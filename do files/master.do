@@ -27,6 +27,7 @@
 	*Main course
 	do "${dir}/do files/Port shares computation.do"
 	do "${dir}/do files/Import data.do" /*Includes do "$dir/do files/Get TSTD info on multiple voyages ventures.do" */
+	//in Get TSTD info on multiple voyages ventures I also create a voyage database to compare to TSTD
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do"
 	do "${dir}/do files/Profit two parts regressions.do"

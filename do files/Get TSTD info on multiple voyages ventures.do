@@ -1,14 +1,14 @@
 clear
 
  if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits"
+	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits/output/"
+	global output "$dir/output/"
 	global tastdb "$dir/external data/"
 }
 
  if lower(c(username)) == "xronkl" {
-	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
+	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits data and programs"
 	cd "$dir"
 	global output "$dir\output\"
 	global tastdb "$dir\external data\"
@@ -40,7 +40,6 @@ gen VOYAGEID= voy
 *destring VOYAGEID, force replace
 
 merge m:1 VOYAGEID using "${tastdb}tastdb-exp-2020.dta"
-drop if _merge==2
 drop _merge
 replace OWNERA= nameofoutfitter if nameofoutfitter!=""
 //Here, we assume stdt on captain is correct
@@ -63,6 +62,8 @@ foreach rank of numlist 1(1)7 {
 }
 
 
+
+
 *** COLLAPSE FATE-VARIABLE INTO FOUR CATEGORIES, DEPENDING ON WHETHER/WHEN SHIP WAS LOST, THEN GENERATE DUMMY-VARS TO CAPTURE DIFFERENT OUTCOMES
 gen FATEcol=1 if FATE==1
 replace FATEcol=2 if FATE==2
@@ -81,10 +82,18 @@ gen FATEdum2=1 if FATEcol==2
 gen FATEdum3=1 if FATEcol==3
 gen FATEdum4=1 if FATEcol==4
 
+label define fate 1 "Voyage completed as intended" 2 "Original goal thwarted before disembarking slaves" 3 "Original goal thwarted after disembarking slaves" 4 "Unspecified/unknown", replace
+label values FATEcol fate
+
 **Compute the length of each voyage (if possible)
 gen length_in_days=(DATEEND-DATEDEP)/1000/60/60/24
 label var length_in_days "Length of voyage (Europe to Europe) in days"
 drop DATEEND DATEDEP
+
+save "${output}Voyages all plus TSTD.dta", replace //To get a database of voyages in the data + TSTD that we can use to compare samples
+
+****Now, we work only on the voyages in the profit database
+drop if ventureid==""
 
 
 
@@ -113,7 +122,6 @@ sort ventureid YEARAF, stable
 *We take the chronolgically first captain and owner 
 
 
-
 collapse (first) CAPTAINA OWNERA (min) YEARAF (mean) SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 	*/ (first) MAJBYIMP MJSELIMP, by(ventureid)
 
@@ -129,8 +137,7 @@ replace FATEcol=2 if FATEdum2==1
 replace FATEcol=4 if FATEdum4==1
 drop FATEdum*
 
-label define fate 1 "Voyage completed as intended" 2 "Original goal thwarted before disembarking slaves" 3 "Original goal thwarted after disembarking slaves" 4 "Unspecified/unknown"
-label values FATEcol fate
+label values FATEcol fate //label fate is defined earlier
 
 
 foreach var of varlist CAPTAINA OWNERA YEARAF SLAXIMP SLAMIMP length_in_days MAJBYIMP MJSELIMP VYMRTRAT {
