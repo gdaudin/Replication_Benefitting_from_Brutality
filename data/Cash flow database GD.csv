@@ -1606,16 +1606,14 @@ Line_number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,in
 31,GD124,Expenditure,Navire,24000,,,,,Return,Livres tournois,
 32,GD124,Expenditure,"Créances restant en Amérique, évaluées à 50%",125728.551,,,,,Return,Livres tournois,Erreur dans la somme due à Van Alstein : manque 142.5
 1,GD125,Expenditure,Insurance (Assurances),2200,,,,,Return,Livres tournois,
-1,GD126,Expenditure,other expense,228020.845833333,,,,,Outfitting,Livres tournois,
-2,GD126,Expenditure,Cargo (cargaison),152528.3,,,,,Outfitting,Livres tournois,
-3,GD126,Expenditure,interest to Franéois de Touchy,10000,,,,,Return,Livres tournois,
-4,GD126,Return,balance remaining of,111156.075,,,,,Return,Livres tournois,
-1,GD127,Return,balance remaining of,104687.008333333,,,,,Return,Livres tournois,
-2,GD127,Expenditure,Cargo (cargaison),194637.283333333,,,,,Outfitting,Livres tournois,
-3,GD127,Expenditure,other expense,81174.4208333333,,,,,Outfitting,Livres tournois,
-1,GD128,Expenditure,Cargo (cargaison),210115.954166667,,,,,Outfitting,Livres tournois,
-2,GD128,Expenditure,other expense,52783.2875,,,,,Outfitting,Livres tournois,
-3,GD128,Return,balance remaining of,99905.8541666667,,,,,Return,Livres tournois,
+1,GD126,Expenditure,Mise-Hors ,112596.05,,,,,Outfitting,Livres tournois,Incertitude sur l’interprétation
+2,GD126,Expenditure,frais,64509.55,,,,,Return,Livres tournois,Incertitude sur l’interprétation
+3,GD126,Return,Entries,303168.3,,,,,Return,Livres tournois,Incertitude sur l’interprétation
+1,GD127,Expenditure,Mon Compte,104687.008333333,,,,,Outfitting,Livres tournois,
+2,GD127,Expenditure,Frais de désarmement,14554,,,,,Return,Livres tournois,
+3,GD127,Expenditure,Retours,162727.2,,,,,Return,Livres tournois,
+1,GD128,Expenditure,Mon Compte,99905.8541666667,,,,,Outfitting,Livres tournois,
+3,GD128,Return,Credit,126514.66,,,,,Return,Livres tournois,
 1,GD138,Expenditure,Value of ship (Valeur du navire),76891,,,,,Outfitting,Livres tournois,
 3,GD138,Expenditure,Outfiting (Armement),40182,,,,,Outfitting,Livres tournois,
 4,GD138,Expenditure,Victuals (Vivres),19223,,,,,Outfitting,Livres tournois,
