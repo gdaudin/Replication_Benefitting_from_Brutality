@@ -96,13 +96,14 @@ save "${output}Exchange rates from Denzel.dta", replace
 ** Import conversion in grams of silver
 import delimited "$dir/external data/Silver equivalent of the lt and franc (Hoffman).csv", clear
 
-rename v1 year
-rename v4 convlivretournois
-drop v5-v12 
+*rename v1 year
+rename value_of_livre convlivretournois
+/*drop v5-v12 
 drop v2 v3
 drop if year=="Source:"
 drop if year==""
-drop if convlivretournois==""
+drop if convlivretournois=="" */
+replace convlivretournois = subinstr(convlivretournois,",",".",.)
 destring year, replace
 destring convlivretournois, replace
 drop if year<1668 
