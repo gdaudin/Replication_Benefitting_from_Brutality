@@ -26,9 +26,9 @@ if lower(c(username)) == "kraemer" {
 }
 
 if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits"
+	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits/output/"
+	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
 	global tastdb "$dir/script guillaume-claire-judith/"
 	global slaves "$dir/script guillaume-claire-judith/slaves/"
 	global graphs "$dir/graphs"

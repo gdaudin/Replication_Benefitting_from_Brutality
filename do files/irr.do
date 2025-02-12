@@ -27,9 +27,9 @@ else if lower(c(username)) == "claire" {
 
 else if lower(c(username)) == "guillaumedaudin" {
 	*set trace on
-	global dir "~/Répertoires GIT/slaveprofits"
+	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits/output/"
+	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
 	global others "$dir/script claire/"
 	global slaves "$dir/script claire/slaves/"
 	global dofile "$dir/script claire/do/"

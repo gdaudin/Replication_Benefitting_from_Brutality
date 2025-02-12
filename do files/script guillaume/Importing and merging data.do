@@ -1,6 +1,6 @@
 *version 16.1
 
-if "`c(username)'" == "guillaumedaudin" global dir_git "~/Répertoires Git/slaveprofits"
+if "`c(username)'" == "guillaumedaudin" global dir_git "~/Répertoires GIT/slaveprofits data and programs"
 if "`c(username)'" == "guillaumedaudin" global dir_stata "~/Documents/Recherche/2019 Profits of slavery/Stata slavery"
 if "`c(username)'" == "xronkl" global dir_git "C:\Users\xronkl\ShareFile\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits\"
 if "`c(username)'" == "xronkl" global dir_stata "C:\Users\xronkl\ShareFile\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\STATA\"

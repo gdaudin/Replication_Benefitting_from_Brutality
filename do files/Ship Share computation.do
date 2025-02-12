@@ -9,7 +9,7 @@ if lower(c(username)) == "kraemer" {
 
 
 else if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits"
+	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
 	global output "~/Documents/Recherche/2019 Profits of slavery/Stata/"
 }
