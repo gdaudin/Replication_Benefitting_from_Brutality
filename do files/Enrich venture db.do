@@ -1,4 +1,37 @@
 
+clear
+
+ if lower(c(username)) == "guillaumedaudin" {
+	global dir "~/Répertoires GIT/slaveprofits data and programs"
+	cd "$dir"
+	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
+	global tastdb "$dir/external data/"
+}
+
+ if lower(c(username)) == "xronkl" {
+	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
+	cd "$dir"
+	global output "$dir\output\"
+	global tastdb "$dir\external data\"
+}
+
+
+
+
+
+* MERGE WITH CORRECTION FILE FOR MULTIPLE VOYAGES
+use "${output}Venture all.dta", clear
+merge m:1 ventureid using "${output}Multiple voyages.dta"
+replace YEARAF_own=YEARAFrev if _merge==3
+replace length_in_days=length_in_daysrev if _merge==3
+
+drop _merge
+drop /*VYMRTRATrev*/ YEARAFrev /*MAJBYIMPrev MJSELIMPrev*/ length_in_daysrev
+
+save "${output}Venture all.dta", replace
+
+
+
 
 ////////////////////////////////////////////
 //////////////////////////////////////////
