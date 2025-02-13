@@ -25,7 +25,7 @@ clear
 ////Captains and OUTFITTERs’ career.
 /////1. Start with tstd.
 //// 2. correct names in STDT
-//// 3. Merge with our ventures
+//// 3. Merge with our the information in our extra voyage
 /////4. PREPARE OUTFITTERS’ AND CAPTAINS’ TRACK RECORD
 
 *1. Make VOYAGEID string
@@ -102,17 +102,18 @@ foreach letter in A B C {
 }
 
 
-save "${tastdb}tastdb-exp-2020.dta", replace
+save "${tastdb}tastdb-exp-2020_corr.dta", replace
 
 
 //////3. merge with Venture all to get an extra 47 ventures + multiple voyages
-use "${output}Venture all.dta", clear
+***I assume the multiple voyages cannot help us
+use "${output}Venture all+multiple.dta", clear
 //To get an unique key
 replace VOYAGEID = ventureid if voyageidintstd==""  |  voyageidintstd=="."
 //This is only useful if we know the name of the captain or the outfitter
 drop if nameofthecaptain=="" & nameofoutfitter==""
 duplicates drop nameofthecaptain nameofoutfitter VOYAGEID, force
-merge 1:1 VOYAGEID  using "${tastdb}tastdb-exp-2020.dta"
+merge 1:1 VOYAGEID  using "${tastdb}tastdb-exp-2020_corr.dta"
 drop _merge
 
 ****We transfer some data from "multiple voyages" into the STDT variables

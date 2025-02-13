@@ -15,7 +15,6 @@ clear
 }
 
 
-
 ** Import and transform war dataset for war variable
 import delimited "$dir/external data/European wars.csv", clear
 reshape long wars comment, i(year) j(country) string
