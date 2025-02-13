@@ -148,7 +148,21 @@ foreach var of varlist CAPTAINA OWNERA YEARAF SLAXIMP SLAMIMP length_in_days MAJ
 }
 
 export delimited using "$dir/external data/Multiple voyages TSTD variables.csv", replace
-save "${output}Multiple voyages.dta", replace
+save "${output}Multiple voyages TSTD variables.dta", replace
+
+/////Enrich Venture all.dta
+
+
+* MERGE WITH CORRECTION FILE FOR MULTIPLE VOYAGES
+use "${output}Venture all.dta", clear
+merge m:1 ventureid using "${output}Multiple voyages TSTD variables.dta"
+replace YEARAF_own=YEARAFrev if _merge==3
+replace length_in_days=length_in_daysrev if _merge==3
+
+drop _merge
+drop /*VYMRTRATrev*/ YEARAFrev /*MAJBYIMPrev MJSELIMPrev*/ length_in_daysrev
+
+save "${output}Venture all+multiple.dta", replace
 
 
 

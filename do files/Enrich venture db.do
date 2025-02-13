@@ -19,16 +19,7 @@ clear
 
 
 
-* MERGE WITH CORRECTION FILE FOR MULTIPLE VOYAGES
-use "${output}Venture all.dta", clear
-merge m:1 ventureid using "${output}Multiple voyages.dta"
-replace YEARAF_own=YEARAFrev if _merge==3
-replace length_in_days=length_in_daysrev if _merge==3
 
-drop _merge
-drop /*VYMRTRATrev*/ YEARAFrev /*MAJBYIMPrev MJSELIMPrev*/ length_in_daysrev
-
-save "${output}Venture all.dta", replace
 
 
 
