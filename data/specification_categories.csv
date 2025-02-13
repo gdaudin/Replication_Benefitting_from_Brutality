@@ -18,9 +18,9 @@ Outfitting	Outfitting	78	-78
 Freight and passengers	Freight and passengers	58	-58
 Returned trade cargo	Trade cargo	56	-56
 Outfiting (Armement)	Outfitting	50	-50
-Cargo (cargaison)	Trade cargo	49	-49
 African goods sold	Cargo	48	-48
 Outfit and cargo		47	-47
+Cargo (cargaison)	Trade cargo	46	-46
 Advance pay to crew (Avances)	Wages	42	-42
 Gross outlays	Unknown	42	-42
 Plantation produce received	Cargo	42	-42
@@ -70,6 +70,7 @@ Outstanding debt in colony	Debt	10	-10
 Sale of sugar	Cargo	10	-10
 To be collected	Credit	10	-10
 Insurance costs	Insurance	9	-9
+Frais de désarmement	Various	8	-8
 Freight charges	Freight and passengers	8	-8
 Insurance payments	Insurance	8	-8
 Other return	Various	8	-8
@@ -80,7 +81,6 @@ gages de l’équipage	Wages	8	-8
 Assurances	Insurance	7	-7
 Cargaison	Cargo	7	-7
 Cost of the mise hors	Unknown	7	-7
-Frais de désarmement	Various	7	-7
 Licence cost (America)	Various	7	-7
 Mise hors estimée	Unknown	7	-7
 Ship in		7	-7
@@ -106,6 +106,7 @@ License costs		5	-5
 Outfit		5	-5
 Sale of American goods	Cargo	5	-5
 Vivres	Victuals	5	-5
+frais	Various	5	-5
 frais de séjour	Various	5	-5
 À recouvrer	Unknown	5	-5
 Assurance de la cargaison		4	-4
@@ -120,9 +121,7 @@ Sale of slaves in America	Slave sale	4	-4
 Sundry goods sold	Cargo	4	-4
 Various (Deniers oubliés)	Various	4	-4
 Victuals (Vivres équipage)	Victuals	4	-4
-frais	Various	4	-4
 frais de cargaison	Cargo	4	-4
-other expense	Various	4	-4
 total recettes	Unknown	4	-4
 Assurance de retour		3	-3
 Avances à l’équipage	Wages	3	-3
@@ -133,7 +132,6 @@ Ship purchase		3	-3
 Vente de la cargaison		3	-3
 Vente du navire	Ship	3	-3
 Wages	Wages	3	-3
-balance remaining of	Unknown	3	-3
 vente d’esclaves	Slave sale	3	-3
 Armement	Outfitting	2	-2
 Autre radoub		2	-2
@@ -146,6 +144,7 @@ Disbursements	Various	2	-2
 Frais déescale	Various	2	-2
 Frais d’armement	Outfitting	2	-2
 Inset and Returned Goods	Unknown	2	-2
+Mon Compte		2	-2
 Other sales	Cargo	2	-2
 Outstanding claims in colony	Credit	2	-2
 Owing from Jamaica	Credit	2	-2
@@ -201,6 +200,7 @@ Commissions	Commission	1	-1
 Commissions, etc. désarmement	Commission	1	-1
 Costs payable to correspondent	Commission	1	-1
 Coût total du désarmement 	Unknown	1	-1
+Credit		1	-1
 Créances diverses		1	-1
 Créances restant en Amérique, évaluées à 50%		1	-1
 Deux comptes de frais généraux pour le navire	Various	1	-1
@@ -218,6 +218,7 @@ Déduction pour fret	Freight and passengers	1	-1
 Désarmement	Unknown	1	-1
 Désarmement et frais imprévus	Unknown	1	-1
 Emploi et remises en France	Unknown	1	-1
+Entries		1	-1
 Exchange gains	Various	1	-1
 Frais au Cap sans commission	Various	1	-1
 Frais de commission	Various	1	-1
@@ -246,6 +247,7 @@ Licence cost	Various	1	-1
 Loss on dollars shipped	Various	1	-1
 Marchandises de retour	Cargo	1	-1
 Mise hors et cargaison	Unknown	1	-1
+Mise-Hors 		1	-1
 Mise-hors (everything included)	Unknown	1	-1
 Mise-hors 1er voyage	Unknown	1	-1
 Navire et doublure de cuivre		1	-1
@@ -283,6 +285,7 @@ Repairs and disbursements		1	-1
 Reste à recouvrer au Cap		1	-1
 Retour par la Betsy (second voyage)	Cargo	1	-1
 Retour par le Montyon	Cargo	1	-1
+Retours		1	-1
 Retours par la Pyrra, la Confiance, le Guerrie	Cargo	1	-1
 Ré-armement assurance	Insurance	1	-1
 Ré-armement cargaison	Cargo	1	-1
@@ -333,9 +336,9 @@ frais de desarmement	Various	1	-1
 frais déenterrement	Various	1	-1
 frais sur place	Various	1	-1
 frais sur place(cap)	Various	1	-1
-interest to Franéois de Touchy	Debit	1	-1
 intérêt du 18 juillet au 29 novembre	Debit	1	-1
 intérêts du prêt à la grosse contracté pour payer les frais des représentants en Angleterre	Debit	1	-1
+other expense	Various	1	-1
 oublis divers	Various	1	-1
 par la Julie	Cargo	1	-1
 peines. soins et deniers oubliés	Various	1	-1
