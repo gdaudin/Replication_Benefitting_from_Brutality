@@ -1,8 +1,8 @@
 
 	if lower(c(username)) == "guillaumedaudin" {
-		global dir "~/Répertoires GIT/slaveprofits"
+		global dir "~/Répertoires GIT/slaveprofits data and programs"
 		cd "$dir"
-		global output "~/Répertoires GIT/slaveprofits/output/"
+		global output "~/Répertoires GIT/slaveprofits data and programs/output/"
 		global graphs "$dir/graphs"
 	}
 
@@ -27,7 +27,13 @@
 	*Main course
 	do "${dir}/do files/Port shares computation.do"
 	do "${dir}/do files/Import data.do" /*Includes do "$dir/do files/Get TSTD info on multiple voyages ventures.do" */
-	//in Get TSTD info on multiple voyages ventures I also create a voyage database to compare to TSTD
+	//in "Get TSTD info on multiple voyages ventures.do" I also create a database with multiple voyages + TSTD "multiple voyages plus TSTD.dta"
+
+	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
+	do "${dir}/do files/Enrich venture db.do"
+
+	do "${dir}/do files/Compare and select sample.do"
+	blif
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do"
 	do "${dir}/do files/Profit two parts regressions.do"
