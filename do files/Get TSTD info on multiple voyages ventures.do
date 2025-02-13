@@ -16,13 +16,18 @@ clear
 
 
 
-*1. Make VOYAGEID string
-use "${tastdb}tastdb-exp-2020.dta", clear
-tostring(VOYAGEID), replace
-save "${tastdb}tastdb-exp-2020.dta", replace
-
 use "${output}Venture all.dta", clear
+
+***I check whether I indeed have one voyageidintstd for each voyage
+gen test = 1+regexm(voyageidintstd,".*/.*/.*/.*/.*/.*/.*/.*/.*")+regexm(voyageidintstd,".*/.*/.*/.*/.*/.*/.*/.*") ///
++ regexm(voyageidintstd,".*/.*/.*/.*/.*/.*/.*") + regexm(voyageidintstd,".*/.*/.*/.*/.*/.*") + regexm(voyageidintstd,".*/.*/.*/.*/.*") ///
++ regexm(voyageidintstd,".*/.*/.*/.*") + regexm(voyageidintstd,".*/.*/.*") + regexm(voyageidintstd,".*/.*")
+
+assert (numberofvoyages == test)
+drop test
+
 keep if strmatch(voyageidintstd,"*/*")==1
+
 ***Only keep ventureID that might be in the sample.
 drop if completedataonoutlays=="no" | completedataonreturns=="no"
 **
@@ -43,6 +48,7 @@ gen VOYAGEID= voy
 *destring VOYAGEID, force replace
 
 merge m:1 VOYAGEID using "${tastdb}tastdb-exp-2020.dta"
+blif
 drop _merge
 replace OWNERA= nameofoutfitter if nameofoutfitter!=""
 //Here, we assume stdt on captain is correct
@@ -147,22 +153,12 @@ foreach var of varlist CAPTAINA OWNERA YEARAF SLAXIMP SLAMIMP length_in_days MAJ
 	rename `var' `var'rev
 }
 
-export delimited using "$dir/external data/Multiple voyages TSTD variables.csv", replace
-save "${output}Multiple voyages TSTD variables.dta", replace
+save "${output}Ventures with multiple voyages TSTD variables.dta", replace
 
 /////Enrich Venture all.dta
 
 
-* MERGE WITH CORRECTION FILE FOR MULTIPLE VOYAGES
-use "${output}Venture all.dta", clear
-merge m:1 ventureid using "${output}Multiple voyages TSTD variables.dta"
-replace YEARAF_own=YEARAFrev if _merge==3
-replace length_in_days=length_in_daysrev if _merge==3
 
-drop _merge
-drop /*VYMRTRATrev*/ YEARAFrev /*MAJBYIMPrev MJSELIMPrev*/ length_in_daysrev
-
-save "${output}Venture all+multiple.dta", replace
 
 
 
