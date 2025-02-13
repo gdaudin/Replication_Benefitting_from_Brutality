@@ -23,6 +23,9 @@ save "${tastdb}tastdb-exp-2020.dta", replace
 
 use "${output}Venture all.dta", clear
 keep if strmatch(voyageidintstd,"*/*")==1
+***Only keep ventureID that might be in the sample.
+drop if completedataonoutlays=="no" | completedataonreturns=="no"
+**
 keep ventureid voyageidintstd nameofoutfitter nameofthecaptain YEARAF_own numberofvoyages
 
 gen voy1 =word(voyageidintstd,1)
@@ -90,7 +93,7 @@ gen length_in_days=(DATEEND-DATEDEP)/1000/60/60/24
 label var length_in_days "Length of voyage (Europe to Europe) in days"
 drop DATEEND DATEDEP
 
-save "${output}Voyages all plus TSTD.dta", replace //To get a database of voyages in the data + TSTD that we can use to compare samples
+save "${output}multiple voyages plus TSTD.dta", replace //To get a database of voyages in the data + TSTD that we can use to compare samples
 
 ****Now, we work only on the voyages in the profit database
 drop if ventureid==""
