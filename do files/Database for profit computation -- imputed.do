@@ -9,9 +9,9 @@ if lower(c(username)) == "kraemer" {
 
 
 else if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits"
+	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits/output/"
+	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
 }
 
 else if lower(c(username)) == "xronkl" {

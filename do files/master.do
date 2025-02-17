@@ -1,8 +1,8 @@
 
 	if lower(c(username)) == "guillaumedaudin" {
-		global dir "~/Répertoires GIT/slaveprofits"
+		global dir "~/Répertoires GIT/slaveprofits data and programs"
 		cd "$dir"
-		global output "~/Répertoires GIT/slaveprofits/output/"
+		global output "~/Répertoires GIT/slaveprofits data and programs/output/"
 		global graphs "$dir/graphs"
 	}
 
@@ -22,11 +22,21 @@
 	* Currently not used section - if we want to import again, delete the old version of the TSTD.dta
 	*unzipfile "${dir}/external data/tastdb-exp-2020.sav.zip", replace
 	*import spss using "${dir}/external data/tastdb-exp-2020.sav", clear
+	*erase "${dir}/external data/tastdb-exp-2020.sav"
+	*tostring(VOYAGEID), replace
 	*save "tastdb-exp-2020.dta", replace
 
 	*Main course
 	do "${dir}/do files/Port shares computation.do"
-	do "${dir}/do files/Import data.do" /*Includes do "$dir/do files/Get TSTD info on multiple voyages ventures.do" */
+	do "${dir}/do files/Import data.do" 
+	do "${dir}/do files/Get TSTD info on multiple voyages ventures.do" //in "Get TSTD info on multiple voyages ventures.do" 
+	*I also create a database with multiple voyages + TSTD "multiple voyages plus TSTD.dta"
+	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
+	blif
+	do "${dir}/do files/Enrich venture db.do"
+
+	do "${dir}/do files/Compare and select sample.do"
+	blif
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do"
 	do "${dir}/do files/Profit two parts regressions.do"
