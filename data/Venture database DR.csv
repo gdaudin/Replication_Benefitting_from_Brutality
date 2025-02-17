@@ -18,7 +18,7 @@ DR016,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 199
 DR017,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1790/8",,Daniel,,"Rogers, James",,1,,18066,,,,1790,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 DR018,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/8",,Daniel,,"Rogers, James",,1,,18096,,,,1791,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 DR019,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1787/22",,Pearl,,"Rogers, James",,1,,18002,,,,1787,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
-DR020,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1790/24",,Rodney,,"Rogers, James",,1,,18117,,,,1790,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
+DR020,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1790/24",,Rodney,,"Rogers, James",,1,,83366,,,,1790,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 DR021,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1789/9",,Crescent,,"Rogers, James",,1,,18040,,,,1789,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 DR022,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1789/23 and 1789/19",,Sarah / Nimble,,"Rogers, James",,2,,18054,,,,1789,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 DR023,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1784/12",,Sally,,"Rogers, James",,1,,17942,,,,1784,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
@@ -123,7 +123,6 @@ KR041,Voyage,Klas Rönnbäck,Investor,English,"Lumley papers, National Archives,
 KR042,Voyage,Klas Rönnbäck,Investor,English,"Lumley papers, National Archives, C114/54, vol 2",,Bedford,,"Lumley, Thomas",,1,,80457,,,,,,,,,,,1,no,no,,,
 KR043,Voyage,Klas Rönnbäck,Investor,English,"AE 52 (Joseph Inikori’s 1981 article, table 5)",,Kitty,,,,1,,82183,,,,,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 KR044,Voyage,Klas Rönnbäck,Investor,English,"AE 52 (Joseph Inikori’s 1981 article, table 5)",,Earl of Liverpool,,,,1,,81112,,,,,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
-KR045,Voyage,Klas Rönnbäck,Investor,English,"James Rogers accounts TNA C 107/13 (taken from Joseph Inikori’s 1981 article, table 5)",,Sarah,,"Rogers, James",,1,,18120,,,,,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 KR046,Voyage,Klas Rönnbäck,Investor,English,"David Tuohy records (taken from Joseph Inikori’s 1981 article, table 5)",,Ranger,,"Tuohy, David",,1,,91274,,,,,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 KR047,Voyage,Klas Rönnbäck,Investor,English,"David Tuohy records (taken from Joseph Inikori’s 1981 article, table 5)",,Elliot,,"Tuohy, David",,1,,81248,,,,,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
 KR048,Voyage,Klas Rönnbäck,Investor,English,"David Tuohy records (taken from Joseph Inikori’s 1981 article, table 5)",,Sally,,"Tuohy, David",,1,,91327,,,,,,,,,,,1,with estimates,yes,,,Insurance rates imputed from previous research on insurance rates
@@ -290,7 +289,7 @@ DR162,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 199
 DR163,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1790/27",,Ruby,,,,1,,18084,,,,1790,,,,,,,1,no,no,,,
 DR164,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/12",,Gibson,,,,1,,,,,,1791,,,,,,,1,with estimates,no,,4,Cannot find matching entry in TSTD
 DR165,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/14",,James,,,,1,,,,,,1791,,,,,,,1,no,no,,4,Cannot find matching entry in TSTD
-DR166,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/21",,Morning Star,,,,1,,18153,,,,1791,,,,,,,1,with estimates,no,,,
+DR166,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/21",,Morning Star,,,,1,,,,,,1791,,,,,,,1,with estimates,no,,4,Cannot find matching entry in TSTD
 DR167,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/28",,Recovery,,,,1,,18116,,,,1791,,,,,,,1,with estimates,no,,,
 DR168,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/29",,Rodney,,,,1,,18117,,,,1791,,,,,,,1,no,yes,,,
 DR169,Voyage,David Richardson & Klas Rönnbäck,Investor,English,"Richardson 1996, ship 1791/31",,St Patrick,,,,1,,,,,,1791,,,,,,,1,no,no,,3,Cannot find matching entry in TSTD
