@@ -29,6 +29,7 @@
 	*Main course
 	do "${dir}/do files/Port shares computation.do"
 	do "${dir}/do files/Import data.do" 
+	do "${dir}/do files/Unique voyage db.do" 
 	do "${dir}/do files/Get TSTD info on multiple voyages ventures.do" //in "Get TSTD info on multiple voyages ventures.do" 
 	*I also create a database with multiple voyages + TSTD "multiple voyages plus TSTD.dta"
 	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
