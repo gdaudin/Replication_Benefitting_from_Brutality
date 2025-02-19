@@ -35,7 +35,7 @@ drop if completedataonoutlays=="no" | completedataonreturns=="no"
 **
 keep ventureid voyageidintstd nameofoutfitter nameofthecaptain YEARAF_own numberofvoyages
 
-gen voy1 =word(voyageidintstd,1)
+gen voy1=word(voyageidintstd,1)
 gen voy2=word(voyageidintstd,3)
 gen voy3=word(voyageidintstd,5)
 gen voy4=word(voyageidintstd,7)
