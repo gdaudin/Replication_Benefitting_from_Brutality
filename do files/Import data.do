@@ -266,6 +266,10 @@ foreach y in "GD" "GK" "KR - new" /*"MR"*/ {
 replace perspectiveofsource="Investor" if perspectiveofsource=="investor"
 replace perspectiveofsource="Owner" if perspectiveofsource=="Owner?"
 replace completedataonoutlays="no" if  strpos(completedataonoutlays, "N")  |  strpos(completedataonoutlays, "n") 
+replace internalcrossref="" if internalcrossref=="."
+replace nameofoutfitter="" if nameofoutfitter=="."
+replace nameofthecaptain="" if nameofthecaptain=="."
+
 
 destring numberofslavespurchased, replace
 destring numberofslavessold, replace
