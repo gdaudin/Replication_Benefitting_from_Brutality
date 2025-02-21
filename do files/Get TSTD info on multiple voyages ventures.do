@@ -17,45 +17,13 @@ clear
 
 
 
-use "${output}Venture all.dta", clear
-
-***I check whether I indeed have one voyageidintstd for each voyage
-gen test = 1+regexm(voyageidintstd,".*/.*/.*/.*/.*/.*/.*/.*/.*")+regexm(voyageidintstd,".*/.*/.*/.*/.*/.*/.*/.*") ///
-+ regexm(voyageidintstd,".*/.*/.*/.*/.*/.*/.*") + regexm(voyageidintstd,".*/.*/.*/.*/.*/.*") + regexm(voyageidintstd,".*/.*/.*/.*/.*") ///
-+ regexm(voyageidintstd,".*/.*/.*/.*") + regexm(voyageidintstd,".*/.*/.*") + regexm(voyageidintstd,".*/.*")
-
-assert (numberofvoyages == test | ventureid=="KR016")
-/*KR016 is grouping of 15 Danish voyages included in table 8 in Lauring*/
-drop test
-
-keep if strmatch(voyageidintstd,"*/*")==1
-
-***Only keep ventureID that might be in the sample.
-drop if completedataonoutlays=="no" | completedataonreturns=="no"
-**
-keep ventureid voyageidintstd nameofoutfitter nameofthecaptain YEARAF_own numberofvoyages
-
-gen voy1=word(voyageidintstd,1)
-gen voy2=word(voyageidintstd,3)
-gen voy3=word(voyageidintstd,5)
-gen voy4=word(voyageidintstd,7)
-gen voy5=word(voyageidintstd,9)
-gen voy6=word(voyageidintstd,11)
-gen voy7=word(voyageidintstd,13)
-
-drop voyageidintstd
-reshape long voy, i(ventureid) j(voyagenumber)
-drop if voy==""
-gen VOYAGEID= voy
-*destring VOYAGEID, force replace
+use "${output}voyages.dta", clear
 
 merge m:1 VOYAGEID using "${tastdb}tastdb-exp-2020.dta"
-blif
 drop _merge
-replace OWNERA= nameofoutfitter if nameofoutfitter!=""
-//Here, we assume stdt on captain is correct
-replace CAPTAINA= nameofthecaptain if missing(CAPTAINA)
-replace YEARAF = YEARAF_own if missing(YEARAF)
+
+****We work only on the voyages in the profit database, and in the sample
+drop if ventureid=="" | sample==0
 
 sort ventureid VOYAGEID
 
@@ -63,7 +31,7 @@ keep ventureid numberofvoyages VOYAGEID YEARAF MAJBYIMP MJSELIMP SLAXIMP SLAMIMP
 sort ventureid DATEDEP
 
 gen voyagerank=.
-by ventureid: replace voyagerank=_n
+by ventureid (VOYAGEID): replace voyagerank=_n
 
 foreach rank of numlist 1(1)7 {
 	foreach var of varlist DATEEND DATEDEP {
@@ -71,8 +39,6 @@ foreach rank of numlist 1(1)7 {
 	replace `var'`rank'=`var' if voyagerank==`rank'
 	}
 }
-
-
 
 
 *** COLLAPSE FATE-VARIABLE INTO FOUR CATEGORIES, DEPENDING ON WHETHER/WHEN SHIP WAS LOST, THEN GENERATE DUMMY-VARS TO CAPTURE DIFFERENT OUTCOMES
@@ -101,10 +67,6 @@ gen length_in_days=(DATEEND-DATEDEP)/1000/60/60/24
 label var length_in_days "Length of voyage (Europe to Europe) in days"
 drop DATEEND DATEDEP
 
-save "${output}multiple voyages plus TSTD.dta", replace //To get a database of voyages in the data + TSTD that we can use to compare samples
-
-****Now, we work only on the voyages in the profit database
-drop if ventureid==""
 
 
 
