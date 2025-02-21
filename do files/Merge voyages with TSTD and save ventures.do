@@ -114,7 +114,7 @@ foreach var of varlist CAPTAINA OWNERA YEARAF SLAXIMP SLAMIMP length_in_days MAJ
 	rename `var' `var'rev
 }
 
-save "${output}Ventures with multiple voyages TSTD variables.dta", replace
+save "${output}Ventures+TSTD variables.dta", replace
 
 /////Enrich Venture all.dta
 

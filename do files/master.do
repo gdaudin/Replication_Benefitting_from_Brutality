@@ -26,15 +26,16 @@
 	*tostring(VOYAGEID), replace
 	*save "tastdb-exp-2020.dta", replace
 
-	*Main course
+	*Creating datasets
 	do "${dir}/do files/Port shares computation.do"
 	do "${dir}/do files/Import data.do" 
 	do "${dir}/do files/Unique voyages db.do" /*This creates a db of voyages in the data*/
 	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
-	blif
-	do "${dir}/do files/Get TSTD info on multiple voyages ventures.do"
 	
+	*Creating an enriched venture dataset
+	do "${dir}/do files/Merge voyages with TSTD and save ventures.do"
 	do "${dir}/do files/Enrich venture db.do"
+	blif
 
 	do "${dir}/do files/Compare and select sample.do"
 	blif
