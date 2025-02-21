@@ -20,11 +20,13 @@ clear
 
 
 * MERGE WITH CORRECTION FILE FOR MULTIPLE VOYAGES
-use "${output}Venture all.dta", clear
-merge m:1 ventureid using "${output}Ventures with multiple voyages TSTD variables.dta"
+use "${output}Ventures+TSTD variables.dta", clear
+
+/*merge m:1 ventureid using "${output}Ventures with multiple voyages TSTD variables.dta"
 replace YEARAF_own=YEARAFrev if _merge==3
 replace length_in_days=length_in_daysrev if _merge==3
 
+blif
 drop _merge
 drop /*VYMRTRATrev*/ YEARAFrev /*MAJBYIMPrev MJSELIMPrev*/ length_in_daysrev
 
@@ -35,6 +37,7 @@ save "${output}Venture all+multiple.dta", replace
 
 ////////////////////////////////////////////
 //////////////////////////////////////////
+
 
 * Start again from the merged dataset
 use  "tastdb-exp-2020+own.dta", clear
@@ -50,8 +53,8 @@ label var MAJMAJBYIMP "African region of trade"
 label var MAJMAJBYIMP_num "African region of trade"
 
 
-
-* MERGE OUR DATASET WITH Career DATASET (CAPTAIN)
+*/
+* MERGE WITH Career DATASET (CAPTAIN)
 generate CAPTAIN = ""
 replace CAPTAIN = CAPTAINA
 replace CAPTAIN = nameofthecaptain if CAPTAIN==""
@@ -67,7 +70,7 @@ assert (CAPTAIN=="" | YEARAF ==.) if _merge==1 ///
 drop _merge
 
 
-* MERGE OUR DATASET WITH Career DATASET (OUTFITTER)
+* MERGE WITH Career DATASET (OUTFITTER)
 generate OUTFITTER = ""
 replace OUTFITTER = nameofoutfitter
 replace OUTFITTER = OWNERA if OUTFITTER==""
@@ -84,12 +87,6 @@ assert (OUTFITTER=="" | YEARAF ==.) if _merge==1 ///
 
 
 drop _merge
-
-
-
-
-*erase "tastdb-exp-2020.dta"
-
 
 
 save "${output}Venture all.dta", replace
