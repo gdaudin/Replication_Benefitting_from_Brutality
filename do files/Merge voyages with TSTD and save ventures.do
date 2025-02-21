@@ -27,7 +27,8 @@ drop if ventureid=="" | sample==0
 
 sort ventureid VOYAGEID
 
-keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJSELIMP SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4
+keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJSELIMP /*
+*/ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample
 sort ventureid DATEDEP
 
 foreach rank of numlist 1(1)7 {
@@ -92,7 +93,7 @@ sort ventureid YEARAF, stable
 *We take the chronolgically first captain and owner 
 
 
-collapse (first) CAPTAINA OWNERA (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
+collapse (first) CAPTAINA OWNERA (mean) sample YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 	*/ (first) MAJBYIMP MJSELIMP, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
