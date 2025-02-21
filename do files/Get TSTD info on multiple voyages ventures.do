@@ -27,16 +27,13 @@ drop if ventureid=="" | sample==0
 
 sort ventureid VOYAGEID
 
-keep ventureid numberofvoyages VOYAGEID YEARAF MAJBYIMP MJSELIMP SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4
+keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJSELIMP SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4
 sort ventureid DATEDEP
-
-gen voyagerank=.
-by ventureid (VOYAGEID): replace voyagerank=_n
 
 foreach rank of numlist 1(1)7 {
 	foreach var of varlist DATEEND DATEDEP {
 	capture gen `var'`rank'=.
-	replace `var'`rank'=`var' if voyagerank==`rank'
+	replace `var'`rank'=`var' if voyagenumber==`rank'
 	}
 }
 

@@ -124,7 +124,7 @@ drop cap
 replace nameofoutfitter=out
 drop out
 
-drop voyagenumber numberofvoyages voyageidintstd completedataonoutlays completedataonreturns voyageid_num date year_dep
+drop voyageidintstd completedataonoutlays completedataonreturns voyageid_num date year_dep
 
 *Check that we have the years for "our" voyages in the sample
 
