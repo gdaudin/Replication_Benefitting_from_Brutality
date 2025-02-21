@@ -304,8 +304,9 @@ local varlist dateofdeparturefromportofoutfitt dateofreturntoportofoutfitting
 
 foreach var of local varlist {
 	gen year1=substr( `var' ,1,4)
-	gen month1=substr( `var' ,6,2)
-	gen day1=substr( `var' ,9,2)
+	**Multiple voyages will be an issue
+	gen month1=substr( `var' ,6,2) if strmatch(`var',"*/*")!=1
+	gen day1=substr( `var' ,9,2) if strmatch(`var',"*/*")!=1
 	destring year1, replace
 	destring month1, replace
 	destring day1, replace
@@ -344,8 +345,8 @@ local varlist dateofdeparturefromportofoutfitt dateofprimarysource datetradebega
 
 foreach var of local varlist {
 	gen year1=substr( `var' ,1,4)
-	gen month1=substr( `var' ,6,2)
-	gen day1=substr( `var' ,9,2)
+	gen month1=substr( `var' ,6,2) if strmatch(`var',"*/*")!=1
+	gen day1=substr( `var' ,9,2) if strmatch(`var',"*/*")!=1
 	destring year1, replace
 	destring month1, replace
 	destring day1, replace
@@ -377,7 +378,7 @@ foreach var of local varlist {
 
 * VARIABLES ONLY INCLUDING THE YEARS OF THE VARIOUS CHRONOLOGICAL VARS ARE DERIVED FROM THE RESPECTIVE DATE-VARS
 
-gen yearofdeparturefromportofoutfit=year(destring(substr(dateofdeparturefromportofoutfit,4)))
+gen yearofdeparturefromportofoutfit=year(dateofdeparturefromportofoutfitt)
 gen yearofprimarysource=year(dateofprimarysource)
 gen yeartradebeganinafrica=year(datetradebeganinafrica)
 gen yearofdeparturefromafrica=year(dateofdeparturefromafrica)

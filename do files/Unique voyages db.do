@@ -37,7 +37,7 @@ drop test
 *********************Transform the ventures into voyages
 keep ventureid voyageidintstd nameofoutfitter nameofthecaptain YEARAF_own /*
     */ numberofvoyages internalcrossref completedataonoutlays completedataonreturns numberofvoyages /*
-    */ nationality
+    */ nationality datedepartureportofoutfitt_str
 
 /*
 foreach var of varlist voyageidintstd nameofthecaptain nameofoutfitter {
@@ -50,6 +50,8 @@ foreach var of varlist voyageidintstd nameofthecaptain nameofoutfitter {
 split voyageidintstd , generate(voy) parse("/")
 split nameofthecaptain , generate(cap) parse("/")
 split nameofoutfitter , generate(out) parse("/")
+split datedepartureportofoutfitt_str,generate(date) parse ("/")
+
 
 
 forvalue i = 1/15 {
@@ -74,14 +76,16 @@ gen voy7=word(voyageidintstd,13)
 */
 */
 
-reshape long voy cap out, i(ventureid) j(voyagenumber)
+reshape long voy cap out date, i(ventureid) j(voyagenumber)
 drop if voyagenumber>numberofvoyages
 
 rename voy VOYAGEID
+gen year_dep = substr(date,1,4)
+destring(year_dep), replace
 replace VOYAGEID="" if strmatch(VOYAGEID," ?")==1
 replace VOYAGEID="" if strmatch(VOYAGEID,"?")==1
 
-br if (VOYAGEID==""& internalcrossref!="")
+*br if (VOYAGEID==""& internalcrossref!="")
 
 /*Testing if there are left potentially duplicate voyages difficult to identify*/
 /*This is the only case where it might happen*/
@@ -95,8 +99,37 @@ assert (internalcrossref=="" | ventureid=="KR014") if strmatch(VOYAGEID,"RDKRR*"
 **We will only keep one observation VOYAGEID. But we need to make sure we have the best data on it
 *from the other cross-references.
 
+/*
 duplicates tag VOYAGEID, generate(duplicate)
 br if duplicate==2
+*/
 
 encode VOYAGEID, generate(voyageid_num)
 xfill cap,i(voyageid_num)
+xfill out,i(voyageid_num)
+xfill YEARAF_own, i(voyageid_num)
+br
+replace YEARAF_own = year_dep+1 if  year_dep !=.
+
+***Drop duplicates.
+gen sample=0
+replace sample=1 if completedataonoutlays!="no" & completedataonreturns!="no"
+replace sample=2 if completedataonoutlays=="yes" & completedataonreturns!="yes"
+bys VOYAGEID (sample): drop if _N != _n
+tab sample
+
+**Arrange variables
+replace nameofthecaptain=cap
+drop cap
+replace nameofoutfitter=out
+drop out
+
+drop voyagenumber numberofvoyages voyageidintstd completedataonoutlays completedataonreturns voyageid_num date year_dep
+
+*Check that we have the years for "our" voyages in the sample
+
+*br if YEARAF_own==. & sample !=0 & strmatch(VOYAGEID,"RDKRR*")==1
+assert YEARAF_own!=. if (sample !=0 & strmatch(VOYAGEID,"RDKRR*"))==1
+
+
+save "${output}voyages.dta", replace
