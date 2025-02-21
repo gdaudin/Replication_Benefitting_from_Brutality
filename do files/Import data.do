@@ -377,7 +377,7 @@ foreach var of local varlist {
 
 * VARIABLES ONLY INCLUDING THE YEARS OF THE VARIOUS CHRONOLOGICAL VARS ARE DERIVED FROM THE RESPECTIVE DATE-VARS
 
-gen yearofdeparturefromportofoutfit=year(dateofdeparturefromportofoutfit)
+gen yearofdeparturefromportofoutfit=year(destring(substr(dateofdeparturefromportofoutfit,4)))
 gen yearofprimarysource=year(dateofprimarysource)
 gen yeartradebeganinafrica=year(datetradebeganinafrica)
 gen yearofdeparturefromafrica=year(dateofdeparturefromafrica)
