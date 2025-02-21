@@ -114,9 +114,11 @@ replace YEARAF_own = year_dep+1 if  year_dep !=.
 ***Drop duplicates.
 gen sample=0
 replace sample=1 if completedataonoutlays!="no" & completedataonreturns!="no"
-replace sample=2 if completedataonoutlays=="yes" & completedataonreturns!="yes"
+replace sample=2 if completedataonoutlays=="yes" & completedataonreturns=="yes"
+
 bys VOYAGEID (sample): drop if _N != _n
 tab sample
+
 
 **Arrange variables
 replace nameofthecaptain=cap
