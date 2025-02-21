@@ -71,7 +71,7 @@ drop DATEEND DATEDEP
 
 
 ***To get rid of values that cannot be averaged because some other one is missing (if we want to do that)
-foreach var of varlist  SLAXIMP SLAMIMP length_in_days /*YEARAF*/ {
+foreach var of varlist  SLAXIMP SLAMIMP length_in_days YEARAF {
 	gen test`var'=1 if `var'==.
 	replace test`var'=0 if `var'!=.
 	egen test1=max(test`var'), by(ventureid)
@@ -95,7 +95,7 @@ sort ventureid YEARAF, stable
 *We take the chronolgically first captain and owner 
 
 
-collapse (first) CAPTAINA OWNERA (min) YEARAF (mean) SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
+collapse (first) CAPTAINA OWNERA (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 	*/ (first) MAJBYIMP MJSELIMP, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
