@@ -1,5 +1,8 @@
 clear
 
+
+*Requires xfill to be installed
+*See net from http://www.sealedenvelope.com/
  if lower(c(username)) == "guillaumedaudin" {
 	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
@@ -32,15 +35,34 @@ assert (numberofvoyages == test | ventureid=="KR016")
 drop test
 
 *********************Transform the ventures into voyages
-keep ventureid voyageidintstd nameofoutfitter nameofthecaptain YEARAF_own numberofvoyages internalcrossref completedataonoutlays completedataonreturns numberofvoyages
+keep ventureid voyageidintstd nameofoutfitter nameofthecaptain YEARAF_own /*
+    */ numberofvoyages internalcrossref completedataonoutlays completedataonreturns numberofvoyages /*
+    */ nationality
 
-replace voyageidintstd=subinstr(voyageidintstd,"/"," / ",.)
-replace voyageidintstd=subinstr(voyageidintstd,"  "," ",.)
-replace voyageidintstd=subinstr(voyageidintstd,"//","/ /",.)
+/*
+foreach var of varlist voyageidintstd nameofthecaptain nameofoutfitter {
+    replace `var'=subinstr(`var',"/"," / ",.)
+    replace `var'=subinstr(`var',"  "," ",.)
+    replace `var'=subinstr(`var',"//","/ /",.)
+}
+*/
+
+split voyageidintstd , generate(voy) parse("/")
+split nameofthecaptain , generate(cap) parse("/")
+split nameofoutfitter , generate(out) parse("/")
+
 
 forvalue i = 1/15 {
-    
+    capture replace voy`i' = strtrim(voy`i')
+    capture replace cap`i' = strtrim(cap`i')
+    capture replace out`i' = strtrim(out`i')
+
+}
+
+/*
     gen voy`i' =word(voyageidintstd,2*`i'-1)
+    gen cap`i' =word(nameofthecaptain,2*`i'-1)
+    gen out`i' =word(nameofoutfitter,2*`i'-1)
 }
 /*
 gen voy2=word(voyageidintstd,3)
@@ -50,10 +72,31 @@ gen voy5=word(voyageidintstd,9)
 gen voy6=word(voyageidintstd,11)
 gen voy7=word(voyageidintstd,13)
 */
+*/
 
-
-reshape long voy, i(ventureid) j(voyagenumber)
+reshape long voy cap out, i(ventureid) j(voyagenumber)
 drop if voyagenumber>numberofvoyages
 
 rename voy VOYAGEID
-replace VOYAGEID="" if VOYAGEID=="?"
+replace VOYAGEID="" if strmatch(VOYAGEID," ?")==1
+replace VOYAGEID="" if strmatch(VOYAGEID,"?")==1
+
+br if (VOYAGEID==""& internalcrossref!="")
+
+/*Testing if there are left potentially duplicate voyages difficult to identify*/
+/*This is the only case where it might happen*/
+drop if ventureid=="KR016" & voyagenumber==14
+assert (VOYAGEID!="" | ventureid=="KR014") if internalcrossref!=""
+/*Following this, all duplicate voyages have a VoyageID (even if some non-duplicates ones do not)*/
+
+replace VOYAGEID = "RDKRR"+ventureid if VOYAGEID==""
+assert (internalcrossref=="" | ventureid=="KR014") if strmatch(VOYAGEID,"RDKRR*")==1
+
+**We will only keep one observation VOYAGEID. But we need to make sure we have the best data on it
+*from the other cross-references.
+
+duplicates tag VOYAGEID, generate(duplicate)
+br if duplicate==2
+
+encode VOYAGEID, generate(voyageid_num)
+xfill cap,i(voyageid_num)
