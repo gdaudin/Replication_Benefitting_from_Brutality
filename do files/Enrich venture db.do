@@ -31,45 +31,6 @@ drop if completedataonoutlays =="no" | completedataonreturns =="no"
 drop _merge
 
 
-
-
-
-
-* MERGE WITH Career DATASET (CAPTAIN)
-generate CAPTAIN = ""
-replace CAPTAIN = CAPTAINA
-*replace CAPTAIN = nameofthecaptain if CAPTAIN==""
-replace CAPTAIN="" if CAPTAIN=="."
-merge m:1 CAPTAIN YEARAF MAJMAJBYIMP using "${output}Captain.dta"
-drop if _merge==2
-*For debugging
-*br CAPTAIN YEARAF ventureid VOYAGEID if _merge==1 & (CAPTAIN!="" & YEARAF !=.)
-assert (CAPTAIN=="" | YEARAF ==.) if _merge==1 ///
-	&  (completedataonoutlays=="yes" | completedataonoutlays=="with estimates") ///
-	& (completedataonreturns=="yes" | completedataonreturns=="with estimates") 
-	
-drop _merge
-
-
-* MERGE WITH Career DATASET (OUTFITTER)
-generate OUTFITTER = ""
-replace OUTFITTER = nameofoutfitter
-replace OUTFITTER = OWNERA if OUTFITTER==""
-replace OUTFITTER="" if OUTFITTER=="."
-merge m:1 OUTFITTER YEARAF MAJMAJBYIMP using "${output}OUTFITTER.dta"
-drop if _merge==2
-*For debugging
-*br OUTFITTER YEARAF ventureid VOYAGEID if _merge==1 & (OUTFITTER!="" & YEARAF !=.)
-assert (OUTFITTER=="" | YEARAF ==.) if _merge==1 ///
-	&  (completedataonoutlays=="yes" | completedataonoutlays=="with estimates") ///
-	& (completedataonreturns=="yes" | completedataonreturns=="with estimates") 
-
-
-
-
-drop _merge
-
-
 * APPEND SLAVE PRICES
 merge m:1 YEARAF using "${output}Prices.dta"
 drop if _merge==2
