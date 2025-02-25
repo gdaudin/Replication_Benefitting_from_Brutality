@@ -78,28 +78,22 @@ foreach var of varlist  SLAXIMP SLAMIMP length_in_days YEARAF {
 }
 
 
-*HERE I TEST FOR DIFFERENCES IN MAJBYIMP OR MJSELIMP. IF THERE IS ONE, I REPLACE THEM BY MISSING
-foreach var of varlist MAJBYIMP MJSELIMP {
+*We only keep a captain, owner name, trading regions if it is constant within a venture_id
 
-	egen test`var'=group(`var'), missing
-	egen test`var'1=min(test`var'), by(ventureid)
-	egen test`var'2=max(test`var'), by(ventureid)
-	egen test`var'3=max(test`var'2-test`var'1), by(ventureid)
-	replace `var'=. if test`var'3 !=0 
-	drop test*
-}
-gsort - SLAXIMP
-sort ventureid YEARAF, stable
-
-*We only keep a captain or owner name if it is constant within the group
-
-foreach var of varlist CAPTAINA OWNERA {
+foreach var of varlist CAPTAINA OWNERA  {
 	bys  ventureid (`var'): replace `var'="" if `var'[1]!=`var'[_N]
 }
 
+foreach var of varlist  MAJBYIMP MJSELIMP {
+	bys  ventureid (`var'): replace `var'=. if `var'[1]!=`var'[_N]
+}
 
-collapse (first) CAPTAINA OWNERA (mean) sample YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
-	*/ (first) MAJBYIMP MJSELIMP, by(ventureid)
+
+gsort - SLAXIMP
+sort ventureid YEARAF, stable
+
+collapse (first) CAPTAINA OWNERA MAJBYIMP MJSELIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
+	*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
 
