@@ -48,11 +48,6 @@ merge m:1 YEARAF nationality using  "${output}Neutrality.dta"
 drop if _merge==2
 drop _merge
 
-****add port shares
-merge m:1 YEARAF MJBYPTIMP using "${output}port_shares.dta", keep(1 3)
-drop _merge
-
-
 ***some more variables
 encode nationality, generate(nationality_num)
 gen ln_SLAXIMP = ln(SLAXIMP)

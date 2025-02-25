@@ -27,7 +27,7 @@ drop if ventureid=="" | sample==0
 
 sort ventureid VOYAGEID
 
-keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJSELIMP /*
+keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJBYPTIMP  /*
 */ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample nameofoutfitter/*
 */ nameofthecaptain YEARAF_own
 sort ventureid DATEDEP
@@ -45,6 +45,11 @@ replace OWNERA= nameofoutfitter if nameofoutfitter!=""
 replace CAPTAINA= nameofthecaptain if missing(CAPTAINA)
 replace YEARAF = YEARAF_own if missing(YEARAF)
 drop nameofoutfitter nameofthecaptain YEARAF_own
+
+
+****add port shares
+merge m:1 YEARAF MJBYPTIMP using "${output}port_shares.dta", keep(1 3)
+drop _merge
 
 
 *** COLLAPSE FATE-VARIABLE INTO FOUR CATEGORIES, DEPENDING ON WHETHER/WHEN SHIP WAS LOST, THEN GENERATE DUMMY-VARS TO CAPTURE DIFFERENT OUTCOMES
@@ -86,7 +91,8 @@ foreach var of varlist  SLAXIMP SLAMIMP length_in_days YEARAF {
 }
 
 
-*We only keep a captain, owner name, trading regions if it is constant within a venture_id
+
+***Simplify trading regions
 
 decode MAJBYIMP, gen(MAJBYIMP_str)
 gen MAJMAJBYIMP = "West" if MAJBYIMP_str==" Senegambia and offshore Atlantic" | MAJBYIMP_str==" Sierra Leone" | MAJBYIMP_str==" Windward Coast"
@@ -145,6 +151,7 @@ sort ventureid YEARAF, stable
 collapse (first)  MAJMAJBYIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 			*/ (min) OUTFITTER_experience OUTFITTER_regional_experience captain_experience captain_regional_experience /*
 			*/ (mean) OUTFITTER_total_career captain_total_career /*
+			*/ (mean) port_share /*
 			*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
