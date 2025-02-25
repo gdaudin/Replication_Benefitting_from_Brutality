@@ -90,7 +90,12 @@ foreach var of varlist MAJBYIMP MJSELIMP {
 }
 gsort - SLAXIMP
 sort ventureid YEARAF, stable
-*We take the chronolgically first captain and owner 
+
+*We only keep a captain or owner name if it is constant within the group
+
+foreach var of varlist CAPTAINA OWNERA {
+	bys  ventureid (`var'): replace `var'="" if `var'[1]!=`var'[_N]
+}
 
 
 collapse (first) CAPTAINA OWNERA (mean) sample YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
