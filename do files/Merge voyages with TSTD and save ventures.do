@@ -88,25 +88,31 @@ foreach var of varlist  SLAXIMP SLAMIMP length_in_days YEARAF {
 
 *We only keep a captain, owner name, trading regions if it is constant within a venture_id
 
-foreach var of varlist CAPTAINA OWNERA  {
-	bys  ventureid (`var'): replace `var'="" if `var'[1]!=`var'[_N]
-}
+decode MAJBYIMP, gen(MAJBYIMP_str)
+gen MAJMAJBYIMP = "West" if MAJBYIMP_str==" Senegambia and offshore Atlantic" | MAJBYIMP_str==" Sierra Leone" | MAJBYIMP_str==" Windward Coast"
+replace MAJMAJBYIMP = "Bight of Guinea" if MAJBYIMP_str==" Gold Coast" | MAJBYIMP_str==" Bight of Benin" | MAJBYIMP_str==" Bight of Biafra and Gulf of Guinea islands"
+replace MAJMAJBYIMP = "South" if MAJBYIMP_str==" West Central Africa and St. Helena" | MAJBYIMP_str==" Southeast Africa and Indian Ocean islands "
+encode MAJMAJBYIMP, gen(MAJMAJBYIMP_num)
+label var MAJMAJBYIMP "African region of trade"
+label var MAJMAJBYIMP_num "African region of trade"
 
-foreach var of varlist  MAJBYIMP MJSELIMP {
-	bys  ventureid (`var'): replace `var'=. if `var'[1]!=`var'[_N]
+
+
+
+foreach var of varlist CAPTAINA OWNERA  MAJMAJBYIMP {
+	bys  ventureid (`var'): replace `var'="" if `var'[1]!=`var'[_N]
 }
 
 
 gsort - SLAXIMP
 sort ventureid YEARAF, stable
 
-collapse (first) CAPTAINA OWNERA MAJBYIMP MJSELIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
+collapse (first) CAPTAINA OWNERA MAJMAJBYIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 	*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
 
 sort ventureid YEARAF
-
 
 *** GENERATE FATEcol from dummy variables after collapsing.
 gen FATEcol=1 if FATEdum1==1
@@ -116,11 +122,6 @@ replace FATEcol=4 if FATEdum4==1
 drop FATEdum*
 
 label values FATEcol fate //label fate is defined earlier
-
-
-foreach var of varlist CAPTAINA OWNERA YEARAF SLAXIMP SLAMIMP length_in_days MAJBYIMP MJSELIMP VYMRTRAT {
-	rename `var' `var'rev
-}
 
 save "${output}Ventures+TSTD variables.dta", replace
 
