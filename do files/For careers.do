@@ -113,21 +113,6 @@ drop if nameofthecaptain=="" & nameofoutfitter==""
 merge 1:1 VOYAGEID  using "${tastdb}tastdb-exp-2020_corr.dta"
 drop _merge
 
-/*
-****We transfer some data from "multiple voyages" into the STDT variables
-replace VYMRTRAT=VYMRTRATrev if numberofvoyages>=2
-replace MAJBYIMP=MAJBYIMPrev if numberofvoyages>=2
-replace MJSELIMP=MJSELIMPrev if numberofvoyages>=2
-replace SLAXIMP=SLAXIMPrev if numberofvoyages>=2
-replace SLAMIMP=SLAMIMPrev if numberofvoyages>=2
-replace CAPTAINA=CAPTAINArev if numberofvoyages>=2
-replace OWNERA=OWNERArev if numberofvoyages>=2
-
-drop *rev
-*/
-
-
-
 
 //Here, we assume our data on outfitter is correct
 replace OWNERA= nameofoutfitter if nameofoutfitter!=""
@@ -170,8 +155,6 @@ use "${output}Captain.dta", clear
 duplicates drop CAPTAIN VOYAGEID, force
 save "${output}Captain.dta", replace
  
-save "${output}Captain.dta", replace
-
 use "tastdb-exp-2020+own.dta", clear
 
  keep OWNERA /*OWNERB OWNERC OWNERD /*
@@ -252,7 +235,7 @@ sort OUTFITTER homonyme MAJMAJBYIMP YEARAF
 bys OUTFITTER homonyme MAJMAJBYIMP: generate OUTFITTER_regional_experience= _n-1 if MAJMAJBYIMP!=""
 
 
-*First line workes if all the voyages in a specific year are to the same region
+*First line works if all the voyages in a specific year are to the same region
 collapse (min) OUTFITTER_experience OUTFITTER_total_career OUTFITTER_regional_experience (count) nbr_in_year=OUTFITTER_experience, by(OUTFITTER YEARAF homonyme MAJMAJBYIMP)
 egen temp_OUTFITTER_experience = min(OUTFITTER_experience), by(OUTFITTER YEARAF homonyme)
 replace OUTFITTER_experience=temp_OUTFITTER_experience if OUTFITTER_experience!=temp_OUTFITTER_experience

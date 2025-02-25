@@ -61,20 +61,6 @@ forvalue i = 1/15 {
 
 }
 
-/*
-    gen voy`i' =word(voyageidintstd,2*`i'-1)
-    gen cap`i' =word(nameofthecaptain,2*`i'-1)
-    gen out`i' =word(nameofoutfitter,2*`i'-1)
-}
-/*
-gen voy2=word(voyageidintstd,3)
-gen voy3=word(voyageidintstd,5)
-gen voy4=word(voyageidintstd,7)
-gen voy5=word(voyageidintstd,9)
-gen voy6=word(voyageidintstd,11)
-gen voy7=word(voyageidintstd,13)
-*/
-*/
 
 reshape long voy cap out date, i(ventureid) j(voyagenumber)
 drop if voyagenumber>numberofvoyages
