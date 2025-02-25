@@ -48,51 +48,6 @@ merge m:1 YEARAF nationality using  "${output}Neutrality.dta"
 drop if _merge==2
 drop _merge
 
-blif
-
-
-*** COLLAPSE FATE-VARIABLE INTO FOUR CATEGORIES, DEPENDING ON WHETHER/WHEN SHIP WAS LOST
-replace FATEcol=	1	if FATE==	1 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	2 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	3 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	4 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	11 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	12 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	23 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	29 & missing(FATEcol)
-replace FATEcol=	4	if FATE==	30 & missing(FATEcol)
-replace FATEcol=	4	if FATE==	40 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	44 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	49 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	50 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	51 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	54 & missing(FATEcol)
-replace FATEcol=	4	if FATE==	59 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	68 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	69 & missing(FATEcol)
-replace FATEcol=	4	if FATE==	70 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	71 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	74 & missing(FATEcol)
-replace FATEcol=	4	if FATE==	77 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	78 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	92 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	95 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	97 & missing(FATEcol)
-replace FATEcol=	3	if FATE==	122 & missing(FATEcol)
-replace FATEcol=	2	if FATE==	161 & missing(FATEcol)
-replace FATEcol=	4	if FATE==	172 & missing(FATEcol)
-
-replace FATEcol=3 if FATE4>1 & !missing(FATEcol) & numberofvoyages>1
-
-replace FATE4=1 if FATEcol==1
-
-label var FATEcol "Fate of venture"
-label define fate 1 "Voyage completed as intended" 2 "Original goal thwarted before disembarking slaves" 3 "Original goal thwarted after disembarking slaves" 4 "Unspecified/unknown"
-label values FATEcol fate
-
-replace FATEcol=4 if missing(FATEcol)
-replace FATE4=4 if missing(FATE4)
-
 ****add port shares
 merge m:1 YEARAF MJBYPTIMP using "${output}port_shares.dta", keep(1 3)
 drop _merge
