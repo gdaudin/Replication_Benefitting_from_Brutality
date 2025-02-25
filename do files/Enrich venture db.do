@@ -19,45 +19,26 @@ clear
 
 
 
-* MERGE WITH CORRECTION FILE FOR MULTIPLE VOYAGES
+* MERGE WITH initial venture file
 use "${output}Ventures+TSTD variables.dta", clear
+merge 1:1 ventureid  using "${output}Venture all.dta"
 
-/*merge m:1 ventureid using "${output}Ventures with multiple voyages TSTD variables.dta"
-replace YEARAF_own=YEARAFrev if _merge==3
-replace length_in_days=length_in_daysrev if _merge==3
+tab completedataonoutlays completedataonreturns if _merge==2
+tab ventureid if _merge==2 & completedataonoutlays=="yes" & completedataonreturns=="yes"
 
-blif
+assert completedataonoutlays =="no" | completedataonreturns =="no" if _merge==2
+drop if completedataonoutlays =="no" | completedataonreturns =="no"
 drop _merge
-drop /*VYMRTRATrev*/ YEARAFrev /*MAJBYIMPrev MJSELIMPrev*/ length_in_daysrev
-
-save "${output}Venture all+multiple.dta", replace
 
 
 
 
-////////////////////////////////////////////
-//////////////////////////////////////////
 
 
-* Start again from the merged dataset
-use  "tastdb-exp-2020+own.dta", clear
-
-
-replace YEARAF=YEARAF_own if YEARAF==.
-decode MAJBYIMP, gen(MAJBYIMP_str)
-gen MAJMAJBYIMP = "West" if MAJBYIMP_str==" Senegambia and offshore Atlantic" | MAJBYIMP_str==" Sierra Leone" | MAJBYIMP_str==" Windward Coast"
-replace MAJMAJBYIMP = "Bight of Guinea" if MAJBYIMP_str==" Gold Coast" | MAJBYIMP_str==" Bight of Benin" | MAJBYIMP_str==" Bight of Biafra and Gulf of Guinea islands"
-replace MAJMAJBYIMP = "South" if MAJBYIMP_str==" West Central Africa and St. Helena" | MAJBYIMP_str==" Southeast Africa and Indian Ocean islands "
-encode MAJMAJBYIMP, gen(MAJMAJBYIMP_num)
-label var MAJMAJBYIMP "African region of trade"
-label var MAJMAJBYIMP_num "African region of trade"
-
-
-*/
 * MERGE WITH Career DATASET (CAPTAIN)
 generate CAPTAIN = ""
 replace CAPTAIN = CAPTAINA
-replace CAPTAIN = nameofthecaptain if CAPTAIN==""
+*replace CAPTAIN = nameofthecaptain if CAPTAIN==""
 replace CAPTAIN="" if CAPTAIN=="."
 merge m:1 CAPTAIN YEARAF MAJMAJBYIMP using "${output}Captain.dta"
 drop if _merge==2
@@ -89,16 +70,12 @@ assert (OUTFITTER=="" | YEARAF ==.) if _merge==1 ///
 drop _merge
 
 
-save "${output}Venture all.dta", replace
-
 * APPEND SLAVE PRICES
 merge m:1 YEARAF using "${output}Prices.dta"
 drop if _merge==2
 drop _merge
 gen pricemarkup=priceamerica/priceafrica
 label var pricemarkup "Slave price markup between America and Africa"
-
-
 
 *APPEND WARS
 merge m:1 YEARAF nationality using "${output}European wars.dta"
@@ -110,7 +87,7 @@ merge m:1 YEARAF nationality using  "${output}Neutrality.dta"
 drop if _merge==2
 drop _merge
 
-save "${output}Venture all.dta", replace
+blif
 
 
 *** COLLAPSE FATE-VARIABLE INTO FOUR CATEGORIES, DEPENDING ON WHETHER/WHEN SHIP WAS LOST
@@ -219,8 +196,9 @@ drop blif
 gen big_port=0
 replace big_port=1 if port_share>0.01 & !missing(port_share)
 label var big_port "Big African slave-trading port"
+"${output}Ventures+TSTD variables.dta"
 
 
-
-save "${output}Venture all.dta", replace
+save "${output}Enriched ventures.dta", replace
+erase "${output}Ventures+TSTD variables.dta"
 
