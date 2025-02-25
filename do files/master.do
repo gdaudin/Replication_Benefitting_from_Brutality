@@ -33,12 +33,12 @@
 	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
 	
 	*Creating an enriched venture dataset
-	do "${dir}/do files/Merge voyages with TSTD and save ventures.do"
-	do "${dir}/do files/Enrich venture db.do"
+	do "${dir}/do files/Enrich voyages and save ventures.do"
+	do "${dir}/do files/Enrich ventures db.do"
 	blif
 
 	do "${dir}/do files/Compare and select sample.do"
-	blif
+
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do"
 	do "${dir}/do files/Profit two parts regressions.do"
