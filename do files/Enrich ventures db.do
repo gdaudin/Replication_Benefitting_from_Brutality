@@ -85,8 +85,6 @@ label var period "Period"
 gen big_port=0
 replace big_port=1 if port_share>0.01 & !missing(port_share)
 label var big_port "Big African slave-trading port"
-"${output}Ventures+TSTD variables.dta"
-
 
 save "${output}Enriched ventures.dta", replace
 erase "${output}Ventures+TSTD variables.dta"

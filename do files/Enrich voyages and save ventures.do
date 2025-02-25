@@ -29,7 +29,7 @@ sort ventureid VOYAGEID
 
 keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJBYPTIMP  /*
 */ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample nameofoutfitter/*
-*/ nameofthecaptain YEARAF_own TONMOD
+*/ nameofthecaptain YEARAF_own TONMOD nationality
 sort ventureid DATEDEP
 
 foreach rank of numlist 1(1)7 {
@@ -172,14 +172,14 @@ sort ventureid YEARAF, stable
 collapse (first)  MAJMAJBYIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 			*/ (min) OUTFITTER_experience OUTFITTER_regional_experience captain_experience captain_regional_experience /*
 			*/ (mean) OUTFITTER_total_career captain_total_career /*
-			*/ (mean) port_share crowd pricemarkup war neutrality /*
+			*/ (mean) port_share crowd pricemarkup war neutral /*
 			*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
 
 *make dummies out of means
 
-foreach var in war neutrality {
+foreach var in war neutral {
 	replace `var' = 1 if `var' >=0.5
 	replace `var' = 0 if `var' <0.5
 }
