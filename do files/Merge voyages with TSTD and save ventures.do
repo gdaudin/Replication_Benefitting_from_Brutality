@@ -28,7 +28,8 @@ drop if ventureid=="" | sample==0
 sort ventureid VOYAGEID
 
 keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJSELIMP /*
-*/ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample
+*/ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample nameofoutfitter/*
+*/ nameofthecaptain YEARAF_own
 sort ventureid DATEDEP
 
 foreach rank of numlist 1(1)7 {
@@ -37,6 +38,13 @@ foreach rank of numlist 1(1)7 {
 	replace `var'`rank'=`var' if voyagenumber==`rank'
 	}
 }
+
+//Here, we assume our data on outfitter is correct
+replace OWNERA= nameofoutfitter if nameofoutfitter!=""
+//Here, we assume stdt on captain and year is correct
+replace CAPTAINA= nameofthecaptain if missing(CAPTAINA)
+replace YEARAF = YEARAF_own if missing(YEARAF)
+drop nameofoutfitter nameofthecaptain YEARAF_own
 
 
 *** COLLAPSE FATE-VARIABLE INTO FOUR CATEGORIES, DEPENDING ON WHETHER/WHEN SHIP WAS LOST, THEN GENERATE DUMMY-VARS TO CAPTURE DIFFERENT OUTCOMES
