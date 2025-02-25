@@ -31,24 +31,7 @@ drop if completedataonoutlays =="no" | completedataonreturns =="no"
 drop _merge
 
 
-* APPEND SLAVE PRICES
-merge m:1 YEARAF using "${output}Prices.dta"
-drop if _merge==2
-drop _merge
-gen pricemarkup=priceamerica/priceafrica
-label var pricemarkup "Slave price markup between America and Africa"
 
-*APPEND WARS
-merge m:1 YEARAF nationality using "${output}European wars.dta"
-drop if _merge==2
-drop _merge
-
-***APPEND NEUTRALITY
-merge m:1 YEARAF nationality using  "${output}Neutrality.dta"
-drop if _merge==2
-drop _merge
-
-***some more variables
 encode nationality, generate(nationality_num)
 gen ln_SLAXIMP = ln(SLAXIMP)
 label var ln_SLAXIMP "Enslaved persons emparked (ln)"
@@ -57,8 +40,7 @@ gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
 replace MORTALITY=VYMRTRAT if missing(MORTALITY)
 label var MORTALITY "Enslaved person mortality rate"
 
-gen crowd=SLAXIMP/TONMOD
-label var crowd "Number of embarked enslaved persons per ton"
+
 
 gen captain_experience_d=0 if !missing(captain_experience)
 replace captain_experience_d=1 if captain_experience>0 & !missing(captain_experience)
@@ -98,10 +80,6 @@ replace period=4 if YEARAF>1800 & !missing(YEARAF)
 label define lab_period 1 "pre-1750" 2 "1751-1775" 3 "1776-1800" 4 "post-1800"
 label values period lab_period
 label var period "Period"
-
-gen blif = (DATEEND-DATEDEP)/1000/60/60/24
-replace length_in_days=blif if blif!=.
-drop blif
 
 
 gen big_port=0

@@ -29,7 +29,7 @@ sort ventureid VOYAGEID
 
 keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJBYPTIMP  /*
 */ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample nameofoutfitter/*
-*/ nameofthecaptain YEARAF_own
+*/ nameofthecaptain YEARAF_own TONMOD
 sort ventureid DATEDEP
 
 foreach rank of numlist 1(1)7 {
@@ -49,6 +49,27 @@ drop nameofoutfitter nameofthecaptain YEARAF_own
 
 ****add port shares
 merge m:1 YEARAF MJBYPTIMP using "${output}port_shares.dta", keep(1 3)
+drop _merge
+
+**Crowding
+gen crowd=SLAXIMP/TONMOD
+label var crowd "Number of embarked enslaved persons per ton"
+
+* APPEND SLAVE PRICES
+merge m:1 YEARAF using "${output}Prices.dta"
+drop if _merge==2
+drop _merge
+gen pricemarkup=priceamerica/priceafrica
+label var pricemarkup "Slave price markup between America and Africa"
+
+*APPEND WARS
+merge m:1 YEARAF nationality using "${output}European wars.dta"
+drop if _merge==2
+drop _merge
+
+***APPEND NEUTRALITY
+merge m:1 YEARAF nationality using  "${output}Neutrality.dta"
+drop if _merge==2
 drop _merge
 
 
@@ -151,10 +172,18 @@ sort ventureid YEARAF, stable
 collapse (first)  MAJMAJBYIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 			*/ (min) OUTFITTER_experience OUTFITTER_regional_experience captain_experience captain_regional_experience /*
 			*/ (mean) OUTFITTER_total_career captain_total_career /*
-			*/ (mean) port_share /*
+			*/ (mean) port_share crowd pricemarkup war neutrality /*
 			*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
+
+*make dummies out of means
+
+foreach var in war neutrality {
+	replace `var' = 1 if `var' >=0.5
+	replace `var' = 0 if `var' <0.5
+}
+
 
 sort ventureid YEARAF
 
@@ -166,6 +195,8 @@ replace FATEcol=4 if FATEdum4==1
 drop FATEdum*
 
 label values FATEcol fate //label fate is defined earlier
+
+
 
 save "${output}Ventures+TSTD variables.dta", replace
 
