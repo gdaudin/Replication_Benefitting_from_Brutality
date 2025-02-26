@@ -35,7 +35,6 @@
 	*Creating an enriched venture dataset
 	do "${dir}/do files/Enrich voyages and save ventures.do"
 	do "${dir}/do files/Enrich ventures db.do"
-	blif
 
 	do "${dir}/do files/Compare and select sample.do"
 

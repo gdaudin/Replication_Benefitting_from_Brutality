@@ -98,12 +98,14 @@ br
 replace YEARAF_own = year_dep+1 if  year_dep !=.
 
 ***Drop duplicates.
-gen sample=0
-replace sample=1 if completedataonoutlays!="no" & completedataonreturns!="no"
-replace sample=2 if completedataonoutlays=="yes" & completedataonreturns=="yes"
+gen data=0
+replace data=1 if completedataonoutlays!="no" & completedataonreturns!="no"
+replace data=2 if completedataonoutlays=="yes" & completedataonreturns=="yes"
 
-bys VOYAGEID (sample): drop if _N != _n
-tab sample
+bys VOYAGEID (data): drop if _N != _n
+tab data
+
+label define data 0 "No computation possible" 1 "With estimates" 2 "Without estimates"
 
 
 **Arrange variables
@@ -116,8 +118,8 @@ drop voyageidintstd completedataonoutlays completedataonreturns voyageid_num dat
 
 *Check that we have the years for "our" voyages in the sample
 
-*br if YEARAF_own==. & sample !=0 & strmatch(VOYAGEID,"RDKRR*")==1
-assert YEARAF_own!=. if (sample !=0 & strmatch(VOYAGEID,"RDKRR*"))==1
+*br if YEARAF_own==. & datat !=0 & strmatch(VOYAGEID,"RDKRR*")==1
+assert YEARAF_own!=. if (data !=0 & strmatch(VOYAGEID,"RDKRR*"))==1
 
 
 save "${output}voyages.dta", replace

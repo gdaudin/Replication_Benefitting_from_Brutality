@@ -22,13 +22,13 @@ use "${output}voyages.dta", clear
 merge m:1 VOYAGEID using "${tastdb}tastdb-exp-2020.dta"
 drop _merge
 
-****We work only on the voyages in the profit database, and in the sample
-drop if ventureid=="" | sample==0
+****We work only on the voyages in the profit database, and with data
+drop if ventureid=="" | data==0
 
 sort ventureid VOYAGEID
 
 keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJBYPTIMP  /*
-*/ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 sample nameofoutfitter/*
+*/ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 data nameofoutfitter/*
 */ nameofthecaptain YEARAF_own TONMOD nationality
 sort ventureid DATEDEP
 
@@ -136,7 +136,7 @@ merge m:1 CAPTAIN YEARAF MAJMAJBYIMP using "${output}Captain.dta"
 drop if _merge==2
 *For debugging
 *br CAPTAIN YEARAF ventureid VOYAGEID if _merge==1 & (CAPTAIN!="" & YEARAF !=.)
-assert (CAPTAIN=="" | YEARAF ==.) if _merge==1 	&  sample >=1
+assert (CAPTAIN=="" | YEARAF ==.) if _merge==1 	&  data >=1
 	
 drop _merge
 
@@ -149,7 +149,7 @@ merge m:1 OUTFITTER YEARAF MAJMAJBYIMP using "${output}OUTFITTER.dta"
 drop if _merge==2
 *For debugging
 *br OUTFITTER YEARAF ventureid VOYAGEID if _merge==1 & (OUTFITTER!="" & YEARAF !=.)
-assert (OUTFITTER=="" | YEARAF ==.) if _merge==1 &  sample >=1
+assert (OUTFITTER=="" | YEARAF ==.) if _merge==1 &  data >=1
 
 
 
@@ -169,7 +169,7 @@ sort ventureid YEARAF, stable
 
 
 ******move back to ventures
-collapse (first)  MAJMAJBYIMP sample (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
+collapse (first)  MAJMAJBYIMP data (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 			*/ (min) OUTFITTER_experience OUTFITTER_regional_experience captain_experience captain_regional_experience /*
 			*/ (mean) OUTFITTER_total_career captain_total_career /*
 			*/ (mean) port_share crowd pricemarkup war neutral /*
