@@ -33,13 +33,10 @@ keep if (completedataonoutlays=="yes" | completedataonoutlays=="with estimates")
 
 sort ventureid
 
-* NUMBER THE INDIVIDUAL OBSERVATIONS FOR EACH VENTURE, AND KEEP THE PROFIT ESTIMATES ONLY FOR ONE OBSERVATION PER VENTURE
-
-
 gen profit= totalnetreturn/ totalnetexp-1
-bysort ventureid: gen seq=_n
-replace profit=. if seq>1
+
 label var profit "(Net returns over net outlays) -1"
+
 
 
 **Compute the silver value of the total investment
