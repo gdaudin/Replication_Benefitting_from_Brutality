@@ -146,7 +146,7 @@ outreg2 using "$output/reg_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VS
 reg profit ib3.nationality_num investment_per_slavekg
 outreg2 using "$output/reg_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) 
 
-reg profit ib3.nationality_num b3.MAJBYIMP
+reg profit ib3.nationality_num b3.MAJMAJBYIMP_num
 outreg2 using "$output/reg_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) 
 
 

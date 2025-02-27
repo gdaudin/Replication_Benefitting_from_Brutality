@@ -29,7 +29,7 @@ sort ventureid VOYAGEID
 
 keep ventureid numberofvoyages voyagenumber VOYAGEID YEARAF MAJBYIMP MJBYPTIMP  /*
 */ SLAXIMP SLAMIMP CAPTAINA OWNERA DATEEND DATEDEP FATE FATE4 data nameofoutfitter/*
-*/ nameofthecaptain YEARAF_own TONMOD nationality
+*/ nameofthecaptain YEARAF_own TONMOD nationality YEARDEP
 sort ventureid DATEDEP
 
 foreach rank of numlist 1(1)7 {
@@ -97,7 +97,7 @@ label values FATEcol fate
 **Compute the length of each voyage (if possible)
 gen length_in_days=(DATEEND-DATEDEP)/1000/60/60/24
 label var length_in_days "Length of voyage (Europe to Europe) in days"
-drop DATEEND DATEDEP
+*drop DATEEND DATEDEP
 
 
 
@@ -169,10 +169,10 @@ sort ventureid YEARAF, stable
 
 
 ******move back to ventures
-collapse (first)  MAJMAJBYIMP data (mean) YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
+collapse (first)  MAJMAJBYIMP data (mean) YEARDEP YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 			*/ (min) OUTFITTER_experience OUTFITTER_regional_experience captain_experience captain_regional_experience /*
 			*/ (mean) OUTFITTER_total_career captain_total_career /*
-			*/ (mean) port_share crowd pricemarkup war neutral /*
+			*/ (mean) port_share crowd pricemarkup war neutral TONMOD/*
 			*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP

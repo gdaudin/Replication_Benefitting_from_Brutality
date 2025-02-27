@@ -58,7 +58,7 @@ replace intermediarytradingoperation=0 if missing(intermediarytradingoperation)
 
 
 * MERGE CASH FLOW AND VENTURE-DATABASES INTO ONE
-merge m:1 ventureid using "${output}Venture all.dta", nogen
+merge m:1 ventureid using "${output}Enriched ventures.dta", nogen
 drop if value==.
 
 drop if nationality==""
@@ -69,8 +69,8 @@ save "${output}Database for IRR computation_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VS
 
 *Assign a transaction year when absent and assignement is possible
 replace transaction_year=yearofdeparturefromportofoutfit if transaction_year==. & (timing=="Outfitting" | timing=="After outfitting")
-replace transaction_year=YEARDEP if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting")
-replace transaction_year=YEARAF if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting")
+replace transaction_year=YEARDEP if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
+replace transaction_year=YEARAF if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
 
 egen yearmax=max(transaction_year), by(ventureid timing)
 replace transaction_year=yearmax  if transaction_year==. &  (timing=="Return" | timing=="Transcations during voyage")

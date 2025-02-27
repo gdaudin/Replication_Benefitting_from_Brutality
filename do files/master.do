@@ -35,10 +35,10 @@
 	*Creating an enriched venture dataset
 	do "${dir}/do files/Enrich voyages and save ventures.do"
 	do "${dir}/do files/Enrich ventures db.do"
-
 	do "${dir}/do files/Compare and select sample.do"
-
+	/*This introduces the cash flows*/
 	do "${dir}/do files/Database for profit and IRR computation.do"
+	
 	do "${dir}/do files/Profit computation.do"
 	do "${dir}/do files/Profit two parts regressions.do"
 	do "${dir}/do files/Profit two parts regressions--various hypothesis.do"
@@ -69,10 +69,11 @@
 
 	**For IRR computations
 	do "${dir}/do files/IRR computation.do"  /*uses do "${dir}/do files/irrGD.do"*/ 
-	**To transform profits into IRR (this is long too) -- previous if you want to work with a limited number of ventures
+	**To transform profits into IRR (this is long)
+	***previous solutio if you want to work with a limited number of ventures
 	*do "${dir}/do files/Transforming profit into IRR.do" /*uses do "${dir}/do files/irrGD.do"*/ 
 	*I think the idea of that program is to compute a typical chronolgy of returns and apply it to the profits of the ventures.
-	*Maybe too complicated ?
+	*Maybe too complicated and not done finaly.?
 
 	
 

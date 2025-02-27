@@ -173,7 +173,10 @@ twoway (scatter post_wt frak_post_wt) (lfit post_wt frak_post_wt)
 
 collapse (sum) post_wt frak_post_wt, by(ventureid)
 
-save "${output}venture weights.dta", replace
+merge 1:1 ventureid using "${output}Enriched ventures.dta", nogen
+
+save "${output}Enriched ventures.dta", replace
+
 
 
 

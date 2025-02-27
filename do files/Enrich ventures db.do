@@ -81,6 +81,7 @@ label define lab_period 1 "pre-1750" 2 "1751-1775" 3 "1776-1800" 4 "post-1800"
 label values period lab_period
 label var period "Period"
 
+encode MAJMAJBYIMP, gen(MAJMAJBYIMP_num)
 
 gen big_port=0
 replace big_port=1 if port_share>0.01 & !missing(port_share)
