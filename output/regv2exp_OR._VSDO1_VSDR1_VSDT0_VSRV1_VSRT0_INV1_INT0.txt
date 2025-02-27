@@ -1,52 +1,52 @@
 		(1)	(2)	(3)	(4)	(5)	(6)
 VARIABLES	LABELS	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1
 							
-2.nationality_num	Nationality = 2, Dutch	-0.062	-0.081	0.16**	0.071	0.0097	-0.061
-		(0.044)	(0.062)	(0.077)	(0.077)	(0.081)	(0.21)
-4.nationality_num	Nationality = 4, French	-0.21*	-0.27*	-0.11	-0.24*	-0.13	-0.13
-		(0.11)	(0.14)	(0.14)	(0.14)	(0.13)	(0.13)
-war	War involving own nationality	0.0024	0.030	0.048	0.015	0.061	0.060
-		(0.062)	(0.065)	(0.069)	(0.064)	(0.069)	(0.065)
-neutral	Neutrality of own nation	0.036	0.040	-0.010	-0.0029	0.0071	-0.0011
-		(0.069)	(0.071)	(0.075)	(0.078)	(0.070)	(0.079)
-1.period	Period = 1, pre-1750	-0.055	-0.036	-0.14*	-0.083	-0.15*	-0.14
-		(0.064)	(0.070)	(0.081)	(0.076)	(0.078)	(0.085)
-3.period	Period = 3, 1776-1800	0.079	0.12	0.25*	0.15	0.20*	0.21*
-		(0.081)	(0.093)	(0.13)	(0.11)	(0.11)	(0.11)
-4.period	Period = 4, post-1800	0.12	0.13	0.52***	0.25	0.50***	0.47***
-		(0.15)	(0.15)	(0.18)	(0.16)	(0.17)	(0.18)
-2.MAJMAJBYIMP_num	African region of trade = 2, South		0.086	0.058	0.047	0.044	0.056
-			(0.11)	(0.099)	(0.11)	(0.092)	(0.094)
-3.MAJMAJBYIMP_num	African region of trade = 3, West		-0.0034	-0.067	-0.0064	-0.066	-0.054
-			(0.045)	(0.051)	(0.046)	(0.050)	(0.052)
-big_port	Big African slave-trading port		-0.059	-0.061	-0.076	-0.060	-0.058
-			(0.054)	(0.047)	(0.056)	(0.046)	(0.048)
-TONMOD	Tonnage standardized on British measured tons, 1773-1835				-0.00035	0.0017**	0.0016**
-					(0.00044)	(0.00076)	(0.00070)
-crowd	Number of embarked enslaved persons per ton			0.15***	0.11**	0.24***	0.24***
-				(0.046)	(0.044)	(0.070)	(0.065)
-OUTFITTER_experience_d	Not the first voyage of the outfitter			0.0081	0.00040	0.040	-0.0077
-				(0.068)	(0.067)	(0.073)	(0.10)
-captain_experience_d	Not the first voyage of the captain			0.061	0.045	0.048	0.013
-				(0.049)	(0.046)	(0.046)	(0.076)
-ln_totalnetexp_silver_ship	Net expenditure on venture (ln(silver grams))			-0.28**		-0.45**	-0.44***
-				(0.12)		(0.18)	(0.17)
-OUTFITTER_total_career	(min) OUTFITTER_total_career						0.00088
-							(0.0022)
-captain_total_career	(min) captain_total_career						0.0043
-							(0.0053)
-OUTFITTER_regional_experience_d	Not the first voyage of the outfitter in the region						0.035
+2.nationality_num	Nationality = 2, Dutch	-0.066	-0.10*	0.11	0.0061	-0.032	-0.17
+		(0.045)	(0.061)	(0.080)	(0.078)	(0.080)	(0.22)
+4.nationality_num	Nationality = 4, French	-0.19	-0.21	-0.090	-0.20	-0.13	-0.14
+		(0.15)	(0.21)	(0.24)	(0.21)	(0.23)	(0.23)
+war	(mean) war	-0.0050	-0.014	0.030	-0.023	0.038	0.030
+		(0.062)	(0.061)	(0.068)	(0.062)	(0.068)	(0.066)
+neutral	(mean) neutral	0.041	0.027	0.011	-0.0058	0.024	0.011
+		(0.070)	(0.072)	(0.082)	(0.079)	(0.078)	(0.086)
+1.period	Period = 1, pre-1750	-0.058	-0.050	-0.15*	-0.097	-0.15**	-0.14*
+		(0.064)	(0.069)	(0.078)	(0.074)	(0.075)	(0.081)
+3.period	Period = 3, 1776-1800	0.079	0.12	0.22	0.14	0.18	0.19
+		(0.082)	(0.089)	(0.14)	(0.11)	(0.12)	(0.12)
+4.period	Period = 4, post-1800	0.12	0.14	0.47**	0.22	0.44**	0.41**
+		(0.14)	(0.14)	(0.18)	(0.16)	(0.17)	(0.17)
+2.MAJMAJBYIMP_num	(first) MAJMAJBYIMP = 2, South		0.076	0.045	0.037	0.024	0.032
+			(0.11)	(0.10)	(0.11)	(0.095)	(0.095)
+3.MAJMAJBYIMP_num	(first) MAJMAJBYIMP = 3, West		-0.021	-0.070	-0.025	-0.070	-0.068
+			(0.047)	(0.053)	(0.049)	(0.052)	(0.055)
+big_port	Big African slave-trading port		-0.084	-0.092*	-0.095*	-0.091*	-0.095*
+			(0.056)	(0.049)	(0.056)	(0.047)	(0.050)
+TONMOD	(mean) TONMOD				-0.00016	0.0016**	0.0015*
+					(0.00043)	(0.00079)	(0.00076)
+crowd	(mean) crowd			0.14***	0.11**	0.22***	0.21***
+				(0.046)	(0.044)	(0.072)	(0.070)
+OUTFITTER_experience_d	Not the first voyage of the outfitter			0.042	0.063	0.065	0.024
+				(0.075)	(0.070)	(0.080)	(0.12)
+captain_experience_d	Not the first voyage of the captain			0.0050	-0.0067	-0.0090	-0.034
+				(0.057)	(0.052)	(0.054)	(0.078)
+ln_totalnetexp_silver_ship	Net expenditure on venture (ln(silver grams))			-0.23*		-0.38**	-0.37**
+				(0.13)		(0.19)	(0.18)
+OUTFITTER_total_career	(mean) OUTFITTER_total_career						0.0016
+							(0.0023)
+captain_total_career	(mean) captain_total_career						-0.00045
+							(0.0065)
+OUTFITTER_regional_experience_d	Not the first voyage of the outfitter in the region						0.0077
+							(0.092)
+captain_regional_experience_d	Not the first voyage of the captain in the region						0.038
 							(0.086)
-captain_regional_experience_d	Not the first voyage of the captain in the region						0.028
-							(0.078)
-1.nationality_num	Nationality = 1, Danish	0.18	0.14				
+1.nationality_num	Nationality = 1, Danish	0.18	0.10				
 		(0.17)	(0.18)				
-5.nationality_num	Nationality = 5, Spanish	0.64***	0.59***				
-		(0.21)	(0.17)				
-Constant	Constant	0.071**	0.074	3.49**	-0.056	5.30**	5.17**
-		(0.028)	(0.046)	(1.58)	(0.14)	(2.08)	(2.00)
+5.nationality_num	Nationality = 5, Spanish	0.64***	0.60***				
+		(0.21)	(0.16)				
+Constant	Constant	0.074***	0.12**	2.86*	-0.050	4.52**	4.36**
+		(0.028)	(0.048)	(1.65)	(0.15)	(2.21)	(2.16)
 							
-Observations		347	280	262	262	262	262
-R-squared		0.189	0.122	0.181	0.096	0.220	0.224
+Observations		346	298	263	280	263	263
+R-squared		0.166	0.091	0.117	0.064	0.147	0.152
 Robust standard errors in parentheses							
 *** p<0.01, ** p<0.05, * p<0.1							

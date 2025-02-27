@@ -5,18 +5,18 @@
 Period                                              |                                                     
   pre-1750                                          |              11        12                         23
   1751-1775                                         |              71       146       27               244
-  1776-1800                                         |       5      19        51       22                97
+  1776-1800                                         |       5      19        50       22                96
   post-1800                                         |                         6        1        17      24
-  Total                                             |       5     101       215       50        17     388
-African region of trade                             |                                                     
-  Bight of Guinea                                   |       5      16       115       16         2     154
-  South                                             |              28        19       11         1      59
+  Total                                             |       5     101       214       50        17     387
+(first) MAJMAJBYIMP                                 |                                                     
+  Bight of Guinea                                   |       5      16       131       19         2     173
+  South                                             |              28        20       13         1      62
   West                                              |              53        39        1         1      94
-  Total                                             |       5      97       173       28         4     307
-Fate of venture                                     |                                                     
-  Voyage completed as intended                      |              94       163       32         6     295
-  Original goal thwarted before disembarking slaves |                         9        1                10
-  Original goal thwarted after disembarking slaves  |       5       6        19       14        11      55
-  Unspecified/unknown                               |               1        24        3                28
-  Total                                             |       5     101       215       50        17     388
+  Total                                             |       5      97       190       33         4     329
+FATEcol                                             |                                                     
+  Voyage completed as intended                      |              94       168       34         6     302
+  Original goal thwarted before disembarking slaves |                         4        3                 7
+  Original goal thwarted after disembarking slaves  |               5        13        3                21
+  Unspecified/unknown                               |       5                 4        6        10      25
+  Total                                             |       5      99       189       46        16     355
 ----------------------------------------------------------------------------------------------------------

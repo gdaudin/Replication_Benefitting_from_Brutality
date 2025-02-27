@@ -2,50 +2,50 @@
                                                             |                              Nationality                            
                                                             |   Danish       Dutch     English      French     Spanish       Total
 ------------------------------------------------------------+---------------------------------------------------------------------
-War involving own nationality                               |                                                                     
-  Mean                                                      |     0.00        0.03        0.29        0.08        0.35        0.20
+(mean) war                                                  |                                                                     
+  Mean                                                      |     0.00        0.03        0.33        0.07        0.35        0.22
   Median                                                    |     0.00        0.00        0.00        0.00        0.00        0.00
-  Standard deviation                                        |     0.00        0.17        0.46        0.28        0.49        0.40
-  Number of nonmissing values                               |        5         104         275          95          17         496
-Neutrality of own nation                                    |                                                                     
-  Mean                                                      |     1.00        0.50        0.11        0.52        0.12        0.28
+  Standard deviation                                        |     0.00        0.17        0.47        0.26        0.49        0.42
+  Number of nonmissing values                               |        5         104         290          85          17         501
+(mean) neutral                                              |                                                                     
+  Mean                                                      |     1.00        0.50        0.17        0.56        0.12        0.31
   Median                                                    |     1.00        0.50        0.00        1.00        0.00        0.00
-  Standard deviation                                        |     0.00        0.50        0.32        0.50        0.33        0.45
-  Number of nonmissing values                               |        5         104         275          95          17         496
+  Standard deviation                                        |     0.00        0.50        0.37        0.50        0.33        0.46
+  Number of nonmissing values                               |        5         104         290          85          17         501
 Big African slave-trading port                              |                                                                     
-  Mean                                                      |     0.00        0.31        0.50        0.55        0.24        0.45
-  Median                                                    |     0.00        0.00        0.00        1.00        0.00        0.00
-  Standard deviation                                        |     0.00        0.46        0.50        0.50        0.44        0.50
-  Number of nonmissing values                               |        5         104         292          95          17         513
+  Mean                                                      |     0.00        0.31        0.56        0.67        0.24        0.51
+  Median                                                    |     0.00        0.00        1.00        1.00        0.00        1.00
+  Standard deviation                                        |     0.00        0.46        0.50        0.47        0.44        0.50
+  Number of nonmissing values                               |        5         104         290          85          17         501
 Total net expenditure in grams of silver for the whole ship |                                                                     
-  Mean                                                      |  761,358     749,635     692,411   1,043,220   1,715,847     789,728
-  Median                                                    |  677,291     675,530     606,692   1,071,704   1,701,476     669,798
-  Standard deviation                                        |  192,373     221,826     433,123     477,337     481,056     455,386
-  Minimum value                                             |  556,265     454,928     111,329      61,315   1,037,501      61,315
+  Mean                                                      |  761,358     749,635     659,322   1,015,465   1,715,847     764,857
+  Median                                                    |  677,291     675,530     596,146     958,552   1,701,476     664,753
+  Standard deviation                                        |  192,373     221,826     462,591     499,585     481,056     477,324
+  Minimum value                                             |  556,265     454,928           0      61,315   1,037,501           0
   Maximum value                                             |  966,599   1,383,340   3,492,068   2,305,632   2,446,436   3,492,068
-  Number of nonmissing values                               |        5         104         292          67          17         485
-Tonnage standardized on British measured tons, 1773-1835    |                                                                     
-  Mean                                                      |        .         325         190         262           .         231
-  Median                                                    |                  316         182         272                     220
-  Standard deviation                                        |        .          83          78          71           .          97
-  Minimum value                                             |        .         140          44         110           .          44
+  Number of nonmissing values                               |        5         104         290          64          17         480
+(mean) TONMOD                                               |                                                                     
+  Mean                                                      |        .         325         189         260           .         228
+  Median                                                    |                  316         182         272                     218
+  Standard deviation                                        |        .          83          75          74           .          96
+  Minimum value                                             |        .         140          44          60           .          44
   Maximum value                                             |        .         497         501         365           .         501
-  Number of nonmissing values                               |        0          97         254          46           0         397
-Number of embarked enslaved persons per ton                 |                                                                     
-  Mean                                                      |        .        0.89        1.60        1.58           .        1.42
-  Median                                                    |                 0.82        1.50        1.58                    1.30
-  Standard deviation                                        |        .        0.33        0.64        0.47           .        0.64
-  Minimum value                                             |        .        0.17        0.42        0.67           .        0.17
+  Number of nonmissing values                               |        0          97         274          43           0         414
+(mean) crowd                                                |                                                                     
+  Mean                                                      |        .        0.89        1.58        1.57           .        1.41
+  Median                                                    |                 0.82        1.49        1.53                    1.30
+  Standard deviation                                        |        .        0.33        0.62        0.46           .        0.62
+  Minimum value                                             |        .        0.17        0.42        0.87           .        0.17
   Maximum value                                             |        .        1.95        4.88        3.19           .        4.88
-  Number of nonmissing values                               |        0          97         251          46           0         394
+  Number of nonmissing values                               |        0          97         271          43           0         411
 Not the first voyage of the outfitter                       |                                                                     
-  Mean                                                      |        .        0.97        0.86        0.78        0.92        0.87
+  Mean                                                      |        .        0.97        0.84        0.75        0.92        0.85
   Median                                                    |                 1.00        1.00        1.00        1.00        1.00
-  Standard deviation                                        |        .        0.17        0.35        0.41        0.29        0.34
-  Number of nonmissing values                               |        0         104         244          92          12         452
+  Standard deviation                                        |        .        0.17        0.37        0.44        0.29        0.35
+  Number of nonmissing values                               |        0         104         245          84          12         445
 Not the first voyage of the captain                         |                                                                     
-  Mean                                                      |     1.00        0.73        0.71        0.43        0.56        0.65
+  Mean                                                      |     1.00        0.73        0.69        0.44        0.56        0.65
   Median                                                    |     1.00        1.00        1.00        0.00        1.00        1.00
-  Standard deviation                                        |        .        0.45        0.46        0.50        0.51        0.48
-  Number of nonmissing values                               |        1         104         260          93          16         474
+  Standard deviation                                        |        .        0.45        0.47        0.50        0.51        0.48
+  Number of nonmissing values                               |        1         104         280          84          16         485
 ----------------------------------------------------------------------------------------------------------------------------------

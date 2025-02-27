@@ -1,0 +1,46 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1
+							
+2.nationality_num	Nationality = 2, Dutch	0.075	-0.022	0.23*	0.081	-0.22	-0.30
+		(0.083)	(0.085)	(0.12)	(0.099)	(0.14)	(0.27)
+4.nationality_num	Nationality = 4, French	0.16**	0.035	0.30**	0.18	0.20*	0.18*
+		(0.077)	(0.12)	(0.14)	(0.12)	(0.10)	(0.099)
+war	(mean) war	-0.045	-0.066	-0.022	-0.092	-0.027	-0.043
+		(0.068)	(0.071)	(0.079)	(0.067)	(0.081)	(0.069)
+neutral	(mean) neutral	-0.33	-0.36*	-0.32*	-0.38*	-0.19	-0.21
+		(0.22)	(0.21)	(0.19)	(0.20)	(0.15)	(0.14)
+3.period	Period = 3, 1776-1800	0.37	0.38*	0.51**	0.44*	0.43**	0.44**
+		(0.22)	(0.22)	(0.25)	(0.23)	(0.18)	(0.18)
+2.MAJMAJBYIMP_num	(first) MAJMAJBYIMP = 2, South		0.17	0.24	0.22	0.22	0.21
+			(0.19)	(0.20)	(0.24)	(0.16)	(0.15)
+3.MAJMAJBYIMP_num	(first) MAJMAJBYIMP = 3, West		0.073	-0.059	0.049	0.024	0.011
+			(0.063)	(0.080)	(0.058)	(0.064)	(0.068)
+big_port	Big African slave-trading port		-0.061	-0.078	-0.098	-0.076	-0.076
+			(0.067)	(0.060)	(0.074)	(0.057)	(0.056)
+TONMOD	(mean) TONMOD				-0.00033	0.0036***	0.0034***
+					(0.00046)	(0.0012)	(0.0011)
+crowd	(mean) crowd			0.18***	0.14**	0.33***	0.33***
+				(0.063)	(0.055)	(0.091)	(0.076)
+OUTFITTER_experience_d	Not the first voyage of the outfitter			0.16*	0.14*	0.19*	0.17
+				(0.094)	(0.073)	(0.096)	(0.14)
+captain_experience_d	Not the first voyage of the captain			0.074	0.061	0.040	-0.12
+				(0.079)	(0.073)	(0.062)	(0.12)
+ln_totalnetexp_silver_ship	Net expenditure on venture (ln(silver grams))			-0.38**		-0.71***	-0.71***
+				(0.16)		(0.24)	(0.21)
+OUTFITTER_total_career	(mean) OUTFITTER_total_career						0.0016
+							(0.0025)
+captain_total_career	(mean) captain_total_career						-0.0067
+							(0.0081)
+OUTFITTER_regional_experience_d	Not the first voyage of the outfitter in the region						-0.031
+							(0.12)
+captain_regional_experience_d	Not the first voyage of the captain in the region						0.23
+							(0.14)
+1.period	Period = 1, pre-1750	-0.45***					
+		(0.031)					
+Constant	Constant	0.073**	0.11*	4.61**	-0.19	8.16***	8.22***
+		(0.031)	(0.062)	(2.03)	(0.16)	(2.75)	(2.47)
+							
+Observations		320	292	257	274	257	257
+R-squared		0.080	0.092	0.301	0.162	0.403	0.425
+Robust standard errors in parentheses							
+*** p<0.01, ** p<0.05, * p<0.1							

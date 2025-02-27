@@ -1,24 +1,22 @@
 		(1)
 VARIABLES	LABELS	(Net returns over net outlays) -1
 		
-ln_SLAXIMP	Enslaved persons emparked (ln)	0.14***
-		(0.054)
-MORTALITY	Enslaved person mortality rate	-0.95***
-		(0.20)
-investment_per_slave	Total net expenditure in g. of silver per enslaved person	-0.000035*
-		(0.000019)
-pricemarkup	Slave price markup between America and Africa	-0.0054
-		(0.017)
-ln_length_in_days	ln_length_in_days	-0.29***
-		(0.068)
-2.FATEcol	Fate of venture = 2, Original goal thwarted before disembarking slaves	-0.11
-		(0.071)
-3.FATEcol	Fate of venture = 3, Original goal thwarted after disembarking slaves	0.12
-		(0.092)
-Constant	Constant	1.32***
-		(0.47)
+ln_SLAXIMP	Enslaved persons emparked (ln)	0.18***
+		(0.055)
+MORTALITY	Enslaved person mortality rate	-1.02***
+		(0.22)
+investment_per_slave	Total net expenditure in g. of silver per enslaved person	-0.000022
+		(0.000016)
+pricemarkup	(mean) pricemarkup	-0.0056
+		(0.018)
+ln_length_in_days	ln_length_in_days	-0.28***
+		(0.076)
+3.FATEcol	FATEcol = 3, Original goal thwarted after disembarking slaves	0.17
+		(0.11)
+Constant	Constant	1.01**
+		(0.48)
 		
-Observations		276
-R-squared		0.191
+Observations		287
+R-squared		0.153
 Robust standard errors in parentheses		
 *** p<0.01, ** p<0.05, * p<0.1		

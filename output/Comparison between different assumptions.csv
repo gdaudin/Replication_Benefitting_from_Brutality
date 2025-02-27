@@ -1,38 +1,38 @@
-		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)
-VARIABLES	LABELS	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1
-												
-2.nationality_num	Nationality = 2, Dutch	0.18**	-0.78	0.046	0.018	0.034	0.0070	0.024	0.022	0.043	-0.012	0.0021
-		(0.069)	(0.48)	(0.072)	(0.067)	(0.069)	(0.071)	(0.068)	(0.068)	(0.068)	(0.061)	(0.061)
-4.nationality_num	Nationality = 4, French	0.19**	-0.15	-0.099	-0.000031	0.049	0.0044	0.023	0.020	0.042	-0.016	-0.0015
-		(0.082)	(0.31)	(0.095)	(0.084)	(0.086)	(0.089)	(0.085)	(0.085)	(0.085)	(0.076)	(0.076)
-1.period	Period = 1, pre-1750	-0.11	-0.41	-0.11	-0.099	-0.088	-0.058	-0.093	-0.094	-0.088	-0.089	-0.084
-		(0.070)	(0.34)	(0.088)	(0.082)	(0.083)	(0.086)	(0.082)	(0.082)	(0.083)	(0.074)	(0.075)
-3.period	Period = 3, 1776-1800	0.35***	-0.21	0.21***	0.21***	0.21***	0.25***	0.21***	0.21***	0.22***	0.15**	0.16**
-		(0.073)	(0.54)	(0.070)	(0.068)	(0.070)	(0.072)	(0.069)	(0.069)	(0.070)	(0.062)	(0.063)
-4.period	Period = 4, post-1800	0.79***		0.54***	0.53***	0.52***	0.65***	0.52***	0.53***	0.54***	0.45***	0.47***
-		(0.19)		(0.17)	(0.17)	(0.17)	(0.17)	(0.17)	(0.17)	(0.17)	(0.15)	(0.15)
-war	War involving own nationality	0.071	1.04*	0.045	0.047	0.049	0.067	0.047	0.051	0.061	0.037	0.047
-		(0.066)	(0.51)	(0.061)	(0.059)	(0.060)	(0.062)	(0.059)	(0.059)	(0.060)	(0.053)	(0.053)
-neutral	Neutrality of own nation	-0.027	0.66*	-0.00049	-0.012	-0.031	-0.033	-0.021	-0.021	-0.019	0.0019	0.0035
-		(0.069)	(0.38)	(0.068)	(0.063)	(0.065)	(0.067)	(0.064)	(0.064)	(0.065)	(0.058)	(0.058)
-pricemarkup	Slave price markup between America and Africa	-0.023	-0.035	-0.011	-0.0079	-0.0071	-0.0081	-0.0075	-0.0076	-0.0075	-0.0098	-0.0096
-		(0.023)	(0.072)	(0.023)	(0.022)	(0.022)	(0.023)	(0.022)	(0.022)	(0.022)	(0.020)	(0.020)
-investment_per_slavekg	Total net expenditure in kg of silver per enslaved person	-0.086***	-0.39***	-0.086***	-0.091***	-0.094***	-0.10***	-0.092***	-0.093***	-0.096***	-0.088***	-0.091***
-		(0.024)	(0.12)	(0.022)	(0.021)	(0.022)	(0.022)	(0.022)	(0.022)	(0.022)	(0.019)	(0.018)
-OUTFITTER_experience_d	Not the first voyage of the outfitter	-0.065	-0.20	0.0037	0.014	0.019	0.0068	0.016	0.017	0.0098	0.0076	0.0020
-		(0.069)	(0.24)	(0.066)	(0.065)	(0.066)	(0.068)	(0.065)	(0.065)	(0.066)	(0.059)	(0.059)
-captain_experience_d	Not the first voyage of the captain	0.060	-0.060	0.050	0.075	0.086*	0.089*	0.080*	0.081*	0.080*	0.075*	0.075*
-		(0.049)	(0.18)	(0.048)	(0.046)	(0.047)	(0.048)	(0.046)	(0.046)	(0.046)	(0.041)	(0.042)
-MORTALITY	Enslaved person mortality rate	-1.07***	-0.67	-1.02***	-1.15***	-1.15***	-1.20***	-1.15***	-1.14***	-1.14***	-1.13***	-1.12***
-		(0.27)	(0.84)	(0.27)	(0.26)	(0.26)	(0.27)	(0.26)	(0.26)	(0.26)	(0.23)	(0.24)
-crowd	Number of embarked enslaved persons per ton	0.14***	0.16	0.043	0.016	0.0036	0.013	0.0090	0.0092	0.0079	-0.0050	-0.0073
-		(0.049)	(0.20)	(0.049)	(0.048)	(0.049)	(0.050)	(0.048)	(0.048)	(0.049)	(0.043)	(0.044)
-ln_totalnetexp_silver_ship	Net expenditure on venture (ln(silver grams))	-0.34***	-0.40**	-0.16***	-0.16***	-0.16***	-0.16***	-0.16***	-0.16***	-0.16***	-0.11**	-0.11**
-		(0.052)	(0.17)	(0.054)	(0.052)	(0.054)	(0.055)	(0.053)	(0.053)	(0.054)	(0.049)	(0.049)
-Constant	Constant	4.72***	6.88***	2.47***	2.48***	2.48***	2.50***	2.47***	2.45***	2.52***	1.80***	1.83***
-		(0.66)	(2.15)	(0.68)	(0.67)	(0.68)	(0.71)	(0.67)	(0.67)	(0.69)	(0.62)	(0.63)
-												
-Observations		335	43	270	292	292	292	292	292	292	292	292
-R-squared		0.343	0.828	0.236	0.234	0.222	0.263	0.227	0.229	0.230	0.225	0.229
-Standard errors in parentheses												
-*** p<0.01, ** p<0.05, * p<0.1												
+		(1)
+VARIABLES	LABELS	(Net returns over net outlays) -1
+		
+2.nationality_num	Nationality = 2, Dutch	-0.0038
+		(0.066)
+4.nationality_num	Nationality = 4, French	0.21***
+		(0.075)
+1.period	Period = 1, pre-1750	-0.082
+		(0.080)
+3.period	Period = 3, 1776-1800	0.19***
+		(0.068)
+4.period	Period = 4, post-1800	0.49***
+		(0.16)
+war	(mean) war	0.029
+		(0.057)
+neutral	(mean) neutral	-0.038
+		(0.062)
+pricemarkup	(mean) pricemarkup	-0.0085
+		(0.021)
+investment_per_slavekg	Total net expenditure in kg of silver per enslaved person	-0.099***
+		(0.021)
+OUTFITTER_experience_d	Not the first voyage of the outfitter	0.068
+		(0.060)
+captain_experience_d	Not the first voyage of the captain	0.043
+		(0.044)
+MORTALITY	Enslaved person mortality rate	-1.39***
+		(0.26)
+crowd	(mean) crowd	0.0089
+		(0.047)
+ln_totalnetexp_silver_ship	Net expenditure on venture (ln(silver grams))	-0.12**
+		(0.049)
+Constant	Constant	1.92***
+		(0.62)
+		
+Observations		298
+R-squared		0.251
+Standard errors in parentheses		
+*** p<0.01, ** p<0.05, * p<0.1		
