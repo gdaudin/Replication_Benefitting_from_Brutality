@@ -49,6 +49,7 @@
 	do "${dir}/do files/Database for profit computation -- imputed.do"
 	profit_computation 0.5 1 1 0 1 0 1 0 IMP 
 	profit_computation 0.5 1 1 0 1 0 1 0 onlyIMP 
+
 	profit_analysis 0.5 1 1 0 1 0 1 0 IMP
 	profit_analysis 0.5 1 1 0 1 0 1 0 onlyIMP
 
@@ -63,10 +64,6 @@
 	do "${dir}/do files/Profit graphs.do"
 
 
-
-	do "${dir}/do files/DS -- profit graphs -- profit analysis  -- Robustness.do" /*only calls different programs, but long*/
-	**We are not using these tables (which fully reproduce the main analysis for each hypothesis)
-
 	**For IRR computations
 	do "${dir}/do files/IRR computation.do"  /*uses do "${dir}/do files/irrGD.do"*/ 
 	**To transform profits into IRR (this is long)
@@ -75,7 +72,9 @@
 	*I think the idea of that program is to compute a typical chronolgy of returns and apply it to the profits of the ventures.
 	*Maybe too complicated and not done finaly.?
 
-	
+	****Robustess	
+	do "${dir}/do files/DS -- profit graphs -- profit analysis  -- Robustness.do" /*only calls different programs, but long*/
+	**We are not using these tables (which fully reproduce the main analysis for each hypothesis)
 
 	**Various 
 

@@ -22,8 +22,9 @@ use "${output}voyages.dta", clear
 merge m:1 VOYAGEID using "${tastdb}tastdb-exp-2020.dta"
 drop _merge
 
-****We work only on the voyages in the profit database, and with data
-drop if ventureid=="" | data==0
+****We work only on the voyages in the profit database
+**we need to keep the voyages without full data to be able to impute latter
+drop if ventureid==""
 
 sort ventureid VOYAGEID
 
@@ -171,7 +172,7 @@ sort ventureid YEARAF, stable
 ******move back to ventures
 collapse (first)  MAJMAJBYIMP data (mean) YEARDEP YEARAF SLAXIMP SLAMIMP length_in_days (max) numberofvoyages FATEdum1 FATEdum2 FATEdum3 FATEdum4 DATEDEP* DATEEND* /*
 			*/ (min) OUTFITTER_experience OUTFITTER_regional_experience captain_experience captain_regional_experience /*
-			*/ (mean) OUTFITTER_total_career captain_total_career /*
+			*/ (mean) OUTFITTER_total_career captain_total_career priceamerica/*
 			*/ (mean) port_share crowd pricemarkup war neutral TONMOD/*
 			*/, by(ventureid)
 

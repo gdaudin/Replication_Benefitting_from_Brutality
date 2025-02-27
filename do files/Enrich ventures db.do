@@ -27,9 +27,8 @@ tab completedataonoutlays completedataonreturns if _merge==2
 tab ventureid if _merge==2 & completedataonoutlays=="yes" & completedataonreturns=="yes"
 
 assert completedataonoutlays =="no" | completedataonreturns =="no" if _merge==2
-drop if completedataonoutlays =="no" | completedataonreturns =="no"
+*drop if completedataonoutlays =="no" | completedataonreturns =="no"
 drop _merge
-
 
 
 encode nationality, generate(nationality_num)
