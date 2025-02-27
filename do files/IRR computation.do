@@ -13,6 +13,8 @@ else if lower(c(username)) == "xronkl" {
 	global graphs "$dir\graphs\"
 }
 clear
+**Notice that the sources of GD126, GD127 and GD128 compute the irr (but does not give the data to do it ourselves)
+**See end of the program for its integration
 
 do "$dir/do files/irrGD.do"
 
@@ -44,6 +46,8 @@ local possibleventures "`possibleventures' GD028 GD029 GD033 GD034 GD035 GD036 G
 local possibleventures "`possibleventures' GD040 GD041 GD042 GD043 GD044 GD045 GD046 GD052 GD155"
 local possibleventures "`possibleventures' GD156 GD157 GD158 GD159 GD160"
 local possibleventures "`possibleventures' DR001 DR006 DR009 DR010 DR053"
+local possibleventures "`possibleventures' GD126 GD127 GD128"
+/// The ones we know the irr of from source
 **GD013 not possible because of no link with TSTD
 drop if voyageidintstd==""
 **GD014 is only 1 voyage in TSTD
@@ -154,6 +158,7 @@ bys ventureid: keep if _n==1
 save "${output}temp_profit.dta", replace
 
 use "${output}temp.dta", clear
+drop if ventureid =="GD126" | ventureid=="GD127" | ventureid=="GD128"
 erase "${output}temp.dta"
 
 collapse(sum) Relative_flow, by(ventureid relative_timing)
@@ -193,10 +198,24 @@ foreach i of local ventureid_list {
 
 keep ventureid irr
 drop if ventureid ==""
+
+/*I add the IRR available in sources*/
+local new=_N+3
+set obs `new'
+sort ventureid
+replace ventureid="GD126" in 1
+replace ventureid="GD127" in 2
+replace ventureid="GD128" in 3
+replace irr=0.1369 in 1
+replace irr=0.1899 in 2
+replace irr=0.028 in 3
+
+
 merge 1:1 ventureid using "${output}temp_profit.dta"
 assert _merge==3
 drop _merge
 erase "${output}temp_profit.dta"
+
 
 save "${output}irr_results_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", replace
 

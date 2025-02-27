@@ -1611,7 +1611,7 @@ Line_number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,in
 3,GD126,Return,Entries,303168.3,,,,,Return,Livres tournois,Incertitude sur l’interprétation
 1,GD127,Expenditure,Mon Compte,104687.008333333,,,,,Outfitting,Livres tournois,
 2,GD127,Expenditure,Frais de désarmement,14554,,,,,Return,Livres tournois,
-3,GD127,Expenditure,Retours,162727.2,,,,,Return,Livres tournois,
+3,GD127,Return,Retours,162727.2,,,,,Return,Livres tournois,
 1,GD128,Expenditure,Mon Compte,99905.8541666667,,,,,Outfitting,Livres tournois,
 3,GD128,Return,Credit,126514.66,,,,,Return,Livres tournois,
 1,GD138,Expenditure,Value of ship (Valeur du navire),76891,,,,,Outfitting,Livres tournois,
