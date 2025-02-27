@@ -141,11 +141,11 @@ gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
 
 gen period=1 if YEARAF<=1755
-replace period=2 if YEARAF > 1756 & YEARAF<=1762
-replace period=3 if YEARAF >1762 & YEARAF <=1777
-replace period=4 if YEARAF >1777 & YEARAF <=1783
-replace period=5 if YEARAF >1783 & YEARAF <=1792
-replace period=6 if YEARAF >1792
+replace period=1 if YEARAF > 1756 & YEARAF<=1762
+replace period=2 if YEARAF >1762 & YEARAF <=1777
+replace period=3 if YEARAF >1777 & YEARAF <=1783
+replace period=4 if YEARAF >1783 & YEARAF <=1792
+replace period=4 if YEARAF >1792
 
 gen pop = 1
 version 14 : total pop, over(period, nolab)
@@ -173,21 +173,13 @@ twoway (scatter post_wt frak_post_wt) (lfit post_wt frak_post_wt)
 
 collapse (sum) post_wt frak_post_wt, by(ventureid)
 
-save "${output}venture weight.dta"
+save "${output}venture weights.dta", replace
 
 
 
+erase "${output}voy_weight.dta"
 
 
-/*
-
-erase "${output}STDT_enriched.dta"
-
-
-
-
-
-svystet 
 
 
 
