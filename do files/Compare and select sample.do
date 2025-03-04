@@ -30,34 +30,133 @@ replace NATIONAL=7 if nationality =="English" & NATIONAL==.
 replace NATIONAL=8 if nationality =="Dutch" & NATIONAL==.
 replace NATIONAL=10 if nationality =="French" & NATIONAL==.
 
-keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
+*keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
+gen three_nat=0
+replace three_nat=1 if (NATIONAL==7 | NATIONAL==8 | NATIONAL == 10)
 
-gen sample = 0
-replace sample=1 if (data >=1 & !missing(data)) & (NATIONAL==7 | NATIONAL==8 | NATIONAL == 10)
-
-save  "${output}STDT_enriched.dta", replace
-
-expand 2 if sample==1,gen(dupindicator)
-
-twoway (histogram YEARAF  if dupindicator==1 &  YEARAF>=1730 & YEARAF<=1815, frac start(1730) width(5) color(red%30)) ///
-	 (histogram YEARAF  if dupindicator==0  &  YEARAF>=1730 & YEARAF<=1815,  frac start(1730) width(5) color(green%30)), ///
+twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac start(1730) width(5) color(red%30)) ///
+	 (histogram YEARAF  if  three_nat==1 &  YEARAF>=1730 & YEARAF<=1815,  frac start(1730) width(5) color(green%30)), ///
 	 legend(order(1 "Sample" 2 "STDT (expanded)" )) 
 
 ***This convinces me that the right common support to look at is 1750-1795
 
 
-replace sample=1 if (data >=1 & !missing(data)) & YEARAF >= 1750 & YEARAF <=1795 & (NATIONAL==7 | NATIONAL==8 | NATIONAL == 10)
 
+save  "${output}STDT_enriched.dta", replace
+
+
+gen support=0
+replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
+
+gen sample = 0
+replace sample=1 if (data >=1 & !missing(data)) & support==1
+
+expand 2 if support==1, gen(dupindicator_support)
+expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)
+
+
+
+
+
+/*
 gen weight = 2
 replace weight=1 if sample==1 & YEARAF >= 1765 & YEARAF <=1775
 
 
 ksmirnov YEARAF,by(dupindicator) 
 
-twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & YEARAF<=1795, frac start(1745) width(5) color(red%30)) ///
-	 (histogram YEARAF [fweight=weight] if dupindicator==0  &  YEARAF>=1745 & YEARAF<=1795,  frac start(1745) width(5) color(green%30)), ///
+twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & YEARAF<=1795 & three_nat==1, frac start(1745) width(5) color(red%30)) ///
+	 (histogram YEARAF [fweight=weight] if dupindicator==0  &  YEARAF>=1745 & YEARAF<=1795 & three_nat==1,  frac start(1745) width(5) color(green%30)), ///
 	 legend(order(1 "Sample" 2 "STDT (expanded)" )) 
 
+*/
+
+************Compare Full STDT, Support STDT, sample for some variables
+
+gen group = .
+replace group = 0 if dupindicator_support==0
+replace group = 1 if dupindicator_support==1 & dupindicator_sample==0
+replace group = 2 if dupindicator_sample==1
+
+label define group 0 "STDT" 1 "STDT-suport" 2 "sample"
+label value group group
+
+replace nationality="French" if NATIONAL==10 & nationality==""
+replace nationality="English" if NATIONAL==7 & nationality==""
+replace nationality="Dutch" if NATIONAL==8 & nationality==""
+
+******Add variables of interest
+gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
+replace MORTALITY=VYMRTRAT if missing(MORTALITY)
+label var MORTALITY "Enslaved person mortality rate"
+****add port shares
+merge m:1 YEARAF MJBYPTIMP using "${output}port_shares.dta", keep(1 3)
+drop _merge
+**Crowding
+gen crowd=SLAXIMP/TONMOD
+label var crowd "Number of embarked enslaved persons per ton"
+* APPEND SLAVE PRICES
+merge m:1 YEARAF using "${output}Prices.dta"
+drop if _merge==2
+drop _merge
+gen pricemarkup=priceamerica/priceafrica
+label var pricemarkup "Slave price markup between America and Africa"
+*APPEND WARS
+merge m:1 YEARAF nationality using "${output}European wars.dta"
+drop if _merge==2
+drop _merge
+***APPEND NEUTRALITY
+merge m:1 YEARAF nationality using  "${output}Neutrality.dta"
+drop if _merge==2
+drop _merge
+*****
+gen big_port=0
+replace big_port=1 if port_share>0.01 & !missing(port_share)
+label var big_port "Big African slave-trading port"
+
+
+global varlist_o  YEARAF  TONMOD crowd SLAXIMP MORTALITY  pricemarkup
+
+table (var) group, ///
+	statistic(mean $varlist_o)  ///
+	statistic(median $varlist_o)  ///
+	statistic(sd $varlist_o)  ///
+	statistic(max $varlist_o) ///
+	statistic(min $varlist_o) ///
+	statistic(count $varlist_o) ///
+	name(DS_Qvar) replace
+
+
+
+global varlist_d war neutral big_port 
+
+table (var) group , ///
+	statistic(mean $varlist_d)  ///
+	statistic(median $varlist_d)  ///
+	statistic(sd $varlist_d)  ///
+	statistic(count $varlist_d) ///
+	name(DS_Dvar) replace
+
+
+collect combine DS= DS_Qvar DS_Dvar, replace
+
+global varlist_count  SLAXIMP   TONMOD
+
+collect style cell var, nformat(%5.2fc)
+collect style cell var[profit], nformat(%5.3f)
+collect style cell var[YEARAF], nformat(%5.0f)
+collect style cell var[$varlist_count], nformat(%12.0fc)
+collect style cell result[count], nformat(%5.0fc)
+collect style cell var[$varlist_count]#result[max min], nformat(%12.0fc)
+
+
+collect layout (var[war neutral big_port] # result[mean median sd count] ///
+	var[TONMOD SLAXIMP crowd MORTALITY ] # result[mean median sd min max count] ///
+	/*var[OUTFITTER_experience_d captain_experience_d] # result[mean median sd count]*/) (group [0 1 2]) 
+
+collect export "${output}Compare STDT__support__sample.txt", as(txt) replace
+
+blif
 
 
 /*
@@ -147,6 +246,7 @@ replace period=3 if YEARAF >1777 & YEARAF <=1783
 replace period=4 if YEARAF >1783 & YEARAF <=1792
 replace period=4 if YEARAF >1792
 
+blif
 gen pop = 1
 version 14 : total pop, over(period, nolab)
 matrix mat_period=e(b)

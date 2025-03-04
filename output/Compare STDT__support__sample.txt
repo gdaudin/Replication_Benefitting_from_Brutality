@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------------------
+                                                         |              group           
+                                                         |   STDT   STDT-suport   sample
+---------------------------------------------------------+------------------------------
+War involving own nationality                            |                              
+  Mean                                                   |   0.37          0.27     0.18
+  Median                                                 |   0.00          0.00     0.00
+  Standard deviation                                     |   0.48          0.45     0.38
+  Number of nonmissing values                            |  12573         7,925      374
+Neutrality of own nation                                 |                              
+  Mean                                                   |   0.26          0.31     0.29
+  Median                                                 |   0.00          0.00     0.00
+  Standard deviation                                     |   0.44          0.46     0.45
+  Number of nonmissing values                            |  12573         7,925      374
+Big African slave-trading port                           |                              
+  Mean                                                   |   0.51          0.52     0.56
+  Median                                                 |   1.00          1.00     1.00
+  Standard deviation                                     |   0.50          0.50     0.50
+  Number of nonmissing values                            |  36149         7,925      374
+Tonnage standardized on British measured tons, 1773-1835 |                              
+  Mean                                                   |    194           205      226
+  Median                                                 |    182           182      193
+  Standard deviation                                     |     98            93       98
+  Minimum value                                          |     10            14       44
+  Maximum value                                          |  1,269           889      497
+  Number of nonmissing values                            |  16704         6,590      333
+Imputed total slaves embarked                            |                              
+  Mean                                                   |    309           291      284
+  Median                                                 |    300           277      263
+  Standard deviation                                     |    155           135      125
+  Minimum value                                          |      0             0       14
+  Maximum value                                          |  2,024           980      980
+  Number of nonmissing values                            |  34477         7,649      369
+Number of embarked enslaved persons per ton              |                              
+  Mean                                                   |   1.74          1.51     1.36
+  Median                                                 |   1.51          1.43     1.28
+  Standard deviation                                     |   1.07          0.73     0.58
+  Minimum value                                          |   0.00          0.00     0.17
+  Maximum value                                          |  19.38         19.38     3.45
+  Number of nonmissing values                            |  15503         6,359      328
+Enslaved person mortality rate                           |                              
+  Mean                                                   |   0.13          0.13     0.12
+  Median                                                 |   0.12          0.12     0.11
+  Standard deviation                                     |   0.09          0.09     0.09
+  Minimum value                                          |  -1.83         -1.39    -0.12
+  Maximum value                                          |   1.00          1.00     0.64
+  Number of nonmissing values                            |  34193         7,532      368
+----------------------------------------------------------------------------------------
