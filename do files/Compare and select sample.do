@@ -42,7 +42,7 @@ twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARA
 
 
 
-save  "${output}STDT_enriched.dta", replace
+
 
 
 gen support=0
@@ -114,6 +114,75 @@ gen big_port=0
 replace big_port=1 if port_share>0.01 & !missing(port_share)
 label var big_port "Big African slave-trading port"
 
+***Simplify trading regions
+decode MAJBYIMP, gen(MAJBYIMP_str)
+gen MAJMAJBYIMP = "West" if MAJBYIMP_str==" Senegambia and offshore Atlantic" | MAJBYIMP_str==" Sierra Leone" | MAJBYIMP_str==" Windward Coast"
+replace MAJMAJBYIMP = "Bight of Guinea" if MAJBYIMP_str==" Gold Coast" | MAJBYIMP_str==" Bight of Benin" | MAJBYIMP_str==" Bight of Biafra and Gulf of Guinea islands"
+replace MAJMAJBYIMP = "South" if MAJBYIMP_str==" West Central Africa and St. Helena" | MAJBYIMP_str==" Southeast Africa and Indian Ocean islands "
+encode MAJMAJBYIMP, gen(MAJMAJBYIMP_num)
+label var MAJMAJBYIMP "African region of trade"
+label var MAJMAJBYIMP_num "African region of trade"
+
+
+* MERGE WITH Career DATASET (CAPTAIN)
+generate CAPTAIN = ""
+replace CAPTAIN = CAPTAINA
+*replace CAPTAIN = nameofthecaptain if CAPTAIN==""
+replace CAPTAIN="" if CAPTAIN=="."
+merge m:1 CAPTAIN YEARAF MAJMAJBYIMP using "${output}Captain.dta"
+drop if _merge==2
+*For debugging
+*br CAPTAIN YEARAF ventureid VOYAGEID if _merge==1 & (CAPTAIN!="" & YEARAF !=.)
+assert (CAPTAIN=="" | YEARAF ==.) if _merge==1 	&  data >=1
+	
+drop _merge
+
+
+* MERGE WITH Career DATASET (OUTFITTER)
+*We assume we are right with outfitters
+replace OWNERA= nameofoutfitter if nameofoutfitter!=""
+generate OUTFITTER = ""
+replace OUTFITTER = OWNERA if OUTFITTER==""
+replace OUTFITTER="" if OUTFITTER=="."
+merge m:1 OUTFITTER YEARAF MAJMAJBYIMP using "${output}OUTFITTER.dta"
+drop if _merge==2
+*For debugging
+*br OUTFITTER YEARAF ventureid VOYAGEID if _merge==1 & (OUTFITTER!="" & YEARAF !=.)
+assert (OUTFITTER=="" | YEARAF ==. | MAJMAJBYIMP=="") if _merge==1 &  data >=1
+drop _merge
+
+
+gen captain_experience_d=0 if !missing(captain_experience)
+replace captain_experience_d=1 if captain_experience>0 & !missing(captain_experience)
+label var captain_experience_d "Not the first voyage of the captain"
+
+
+gen captain_regional_experience_d=0 if !missing(captain_regional_experience)
+replace captain_regional_experience_d=1 if captain_regional_experience>0 & !missing(captain_regional_experience)
+label var captain_regional_experience_d "Not the first voyage of the captain in the region"
+
+
+
+gen captain_total_career_d=0 if !missing(captain_total_career)
+replace captain_total_career_d=1 if captain_total_career>1 & !missing(captain_total_career)
+
+
+gen OUTFITTER_experience_d=0 if !missing(OUTFITTER_experience)
+replace OUTFITTER_experience_d=1 if OUTFITTER_experience>0 & !missing(OUTFITTER_experience)
+label var OUTFITTER_experience_d "Not the first voyage of the outfitter"
+
+gen OUTFITTER_regional_experience_d=0 if !missing(OUTFITTER_regional_experience)
+replace OUTFITTER_regional_experience_d=1 if OUTFITTER_regional_experience>0 & !missing(OUTFITTER_regional_experience)
+label var OUTFITTER_regional_experience_d "Not the first voyage of the outfitter in the region"
+
+gen OUTFITTER_total_career_d=0 if !missing(OUTFITTER_total_career)
+replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFITTER_total_career)
+
+
+
+
+save  "${output}STDT_enriched.dta", replace
+
 
 global varlist_o  YEARAF  TONMOD crowd SLAXIMP MORTALITY  pricemarkup
 
@@ -128,7 +197,7 @@ table (var) group, ///
 
 
 
-global varlist_d war neutral big_port 
+global varlist_d war neutral big_port captain_experience_d OUTFITTER_experience_d
 
 table (var) group , ///
 	statistic(mean $varlist_d)  ///
@@ -139,6 +208,8 @@ table (var) group , ///
 
 
 collect combine DS= DS_Qvar DS_Dvar, replace
+
+
 
 global varlist_count  SLAXIMP   TONMOD
 
@@ -184,22 +255,29 @@ collect clear
 
 ****Ttests
 
-foreach var of varlist $varlist_o {
+local labels
+
+local i 1
+
+foreach var of varlist $varlist_o $varlist_d {
 	collect r(N_1) r(mu_1) r(N_2) r(mu_2) r(p):  ttest `var', by(ksmirnov_group)
+	local labels  `labels' `i' "`var'"
+	local i = `i'+1    
 }
+
+
 collect remap result[N_1 mu_1] = STDT_same_support
 collect remap result[N_2 mu_2] = Sample
 collect remap result[p] = Difference
 collect style header STDT_same_support Sample Difference, title(name)
 collect style column, dups(center) width(equal)
-collect label levels STDT_same_support N_1 ”N” mu_1 ”Mean”
-collect label levels Sample N_2 ”N” mu_2 ”Mean”
-collect label levels Difference p ”p-value”
+collect label levels STDT_same_support N_1 N mu_1 Mean
+collect label levels Sample N_2 N mu_2 Mean
+collect label levels Difference p p-value
 collect style cell STDT_same_support[mu_1] Sample[mu_2] Difference[p], nformat(%4.2fc)
 collect title "Ttest test between STDT (same support) and sample"
 collect label levels cmdset `labels', modify
 collect layout (cmdset) (STDT_same_support Sample Difference )
-
 
 
 
@@ -234,6 +312,7 @@ And GREC for continuous auxiliary variable. (Does not exist...	)
 **** Post-stratification
 **Issue : we have no French observation before 1763
 use "${output}STDT_enriched.dta", clear
+
 
 keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
