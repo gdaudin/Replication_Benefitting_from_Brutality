@@ -156,7 +156,52 @@ collect layout (var[war neutral big_port] # result[mean median sd count] ///
 
 collect export "${output}Compare STDT__support__sample.txt", as(txt) replace
 
-blif
+
+****K_Smirnov tests
+
+gen ksmirnov_group = group
+replace ksmirnov_group = . if group==0
+
+collect clear
+
+local labels
+
+local i 1
+foreach var of varlist $varlist_o {
+	collect r(D) r(p): ksmirnov `var',by(ksmirnov_group)
+	local labels  `labels' `i' "`var'"
+	local i = `i'+1    
+
+}
+
+collect label levels cmdset `labels', modify
+collect style cell result, nformat(%4.2fc)
+collect layout (cmdset) (result)
+collect title "KS test between STDT (same support) and sample"
+collect preview
+
+collect clear
+
+****Ttests
+
+foreach var of varlist $varlist_o {
+	collect r(N_1) r(mu_1) r(N_2) r(mu_2) r(p):  ttest `var', by(ksmirnov_group)
+}
+collect remap result[N_1 mu_1] = STDT_same_support
+collect remap result[N_2 mu_2] = Sample
+collect remap result[p] = Difference
+collect style header STDT_same_support Sample Difference, title(name)
+collect style column, dups(center) width(equal)
+collect label levels STDT_same_support N_1 ”N” mu_1 ”Mean”
+collect label levels Sample N_2 ”N” mu_2 ”Mean”
+collect label levels Difference p ”p-value”
+collect style cell STDT_same_support[mu_1] Sample[mu_2] Difference[p], nformat(%4.2fc)
+collect title "Ttest test between STDT (same support) and sample"
+collect label levels cmdset `labels', modify
+collect layout (cmdset) (STDT_same_support Sample Difference )
+
+
+
 
 
 /*
