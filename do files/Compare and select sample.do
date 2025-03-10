@@ -64,7 +64,9 @@ twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & Y
 
 */
 
-
+replace nationality="French" if NATIONAL==10 & nationality==""
+replace nationality="English" if NATIONAL==7 & nationality==""
+replace nationality="Dutch" if NATIONAL==8 & nationality==""
 
 ******Add variables of interest
 gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
@@ -184,9 +186,7 @@ replace group = 2 if dupindicator_sample==1
 label define group 0 "STDT" 1 "STDT-suport" 2 "sample"
 label value group group
 
-replace nationality="French" if NATIONAL==10 & nationality==""
-replace nationality="English" if NATIONAL==7 & nationality==""
-replace nationality="Dutch" if NATIONAL==8 & nationality==""
+
 
 
 global varlist_o  YEARAF  TONMOD crowd SLAXIMP MORTALITY  pricemarkup
@@ -229,6 +229,8 @@ collect style cell var[$varlist_count]#result[max min], nformat(%12.0fc)
 collect layout (var[war neutral big_port] # result[mean median sd count] ///
 	var[TONMOD SLAXIMP crowd MORTALITY ] # result[mean median sd min max count] ///
 	/*var[OUTFITTER_experience_d captain_experience_d] # result[mean median sd count]*/) (group [0 1 2]) 
+
+
 
 collect export "${output}Compare STDT__support__sample.txt", as(txt) replace
 
