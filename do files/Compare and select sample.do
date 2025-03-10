@@ -16,7 +16,7 @@ clear
 
 use "${output}voyages", clear
 
-merge 1:1 VOYAGEID using "${tastdb}tastdb-exp-2020.dta"
+merge 1:1 VOYAGEID using "${tastdb}tastdb-exp-2020_corr.dta"
 drop _merge
 replace FATE4=4 if FATE4==.
 
@@ -45,14 +45,7 @@ twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARA
 
 
 
-gen support=0
-replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
 
-gen sample = 0
-replace sample=1 if (data >=1 & !missing(data)) & support==1
-
-expand 2 if support==1, gen(dupindicator_support)
-expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)
 
 
 
@@ -71,19 +64,7 @@ twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & Y
 
 */
 
-************Compare Full STDT, Support STDT, sample for some variables
 
-gen group = .
-replace group = 0 if dupindicator_support==0
-replace group = 1 if dupindicator_support==1 & dupindicator_sample==0
-replace group = 2 if dupindicator_sample==1
-
-label define group 0 "STDT" 1 "STDT-suport" 2 "sample"
-label value group group
-
-replace nationality="French" if NATIONAL==10 & nationality==""
-replace nationality="English" if NATIONAL==7 & nationality==""
-replace nationality="Dutch" if NATIONAL==8 & nationality==""
 
 ******Add variables of interest
 gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
@@ -182,6 +163,30 @@ replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFIT
 
 
 save  "${output}STDT_enriched.dta", replace
+
+
+************Compare Full STDT, Support STDT, sample for some variables
+
+gen support=0
+replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
+
+gen sample = 0
+replace sample=1 if (data >=1 & !missing(data)) & support==1
+
+expand 2 if support==1, gen(dupindicator_support)
+expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)
+
+gen group = .
+replace group = 0 if dupindicator_support==0
+replace group = 1 if dupindicator_support==1 & dupindicator_sample==0
+replace group = 2 if dupindicator_sample==1
+
+label define group 0 "STDT" 1 "STDT-suport" 2 "sample"
+label value group group
+
+replace nationality="French" if NATIONAL==10 & nationality==""
+replace nationality="English" if NATIONAL==7 & nationality==""
+replace nationality="Dutch" if NATIONAL==8 & nationality==""
 
 
 global varlist_o  YEARAF  TONMOD crowd SLAXIMP MORTALITY  pricemarkup
@@ -312,7 +317,7 @@ And GREC for continuous auxiliary variable. (Does not exist...	)
 **** Post-stratification
 **Issue : we have no French observation before 1763
 use "${output}STDT_enriched.dta", clear
-
+blif
 
 keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
