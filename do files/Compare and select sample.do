@@ -364,11 +364,15 @@ replace FATE_3c= 2 if FATE4 ==3
 
 **Using war and peace for periods
 gen period=1 if YEARAF<=1755
-replace period=1 if YEARAF > 1756 & YEARAF<=1762
+replace period=1 if YEARAF >1755 & YEARAF<=1762
 replace period=2 if YEARAF >1762 & YEARAF <=1777
 replace period=3 if YEARAF >1777 & YEARAF <=1783
 replace period=4 if YEARAF >1783 & YEARAF <=1792
-replace period=4 if YEARAF >1792
+replace period=4 if YEARAF >1792 & !missing(YEARAF)
+
+assert !missing(period) if sample==1
+
+
 
 **Using quartiles for tonnage
 summarize TONMOD if support==1, det
@@ -380,6 +384,7 @@ replace tonnage=4 if TONMOD > 272 & !missing(TONMOD)
 
 tab tonnage if support==1
 tab tonnage if sample==1
+replace tonnage=. if support ==0
 
 
 
@@ -402,10 +407,14 @@ matrix rownames mat_tonnage=tonnage
 
 keep if sample==1
 
+
 ipfraking [pw=post_wt], /*
-	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c mat_tonnage) generate (frak_post_wt)
+	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c) generate (frak_post_wt)
+	
+ipfraking [pw=post_wt] if tonnage !=., /*
+	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c mat_tonnage) generate (frak2_post_wt)
 
-
+blif
 tabulate NATIONAL FATE_3c  [iweight=frak_post_wt], cell nofreq
 tabulate NATIONAL FATE_3c  [iweight=post_wt], cell nofreq
 
@@ -413,8 +422,11 @@ tabulate NATIONAL tonnage  [iweight=frak_post_wt], cell nofreq
 tabulate NATIONAL tonnage  [iweight=post_wt], cell nofreq
 
 twoway (scatter post_wt frak_post_wt) (lfit post_wt frak_post_wt)
+twoway (scatter frak2_post_wt frak_post_wt) (lfit frak2_post_wt frak_post_wt)
 
-collapse (sum) post_wt frak_post_wt, by(ventureid)
+blif
+
+collapse (sum) post_wt frak_post_wt frak2_post_wt, by(ventureid)
 
 merge 1:1 ventureid using "${output}Enriched ventures.dta", nogen
 
