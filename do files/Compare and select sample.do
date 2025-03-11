@@ -40,16 +40,10 @@ twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARA
 
 ***This convinces me that the right common support to look at is 1750-1795
 
-
-
-
-
-
-
-
-
-
-
+**Look at the tonnage repartition
+twoway (histogram TONMOD  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac color(red%30)) ///
+ 	(histogram TONMOD  if  three_nat==1 &  YEARAF>=1730 & YEARAF<=1815,  frac color(green%30)), ///
+ 	legend(order(1 "Sample" 2 "STDT (expanded)" )) 
 
 /*
 gen weight = 2
@@ -161,6 +155,11 @@ label var OUTFITTER_regional_experience_d "Not the first voyage of the outfitter
 gen OUTFITTER_total_career_d=0 if !missing(OUTFITTER_total_career)
 replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFITTER_total_career)
 
+gen support=0
+replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
+
+gen sample = 0
+replace sample=1 if (data >=1 & !missing(data)) & support==1
 
 
 
@@ -168,13 +167,6 @@ save  "${output}STDT_enriched.dta", replace
 
 
 ************Compare Full STDT, Support STDT, sample for some variables
-
-gen support=0
-replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
-
-gen sample = 0
-replace sample=1 if (data >=1 & !missing(data)) & support==1
-
 expand 2 if support==1, gen(dupindicator_support)
 expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)
 
@@ -319,7 +311,7 @@ And GREC for continuous auxiliary variable. (Does not exist...	)
 **** Post-stratification
 **Issue : we have no French observation before 1763
 use "${output}STDT_enriched.dta", clear
-blif
+
 
 keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
@@ -370,6 +362,7 @@ keep if YEARAF >= 1750 & YEARAF <=1795
 gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
 
+**Using war and peace for periods
 gen period=1 if YEARAF<=1755
 replace period=1 if YEARAF > 1756 & YEARAF<=1762
 replace period=2 if YEARAF >1762 & YEARAF <=1777
@@ -377,7 +370,19 @@ replace period=3 if YEARAF >1777 & YEARAF <=1783
 replace period=4 if YEARAF >1783 & YEARAF <=1792
 replace period=4 if YEARAF >1792
 
-blif
+**Using quartiles for tonnage
+summarize TONMOD if support==1, det
+
+gen tonnage=1 if TONMOD <=136
+replace tonnage=2 if TONMOD > 136 & TONMOD<=183
+replace tonnage=3 if TONMOD > 183 & TONMOD<=272
+replace tonnage=4 if TONMOD > 272 & !missing(TONMOD)
+
+tab tonnage if support==1
+tab tonnage if sample==1
+
+
+
 gen pop = 1
 version 14 : total pop, over(period, nolab)
 matrix mat_period=e(b)
@@ -391,14 +396,21 @@ version 14 : total pop, over(FATE_3c, nolab)
 matrix mat_FATE_3c=e(b)
 matrix rownames mat_FATE_3c=FATE_3c
 
+version 14 : total tonnage, over(tonnage, nolab)
+matrix mat_tonnage=e(b)
+matrix rownames mat_tonnage=tonnage
+
 keep if sample==1
 
 ipfraking [pw=post_wt], /*
-	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c) generate (frak_post_wt)
+	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c mat_tonnage) generate (frak_post_wt)
 
 
-tabulate NATIONAL FATE_3c [iweight=frak_post_wt], cell nofreq
-tabulate NATIONAL FATE_3c [iweight=post_wt], cell nofreq
+tabulate NATIONAL FATE_3c  [iweight=frak_post_wt], cell nofreq
+tabulate NATIONAL FATE_3c  [iweight=post_wt], cell nofreq
+
+tabulate NATIONAL tonnage  [iweight=frak_post_wt], cell nofreq
+tabulate NATIONAL tonnage  [iweight=post_wt], cell nofreq
 
 twoway (scatter post_wt frak_post_wt) (lfit post_wt frak_post_wt)
 
