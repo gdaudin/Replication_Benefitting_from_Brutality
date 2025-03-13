@@ -401,9 +401,10 @@ version 14 : total pop, over(FATE_3c, nolab)
 matrix mat_FATE_3c=e(b)
 matrix rownames mat_FATE_3c=FATE_3c
 
-version 14 : total tonnage, over(tonnage, nolab)
+version 14 : total pop, over(tonnage, nolab)
 matrix mat_tonnage=e(b)
 matrix rownames mat_tonnage=tonnage
+
 
 keep if sample==1
 
@@ -414,19 +415,22 @@ ipfraking [pw=post_wt], /*
 ipfraking [pw=post_wt] if tonnage !=., /*
 	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c mat_tonnage) generate (frak2_post_wt)
 
-blif
+
 tabulate NATIONAL FATE_3c  [iweight=frak_post_wt], cell nofreq
 tabulate NATIONAL FATE_3c  [iweight=post_wt], cell nofreq
 
-tabulate NATIONAL tonnage  [iweight=frak_post_wt], cell nofreq
+tabulate NATIONAL tonnage  [iweight=frak2_post_wt], cell nofreq
 tabulate NATIONAL tonnage  [iweight=post_wt], cell nofreq
 
 twoway (scatter post_wt frak_post_wt) (lfit post_wt frak_post_wt)
 twoway (scatter frak2_post_wt frak_post_wt) (lfit frak2_post_wt frak_post_wt)
 
-blif
+save "${output}voy_weight.dta", replace
 
 collapse (sum) post_wt frak_post_wt frak2_post_wt, by(ventureid)
+
+*To treat the missiong values
+replace frak2_post_wt = . if frak2_post_wt ==0
 
 merge 1:1 ventureid using "${output}Enriched ventures.dta", nogen
 
@@ -434,8 +438,6 @@ save "${output}Enriched ventures.dta", replace
 
 
 
-
-erase "${output}voy_weight.dta"
 
 
 

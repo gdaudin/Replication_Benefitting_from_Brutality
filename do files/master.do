@@ -40,6 +40,10 @@
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	
 	do "${dir}/do files/Profit computation.do"
+
+	do "${dir}/do files/Profit analysis - survey methods.do"
+
+
 	do "${dir}/do files/Profit two parts regressions.do"
 	do "${dir}/do files/Profit two parts regressions--various hypothesis.do"
 
