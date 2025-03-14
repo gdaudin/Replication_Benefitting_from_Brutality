@@ -97,6 +97,9 @@ matrix mat_Fate_x_National=e(b),e(N)
 matrix colnames mat_Fate_x_National = ""
 matrix rownames mat_Fate_x_National = ""
 
+
+
+
 **Using war and peace for periods
 gen period=1 if YEARAF<=1755
 replace period=1 if YEARAF >1755 & YEARAF<=1762
@@ -112,7 +115,22 @@ total pop, over(period, nolab)
 matrix mat_period=e(b)
 matrix rownames mat_period=period
 
+**** The same without the missing TONMOD
+drop if TONMOD==.
+total pop, over(period, nolab) 
+matrix mat_period_with_ton=e(b)
+matrix rownames mat_period_with_ton=period
 
+total pop, over(Fate_x_National, nolab)
+matrix mat_Fate_x_National_with_ton=e(b)
+matrix colnames mat_Fate_x_National_with_ton = ""
+matrix rownames mat_Fate_x_National_with_ton = ""
+
+total pop, over(FATE_3c, nolab)
+matrix mat_Fate_with_ton=e(b),e(N)
+
+total pop, over(NATIONAL, nolab)
+matrix mat_National_with_ton=e(b),e(N)
 
 ****And now to analysis
 
@@ -144,10 +162,12 @@ matrix list mat_Fate_x_National
 svyset VOYAGEID [pw=pweight], rake(bn.Fate_x_National, totals(4219 530 1822 795 36 355 96 5 67 7925, copy))
 
 matrix mat_Fate_x_National =  (4219,   530,  1822,   795,    36,   355,    96,     5,    67,  7925)
+/*This does not work and I do not understand why...*/
+matrix list mat_Fate_x_National
 
 svyset VOYAGEID [pw=pweight], rake(bn.Fate_x_National, totals(mat_Fate_x_National))
 
-blif
+*/
 svy : mean profit
 mean profit [pw=post_wt]
 
@@ -157,22 +177,38 @@ mean profit [pw=post_wt]
 ***** Comparing profit with "by hand" post-stratification + ipfraking  and use of svy command
 **No : you cannot use both postrata and rake...
 matrix list mat_period
-svyset VOYAGEID [pw=pweight],   rake(bn.period bn.Fate_x_National, totals(1782 3237 387 2519  4219 530 1822 795 36 355 96 5 67 7925, copy))
+svyset VOYAGEID [pw=pweight],  rake(bn.period bn.Fate_x_National, totals(1782 3237 387 2519  4219 530 1822 795 36 355 96 5 67 7925, copy))
 svy : mean profit
 mean profit [pw=frak_post_wt]
 
-**There is a difference...
-
-
-
 svyset VOYAGEID [pw=frak_post_wt]
-mean profit [pw=frak_post_wt]
 svy: mean profit
+
+**There is a relatively small difference... Easy to explain with 2 steps or 1 step ?
+**And now with tonnage
+
+
+matrix list mat_Fate_x_National_with_ton
+matrix list mat_period_with_ton
+
+
+svyset VOYAGEID [pw=pweight], rake(bn.period bn.Fate_x_National TONMOD,totals(1692 3077 335 1486  4140 344 986 758 23 222 92 2 23 $totalTONMOD_support $nbr_obs_ton , copy))
+svy : mean profit
 
 svyset VOYAGEID [pw=post_wt], rake(TONMOD,totals(TONMOD=$totalTONMOD_support _cons=$nbr_obs_ton))
 svy : mean profit
 
 svyset VOYAGEID [pw=frak_post_wt], rake(TONMOD,totals(TONMOD=$totalTONMOD_support _cons=$nbr_obs_ton))
+svy : mean profit
+
+
+******
+**New option : without crossing Fate and National
+matrix list mat_Fate_with_ton
+matrix list mat_National_with_ton
+matrix list mat_period_with_ton
+
+svyset VOYAGEID [pw=pweight], rake(bn.period bn.FATE_3c bn.NATIONAL TONMOD,totals(1692 3077 335 1486 5470 1003 117 4990 369 1231 $totalTONMOD_support $nbr_obs_ton , copy))
 svy : mean profit
 
 
