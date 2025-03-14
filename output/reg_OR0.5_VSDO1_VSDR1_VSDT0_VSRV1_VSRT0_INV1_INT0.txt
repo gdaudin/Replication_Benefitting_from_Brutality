@@ -1,0 +1,36 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)
+VARIABLES	LABELS	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1
+								
+1.nationality_num	Nationality = 1, Danish	0.27	0.24	0.24	0.20	0.22	0.27	0.047
+		(0.18)	(0.18)	(0.18)	(0.18)	(0.18)	(0.17)	(0.39)
+2.nationality_num	Nationality = 2, Dutch	-0.056	-0.046	-0.047	-0.046	-0.072	-0.058	-0.050
+		(0.048)	(0.048)	(0.048)	(0.048)	(0.054)	(0.046)	(0.047)
+4.nationality_num	Nationality = 4, French	0.046	0.017	0.017	0.024	0.029	0.042	0.077
+		(0.062)	(0.063)	(0.063)	(0.063)	(0.066)	(0.060)	(0.063)
+5.nationality_num	Nationality = 5, Spanish	0.74***	0.58***	0.67***	0.68***	0.74***		0.76***
+		(0.099)	(0.13)	(0.20)	(0.18)	(0.099)		(0.10)
+1.period	Period = 1, pre-1750				-0.046			
+					(0.086)			
+3.period	Period = 3, 1776-1800				0.099**			
+					(0.049)			
+4.period	Period = 4, post-1800				0.088			
+					(0.15)			
+YEARAF	(mean) YEARAF		0.0032**	0.13				
+			(0.0015)	(0.22)				
+yearsq	yearsq			-0.000036				
+				(0.000061)				
+war	(mean) war					0.032		
+						(0.054)		
+neutral	(mean) neutral					0.069		
+						(0.051)		
+pricemarkup	(mean) pricemarkup						0.0070	
+							(0.019)	
+captain_experience_d	Not the first voyage of the captain							0.013
+								(0.044)
+Constant	Constant	0.098***	-5.50**	-119	0.075**	0.079**	0.073	0.082*
+		(0.027)	(2.73)	(191)	(0.030)	(0.034)	(0.072)	(0.042)
+								
+Observations		387	387	387	387	387	369	371
+R-squared		0.143	0.153	0.153	0.154	0.148	0.014	0.147
+Standard errors in parentheses								
+*** p<0.01, ** p<0.05, * p<0.1								

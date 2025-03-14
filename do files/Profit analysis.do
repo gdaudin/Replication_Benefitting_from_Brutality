@@ -72,13 +72,21 @@ collect clear
 estpost summarize profit  nationality_num SLAXIMP YEARAF totalnetexp_silver_ship investment_per_slave war neutral pricemarkup OUTFITTER_experience_d captain_experience_d TONMOD ln_SLAXIMP ln_totalnetexp_silver_ship MORTALITY crowd
 esttab using "$output/tables_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
 
-estpost summarize profit  nationality_num SLAXIMP YEARAF totalnetexp_silver_ship investment_per_slave war neutral pricemarkup OUTFITTER_experience_d captain_experience_d TONMOD ln_SLAXIMP ln_totalnetexp_silver_ship MORTALITY crowd [weight=frak_post_wt]
-esttab using "$output/tables_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
-
 estpost summarize profit  nationality_num SLAXIMP YEARAF totalnetexp_silver_ship investment_per_slave war neutral pricemarkup OUTFITTER_experience_d captain_experience_d TONMOD ln_SLAXIMP ln_totalnetexp_silver_ship MORTALITY crowd if frak_post_wt !=.
 esttab using "$output/tables_sp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
 
+estpost summarize profit  nationality_num SLAXIMP YEARAF totalnetexp_silver_ship investment_per_slave war neutral pricemarkup OUTFITTER_experience_d captain_experience_d TONMOD ln_SLAXIMP ln_totalnetexp_silver_ship MORTALITY crowd [weight=frak_post_wt]
+esttab using "$output/tables_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
 
+estpost summarize profit  nationality_num SLAXIMP YEARAF totalnetexp_silver_ship investment_per_slave war neutral pricemarkup OUTFITTER_experience_d captain_experience_d TONMOD ln_SLAXIMP ln_totalnetexp_silver_ship MORTALITY crowd if frak2_post_wt !=.
+esttab using "$output/tables_sp2_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
+
+
+estpost summarize profit  nationality_num SLAXIMP YEARAF totalnetexp_silver_ship investment_per_slave war neutral pricemarkup OUTFITTER_experience_d captain_experience_d TONMOD ln_SLAXIMP ln_totalnetexp_silver_ship MORTALITY crowd [weight=frak2_post_wt]
+esttab using "$output/tables_wt2_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
+
+
+blif
 * VARIOUS LIMITED REGRESSIONS; TESTING ONLY SPECIFIC VARIABLES
 reg profit ib3.nationality_num 
 outreg2 using "$output/reg_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
