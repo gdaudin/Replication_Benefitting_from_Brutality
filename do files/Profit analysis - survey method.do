@@ -162,7 +162,7 @@ matrix list mat_Fate_x_National
 svyset VOYAGEID [pw=pweight], rake(bn.Fate_x_National, totals(4219 530 1822 795 36 355 96 5 67 7925, copy))
 
 matrix mat_Fate_x_National =  (4219,   530,  1822,   795,    36,   355,    96,     5,    67,  7925)
-/*This does not work and I do not understand why...*/
+/*This does not work and I do not understand why...
 matrix list mat_Fate_x_National
 
 svyset VOYAGEID [pw=pweight], rake(bn.Fate_x_National, totals(mat_Fate_x_National))
