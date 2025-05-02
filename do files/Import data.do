@@ -414,5 +414,9 @@ gen VOYAGEID= voyageidintstd
 *destring VOYAGEID, force replace
 save "${output}Venture all.dta", replace
 
+codebook ventureid
+quietly summarize numberofvoyages
+display r(sum)
+
 
 

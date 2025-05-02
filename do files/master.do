@@ -28,7 +28,7 @@
 
 	*Creating datasets
 	do "${dir}/do files/Port shares computation.do"
-	do "${dir}/do files/Import data.do" 
+	do "${dir}/do files/Import data.do" /*606 ventures 685 voyages*/
 	do "${dir}/do files/Unique voyages db.do" /*This creates a db of voyages in the data*/
 	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
 	
@@ -38,7 +38,7 @@
 	do "${dir}/do files/Compare and select sample.do"
 	/*This introduces the cash flows*/
 	do "${dir}/do files/Database for profit and IRR computation.do"
-	do "${dir}/do files/Profit computation.do"
+	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
 
 
 
@@ -49,6 +49,7 @@
 		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
 		///to find an easy better way.
 		///table 1 BB///
+
 	
 	do "${dir}/do files/Profit graphs.do" /*Figure 2 and 3 and 4 in BB*/
 
