@@ -20,15 +20,40 @@ merge 1:1 VOYAGEID using "${tastdb}tastdb-exp-2020_corr.dta"
 drop _merge
 replace FATE4=4 if FATE4==.
 
+label list labels19
 /*NATIONAL coding in stdt
 7     Great Britain
 8     Netherlands
 10    France
 */
 
+
+replace NATIONAL=1 if nationality =="Spanish" & NATIONAL==.
 replace NATIONAL=7 if nationality =="English" & NATIONAL==.
 replace NATIONAL=8 if nationality =="Dutch" & NATIONAL==.
 replace NATIONAL=10 if nationality =="French" & NATIONAL==.
+replace NATIONAL=11 if nationality =="Danish" & NATIONAL==.
+
+gen NATIONAL_tab3 = NATIONAL
+replace NATIONAL_tab3=30 if NATIONAL ==2 | NATIONAL ==3 | (NATIONAL >=12   & NATIONAL !=.)
+replace NATIONAL_tab3=6 if NATIONAL==4 | NATIONAL==5
+label value NATIONAL_tab3 labels19
+
+gen sample =  1 if data==1 | data==2
+replace sample=0 if sample==.
+label define sample_l 0 "Whole TSTD" 1 "Our sample" 
+label values sample sample_l
+
+table (NATIONAL_tab3) (sample),  statistic (freq) statistic(percent, across(NATIONAL_tab3)) totals(sample)
+collect style header NATIONAL_tab3, title(hide)
+collect style header sample, title(hide)
+collect layout (NATIONAL_tab3[7 8 10 1 11 6 9 30 .m]) (sample[1 0]#result) 
+
+collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
+collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
+collect export "${output}Compare_Sample_Nationality.pdf", as(pdf) replace
+
+blif
 
 *keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 gen three_nat=0

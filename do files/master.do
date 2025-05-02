@@ -35,7 +35,8 @@
 	*Creating an enriched venture dataset
 	do "${dir}/do files/Enrich voyages and save ventures.do"
 	do "${dir}/do files/Enrich ventures db.do"
-	do "${dir}/do files/Compare and select sample.do"
+	do "${dir}/do files/Compare and select sample.do" //Table 3 BB//
+	do "${dir}/do files/Pearson chi-squared.do" /*For Chi2 in table 3 and 4 BB*/
 	/*This introduces the cash flows*/
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
@@ -48,7 +49,7 @@
 		*/ comes from here. 
 		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
 		///to find an easy better way.
-		///table 1 BB///
+		///table 2 Average profitability BB///
 
 	
 	do "${dir}/do files/Profit graphs.do" /*Figure 2 and 3 and 4 in BB*/
@@ -57,6 +58,8 @@
 	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
 
 	do "${dir}/do files/Profit analysis - survey methods.do"
+
+	
 
 
 	do "${dir}/do files/Profit two parts regressions.do"
@@ -94,4 +97,4 @@
 	**Various 
 
 	do "${dir}/do files/Length Europe-Europe computation (exploratory).do" /*Not the one we use : exploratory*/
-	do "${dir}/do files/Pearson chi-squared.do"
+	
