@@ -64,9 +64,8 @@ label var profit "(Net returns over net outlays) -1"
 graph bar (count) profit, over(nationality) scheme(s1color)
 graph export "$graphs/nbr_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png", as(png) replace
 
-hist YEARAF, freq scheme(s1color)
-graph export "$graphs/hist_by_year_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
-
+hist YEARAF, freq scheme(s1color) start(1720) width(5) ytitle(Year in Africa (mean if multiple voyages))
+graph export "$graphs/hist_venture_by_year_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
 
 quietly summarize profit
 local m=r(mean)

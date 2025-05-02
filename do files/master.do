@@ -52,7 +52,7 @@
 		///table 2 Average profitability BB///
 
 	
-	do "${dir}/do files/Profit graphs.do" /*Figure 2 and 3 and 4 in BB*/
+	do "${dir}/do files/Profit graphs.do" /*Figures 2 and 3 and 4 in BB*/
 
 	blif
 	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
