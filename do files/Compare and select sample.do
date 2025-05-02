@@ -49,11 +49,14 @@ collect style header NATIONAL_tab3, title(hide)
 collect style header sample, title(hide)
 collect layout (NATIONAL_tab3[7 8 10 1 11 6 9 30 .m]) (sample[1 0]#result) 
 
+**For table 3 "Representativity of our sample (flag)"":
+tabi 238 11239 \  101 1249 \ 85 4090 \ 17 1660 \5 311 \ 0 6130 \ 0 1799 \ 0 92, chi2  
+
+
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
 collect export "${output}Compare_Sample_Nationality.pdf", as(pdf) replace
 
-blif
 
 *keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 gen three_nat=0
