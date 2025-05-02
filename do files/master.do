@@ -43,13 +43,15 @@
 
 
 	********
-		do "${dir}/do files/Descriptive statistics of profit.do" /*I believe the small table 6 .*/
+	do "${dir}/do files/Descriptive statistics of profit.do" /*I believe the small table 6 .*/
 		*/ Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830 */
 		*/ comes from here. 
 		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
 		///to find an easy better way.
 		///table 1 BB///
 	
+	do "${dir}/do files/Profit graphs.do" /*Figure 2 and 3 and 4 in BB*/
+
 	blif
 	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
 
@@ -73,7 +75,7 @@
 
 
 	do "${dir}/do files/Descriptive statistics of explaining variables.do"
-	do "${dir}/do files/Profit graphs.do"
+	
 
 
 	**For IRR computations
