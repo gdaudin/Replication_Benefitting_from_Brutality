@@ -48,15 +48,14 @@ table (NATIONAL_tab3) (sample),  statistic (freq) statistic(percent, across(NATI
 collect style header NATIONAL_tab3, title(hide)
 collect style header sample, title(hide)
 collect layout (NATIONAL_tab3[7 8 10 1 11 6 9 30 .m]) (sample[1 0]#result) 
-
 **For table 3 "Representativity of our sample (flag)"":
 tabi 238 11239 \  101 1249 \ 85 4090 \ 17 1660 \5 311 \ 0 6130 \ 0 1799 \ 0 92, chi2  
-
-
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
 collect export "${output}Compare_Sample_Nationality.pdf", as(pdf) replace
 
+hist YEARAF if sample==1, freq scheme(s1color) start(1720) width(5) xtitle(Year departed Africa)
+graph export "$graphs/hist_voyage_by_year_Baseline.png",as(png) replace
 
 *keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 gen three_nat=0
@@ -67,6 +66,38 @@ twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARA
 	 legend(order(1 "Sample" 2 "STDT (expanded)" )) 
 
 ***This convinces me that the right common support to look at is 1750-1795
+replace sample=0 if YEARAF >1795 | YEARAF < 1750 | nationality =="Danish" | nationality =="Spanish"
+
+gen support=0
+replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
+
+**Using war and peace for periods
+gen period=1 if YEARAF<=1755
+replace period=1 if YEARAF >1755 & YEARAF<=1762
+replace period=2 if YEARAF >1762 & YEARAF <=1777
+replace period=3 if YEARAF >1777 & YEARAF <=1783
+replace period=4 if YEARAF >1783 & YEARAF <=1792
+replace period=4 if YEARAF >1792 & !missing(YEARAF)
+assert !missing(period) if sample==1
+
+label define period_l 1 "1750-1762" 2 "1763-1778" 3 "1778-1783" 4 "1784-1795"
+label values period period_l
+
+collect clear
+collect : table (NATIONAL_tab3) (period) if sample==1,  statistic(percent)  nformat(%3.1f)
+collect rename Table Sample
+collect: table (NATIONAL_tab3) (period) if support==1,  statistic(percent)  nformat(%3.1f)
+collect rename Table STDT
+collect combine tab = Sample STDT
+collect style header NATIONAL_tab3 collection period, title(hide)
+collect layout (NATIONAL_tab3#collection)(period)
+
+collect export "${output}Compare_Sample_NationalityxPeriod.txt", as(txt) replace
+collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
+collect export "${output}Compare_Sample_NationalityxPeriod.pdf", as(pdf) replace
+
+
+blif
 
 **Look at the tonnage repartition
 twoway (histogram TONMOD  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac color(red%30)) ///
@@ -85,10 +116,12 @@ twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & Y
 	 legend(order(1 "Sample" 2 "STDT (expanded)" )) 
 
 */
-
+/*
 replace nationality="French" if NATIONAL==10 & nationality==""
 replace nationality="English" if NATIONAL==7 & nationality==""
 replace nationality="Dutch" if NATIONAL==8 & nationality==""
+*/
+
 
 ******Add variables of interest
 gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
@@ -166,8 +199,6 @@ gen captain_regional_experience_d=0 if !missing(captain_regional_experience)
 replace captain_regional_experience_d=1 if captain_regional_experience>0 & !missing(captain_regional_experience)
 label var captain_regional_experience_d "Not the first voyage of the captain in the region"
 
-
-
 gen captain_total_career_d=0 if !missing(captain_total_career)
 replace captain_total_career_d=1 if captain_total_career>1 & !missing(captain_total_career)
 
@@ -182,14 +213,6 @@ label var OUTFITTER_regional_experience_d "Not the first voyage of the outfitter
 
 gen OUTFITTER_total_career_d=0 if !missing(OUTFITTER_total_career)
 replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFITTER_total_career)
-
-gen support=0
-replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
-
-gen sample = 0
-replace sample=1 if (data >=1 & !missing(data)) & support==1
-
-
 
 save  "${output}STDT_enriched.dta", replace
 
@@ -389,16 +412,6 @@ keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
 gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
-
-**Using war and peace for periods
-gen period=1 if YEARAF<=1755
-replace period=1 if YEARAF >1755 & YEARAF<=1762
-replace period=2 if YEARAF >1762 & YEARAF <=1777
-replace period=3 if YEARAF >1777 & YEARAF <=1783
-replace period=4 if YEARAF >1783 & YEARAF <=1792
-replace period=4 if YEARAF >1792 & !missing(YEARAF)
-
-assert !missing(period) if sample==1
 
 
 
