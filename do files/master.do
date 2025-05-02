@@ -1,4 +1,4 @@
-
+	
 	if lower(c(username)) == "guillaumedaudin" {
 		global dir "~/Répertoires GIT/slaveprofits data and programs"
 		cd "$dir"
@@ -38,8 +38,20 @@
 	do "${dir}/do files/Compare and select sample.do"
 	/*This introduces the cash flows*/
 	do "${dir}/do files/Database for profit and IRR computation.do"
-	
 	do "${dir}/do files/Profit computation.do"
+
+
+
+	********
+		do "${dir}/do files/Descriptive statistics of profit.do" /*I believe the small table 6 .*/
+		*/ Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830 */
+		*/ comes from here. 
+		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
+		///to find an easy better way.
+		///table 1 BB///
+	
+	blif
+	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
 
 	do "${dir}/do files/Profit analysis - survey methods.do"
 
@@ -47,7 +59,7 @@
 	do "${dir}/do files/Profit two parts regressions.do"
 	do "${dir}/do files/Profit two parts regressions--various hypothesis.do"
 
-	do "${dir}/do files/Profit analysis.do"
+	
 
 	**For imputation
 	do "${dir}/do files/Database for profit computation -- imputed.do"
@@ -58,11 +70,7 @@
 	profit_analysis 0.5 1 1 0 1 0 1 0 onlyIMP
 
 	**Descriptive statistics, comparing different hypothesis
-	do "${dir}/do files/Descriptive statistics of profit.do" /*I believe the small table 6 .*/
-		*/ Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830 */
-		*/ comes from here. 
-		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
-		///to find an easy better way.
+
 
 	do "${dir}/do files/Descriptive statistics of explaining variables.do"
 	do "${dir}/do files/Profit graphs.do"

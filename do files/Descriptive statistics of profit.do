@@ -78,10 +78,13 @@ table (nationality), ///
 ///, attach(mean)
 *collect layout (result[mean stars ub lb first median sd max min]) (nationality)
 collect stars first 0.01 "***" 0.05 "** " 0.1 "*  " 1 "   ", attach(mean) dimension
-collect layout (result[mean ub lb median sd max min]) (nationality#stars)
+/*collect layout (result[mean ub lb median sd max min]) (nationality#stars) /// Old version */
+collect label levels result count "N" lb "ci lb" ub "ci up", modify
+collect layout (nationality#stars) (result[count mean median lb ub ]) 
 collect style cell result[count], nformat(%5.0f)
 
 collect preview
+
 
 collect export "${output}Profits_bynatio_baseline.txt", as(txt) replace
 collect export "${output}Profits_bynatio_baseline.docx", as(docx) replace
