@@ -3,27 +3,6 @@ clear
 *ssc install estout, replace
 *ssc install outreg2, replace
 
-if lower(c(username)) == "kraemer" {
-	!subst X: /d
-	!subst X:   "C:\Users\Kraemer\Documents"
-	capture cd "X:\slaveprofits\"
-	if _rc != 0 cd  "C:\Users\Kraemer\Documents\slaveprofits"
-	global output "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith\output"
-	global tastdb "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith"
-	global slaves "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith\slaves"
-
-}
-
- if lower(c(username)) == "claire" {
-	!subst X: /d
-	!subst X:   "/Users/guillaume-claire-judith/"
-	capture cd "X:/slaveprofits/"
-	if _rc != 0 cd  "/Users/h-claire-judith/slaveprofits/"
-	global output "/Users/guillaume-claire-judith/Desktop/temp"
-	global tastdb "/Users/guillaume-claire-judith/slaveprofits/script guillaume-claire-judith/"
-	global slaves "/Users/guillaume-claire-judith/slaveprofits/script guillaume-claire-judith/slaves/"
-
-}
 
 if lower(c(username)) == "guillaumedaudin" {
 	global dir "~/Répertoires GIT/slaveprofits data and programs"
@@ -56,10 +35,31 @@ if "`OR' `VSDO' `VSDR' `VSDT' `VSRV' `VSRT' `INV' `INT'`IMP'"=="0.5 1 1 0 1 0 1 
 	local hyp="Imputed"
 
 
-***To recovert total (and hence) mean tonnage in the sample
-use "${output}STDT_enriched.dta", clear
+*****Just nationality and period
+
+use "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", clear
+keep ventureid profit
+merge 1:m ventureid using "${output}voyages.dta"
+keep VOYAGEID profit
+merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
+
+
 keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
+
+tab period 
+
+tab NATIONAL_tab3
+
+svyset VOYAGEID, rake(bn.period bn.NATIONAL,totals(1782 3237 387 2519 5110 571 2244 7925, copy))
+svy : mean profit
+
+
+
+
+blif
+
+***To recovert total (and hence) mean tonnage in the sample
 
 egen sumTONMOD=total(TONMOD)
 global totalTONMOD_support=sumTONMOD[1]
