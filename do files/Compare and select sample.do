@@ -96,7 +96,17 @@ collect layout (NATIONAL_tab3#collection)(period#result)
 
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
-
+***Fate
+collect clear
+collect: table (FATE4) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
+collect rename Table STDT
+collect: table (FATE4) if sample==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
+collect rename Table Sample
+collect combine tab = STDT Sample 
+collect style header FATE4 collection, title(hide)
+collect style header result, level(hide)
+collect style cell result[frequency], nformat (%5.0fc)
+collect layout (FATE4)(collection#result)
 
 save  "${output}STDT_enriched.dta", replace
 
