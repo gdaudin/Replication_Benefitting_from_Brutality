@@ -97,8 +97,10 @@ collect layout (NATIONAL_tab3#collection)(period#result)
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
 
-blif
 
+save  "${output}STDT_enriched.dta", replace
+
+/*
 **Look at the tonnage repartition
 twoway (histogram TONMOD  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac color(red%30)) ///
  	(histogram TONMOD  if  three_nat==1 &  YEARAF>=1730 & YEARAF<=1815,  frac color(green%30)), ///
