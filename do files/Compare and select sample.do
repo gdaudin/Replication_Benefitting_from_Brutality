@@ -97,6 +97,11 @@ collect layout (NATIONAL_tab3#collection)(period#result)
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
 ***Fate
+
+merge m:1 ventureid using "${output}Venture all.dta"
+assert _merge==3 if sample==1
+blif
+
 collect clear
 collect: table (FATE4) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
 collect rename Table STDT
@@ -107,6 +112,10 @@ collect style header FATE4 collection, title(hide)
 collect style header result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
 collect layout (FATE4)(collection#result)
+tabi 337 6571 \  22 677 \ 12 509 \ 3 168, chi2  
+collect export "${output}Compare_Sample_Fate.docx", as(docx) replace
+
+blif
 
 save  "${output}STDT_enriched.dta", replace
 

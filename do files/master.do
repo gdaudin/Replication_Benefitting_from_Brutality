@@ -36,7 +36,7 @@
 	do "${dir}/do files/Enrich voyages and save ventures.do"
 	do "${dir}/do files/Enrich ventures db.do"
 	do "${dir}/do files/Compare and select sample.do" //Table 3 & 4 BB//
-	do "${dir}/do files/Pearson chi-squared.do" /*For Chi2 in table 3 and 5 BB*/
+	
 	/*This introduces the cash flows*/
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
