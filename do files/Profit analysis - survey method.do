@@ -47,11 +47,15 @@ merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
 keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
 
-tab period 
+***Extracting matrixes to use with rake
+tabulate period, matcell(period_mat)
 
-tab NATIONAL_tab3
+tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
+matrix for_rake = period_mat', NATIONAL_mat'
 
-svyset VOYAGEID, rake(bn.period bn.NATIONAL,totals(1782 3237 387 2519 5110 571 2244 7925, copy))
+local support_size=_N
+
+svyset ventureid, rake(bn.period bn.NATIONAL, totals(for_rake `support_size', copy))
 svy : mean profit
 
 
