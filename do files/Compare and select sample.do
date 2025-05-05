@@ -84,17 +84,17 @@ label define period_l 1 "1750-1762" 2 "1763-1778" 3 "1778-1783" 4 "1784-1795"
 label values period period_l
 
 collect clear
-collect : table (NATIONAL_tab3) (period) if sample==1,  statistic(percent)  nformat(%3.1f)
-collect rename Table Sample
-collect: table (NATIONAL_tab3) (period) if support==1,  statistic(percent)  nformat(%3.1f)
+collect: table (NATIONAL_tab3) (period) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
 collect rename Table STDT
-collect combine tab = Sample STDT
-collect style header NATIONAL_tab3 collection period, title(hide)
-collect layout (NATIONAL_tab3#collection)(period)
+collect : table (NATIONAL_tab3) (period) if sample==1,  statistic (freq) statistic(proportion)   nformat(%3.2f)
+collect rename Table Sample
+collect combine tab = STDT Sample 
+collect style header NATIONAL_tab3 collection period result, title(hide)
+collect style header  result, level(hide)
+collect style cell result[frequency], nformat (%5.0fc)
+collect layout (NATIONAL_tab3#collection)(period#result)
 
-collect export "${output}Compare_Sample_NationalityxPeriod.txt", as(txt) replace
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
-collect export "${output}Compare_Sample_NationalityxPeriod.pdf", as(pdf) replace
 
 
 blif

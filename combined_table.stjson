@@ -1,0 +1,392 @@
+{
+  "AutoHideDims": [
+    "across"
+  ],
+  "Items": {
+    "NATIONAL_tab3[10]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[2]#result[percent]#statcmd[1]": {
+      "d": 11.76470588235294
+    },
+    "NATIONAL_tab3[10]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[3]#result[percent]#statcmd[1]": {
+      "d": 0.267379679144385
+    },
+    "NATIONAL_tab3[10]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[4]#result[percent]#statcmd[1]": {
+      "d": 8.55614973262032
+    },
+    "NATIONAL_tab3[7]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[1]#result[percent]#statcmd[1]": {
+      "d": 11.76470588235294
+    },
+    "NATIONAL_tab3[7]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[2]#result[percent]#statcmd[1]": {
+      "d": 32.62032085561498
+    },
+    "NATIONAL_tab3[7]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[3]#result[percent]#statcmd[1]": {
+      "d": 4.545454545454546
+    },
+    "NATIONAL_tab3[7]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[4]#result[percent]#statcmd[1]": {
+      "d": 6.417112299465241
+    },
+    "NATIONAL_tab3[8]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[1]#result[percent]#statcmd[1]": {
+      "d": 6.417112299465241
+    },
+    "NATIONAL_tab3[8]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[2]#result[percent]#statcmd[1]": {
+      "d": 13.368983957219251
+    },
+    "NATIONAL_tab3[8]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[3]#result[percent]#statcmd[1]": {
+      "d": 1.6042780748663104
+    },
+    "NATIONAL_tab3[8]#across[NATIONAL_tab3#period]#cmdset[1]#command[0]#period[4]#result[percent]#statcmd[1]": {
+      "d": 2.6737967914438503
+    }
+  },
+  "Labels": {
+    "Dimensions": {
+      "NATIONAL_tab3": {
+        ".m": "Total",
+        "10": "France",
+        "7": "Great Britain",
+        "8": "Netherlands"
+      },
+      "_dimensions": {
+        "across": "Across",
+        "border_block": "Table border block",
+        "cell_type": "Table cell type",
+        "cmdset": "Command results index",
+        "command": "Command option index",
+        "result": "Result",
+        "statcmd": "Statistic/command option index"
+      },
+      "command": {
+        "0": "Statistic"
+      },
+      "period": {
+        ".m": "Total",
+        "1": "1750-1762",
+        "2": "1763-1778",
+        "3": "1778-1783",
+        "4": "1784-1795"
+      },
+      "result": {
+        "distribution": "Sample",
+        "percent": "Percent"
+      }
+    }
+  },
+  "Layout": {
+    "columns": "period",
+    "rows": "NATIONAL_tab3",
+    "tables": "result"
+  },
+  "NumericDimNames": [
+    "NATIONAL_tab3",
+    "period"
+  ],
+  "Styles": {
+    "cell": {
+      "base": {
+        "ci-delimiter": "   ",
+        "cri-delimiter": "   ",
+        "nformat": "%9.0g"
+      },
+      "edits": [
+        [
+          "cell_type[item]",
+          {
+            "smcl": "result"
+          }
+        ],
+        [
+          "result[_r_b _r_se _r_lb _r_ub _r_ci _r_crlb _r_crub _r_cri]",
+          {
+            "nformat": "%9.0g"
+          }
+        ],
+        [
+          "result[_r_z _r_z_abs]",
+          {
+            "nformat": "%8.2f"
+          }
+        ],
+        [
+          "result[_r_p]",
+          {
+            "nformat": "%5.3f"
+          }
+        ],
+        [
+          "result[count frequency fvrawfrequency]",
+          {
+            "nformat": "%18.0fc"
+          }
+        ],
+        [
+          "result[fvpercent fvrawpercent percent rawpercent]",
+          {
+            "nformat": "%9.2f"
+          }
+        ],
+        [
+          "result[fvproportion fvrawproportion proportion rawproportion]",
+          {
+            "nformat": "%9.4g"
+          }
+        ],
+        [
+          "result[rawtotal sumw total fvfrequency]",
+          {
+            "nformat": "%18.6gc"
+          }
+        ],
+        [
+          "cell_type[item]",
+          {
+            "margin-left": {
+              "width": "10pt"
+            }
+          }
+        ],
+        [
+          "cell_type[corner]",
+          {
+            "halign": "center"
+          }
+        ],
+        [
+          "cell_type[column-header]",
+          {
+            "halign": "right"
+          }
+        ],
+        [
+          "cell_type[column-header]#result[_r_ci _r_cri]",
+          {
+            "halign": "center"
+          }
+        ],
+        [
+          "cell_type[item]",
+          {
+            "halign": "right"
+          }
+        ],
+        [
+          "cell_type[row-header]",
+          {
+            "halign": "left"
+          }
+        ],
+        [
+          "border_block[corner]",
+          {
+            "border-right": {
+              "pattern": "single"
+            },
+            "border-top": {
+              "pattern": "single"
+            }
+          }
+        ],
+        [
+          "border_block[column-header]",
+          {
+            "border-top": {
+              "pattern": "single"
+            }
+          }
+        ],
+        [
+          "border_block[row-header]",
+          {
+            "border-bottom": {
+              "pattern": "single"
+            },
+            "border-right": {
+              "pattern": "single"
+            },
+            "border-top": {
+              "pattern": "single"
+            }
+          }
+        ],
+        [
+          "border_block[item]",
+          {
+            "border-bottom": {
+              "pattern": "single"
+            },
+            "border-top": {
+              "pattern": "single"
+            }
+          }
+        ]
+      ]
+    },
+    "export": {
+      "tex": {
+        "begintable": "true",
+        "centering": "true"
+      }
+    },
+    "header": {
+      "auto-levels": {
+        "result": [
+          {
+            "stripe": "percent",
+            "term-index": 0
+          }
+        ]
+      },
+      "base": {
+        "level": "label",
+        "title": "label"
+      },
+      "column": {
+        "dups": "center",
+        "extra-space": 1
+      },
+      "dimensions": {
+        "NATIONAL_tab3": {
+          "nformat": "%24.0g",
+          "title": "hide"
+        },
+        "across": {
+          "level": "hide",
+          "title": "hide"
+        },
+        "coleq": {
+          "title": "hide"
+        },
+        "colname": {
+          "title": "hide"
+        },
+        "command": {
+          "title": "hide"
+        },
+        "period": {
+          "nformat": "%9.0g"
+        },
+        "result": {
+          "title": "hide"
+        },
+        "roweq": {
+          "title": "hide"
+        },
+        "rowname": {
+          "title": "hide"
+        },
+        "stars": {
+          "level": "hide",
+          "title": "hide"
+        },
+        "statcmd": {
+          "title": "hide"
+        },
+        "var": {
+          "title": "hide"
+        }
+      },
+      "row": {
+        "arrangement": "stack"
+      }
+    }
+  },
+  "Tags": {
+    "NATIONAL_tab3": [
+      {
+        "stripe": "10",
+        "term-index": 2
+      },
+      {
+        "stripe": "7",
+        "term-index": 0
+      },
+      {
+        "stripe": "8",
+        "term-index": 1
+      }
+    ],
+    "across": [
+      {
+        "stripe": "NATIONAL_tab3#period",
+        "term-index": 1
+      }
+    ],
+    "border_block": [
+      {
+        "stripe": "column-header",
+        "term-index": 0
+      },
+      {
+        "stripe": "corner",
+        "term-index": 0
+      },
+      {
+        "stripe": "item",
+        "term-index": 0
+      },
+      {
+        "stripe": "row-header",
+        "term-index": 0
+      }
+    ],
+    "cell_type": [
+      {
+        "stripe": "column-header",
+        "term-index": 0
+      },
+      {
+        "stripe": "corner",
+        "term-index": 0
+      },
+      {
+        "stripe": "item",
+        "term-index": 0
+      },
+      {
+        "stripe": "row-header",
+        "term-index": 0
+      }
+    ],
+    "cmdset": [
+      {
+        "stripe": "1",
+        "term-index": 0
+      }
+    ],
+    "command": [
+      {
+        "stripe": "0",
+        "term-index": 0
+      }
+    ],
+    "period": [
+      {
+        "stripe": "1",
+        "term-index": 0
+      },
+      {
+        "stripe": "2",
+        "term-index": 1
+      },
+      {
+        "stripe": "3",
+        "term-index": 2
+      },
+      {
+        "stripe": "4",
+        "term-index": 3
+      }
+    ],
+    "result": [
+      {
+        "stripe": "percent",
+        "term-index": 0
+      }
+    ],
+    "statcmd": [
+      {
+        "stripe": "1",
+        "term-index": 0
+      }
+    ]
+  },
+  "collection-name": "Table"
+}
