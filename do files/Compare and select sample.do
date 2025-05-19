@@ -100,7 +100,8 @@ collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) repla
 
 merge m:1 ventureid using "${output}Venture all.dta"
 assert _merge==3 if sample==1
-blif
+drop _merge
+save  "${output}STDT_enriched.dta", replace
 
 collect clear
 collect: table (FATE4) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
@@ -115,9 +116,22 @@ collect layout (FATE4)(collection#result)
 tabi 337 6571 \  22 677 \ 12 509 \ 3 168, chi2  
 collect export "${output}Compare_Sample_Fate.docx", as(docx) replace
 
-blif
+***Quantitative outcome variables
+**Mortality
+gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
+replace MORTALITY=VYMRTRAT if missing(MORTALITY)
+label var MORTALITY "Enslaved person mortality rate during Middle Passage"
+
+**Crowding
+gen crowd=SLAXIMP/TONMOD
+label var crowd "Number of embarked enslaved persons per ton"
+
+**Disembarked slaves per ton
+gen DisSlavePerTon=SLAMIMP/TONMOD
+label var  DisSlavePerTon "Number of disembarked enslaved persons per ton"
 
 save  "${output}STDT_enriched.dta", replace
+
 
 /*
 **Look at the tonnage repartition
@@ -145,15 +159,11 @@ replace nationality="Dutch" if NATIONAL==8 & nationality==""
 
 
 ******Add variables of interest
-gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
-replace MORTALITY=VYMRTRAT if missing(MORTALITY)
-label var MORTALITY "Enslaved person mortality rate"
+
 ****add port shares
 merge m:1 YEARAF MJBYPTIMP using "${output}port_shares.dta", keep(1 3)
 drop _merge
-**Crowding
-gen crowd=SLAXIMP/TONMOD
-label var crowd "Number of embarked enslaved persons per ton"
+
 * APPEND SLAVE PRICES
 merge m:1 YEARAF using "${output}Prices.dta"
 drop if _merge==2
@@ -237,7 +247,7 @@ replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFIT
 
 save  "${output}STDT_enriched.dta", replace
 
-
+*/
 ************Compare Full STDT, Support STDT, sample for some variables
 expand 2 if support==1, gen(dupindicator_support)
 expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)
@@ -253,7 +263,7 @@ label value group group
 
 
 
-global varlist_o  YEARAF  TONMOD crowd SLAXIMP MORTALITY  pricemarkup
+global varlist_o  /*YEARAF  TONMOD*/ crowd /*SLAXIMP*/ MORTALITY DisSlavePerTon /*  pricemarkup*/
 
 table (var) group, ///
 	statistic(mean $varlist_o)  ///
@@ -265,7 +275,7 @@ table (var) group, ///
 	name(DS_Qvar) replace
 
 
-
+/*
 global varlist_d war neutral big_port captain_experience_d OUTFITTER_experience_d
 
 table (var) group , ///
@@ -281,24 +291,26 @@ collect combine DS= DS_Qvar DS_Dvar, replace
 
 
 global varlist_count  SLAXIMP   TONMOD
-
+*/
 collect style cell var, nformat(%5.2fc)
+collect style cell result[count], nformat(%5.0fc)
+/*
 collect style cell var[profit], nformat(%5.3f)
 collect style cell var[YEARAF], nformat(%5.0f)
 collect style cell var[$varlist_count], nformat(%12.0fc)
-collect style cell result[count], nformat(%5.0fc)
 collect style cell var[$varlist_count]#result[max min], nformat(%12.0fc)
-
-
+*/
+/*
 collect layout (var[war neutral big_port] # result[mean median sd count] ///
 	var[TONMOD SLAXIMP crowd MORTALITY ] # result[mean median sd min max count] ///
 	/*var[OUTFITTER_experience_d captain_experience_d] # result[mean median sd count]*/) (group [0 1 2]) 
+*/
 
+collect layout (var[crowd MORTALITY DisSlavePerTon] # result[mean median sd count]) (group [1 2])
 
+collect export "${output}Compare STDT__support__sample.docx", as(docx) replace
 
-collect export "${output}Compare STDT__support__sample.txt", as(txt) replace
-
-
+/*
 ****K_Smirnov tests
 
 gen ksmirnov_group = group
@@ -323,33 +335,39 @@ collect title "KS test between STDT (same support) and sample"
 collect preview
 
 collect clear
-
+*/
 ****Ttests
+replace group = . if group==0
 
 local labels
 
 local i 1
 
-foreach var of varlist $varlist_o $varlist_d {
-	collect r(N_1) r(mu_1) r(N_2) r(mu_2) r(p):  ttest `var', by(ksmirnov_group)
-	local labels  `labels' `i' "`var'"
+foreach var of varlist $varlist_o /*$varlist_d*/ {
+	collect r(N_1) r(mu_1) r(sd_1) r(N_2) r(mu_2) r(sd_2) r(p):  ttest `var', by(group)
+	local lab : variable label `var'
+	local labels  `labels' `i' "`lab'"
 	local i = `i'+1    
 }
+ macro list
 
-
-collect remap result[N_1 mu_1] = STDT_same_support
-collect remap result[N_2 mu_2] = Sample
+collect remap result[N_1 mu_1 sd_1] = STDT_same_support
+collect remap result[N_2 mu_2 sd_2] = Sample
 collect remap result[p] = Difference
 collect style header STDT_same_support Sample Difference, title(name)
-collect style column, dups(center) width(equal)
-collect label levels STDT_same_support N_1 N mu_1 Mean
-collect label levels Sample N_2 N mu_2 Mean
+collect style column, dups(center) width(asis)
+collect label levels STDT_same_support N_1 N mu_1 Mean sd_1 "St. dev"
+collect label levels Sample N_2 N mu_2 Mean sd_2 "St. dev"
 collect label levels Difference p p-value
-collect style cell STDT_same_support[mu_1] Sample[mu_2] Difference[p], nformat(%4.2fc)
+collect style cell STDT_same_support[mu_1 sd_1] Sample[mu_2 sd_2] Difference[p], nformat(%4.2fc)
+collect style cell STDT_same_support[N_1], nformat(%5.0fc)
+collect style header cmdset, title(hide)
 collect title "Ttest test between STDT (same support) and sample"
 collect label levels cmdset `labels', modify
 collect layout (cmdset) (STDT_same_support Sample Difference )
 
+
+collect export "${output}Compare STDT__support__sample_withTTest.docx", as(docx) replace
 
 
 
@@ -378,7 +396,7 @@ restore
 Use raking when you have marginal totals for multiple variables but not their joint distribution.
 Use post-stratification when you have complete joint distributions (e.g., cross-tabulated population totals).
 And GREC for continuous auxiliary variable. (Does not exist...	)
-*/
+
 
 **** Post-stratification
 **Issue : we have no French observation before 1763
