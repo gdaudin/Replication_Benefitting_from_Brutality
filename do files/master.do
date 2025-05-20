@@ -42,6 +42,7 @@
 	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
 	
 	do "${dir}/do files/Profit analysis - survey method.do"
+	blif
 
 
 

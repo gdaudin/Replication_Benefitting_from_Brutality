@@ -216,6 +216,25 @@ assert _merge==3
 drop _merge
 erase "${output}temp_profit.dta"
 
+bys nationality :sum profit irr
+
+table (var) nationality, ///
+	statistic(mean profit irr)  ///
+	statistic(median profit irr)  ///
+	statistic(sd profit irr)  ///
+	statistic(max profit irr) ///
+	statistic(min profit irr) ///
+	statistic(count profit irr) ///
+	name(Profit_IRR_Qvar) replace
+
+collect style cell var, nformat(%5.2fc)
+collect style cell result[count], nformat(%5.0fc)
+collect style column, dups(center) width(asis)
+collect label levels result count N sd "Std. dev"  max "Max" min "Min", replace
+
+collect layout (var) (nationality [English French] # result)
+
+collect export "${output}IRR_profit.docx", as(docx) replace
 
 save "${output}irr_results_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", replace
 
@@ -247,8 +266,11 @@ reg irr profit sq_profit
 
 bysort sample: summarize irr profit
 
-display "mean:" _b[_cons]+_b[profit]*0.116+_b[sq_profit]*(0.116)^2
-display "median:" _b[_cons]+_b[profit]*0.087+_b[sq_profit]*(0.087)^2
+display "mean:" _b[_cons]+_b[profit]*0.13+_b[sq_profit]*(0.13)^2
+display "median:" _b[_cons]+_b[profit]*0.09+_b[sq_profit]*(0.09)^2
+
+display "mean:" _b[_cons]+_b[profit]*0.144+_b[sq_profit]*(0.144)^2
+
 
 end
 
