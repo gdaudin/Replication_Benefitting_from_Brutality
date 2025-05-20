@@ -34,24 +34,59 @@ if "`OR' `VSDO' `VSDR' `VSDT' `VSRV' `VSRT' `INV' `INT'`IMP'"=="0.5 1 1 0 1 0 1 
 	local hyp="Imputed"
 
 use "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", clear
-keep ventureid profit
-merge 1:m ventureid using "${output}voyages.dta"
-keep VOYAGEID profit
-merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
+keep if numberofvoyages==1
+keep ventureid profit YEARAF nationality_num
 
+bysort YEARAF : gen N=_N
+
+reg profit i.YEARAF 
+testparm i.YEARAF
 
 reg profit i.YEARAF ib3.nationality_num
-outreg2 using "$output/reg_synchro, label excel auto(2) replace 
+testparm i.YEARAF
+
+reg profit i.YEARAF ib3.nationality_num if N>=2
+testparm i.YEARAF
+outreg2 using "$output/reg_synchro.doc", label word auto(2) replace addstat(F-test for joint significance of years, r(F), p-stat, r(p)) 
+
+reg profit i.YEARAF if N>=2
+testparm i.YEARAF
+
+reg profit i.YEARAF#i.nationality_num if N>=2
+testparm i.YEARAF#i.nationality_num
+
+reg profit i.YEARAF ib3.nationality_num if N>=3
+testparm i.YEARAF
+
+reg profit i.YEARAF if N>=3
+testparm i.YEARAF
+
+reg profit i.YEARAF#i.nationality_num if N>=3
+testparm i.YEARAF#i.nationality_num
+
+reg profit i.YEARAF ib3.nationality_num if N>=4
+testparm i.YEARAF
+
+reg profit i.YEARAF if N>=4
+testparm i.YEARAF
+
+
+reg profit i.YEARAF ib3.nationality_num if N>=5
+testparm i.YEARAF
+
+reg profit i.YEARAF if N>=5
+testparm i.YEARAF
+
+
+reg profit i.YEARAF ib3.nationality_num if N>=6
+testparm i.YEARAF
+
+reg profit i.YEARAF if N>=6
+testparm i.YEARAF
+
+
 
 end
-
-capture erase "$output/Table6.xls"
-capture erase "$output/Table6.txt"
-capture erase "$output/Comparison between different assumptions.xls"
-capture erase "$output/Comparison between different assumptions.txt"
-capture erase "$output/TableBaseline-Imputed.xls"
-capture erase "$output/TableBaseline-Imputed.txt"
-
 
 profit_analysis_synchro 0.5 1 1 0 1 0 1 0
 
