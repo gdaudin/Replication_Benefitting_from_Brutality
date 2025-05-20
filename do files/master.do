@@ -42,10 +42,9 @@
 	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
 	
 	do "${dir}/do files/Profit analysis - survey method.do"
+	do "${dir}/do files/Profit analysis - synchronisation.do" 
 	blif
-
-
-
+	
 	********
 	do "${dir}/do files/Descriptive statistics of profit.do" /*I believe the small table 6 .*/
 		*/ Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830 */
@@ -56,15 +55,10 @@
 
 	
 	do "${dir}/do files/Profit graphs.do" /*Figures 2 and 3 and 4 in BB*/
+	
 
-	blif
+	/*
 	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
-
-	
-
-	
-
-
 	do "${dir}/do files/Profit two parts regressions.do"
 	do "${dir}/do files/Profit two parts regressions--various hypothesis.do"
 
@@ -84,11 +78,11 @@
 	do "${dir}/do files/Descriptive statistics of explaining variables.do"
 	
 
-
+*/
 	**For IRR computations
 	do "${dir}/do files/IRR computation.do"  /*uses do "${dir}/do files/irrGD.do"*/ 
 	**To transform profits into IRR (this is long)
-	***previous solutio if you want to work with a limited number of ventures
+	***previous solution if you want to work with a limited number of ventures
 	*do "${dir}/do files/Transforming profit into IRR.do" /*uses do "${dir}/do files/irrGD.do"*/ 
 	*I think the idea of that program is to compute a typical chronolgy of returns and apply it to the profits of the ventures.
 	*Maybe too complicated and not done finaly.?
