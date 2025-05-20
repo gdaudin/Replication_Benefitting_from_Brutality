@@ -94,7 +94,6 @@ encode VOYAGEID, generate(voyageid_num)
 xfill cap,i(voyageid_num)
 xfill out,i(voyageid_num)
 xfill YEARAF_own, i(voyageid_num)
-br
 replace YEARAF_own = year_dep+1 if  year_dep !=.
 
 ***Drop duplicates.
@@ -103,6 +102,7 @@ replace data=1 if completedataonoutlays!="no" & completedataonreturns!="no"
 replace data=2 if completedataonoutlays=="yes" & completedataonreturns=="yes"
 
 bys VOYAGEID (data): drop if _N != _n
+
 tab data
 
 label define data 0 "No computation possible" 1 "With estimates" 2 "Without estimates"

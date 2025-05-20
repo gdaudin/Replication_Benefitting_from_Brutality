@@ -97,10 +97,16 @@ collect layout (NATIONAL_tab3#collection)(period#result)
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
 ***Fate
+bysort VOYAGEID: assert _N==1
 
 merge m:1 ventureid using "${output}Venture all.dta"
 assert _merge==3 if sample==1
+
+**In Venture all.dta we have some voyages that are duplicates (multiple sources of information of varying quality). We remove them and keep the best quality.
+bys VOYAGEID (data): drop if _N != _n
+bysort VOYAGEID: assert _N==1
 drop _merge
+
 save  "${output}STDT_enriched.dta", replace
 
 collect clear
