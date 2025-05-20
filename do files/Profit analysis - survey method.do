@@ -34,8 +34,9 @@ if "`OR' `VSDO' `VSDR' `VSDT' `VSRV' `VSRT' `INV' `INT'`IMP'"=="0.5 1 1 0 1 0 1 
 if "`OR' `VSDO' `VSDR' `VSDT' `VSRV' `VSRT' `INV' `INT'`IMP'"=="0.5 1 1 0 1 0 1 0 IMP" ///
 	local hyp="Imputed"
 
-
+*********
 *****Just nationality and period
+**********
 
 use "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", clear
 keep ventureid profit
@@ -58,11 +59,104 @@ local support_size=_N
 svyset ventureid, rake(bn.period bn.NATIONAL, totals(for_rake `support_size', copy))
 svy : mean profit
 
+***********
+****Adding fate and mortality
+************
+gen FATE_forraking=FATE4
+replace FATE_forraking=. if FATE_forraking==4
+replace FATE_forraking=2 if FATE_forraking==3
 
 
 
-blif
 
+
+preserve
+drop if FATE_forraking==.
+local support_size=_N
+
+tabulate FATE_forraking, matcell(FATE_forraking)
+tabulate period, matcell(period_mat)
+tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
+matrix for_rake = period_mat', NATIONAL_mat', FATE_forraking'
+
+
+svyset ventureid, rake(bn.period bn.NATIONAL bn.FATE_forraking, totals(for_rake `support_size', copy))
+display "bn.period bn.NATIONAL bn.FATE_forraking"
+svy : mean profit
+restore
+
+
+
+preserve
+drop if MORTALITY==.
+local support_size=_N
+
+egen sumMORTALITY=total(MORTALITY)
+global totalMORTALITY_support=sumMORTALITY[1]
+tabulate period, matcell(period_mat)
+tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
+matrix for_rake = period_mat', NATIONAL_mat', $totalMORTALITY_support
+
+
+svyset ventureid, rake(bn.period bn.NATIONAL MORTALITY, totals(for_rake `support_size', copy))
+display "bn.period bn.NATIONAL MORTALITY"
+svy : mean profit
+restore
+
+preserve
+drop if MORTALITY==. | FATE_forraking==.
+local support_size=_N
+
+egen sumMORTALITY=total(MORTALITY)
+global totalMORTALITY_support=sumMORTALITY[1]
+tabulate FATE_forraking, matcell(FATE_forraking)
+tabulate period, matcell(period_mat)
+tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
+
+matrix for_rake = period_mat', NATIONAL_mat', FATE_forraking', $totalMORTALITY_support 
+svyset ventureid, rake(bn.period bn.NATIONAL bn.FATE_forraking MORTALITY, totals(for_rake `support_size', copy))
+display "bn.period bn.NATIONAL bn.FATE_forraking MORTALITY"
+svy : mean profit
+restore
+
+***********
+****Adding crowding
+************
+
+preserve
+drop if crowd==.
+local support_size=_N
+
+egen sumcrowd=total(crowd)
+global totalcrowd_support=sumcrowd[1]
+tabulate period, matcell(period_mat)
+tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
+
+matrix for_rake = period_mat', NATIONAL_mat', $totalcrowd_support 
+svyset ventureid, rake(bn.period bn.NATIONAL  crowd, totals(for_rake `support_size', copy))
+display "bn.period bn.NATIONAL  crowd"
+svy : mean profit
+restore
+
+preserve
+drop if crowd==. | MORTALITY==. | FATE_forraking==.
+local support_size=_N
+
+egen sumcrowd=total(crowd)
+global totalcrowd_support=sumcrowd[1]
+egen sumMORTALITY=total(MORTALITY)
+global totalMORTALITY_support=sumMORTALITY[1]
+tabulate FATE_forraking, matcell(FATE_forraking)
+tabulate period, matcell(period_mat)
+tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
+
+matrix for_rake = period_mat', NATIONAL_mat', FATE_forraking', $totalMORTALITY_support, $totalcrowd_support 
+svyset ventureid, rake(bn.period bn.NATIONAL  bn.FATE_forraking MORTALITY crowd, totals(for_rake `support_size', copy))
+display "bn.period bn.NATIONAL bn.FATE_forraking MORTALITY crow"
+svy : mean profit
+restore
+
+/*
 ***To recovert total (and hence) mean tonnage in the sample
 
 egen sumTONMOD=total(TONMOD)
@@ -215,7 +309,7 @@ matrix list mat_period_with_ton
 svyset VOYAGEID [pw=pweight], rake(bn.period bn.FATE_3c bn.NATIONAL TONMOD,totals(1692 3077 335 1486 5470 1003 117 4990 369 1231 $totalTONMOD_support $nbr_obs_ton , copy))
 svy : mean profit
 
-
+*/
 end 
 
 profit_analysis_survey 0.5 1 1 0 1 0 1 0
