@@ -25,20 +25,13 @@ if lower(c(username)) == "guillaumedaudin" {
 
 capture program drop profit_analysis_survey
 program define profit_analysis_survey
-args OR VSDO VSDR VSDT VSRV VSRT INV INT IMP
-*eg profit_analysis 0.5 1 1 0 1 0 1 0 for the baseline
-* eg profit_analysis 0.5 1 1 0 1 0 1 0 IMP for the baseline + imputed
+args HYP
+*eg profit_analysis OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 for the baseline
 
-if "`OR' `VSDO' `VSDR' `VSDT' `VSRV' `VSRT' `INV' `INT'`IMP'"=="0.5 1 1 0 1 0 1 0" ///
-	local hyp="Baseline"
-if "`OR' `VSDO' `VSDR' `VSDT' `VSRV' `VSRT' `INV' `INT'`IMP'"=="0.5 1 1 0 1 0 1 0 IMP" ///
-	local hyp="Imputed"
 
-*********
-*****Just nationality and period
-**********
 
-use "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", clear
+
+use "${output}Ventures&profit_`HYP'.dta", clear
 keep ventureid profit
 merge 1:m ventureid using "${output}voyages.dta"
 keep VOYAGEID profit
@@ -47,6 +40,12 @@ merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
 
 keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
+**Without raking
+collect get, tags(raking[none] hyp[`HYP']) : mean profit
+
+*********
+*****Just nationality and period
+**********
 
 ***Extracting matrixes to use with rake
 tabulate period, matcell(period_mat)
@@ -57,7 +56,8 @@ matrix for_rake = period_mat', NATIONAL_mat'
 local support_size=_N
 
 svyset ventureid, rake(bn.period bn.NATIONAL, totals(for_rake `support_size', copy))
-svy : mean profit
+collect get, tags(raking[nat_period] hyp[`HYP']) : svy : mean profit
+
 
 ***********
 ****Adding fate and mortality
@@ -153,165 +153,76 @@ tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
 matrix for_rake = period_mat', NATIONAL_mat', FATE_forraking', $totalMORTALITY_support, $totalcrowd_support 
 svyset ventureid, rake(bn.period bn.NATIONAL  bn.FATE_forraking MORTALITY crowd, totals(for_rake `support_size', copy))
 display "bn.period bn.NATIONAL bn.FATE_forraking MORTALITY crow"
-svy : mean profit
+collect get, tags(raking[all] hyp[`HYP']) : svy : mean profit
 restore
 
-/*
-***To recovert total (and hence) mean tonnage in the sample
-
-egen sumTONMOD=total(TONMOD)
-global totalTONMOD_support=sumTONMOD[1]
-
-summarize TONMOD
-global nbr_obs_ton=r(N)
-
-summarize NATIONAL
-global nbr_obs=r(N)
-
-
-
-*****For population totals
-gen FATE_3c = FATE4
-replace FATE_3c= 2 if FATE4 ==3
-egen Fate_x_National=group(FATE_3c NATIONAL)
-collapse (count) pop_size_Fate_x_National=NATIONAL, by(Fate_x_National)
-
-save "${output}pop_totals.dta", replace
-
-
-
-*****For margins 
-use "${output}STDT_enriched.dta", clear
-keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
-keep if YEARAF >= 1750 & YEARAF <=1795
-gen pop = 1
-***For Fate_x_National
-gen FATE_3c = FATE4
-replace FATE_3c= 2 if FATE4 ==3
-egen Fate_x_National=group(FATE_3c NATIONAL)
-total pop, over(Fate_x_National, nolab)
-matrix mat_Fate_x_National=e(b),e(N)
-
-matrix colnames mat_Fate_x_National = ""
-matrix rownames mat_Fate_x_National = ""
-
-
-
-
-**Using war and peace for periods
-gen period=1 if YEARAF<=1755
-replace period=1 if YEARAF >1755 & YEARAF<=1762
-replace period=2 if YEARAF >1762 & YEARAF <=1777
-replace period=3 if YEARAF >1777 & YEARAF <=1783
-replace period=4 if YEARAF >1783 & YEARAF <=1792
-replace period=4 if YEARAF >1792 & !missing(YEARAF)
-
-assert !missing(period) if sample==1
-
-
-total pop, over(period, nolab)
-matrix mat_period=e(b)
-matrix rownames mat_period=period
-
-**** The same without the missing TONMOD
-drop if TONMOD==.
-total pop, over(period, nolab) 
-matrix mat_period_with_ton=e(b)
-matrix rownames mat_period_with_ton=period
-
-total pop, over(Fate_x_National, nolab)
-matrix mat_Fate_x_National_with_ton=e(b)
-matrix colnames mat_Fate_x_National_with_ton = ""
-matrix rownames mat_Fate_x_National_with_ton = ""
-
-total pop, over(FATE_3c, nolab)
-matrix mat_Fate_with_ton=e(b),e(N)
-
-total pop, over(NATIONAL, nolab)
-matrix mat_National_with_ton=e(b),e(N)
-
-****And now to analysis
-
-use "${output}voy_weight.dta", clear
-
-
-egen Fate_x_National=group(FATE_3c NATIONAL)
-
-merge m:1 Fate_x_National using "${output}pop_totals.dta"
-drop _merge
-
-merge m:1 ventureid using "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta"
-
-keep if _merge==3
-
-
-
-gen pweight = $nbr_obs/_N
-
-
-mean profit
-
-
-***** Comparing profit with "by hand" post-stratification and use of svy command
-svyset VOYAGEID [pw=pweight], poststrata(Fate_x_National) postweight(pop_size_Fate_x_National)
-svy : mean profit
-matrix list mat_Fate_x_National
-
-svyset VOYAGEID [pw=pweight], rake(bn.Fate_x_National, totals(4219 530 1822 795 36 355 96 5 67 7925, copy))
-
-matrix mat_Fate_x_National =  (4219,   530,  1822,   795,    36,   355,    96,     5,    67,  7925)
-/*This does not work and I do not understand why...
-matrix list mat_Fate_x_National
-
-svyset VOYAGEID [pw=pweight], rake(bn.Fate_x_National, totals(mat_Fate_x_National))
-
-*/
-svy : mean profit
-mean profit [pw=post_wt]
-
-**Standard error is very slightly smaller with svy. The first two give exactly the right number
-
-
-***** Comparing profit with "by hand" post-stratification + ipfraking  and use of svy command
-**No : you cannot use both postrata and rake...
-matrix list mat_period
-svyset VOYAGEID [pw=pweight],  rake(bn.period bn.Fate_x_National, totals(1782 3237 387 2519  4219 530 1822 795 36 355 96 5 67 7925, copy))
-svy : mean profit
-mean profit [pw=frak_post_wt]
-
-svyset VOYAGEID [pw=frak_post_wt]
-svy: mean profit
-
-**There is a relatively small difference... Easy to explain with 2 steps or 1 step ?
-**And now with tonnage
-
-
-matrix list mat_Fate_x_National_with_ton
-matrix list mat_period_with_ton
-
-
-svyset VOYAGEID [pw=pweight], rake(bn.period bn.Fate_x_National TONMOD,totals(1692 3077 335 1486  4140 344 986 758 23 222 92 2 23 $totalTONMOD_support $nbr_obs_ton , copy))
-svy : mean profit
-
-svyset VOYAGEID [pw=post_wt], rake(TONMOD,totals(TONMOD=$totalTONMOD_support _cons=$nbr_obs_ton))
-svy : mean profit
-
-svyset VOYAGEID [pw=frak_post_wt], rake(TONMOD,totals(TONMOD=$totalTONMOD_support _cons=$nbr_obs_ton))
-svy : mean profit
-
-
-******
-**New option : without crossing Fate and National
-matrix list mat_Fate_with_ton
-matrix list mat_National_with_ton
-matrix list mat_period_with_ton
-
-svyset VOYAGEID [pw=pweight], rake(bn.period bn.FATE_3c bn.NATIONAL TONMOD,totals(1692 3077 335 1486 5470 1003 117 4990 369 1231 $totalTONMOD_support $nbr_obs_ton , copy))
-svy : mean profit
-
-*/
 end 
 
-profit_analysis_survey 0.5 1 1 0 1 0 1 0
+
+////////// 
+*****For appendix
+////////////////
+
+
+
+
+
+global hyp_list 	OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
+					OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
+					OR0_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
+					OR1_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
+					OR0.5_VSDO1.5_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
+					OR0.5_VSDO1_VSDR0.83_VSDT0_VSRV1.2_VSRT0_INV1_INT0 ///
+					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV0_INT0 ///
+					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT1 ///
+					OR0.5_VSDO1_VSDR1_VSDT1_VSRV1_VSRT1_INV1_INT0 ///
+					OR0.5_VSDO1_VSDR1_VSDT1_VSRV1_VSRT1_INV1_INT1
+*					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0IMP /// 
+*					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0onlyIMP
+*/
+
+
+
+
+global hyp_list_name `""Baseline" "Observations with outstanding claims excluded from analysis"'
+global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to not have been paid at all"'
+global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to have been paid in full"'
+global hyp_list_name `"$hyp_list_name" "Higher cost of hull relative to other outlays (25% instead of 17% in baseline)"'
+global hyp_list_name `"$hyp_list_name" "Lower rate of depreciation (10% instead of baseline 25%)"'
+global hyp_list_name `"$hyp_list_name" "Cost of insurance not added to any voyages"'
+global hyp_list_name `"$hyp_list_name" "Cost of insurance added to outlays, even in cases where accounts seem to suggest total outlays"'
+global hyp_list_name `"$hyp_list_name" "Value of hull (outgoing/incoming) added to outlays/returns, even in cases where accounts seem to suggest total outlays/returns"'
+global hyp_list_name `"$hyp_list_name" "Both value of hull and cost of insurance added, in cases where accounts seem to suggest total outlays/returns"'
+*global hyp_list_name `"$hyp_list_name" "Baseline including imputed profits"'
+*global hyp_list_name `"$hyp_list_name" "Baseline including only imputed profits""'
+
+
+
+tokenize `"$hyp_list_name"'
+macro list
+display "`1'"
+
+collect clear
+local label_list
+local i 1
+foreach hyp of global hyp_list {
+	profit_analysis_survey `hyp'
+	local label_list `label_list' `hyp' "``i''"
+	local i = `i'+1
+}
+
+macro list
+
+collect label levels hyp `label_list', replace
+collect label levels raking none "No raking" nat_period "Nationality and period" all "All", replace
+collect label levels result _r_b mean _r_ci "95% ci" N "Nbr. of observations", replace
+collect style cell result[_r_ci], sformat([%s]) cidelimiter(, )
+collect style cell result[_r_b _r_ci], nformat(%4.2fc)
+collect style cell hyp[none nat_period all]#result[_r_b _r_ci N], halign(center)
+*collect style header result, halign(left)
+collect layout (hyp#result[_r_b _r_ci N]) (raking)
+
+collect export "${output}Profit analysis survey robustess.docx", as(docx) replace
+
 
 break
