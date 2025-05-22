@@ -42,9 +42,9 @@ bysort YEARAF : gen N=_N
 preserve
 bysort YEARAF : keep if _n==1
 label var N "Number of single-voyage ventures (all nationalities)"
-histogram N, width(1) ytitle(Number of years between 1730 and 1830) discrete freque
+histogram N, width(1) ytitle(Number of years between 1730 and 1830) discrete freque start(0.5)
 
-graph export  "$output/Syncro_hist.png", replace
+graph export  "$graphs/Syncro_hist.png", replace
 
 restore
 
