@@ -37,7 +37,17 @@ use "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'
 keep if numberofvoyages==1
 keep ventureid profit YEARAF nationality_num
 
+
 bysort YEARAF : gen N=_N
+preserve
+bysort YEARAF : keep if _n==1
+label var N "Number of single-voyage ventures (all nationalities)"
+histogram N, width(1) ytitle(Number of years between 1730 and 1830) discrete freque
+
+graph export  "$output/Syncro_hist.png", replace
+
+restore
+
 
 reg profit i.YEARAF 
 testparm i.YEARAF
