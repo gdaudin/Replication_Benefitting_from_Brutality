@@ -2,13 +2,12 @@
                   |       Our sample            Whole TSTD    
                   |  Frequency   Percent   Frequency   Percent
 ------------------+-------------------------------------------
-Great Britain     |        238     53.36      11,022     42.11
-Netherlands       |        101     22.65       1,148      4.39
-France            |         85     19.06       4,026     15.38
-Spain             |         17      3.81       1,623      6.20
-Denmark           |          5      1.12         311      1.19
-Portugal / Brazil |                            6,130     23.42
-USA               |                            1,799      6.87
-Other             |                              115      0.44
-Total             |        446    100.00      26,174    100.00
+Great Britain     |        239     53.59      11,796     35.20
+Netherlands       |        101     22.65       1,606      4.79
+France            |         84     18.83       4,141     12.36
+Denmark           |                                1      0.00
+Portugal / Brazil |                           11,363     33.90
+USA               |                            2,275      6.79
+Other             |         22      4.93       2,334      6.96
+Total             |        446    100.00      33,516    100.00
 --------------------------------------------------------------

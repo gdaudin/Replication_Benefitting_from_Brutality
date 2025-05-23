@@ -4,6 +4,7 @@ clear
 	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
 	global output "$dir/output/"
+	global graphs "$dir/graphs/"
 	global tastdb "$dir/external data/"
 }
 
@@ -21,45 +22,47 @@ drop _merge
 replace FATE4=4 if FATE4==.
 
 label list labels19
-/*NATIONAL coding in stdt
+/*NATINIMP coding in stdt
 7     Great Britain
 8     Netherlands
 10    France
 */
 
 
-replace NATIONAL=1 if nationality =="Spanish" & NATIONAL==.
-replace NATIONAL=7 if nationality =="English" & NATIONAL==.
-replace NATIONAL=8 if nationality =="Dutch" & NATIONAL==.
-replace NATIONAL=10 if nationality =="French" & NATIONAL==.
-replace NATIONAL=11 if nationality =="Danish" & NATIONAL==.
+replace NATINIMP=1 if nationality =="Spanish" & NATINIMP==.
+replace NATINIMP=7 if nationality =="English" & NATINIMP==.
+replace NATINIMP=8 if nationality =="Dutch" & NATINIMP==.
+replace NATINIMP=10 if nationality =="French" & NATINIMP==.
+replace NATINIMP=11 if nationality =="Danish" & NATINIMP==.
 
-gen NATIONAL_tab3 = NATIONAL
-replace NATIONAL_tab3=30 if NATIONAL ==2 | NATIONAL ==3 | (NATIONAL >=12   & NATIONAL !=.)
-replace NATIONAL_tab3=6 if NATIONAL==4 | NATIONAL==5
-label value NATIONAL_tab3 labels19
+gen NATINIMP_tab3 = NATINIMP
+replace NATINIMP_tab3=30 if NATINIMP ==2 | NATINIMP ==3 | (NATINIMP >=12   & NATINIMP !=.)
+replace NATINIMP_tab3=6 if NATINIMP==4 | NATINIMP==5
+label value NATINIMP_tab3 labels19
 
 gen sample =  1 if data==1 | data==2
 replace sample=0 if sample==.
 label define sample_l 0 "Whole TSTD" 1 "Our sample" 
 label values sample sample_l
 
-table (NATIONAL_tab3) (sample),  statistic (freq) statistic(percent, across(NATIONAL_tab3)) totals(sample)
-collect style header NATIONAL_tab3, title(hide)
+table (NATINIMP_tab3) (sample),  statistic (freq) statistic(percent, across(NATINIMP_tab3)) totals(sample)
+collect style header NATINIMP_tab3, title(hide)
 collect style header sample, title(hide)
-collect layout (NATIONAL_tab3[7 8 10 1 11 6 9 30 .m]) (sample[1 0]#result) 
+collect layout (NATINIMP_tab3[7 8 10 1 11 6 9 30 .m]) (sample[1 0]#result) 
 **For table 3 "Representativity of our sample (flag)"":
 tabi 238 11239 \  101 1249 \ 85 4090 \ 17 1660 \5 311 \ 0 6130 \ 0 1799 \ 0 92, chi2  
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
 collect export "${output}Compare_Sample_Nationality.pdf", as(pdf) replace
 
+
+
 hist YEARAF if sample==1, freq scheme(s1color) start(1720) width(5) xtitle(Year departed Africa)
 graph export "$graphs/hist_voyage_by_year_Baseline.png",as(png) replace
 
-*keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
+*keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
 gen three_nat=0
-replace three_nat=1 if (NATIONAL==7 | NATIONAL==8 | NATIONAL == 10)
+replace three_nat=1 if (NATINIMP==7 | NATINIMP==8 | NATINIMP == 10)
 
 twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac start(1730) width(5) color(red%30)) ///
 	 (histogram YEARAF  if  three_nat==1 &  YEARAF>=1730 & YEARAF<=1815,  frac start(1730) width(5) color(green%30)), ///
@@ -84,15 +87,15 @@ label define period_l 1 "1750-1762" 2 "1763-1778" 3 "1778-1783" 4 "1784-1795"
 label values period period_l
 
 collect clear
-collect: table (NATIONAL_tab3) (period) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
+collect: table (NATINIMP_tab3) (period) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
 collect rename Table STDT
-collect : table (NATIONAL_tab3) (period) if sample==1,  statistic (freq) statistic(proportion)   nformat(%3.2f)
+collect : table (NATINIMP_tab3) (period) if sample==1,  statistic (freq) statistic(proportion)   nformat(%3.2f)
 collect rename Table Sample
 collect combine tab = STDT Sample 
-collect style header NATIONAL_tab3 collection period result, title(hide)
+collect style header NATINIMP_tab3 collection period result, title(hide)
 collect style header  result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
-collect layout (NATIONAL_tab3#collection)(period#result)
+collect layout (NATINIMP_tab3#collection)(period#result)
 
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
@@ -158,9 +161,9 @@ twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & Y
 
 */
 /*
-replace nationality="French" if NATIONAL==10 & nationality==""
-replace nationality="English" if NATIONAL==7 & nationality==""
-replace nationality="Dutch" if NATIONAL==8 & nationality==""
+replace nationality="French" if NATINIMP==10 & nationality==""
+replace nationality="English" if NATINIMP==7 & nationality==""
+replace nationality="Dutch" if NATINIMP==8 & nationality==""
 */
 
 
@@ -380,14 +383,14 @@ collect export "${output}Compare STDT__support__sample_withTTest.docx", as(docx)
 /*
 
 gen sampleSTDT=0
-replace sampleSTDT=1 if YEARAF >= 1750 & YEARAF <=1790 & (NATIONAL==7 | NATIONAL==8 | NATIONAL == 10)
+replace sampleSTDT=1 if YEARAF >= 1750 & YEARAF <=1790 & (NATINIMP==7 | NATINIMP==8 | NATINIMP == 10)
 
 preserve
 keep if sampleSTDT==1
 
 expand 2 if  sample==1,gen(dupindicator)
 
-tab dupindicator NATIONAL, chi2
+tab dupindicator NATINIMP, chi2
 
 restore
 */
@@ -409,11 +412,11 @@ And GREC for continuous auxiliary variable. (Does not exist...	)
 use "${output}STDT_enriched.dta", clear
 
 
-keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
+keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
 
-table FATE4 NATIONAL
-table FATE4 NATIONAL if sample==1
+table FATE4 NATINIMP
+table FATE4 NATINIMP if sample==1
 
 **This shows no instance in the sample of France / Original goal
 ***thwarted (human agency)
@@ -422,28 +425,28 @@ table FATE4 NATIONAL if sample==1
 gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
 
-tabulate NATIONAL FATE_3c, cell
+tabulate NATINIMP FATE_3c, cell
 
 
-gen strata = FATE_3c*100+NATIONAL
-collapse (count) pop_size=NATIONAL, by(strata)
+gen strata = FATE_3c*100+NATINIMP
+collapse (count) pop_size=NATINIMP, by(strata)
 save "${output}pop_totals.dta", replace
 
 use "${output}STDT_enriched.dta", clear
 
 gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
-gen strata = FATE_3c*100+NATIONAL
+gen strata = FATE_3c*100+NATINIMP
 
 merge m:1 strata using "${output}pop_totals.dta"
 drop _merge
-replace sample=1 if (data >=1 & !missing(data)) & (NATIONAL==7 | NATIONAL==8 | NATIONAL == 10)
+replace sample=1 if (data >=1 & !missing(data)) & (NATINIMP==7 | NATINIMP==8 | NATINIMP == 10)
 keep if YEARAF >= 1750 & YEARAF <=1795
 drop if sample==0
-egen pop_size_sample=count(NATIONAL), by(strata)
+egen pop_size_sample=count(NATINIMP), by(strata)
 gen post_wt=(pop_size/pop_size_sample)
 
-tabulate NATIONAL FATE_3c [iweight=post_wt], cell
+tabulate NATINIMP FATE_3c [iweight=post_wt], cell
 
 *******
 keep VOYAGEID post_wt
@@ -453,7 +456,7 @@ save "${output}voy_weight.dta", replace
 use "${output}STDT_enriched.dta", clear
 merge 1:1 VOYAGEID using  "${output}voy_weight.dta"
 drop _merge
-keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
+keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
 gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
@@ -479,9 +482,9 @@ version 14 : total pop, over(period, nolab)
 matrix mat_period=e(b)
 matrix rownames mat_period=period
 
-version 14 : total pop, over(NATIONAL, nolab)
-matrix mat_NATIONAL=e(b)
-matrix rownames mat_NATIONAL=NATIONAL
+version 14 : total pop, over(NATINIMP, nolab)
+matrix mat_NATINIMP=e(b)
+matrix rownames mat_NATINIMP=NATINIMP
 
 version 14 : total pop, over(FATE_3c, nolab)
 matrix mat_FATE_3c=e(b)
@@ -496,17 +499,17 @@ keep if sample==1
 
 
 ipfraking [pw=post_wt], /*
-	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c) generate (frak_post_wt)
+	*/ctotal(mat_period mat_NATINIMP mat_FATE_3c) generate (frak_post_wt)
 	
 ipfraking [pw=post_wt] if tonnage !=., /*
-	*/ctotal(mat_period mat_NATIONAL mat_FATE_3c mat_tonnage) generate (frak2_post_wt)
+	*/ctotal(mat_period mat_NATINIMP mat_FATE_3c mat_tonnage) generate (frak2_post_wt)
 
 
-tabulate NATIONAL FATE_3c  [iweight=frak_post_wt], cell nofreq
-tabulate NATIONAL FATE_3c  [iweight=post_wt], cell nofreq
+tabulate NATINIMP FATE_3c  [iweight=frak_post_wt], cell nofreq
+tabulate NATINIMP FATE_3c  [iweight=post_wt], cell nofreq
 
-tabulate NATIONAL tonnage  [iweight=frak2_post_wt], cell nofreq
-tabulate NATIONAL tonnage  [iweight=post_wt], cell nofreq
+tabulate NATINIMP tonnage  [iweight=frak2_post_wt], cell nofreq
+tabulate NATINIMP tonnage  [iweight=post_wt], cell nofreq
 
 twoway (scatter post_wt frak_post_wt) (lfit post_wt frak_post_wt)
 twoway (scatter frak2_post_wt frak_post_wt) (lfit frak2_post_wt frak_post_wt)
