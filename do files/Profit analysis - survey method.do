@@ -42,14 +42,14 @@ keep VOYAGEID profit
 merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
 
 
-keep if NATIONAL==7 | NATIONAL==8 | NATIONAL == 10
+keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
 keep if YEARAF >= 1750 & YEARAF <=1795
 label list labels19
-if "`HYP'"== "French" keep if NATIONAL==10 
+if "`HYP'"== "French" keep if NATINIMP==10 
 if "`HYP'"== "French" keep if YEARAF>=1763
 if "`HYP'"== "French" drop if YEARAF>=1778 & YEARAF <=1783 
-if "`HYP'"== "British" keep if NATIONAL==7
-if "`HYP'"== "Dutch" keep if NATIONAL==8 
+if "`HYP'"== "British" keep if NATINIMP==7
+if "`HYP'"== "Dutch" keep if NATINIMP==8 
 
 **Without raking
 collect get, tags(raking[none] hyp[`HYP']) : mean profit
@@ -64,9 +64,9 @@ matrix for_rake = period_mat'
 local regressor_list= "bn.period"
 
 if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
-	tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
-	matrix for_rake = for_rake, NATIONAL_mat'
-	local regressor_list= "`regressor_list' bn.NATIONAL"
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = for_rake, NATINIMP_mat'
+	local regressor_list= "`regressor_list' bn.NATINIMP"
 }
 
 macro list
@@ -99,9 +99,9 @@ matrix for_rake = period_mat'
 local regressor_list= "bn.period"
 
 if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
-	tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
-	matrix for_rake = for_rake, NATIONAL_mat'
-	local regressor_list = "`regressor_list' bn.NATIONAL"
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = for_rake, NATINIMP_mat'
+	local regressor_list = "`regressor_list' bn.NATINIMP"
 }
 
 
@@ -112,8 +112,9 @@ local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 display "rake(`regressor_list', totals(for_rake `support_size', copy))"
 svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
-display "bn.period bn.NATIONAL bn.FATE_forraking"
-svy : mean profit
+display "bn.period bn.NATINIMP bn.FATE_forraking"
+if "`HYP'" !="OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0" svy : mean profit
+
 restore
 
 
@@ -127,9 +128,9 @@ matrix for_rake = period_mat'
 local regressor_list= "bn.period"
 
 if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
-	tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
-	matrix for_rake = for_rake, NATIONAL_mat'
-	local regressor_list= "`regressor_list' bn.NATIONAL"
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = for_rake, NATINIMP_mat'
+	local regressor_list= "`regressor_list' bn.NATINIMP"
 }
 
 
@@ -141,7 +142,7 @@ local regressor_list= "`regressor_list' MORTALITY"
 
 display "rake(`regressor_list', totals(for_rake `support_size', copy))"
 svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
-display "bn.period bn.NATIONAL MORTALITY"
+display "bn.period bn.NATINIMP MORTALITY"
 svy : mean profit
 restore
 
@@ -156,9 +157,9 @@ matrix for_rake = period_mat'
 local regressor_list= "bn.period"
 
 if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
-	tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
-	matrix for_rake = for_rake, NATIONAL_mat'
-	local regressor_list= "`regressor_list' bn.NATIONAL"
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = for_rake, NATINIMP_mat'
+	local regressor_list= "`regressor_list' bn.NATINIMP"
 }
 
 
@@ -174,8 +175,8 @@ local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 display "rake(`regressor_list', totals(for_rake `support_size', copy))"
 svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
-display "bn.period bn.NATIONAL bn.FATE_forraking MORTALITY"
-svy : mean profit
+display "bn.period bn.NATINIMP bn.FATE_forraking MORTALITY"
+if "`HYP'" !="OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0" svy : mean profit
 restore
 
 ***********
@@ -192,9 +193,9 @@ matrix for_rake = period_mat'
 local regressor_list= "bn.period"
 
 if "`HYP'"!="French" & "`HYP'" != "British" & "`HYP'" != "Dutch" {
-	tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
-	matrix for_rake = for_rake, NATIONAL_mat'
-	local regressor_list= "`regressor_list' bn.NATIONAL"
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = for_rake, NATINIMP_mat'
+	local regressor_list= "`regressor_list' bn.NATINIMP"
 }
 
 
@@ -207,7 +208,7 @@ matrix for_rake = for_rake, $totalcrowd_support
 display "rake(`regressor_list', totals(for_rake `support_size', copy))"
 matrix list for_rake
 svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
-display "bn.period bn.NATIONAL  crowd"
+display "bn.period bn.NATINIMP  crowd"
 if "`HYP'"!="French" svy : mean profit
 restore
 
@@ -220,9 +221,9 @@ matrix for_rake = period_mat'
 local regressor_list= "bn.period"
 
 if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
-	tabulate NATIONAL_tab3, matcell(NATIONAL_mat)
-	matrix for_rake = for_rake, NATIONAL_mat'
-	local regressor_list= "`regressor_list' bn.NATIONAL"
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = for_rake, NATINIMP_mat'
+	local regressor_list= "`regressor_list' bn.NATINIMP"
 }
 
 egen sumcrowd=total(crowd)
@@ -237,8 +238,8 @@ local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 display "rake(`regressor_list', totals(for_rake `support_size', copy))"
 svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
-display "bn.period bn.NATIONAL bn.FATE_forraking MORTALITY crow"
-if "`HYP'"!="French" collect get, tags(raking[all] hyp[`HYP']) : svy : mean profit
+display "bn.period bn.NATINIMP bn.FATE_forraking MORTALITY crowd"
+if "`HYP'"!="French" collect get, tags(raking[all] hyp[`HYP']) :  svy : mean profit
 restore
 
 end 
@@ -253,7 +254,7 @@ end
 
 
 global hyp_list 	OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
-					French British Dutch ///	
+					British Dutch French ///	
 					OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
 					OR0_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
 					OR1_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
@@ -270,7 +271,7 @@ global hyp_list 	OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
 
 
 
-global hyp_list_name `""Baseline" "Only French" "Only British" "Only Dutch" "Without Observations with outstanding claims"'
+global hyp_list_name `""Baseline" "Only British" "Only Dutch" "Only French" "Without Observations with outstanding claims"'
 global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to not have been paid at all"'
 global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to have been paid in full"'
 global hyp_list_name `"$hyp_list_name" "Higher cost of hull relative to other outlays (25% instead of 17% in baseline)"'
@@ -303,7 +304,7 @@ collect label levels hyp `label_list', replace
 collect label levels raking none "No raking" nat_period "Nationality and period" all "All", replace
 collect label levels result _r_b mean _r_ci "95% ci" N "Nbr. of observations", replace
 collect style cell result[_r_ci], sformat([%s]) cidelimiter(, )
-collect style cell result[_r_b _r_ci], nformat(%4.2fc)
+collect style cell result[_r_b _r_ci], nformat(%4.3fc)
 collect style cell hyp[none nat_period all]#result[_r_b _r_ci N], halign(center)
 *collect style header result, halign(left)
 collect layout (hyp#result[_r_b _r_ci N]) (raking)
