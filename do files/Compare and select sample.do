@@ -15,13 +15,19 @@ clear
 	global tastdb "$dir\external data\"
 }
 
+use "${output}Venture all", clear
+gen sample =  1 if completedataonoutlays!="no" & completedataonreturns!="no"
+table nationality if sample==1
+
 use "${output}voyages", clear
 
 merge 1:1 VOYAGEID using "${tastdb}tastdb-exp-2020_corr.dta"
 drop _merge
 replace FATE4=4 if FATE4==.
 
-label list labels19
+codebook NATINIMP
+label list labels18
+
 /*NATINIMP coding in stdt
 7     Great Britain
 8     Netherlands
@@ -29,16 +35,20 @@ label list labels19
 */
 
 
+
+
 replace NATINIMP=1 if nationality =="Spanish" & NATINIMP==.
 replace NATINIMP=7 if nationality =="English" & NATINIMP==.
 replace NATINIMP=8 if nationality =="Dutch" & NATINIMP==.
 replace NATINIMP=10 if nationality =="French" & NATINIMP==.
-replace NATINIMP=11 if nationality =="Danish" & NATINIMP==.
+replace NATINIMP=15 if nationality =="Danish" & NATINIMP==.
 
 gen NATINIMP_tab3 = NATINIMP
-replace NATINIMP_tab3=30 if NATINIMP ==2 | NATINIMP ==3 | (NATINIMP >=12   & NATINIMP !=.)
+replace NATINIMP_tab3=30 if NATINIMP ==2 | NATINIMP ==3 | (NATINIMP >=12  & NATINIMP !=. & NATINIMP==12)
 replace NATINIMP_tab3=6 if NATINIMP==4 | NATINIMP==5
-label value NATINIMP_tab3 labels19
+replace NATINIMP_tab3=3 if NATINIMP==1 | NATINIMP==3
+replace NATINIMP_tab3=15 if NATINIMP==11 | NATINIMP==15
+label value NATINIMP_tab3 labels18
 
 gen sample =  1 if data==1 | data==2
 replace sample=0 if sample==.
@@ -46,16 +56,15 @@ label define sample_l 0 "Whole TSTD" 1 "Our sample"
 label values sample sample_l
 
 table (NATINIMP_tab3) (sample),  statistic (freq) statistic(percent, across(NATINIMP_tab3)) totals(sample)
+
 collect style header NATINIMP_tab3, title(hide)
 collect style header sample, title(hide)
-collect layout (NATINIMP_tab3[7 8 10 1 11 6 9 30 .m]) (sample[1 0]#result) 
+collect style cell result[percent], nformat (%3.0fc)
+collect layout (NATINIMP_tab3[7 8 10 3 15 6 9 30 .m]) (sample[1 0]#result) 
 **For table 3 "Representativity of our sample (flag)"":
-tabi 238 11239 \  101 1249 \ 85 4090 \ 17 1660 \5 311 \ 0 6130 \ 0 1799 \ 0 92, chi2  
+tabi 239 11796 \  101 1606 \ 84 4141 \ 17 1911 \5 408 \ 0 11363 \ 0 2275 \ 0 16, chi2  
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
-collect export "${output}Compare_Sample_Nationality.pdf", as(pdf) replace
-
-
 
 hist YEARAF if sample==1, freq scheme(s1color) start(1720) width(5) xtitle(Year departed Africa)
 graph export "$graphs/hist_voyage_by_year_Baseline.png",as(png) replace
