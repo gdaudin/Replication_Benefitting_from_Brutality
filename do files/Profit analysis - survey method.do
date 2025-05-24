@@ -41,18 +41,22 @@ merge 1:m ventureid using "${output}voyages.dta"
 keep VOYAGEID profit
 merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
 
-
-keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
-keep if YEARAF >= 1750 & YEARAF <=1795
-label list labels19
 if "`HYP'"== "French" keep if NATINIMP==10 
 if "`HYP'"== "French" keep if YEARAF>=1763
 if "`HYP'"== "French" drop if YEARAF>=1778 & YEARAF <=1783 
 if "`HYP'"== "British" keep if NATINIMP==7
 if "`HYP'"== "Dutch" keep if NATINIMP==8 
 
+collect get, tags(raking[whole] hyp[`HYP']) : mean profit
+
+
+keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
+keep if YEARAF >= 1750 & YEARAF <=1795
+label list labels19
+
+
 **Without raking
-collect get, tags(raking[none] hyp[`HYP']) : mean profit
+collect get, tags(raking[support] hyp[`HYP']) : mean profit
 
 *********
 *****Just nationality and period
@@ -301,11 +305,11 @@ foreach hyp of global hyp_list {
 macro list
 
 collect label levels hyp `label_list', replace
-collect label levels raking none "No raking" nat_period "Nationality and period" all "All", replace
+collect label levels raking whole "Whole sample" support "1750-1795, 3 flags" nat_period "Raking: nationality and period" all "Raking: all variables", replace
 collect label levels result _r_b mean _r_ci "95% ci" N "Nbr. of observations", replace
 collect style cell result[_r_ci], sformat([%s]) cidelimiter(, )
 collect style cell result[_r_b _r_ci], nformat(%4.3fc)
-collect style cell hyp[none nat_period all]#result[_r_b _r_ci N], halign(center)
+collect style cell hyp[whole support nat_period all]#result[_r_b _r_ci N], halign(center)
 *collect style header result, halign(left)
 collect layout (hyp#result[_r_b _r_ci N]) (raking)
 
