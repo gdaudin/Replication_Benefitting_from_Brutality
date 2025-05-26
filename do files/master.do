@@ -47,7 +47,7 @@
 	
 	
 	********
-	do "${dir}/do files/Descriptive statistics of profit.do" /*I believe the small table 6 .*/
+	do "${dir}/do files/Descriptive statistics of profit.do" /*Small table 2 BB Profit by flag for all sample.*/
 		*/ Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830 */
 		*/ comes from here. 
 		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able

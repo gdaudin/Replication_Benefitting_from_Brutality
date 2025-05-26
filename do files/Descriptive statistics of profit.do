@@ -49,22 +49,9 @@ collect clear
 use "${output}Ventures&profit_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.dta", clear
 keep ventureid nationality profit
 
-
-gen twosidedpvalue=.
-foreach v in Danish Dutch English French Spanish { 
-        gen `v' = strpos(nationality, "`v'") > 0 
-		ttest profit, by(`v') unequal
-		replace twosidedpvalue=r(p) if `v'==1
-	}
-
-
-
-
-
 table (nationality), ///
 	statistic(mean profit)  ///
 	command(r(lb) r(ub): ci means profit) ///
-	statistic(first twosidedpvalue)  ///
 	statistic(median profit)  ///
 	statistic(sd profit)  ///
 	statistic(max profit) ///
@@ -73,23 +60,54 @@ table (nationality), ///
 	name(Hyp_table) replace ///
 	nformat (%5.3f)
 
+
+merge 1:m ventureid using "${output}voyages.dta" /// if we want the means by venture
+
+collect clear
+svyset ventureid
+
+gen twosidedpvalue=.
+foreach v in Danish Dutch English French Spanish { 
+        gen `v' = strpos(nationality, "`v'") > 0 
+		svy: regress profit `v'
+		replace twosidedpvalue=r(table)[4,1] if `v'==1
+	}
+
+table (nationality), ///
+	statistic(mean profit)  ///
+	command(_r_ci: svy: mean profit) ///
+	statistic(first twosidedpvalue)  ///
+	statistic(median profit)  ///
+	statistic(sd profit)  ///
+	statistic(max profit) ///
+	statistic(min profit) ///
+	statistic(count profit) ///
+	name(bynation) replace ///
+	nformat (%5.3f) /// 
+
+
 *collect label levels result first "Mean equality t-test p_stat", modify
 *collect stars first 0.01 "***" 0.05 "** " 0.1 "*  " 1 "   " 
 ///, attach(mean)
 *collect layout (result[mean stars ub lb first median sd max min]) (nationality)
-collect stars first 0.01 "***" 0.05 "** " 0.1 "*  " 1 "   ", attach(mean) dimension
+collect style cell result[_r_ci], sformat([%s]) cidelimiter(, )
+collect stars first 0.01 "***" 0.05 "** " 0.1 "*  " 1 "   ", attach(mean) result
 /*collect layout (result[mean ub lb median sd max min]) (nationality#stars) /// Old version */
-collect label levels result count "N" lb "ci lb" ub "ci up", modify
-collect layout (nationality#stars) (result[count mean median lb ub ]) 
+collect label levels result count "N" _r_ci "95% CI" , modify
 collect style cell result[count], nformat(%5.0f)
+collect layout (nationality) (result[count mean stars _r_ci median min max]) 
+
 
 collect preview
 
-
+****Should remove the stars on the last line***
 collect export "${output}Profits_bynatio_baseline.txt", as(txt) replace
 collect export "${output}Profits_bynatio_baseline.docx", as(docx) replace
 collect export "${output}Profits_bynatio_baseline.pdf", as(pdf) replace
 
+****Should remove the stars on the last line***
+
+/*
 ** For the table Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830
 
 
