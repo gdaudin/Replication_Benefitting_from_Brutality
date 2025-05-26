@@ -266,10 +266,13 @@ reg irr profit sq_profit
 
 bysort sample: summarize irr profit
 
-display "mean:" _b[_cons]+_b[profit]*0.13+_b[sq_profit]*(0.13)^2
-display "median:" _b[_cons]+_b[profit]*0.09+_b[sq_profit]*(0.09)^2
-
 display "mean:" _b[_cons]+_b[profit]*0.144+_b[sq_profit]*(0.144)^2
+display "median:" _b[_cons]+_b[profit]*0.116+_b[sq_profit]*(0.116)^2
+
+display "representative mean:" _b[_cons]+_b[profit]*0.144+_b[sq_profit]*(0.144)^2
+display "representative English mean:" _b[_cons]+_b[profit]*0.112+_b[sq_profit]*(0.112)^2
+display "representative Dutch mean:" _b[_cons]+_b[profit]*0.089+_b[sq_profit]*(0.089)^2
+display "representative French mean:" _b[_cons]+_b[profit]*0.254+_b[sq_profit]*(0.254)^2
 
 
 end
