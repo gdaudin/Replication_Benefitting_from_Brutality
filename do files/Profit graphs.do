@@ -61,11 +61,12 @@ drop if profit ==.
 label var profit "(Net returns over net outlays) -1"
 
 
-graph bar (count) profit, over(nationality) scheme(s1color)
+graph bar (count) profit [fweight=numberofvoyages], over(nationality) scheme(s1color)
 graph export "$graphs/nbr_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png", as(png) replace
 
-hist YEARAF, freq scheme(s1color) start(1720) width(5) ytitle(Year in Africa (mean if multiple voyages))
+hist YEARAF [fweight=numberofvoyages], freq scheme(s1color) start(1720) width(5) xtitle(Year departed Africa (mean if multiple voyages)) ytitle(Frequency)
 graph export "$graphs/hist_venture_by_year_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
+
 
 quietly summarize profit
 local m=r(mean)
@@ -86,7 +87,7 @@ if "`IMP'"=="onlyIMP" local natlist "Dutch English French"
 foreach nat in `natlist' {
 	quietly summarize profit if nationality =="`nat'"
 	local m=r(mean)
-	hist profit if nationality =="`nat'", width(0.15) freq norm ///
+	hist profit [fweight=numberofvoyages] if nationality =="`nat'", width(0.15) freq norm ///
 	note(`"mean = `=string(`m',"%6.2f")'%"') ///
 	xscale(range(-1 `max')) xlabel(-1 (0.5) `max') ///
 	scheme(s1color) title ("`nat'") name(`nat', replace)
@@ -94,19 +95,20 @@ foreach nat in `natlist' {
 graph combine `natlist' All_nationalities, scheme(s1color)
 graph export "$graphs/hist_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
 
+label var YEARAF "Year departed Africa"
 
-
-twoway (scatter profit YEARAF if nationality=="French", msymbol(plus)) ///
-		(scatter profit YEARAF if nationality=="English", msymbol(X)) ///
-		(scatter profit YEARAF if nationality=="Dutch", msymbol(Oh)) ///
-		(scatter profit YEARAF if nationality=="Danish", msymbol(dh)) ///
-		(scatter profit YEARAF if nationality=="Spanish", msymbol(th)), ///
+twoway (scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th)), ///
 		legend(label(1 "French") label(2 "English") label(3 "Dutch") ///
-		label(4 "Danish") label(5 "Spanish")) scheme(s1color)
+		label(4 "Danish") label(5 "Spanish")) scheme(s1color) note("Marker size proportional to number of voyages")
 graph export "$graphs/scatter_year_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
-		
+
 end
 
 profit_graphs 0.5 1 1 0 1 0 1 0
+/*
 profit_graphs 0.5 1 1 0 1 0 1 0 IMP
 profit_graphs 0.5 1 1 0 1 0 1 0 onlyIMP	

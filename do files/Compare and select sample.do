@@ -57,6 +57,7 @@ label values sample sample_l
 
 table (NATINIMP_tab3) (sample),  statistic (freq) statistic(percent, across(NATINIMP_tab3)) totals(sample)
 
+
 collect style header NATINIMP_tab3, title(hide)
 collect style header sample, title(hide)
 collect style cell result[percent], nformat (%3.0fc)
@@ -65,6 +66,7 @@ collect layout (NATINIMP_tab3[7 8 10 3 15 6 9 30 .m]) (sample[1 0]#result)
 tabi 239 11796 \  101 1606 \ 84 4141 \ 17 1911 \5 408 \ 0 11363 \ 0 2275 \ 0 16, chi2  
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
+
 
 hist YEARAF if sample==1, freq scheme(s1color) start(1720) width(5) xtitle(Year departed Africa)
 graph export "$graphs/hist_voyage_by_year_Baseline.png",as(png) replace
@@ -108,18 +110,34 @@ collect layout (NATINIMP_tab3#collection)(period#result)
 
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
+table (FATE4) if sample==1
+codebook FATE4 if sample==1
+
 ***Fate
 bysort VOYAGEID: assert _N==1
 
 merge m:1 ventureid using "${output}Venture all.dta"
 assert _merge==3 if sample==1
+***There are some missing sample
+replace sample=1 if data==1 | data==2
+replace sample=0 if sample==.
+replace sample=0 if YEARAF >1795 | YEARAF < 1750 | nationality =="Danish" | nationality =="Spanish"
+replace support=1 if sample==1
+
 
 **In Venture all.dta we have some voyages that are duplicates (multiple sources of information of varying quality). We remove them and keep the best quality.
-bys VOYAGEID (data): drop if _N != _n
+gsort VOYAGEID sample
+
+by VOYAGEID: drop if _N != _n
 bysort VOYAGEID: assert _N==1
 drop _merge
 
 save  "${output}STDT_enriched.dta", replace
+
+replace FATE4=4 if FATE4==.
+table (FATE4) if sample==1
+codebook FATE4 if sample==1
+
 
 collect clear
 collect: table (FATE4) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
@@ -131,7 +149,7 @@ collect style header FATE4 collection, title(hide)
 collect style header result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
 collect layout (FATE4)(collection#result)
-tabi 337 6571 \  22 677 \ 12 509 \ 3 168, chi2  
+tabi 337 6836 \  22 735 \ 12 549 \ 3 187, chi2  
 collect export "${output}Compare_Sample_Fate.docx", as(docx) replace
 
 ***Quantitative outcome variables
