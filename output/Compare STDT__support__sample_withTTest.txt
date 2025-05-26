@@ -1,0 +1,9 @@
+Ttest test between STDT (same support) and sample
+------------------------------------------------------------------------------------------------------------------
+                                                     |     STDT_same_support            Sample          Difference
+                                                     |      N   Mean   St. dev     N   Mean   St. dev      p-value
+-----------------------------------------------------+------------------------------------------------------------
+Number of embarked enslaved persons per ton          |  6,406   1.52      0.77   328   1.36      0.58         0.00
+Enslaved person mortality rate during Middle Passage |  7,874   0.13      0.09   368   0.12      0.09         0.13
+Number of disembarked enslaved persons per ton       |  6,307   1.32      0.66   327   1.18      0.50         0.00
+------------------------------------------------------------------------------------------------------------------

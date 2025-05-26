@@ -42,7 +42,6 @@
 	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
 	
 	do "${dir}/do files/Profit analysis - survey method.do" /// Appendix table
-	blif
 	do "${dir}/do files/Profit analysis - synchronisation.do" 
 	
 	
@@ -88,7 +87,7 @@
 	*I think the idea of that program is to compute a typical chronolgy of returns and apply it to the profits of the ventures.
 	*Maybe too complicated and not done finaly.?
 
-
+/*
 	****Robustess	
 	do "${dir}/do files/DS -- profit graphs -- profit analysis  -- Robustness.do" /*only calls different programs, but long*/
 	**We are not using these tables (which fully reproduce the main analysis for each hypothesis)

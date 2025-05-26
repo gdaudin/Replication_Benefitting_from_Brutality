@@ -317,6 +317,7 @@ collect style cell hyp[whole support nat_period all]#result[_r_b _r_ci N], halig
 collect layout (hyp#result[_r_b _r_ci N]) (raking)
 
 collect export "${output}Profit analysis survey robustess.docx", as(docx) replace
+collect export "${output}Profit analysis survey robustess.txt", as(txt) replace
 
 
 break

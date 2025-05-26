@@ -235,6 +235,7 @@ collect label levels result count N sd "Std. dev"  max "Max" min "Min", replace
 collect layout (var) (nationality [English French] # result)
 
 collect export "${output}IRR_profit.docx", as(docx) replace
+collect export "${output}IRR_profit.txt", as(txt) replace
 
 save "${output}irr_results_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", replace
 

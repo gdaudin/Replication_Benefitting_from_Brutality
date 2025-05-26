@@ -108,6 +108,7 @@ collect style header  result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
 collect layout (NATINIMP_tab3#collection)(period#result)
 
+collect export "${output}Compare_Sample_NationalityxPeriod.txt", as(txt) replace
 collect export "${output}Compare_Sample_NationalityxPeriod.docx", as(docx) replace
 
 table (FATE4) if sample==1
@@ -151,6 +152,7 @@ collect style cell result[frequency], nformat (%5.0fc)
 collect layout (FATE4)(collection#result)
 tabi 337 6836 \  22 735 \ 12 549 \ 3 187, chi2  
 collect export "${output}Compare_Sample_Fate.docx", as(docx) replace
+collect export "${output}Compare_Sample_Fate.txt", as(txt) replace
 
 ***Quantitative outcome variables
 **Mortality
@@ -345,6 +347,7 @@ collect layout (var[war neutral big_port] # result[mean median sd count] ///
 collect layout (var[crowd MORTALITY DisSlavePerTon] # result[mean median sd count]) (group [1 2])
 
 collect export "${output}Compare STDT__support__sample.docx", as(docx) replace
+collect export "${output}Compare STDT__support__sample.txt", as(txt) replace
 
 /*
 ****K_Smirnov tests
@@ -404,6 +407,7 @@ collect layout (cmdset) (STDT_same_support Sample Difference )
 
 
 collect export "${output}Compare STDT__support__sample_withTTest.docx", as(docx) replace
+collect export "${output}Compare STDT__support__sample_withTTest.txt", as(txt) replace
 
 
 
