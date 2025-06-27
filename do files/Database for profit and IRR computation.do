@@ -34,6 +34,8 @@ foreach hypo in OR VSDO VSDR VSDT VSRV VSRT INV INT {
 	
 	replace value=value*``hypo'' if nbr_`hypo' !=0
 	replace value=value*``hypo''^(nbr_`hypo'-1) if nbr_`hypo' !=0 & value !=.
+
+	**This means for example that if the OR hypothesis is 0.5, then the value in the database is multiplied by 0.5, if it is 1, then it is not changed, if it is 0, then it is set to zero.
 	
 	*drop nbr
 }
