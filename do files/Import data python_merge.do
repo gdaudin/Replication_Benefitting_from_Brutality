@@ -16,38 +16,15 @@ clear
 
 ///////////////////////////////////////////////////////////////////////////-
 
-* IMPORT CASH FLOW-DATABASES
-* STANDARDIZING STRING FIELDS, IN CASE SOME DATASETS HAVE MISSING VARIABLES FOR ALL OBS
-* STANDARDIZING THE NUMERIC VARIABLES SO THAT COMMAS ARE REPLACED BY DOTS AS DECIMAL-SEPARATOR IN THE VALUE-FIELD
-* STANDARDIZING THE VARIABLES SO THAT THE FIELD WITH VALUES REALLY ARE NUMERIC, EVEN IF DATA IS MISSING IN SOME CASES
-* ROUTINE THE REPEATED FOR EACH DATASET
+* IMPORT CASH FLOW-DATABASES (now "transactions.csv" from python)
+import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
 
-foreach y in "DR" "GD" "GK" "KR - new" "MR - new"{
-	import delimited "$dir/data/Cash flow database `y'.csv" , encoding(utf8) clear
-	capture tostring meansofpaymentreturn dateoftransaction , replace
-	capture replace value=subinstr(value, ",", ".",.)
-	capture destring value, force replace
-	save "${output}Cash flow `y'.dta", replace
-	assert ventureid !=""
-}
-
-
-
- 
-* ALL CASH FLOW DATASETS MERGED INTO ONE FILE, AND SAVED IN NEW FILE
-
-use "${output}Cash flow DR.dta", clear
-	foreach y in "GD" "GK" "KR - new" "MR - new"{
-	append using "${output}Cash flow `y'.dta", force
-	assert ventureid !=""
-}
-
-*append using "C:\Users\xronkl\ShareFile\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\STATA\Cash flow MR.dta"
 
 recast str2045 specification 
 assert ventureid !=""
 
 save "${output}Cash flow all.dta", replace
+
 
 //To complete specification categories
 import delimited "$dir/data/specification_categories.csv" , encoding(utf8) clear
@@ -95,40 +72,23 @@ generate transaction_year = yofd(dateoftransaction)
 
 save "${output}Cash flow all.dta", replace
 
-foreach y in "DR" "GD" "GK" "KR - new" "MR - new"{
-	erase "${output}Cash flow `y'.dta" 
-}
 
 
 * IMPORT VENTURE DATABASES
-* STANDARDIZING STRING FIELDS, IN CASE SOME DATASETS HAVE MISSING VARIABLES FOR ALL OBS
-* STANDARDIZING NUMERIC FIELDS, IN CASE THEY FOR SOME REASON CONTAIN STRINGS. THIS IS CURRENTLY FORCED, SO STRING VALUES ARE LOST.
-* ROUTINE THE REPEATED FOR EACH DATASET
 
-foreach y in "DR" "GD" "GK" "KR - new" /*"MR"*/ {
-	import delimited "$dir/data/Venture database `y'.csv", encoding(utf8) clear 
-	capture tostring  date* place* number* voyageidintstd internalcrossref nameofthecaptain  profitsreportedinsource, replace
-	capture replace shareoftheship=subinstr(shareoftheship, ",", ".",.)
-	capture destring shareoftheship, force replace
-	capture destring numberofvoyages, force replace
-	rename fate FATEcol 
-save "${output}Venture `y'.dta", replace
-}
 
 clear
 
-
-* ALL VENTURE DATASETS MERGED INTO ONE FILE, AND SAVED IN NEW FILE
-
-use "${output}Venture DR.dta"
-
-foreach y in "GD" "GK" "KR - new" /*"MR"*/ {
-	append using "${output}Venture `y'.dta", force
-}
+import delimited "$dir/python_merge/venture all.csv" , encoding(utf8) clear
+**In the do file, spaces were initially removed. With the merged data, they werereplaced by 
+rename *_* **
+rename *_* **
+rename *_* **
+rename *_* **
+rename *_* **
+rename *_* **
 
  
-*append using "C:\Users\xronkl\ShareFile\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\STATA\Venture MR.dta"
-
 * STANDARDIZE THE SPELLING IN SOME VARIABLES
 
 replace perspectiveofsource="Investor" if perspectiveofsource=="investor"
@@ -161,12 +121,11 @@ replace nameofoutfitter = "Goad, John" if strmatch(nameofoutfitter,"*Goad, Joan*
 
 
 save "${output}Venture all.dta", replace
-foreach y in "DR" "GD" "GK" "KR - new" /*"MR"*/ {
-	erase "${output}Venture `y'.dta"
-}
+
 
 use "${output}Venture all.dta", clear
 * LENGTH COMPUTATION (IN DAYS) WHEN WE HAVE AT LEAST THE MONTH OF DEPARTURE AND ARRIVAL IN OUR DATA
+
 
 local varlist dateofdeparturefromportofoutfitt dateofreturntoportofoutfitting
 
@@ -205,8 +164,6 @@ rename datedepartureportofoutfitt_str dateofdeparturefromportofoutfitt
 * A SET OF DATES IN STATA-READABLE FORMAT ARE DERIVED FROM DATE IN STRING FORMAT, BASED ON POSITION OF CHARACTERS IN THE STRING (DATES ARE TO BE FORMATTED AS: YYYY-MM-DD)
 * IF MONTH & DAY IS MISSING IN THE OBSERVATION, BUT WE HAVE AN OBSERVATION FOR YEAR, MONTH AND DATE IS CURRENTLY ASSUMED TO BE 1st OF JULY, IN ORDER TO CREATE A STATA-READABLE DATE-VAR.
 * ROUTINE IS THEN REPEATED FOR ALL DIFFERENT DATES IN THE DATASETS
-
-
 
 
 local varlist dateofdeparturefromportofoutfitt dateofprimarysource datetradebeganinafrica dateofdeparturefromafrica datevesselarrivedwithslaves dateofreturntoportofoutfitting
