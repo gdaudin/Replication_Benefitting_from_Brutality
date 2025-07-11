@@ -95,6 +95,7 @@ generate transaction_year = yofd(dateoftransaction)
 
 
 save "${output}Cash flow all.dta", replace
+export delimited "${output}Cash flow all.csv", replace
 
 foreach y in "DR" "GD" "GK" "KR - new" "MR - new"{
 	erase "${output}Cash flow `y'.dta" 
@@ -282,6 +283,7 @@ replace YEARAF_own= yearofprimarysource if missing(YEARAF_own)
 gen VOYAGEID= voyageidintstd
 *destring VOYAGEID, force replace
 save "${output}Venture all.dta", replace
+export delimited "${output}Venture all.csv", replace
 
 codebook ventureid
 quietly summarize numberofvoyages
