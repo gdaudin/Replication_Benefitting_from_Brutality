@@ -1,4 +1,4 @@
-Line number,VentureID,typeofcashflow,Specification,Value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,Timing,Currency,remarks
+Line_number,VentureID,typeofcashflow,Specification,Value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,Timing,Currency,remarks
 1,MR001,Expenditure,Trade cargo costs,1700000,cash and credit,,0,1600-11-04,,Portuguese real,
 2,MR001,Expenditure,Licence cost (Africa),72000,,,1,,Outfitting,Portuguese real,Contract stipulated that the arma��o (outfitting) carried the registry for the slaves' licences
 3,MR001,Expenditure,Licence cost (America),3960,,,1,,Outfitting,Spanish real,"Estimate based on contract stating that the arma��o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America"

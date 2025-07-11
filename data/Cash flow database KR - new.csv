@@ -1,4 +1,4 @@
-Line number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
+Line_number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
 1,KR001,Expenditure,Crew bonus,2054,,0,,,Return,Danish rigsdaler,
 2,KR001,Expenditure,Crew costs,5440,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
 3,KR001,Expenditure,Extraordinary expenses,897,,0,,,Outfitting,Danish rigsdaler,

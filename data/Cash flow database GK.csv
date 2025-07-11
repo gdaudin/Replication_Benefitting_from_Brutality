@@ -1,4 +1,4 @@
-Line number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
+Line_number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
 1,GK001,Expenditure,Value of ship before departure,30000,,,,,Outfitting,Dutch Guilder,
 2,GK001,Expenditure,Outfitting costs,13115,,,,,Outfitting,Dutch Guilder,
 3,GK001,Expenditure,Advance crew payment,1719,,,,,Outfitting,Dutch Guilder,

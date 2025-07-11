@@ -1,4 +1,4 @@
-Line number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
+Line_number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
 1,DR001,Expenditure,Insurance,30.15,,0,,1750-09-26,Outfitting,Pound sterling,
 2,DR001,Expenditure,Other expenditures,513.11,,0,,1750-09-26,Outfitting,Pound sterling,Calculated as the remainder. after deducting expenditures specified in the source. from total expenditures specified in the source.
 3,DR001,Expenditure,Ship out,100,,0,,1750-09-26,Outfitting,Pound sterling,
