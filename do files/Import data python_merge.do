@@ -20,6 +20,7 @@ clear
 import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
 
 rename *_* **
+drop if regexm(ventureid, "MR")
 
 
 
@@ -80,9 +81,9 @@ generate transaction_year = yofd(dateoftransaction)
 save "${output}Cash flow all.dta", replace
 
 
-
-* IMPORT VENTURE DATABASES
-
+///////////////////////////////////
+* IMPORT VENTURE DATABASE
+////////////////////////////////////
 
 clear
 
@@ -96,6 +97,8 @@ rename *_* **
 rename *_* **
 rename dateofdeparturefromportofo dateofdeparturefromportofoutfitt
 rename dateofreturntoportofoutfit dateofreturntoportofoutfitting
+drop if regexm(ventureid, "MR")
+drop if ventureid == ""
 
 foreach var of varlist date* place* number* {
 	replace `var' = "" if `var' == "nan"
@@ -176,7 +179,6 @@ foreach var of local varlist {
 
 gen length_in_days=(dateofreturntoportofoutfitting-dateofdeparturefromportofoutfitt)
 label var length_in_days "Length of voyage (Europe to Europe) in days"
-
 drop dateofreturntoportofoutfitting dateofdeparturefromportofoutfitt returntoportofoutfitting departurefromportofoutfitt
 rename datereturnportofoutfitting_str dateofreturntoportofoutfitting
 rename datedepartureportofoutfitt_str dateofdeparturefromportofoutfitt
