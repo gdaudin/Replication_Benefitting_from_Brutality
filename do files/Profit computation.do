@@ -64,6 +64,8 @@ save "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV
 if "`hyp'"=="Baseline"  | "`hyp'"=="Imputed" ///
 	save "${output}Ventures&profit_`hyp'.dta", replace
 
+if "`hyp'"=="Baseline"  export delimited "${output}Ventures&profit_`hyp'.csv", replace
+
 codebook ventureid
 quietly summarize numberofvoyages
 display "Number of voyages: " r(sum)
