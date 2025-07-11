@@ -18,6 +18,11 @@ clear
 
 * IMPORT CASH FLOW-DATABASES (now "transactions.csv" from python)
 import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
+save blouf.dat, replace
+
+import delimited "$dir/python_merge/transactions_hypothetical.csv" , encoding(utf8) clear
+append using blouf.dat
+erase blouf.dat
 
 rename *_* **
 drop if regexm(ventureid, "MR")
@@ -78,8 +83,9 @@ drop date date2 date3
 
 generate transaction_year = yofd(dateoftransaction)
 
-
+sort ventureid line_number
 save "${output}Cash flow all.dta", replace
+export delimited "${output}Cash flow all.csv", replace
 
 
 ///////////////////////////////////
@@ -262,6 +268,7 @@ replace YEARAF_own= yearofprimarysource if missing(YEARAF_own)
 gen VOYAGEID= voyageidintstd
 *destring VOYAGEID, force replace
 save "${output}Venture all.dta", replace
+export delimited "${output}Venture all.csv", replace
 
 codebook ventureid
 quietly summarize numberofvoyages

@@ -93,7 +93,7 @@ drop date date2 date3
 
 generate transaction_year = yofd(dateoftransaction)
 
-
+sort ventureid line_number
 save "${output}Cash flow all.dta", replace
 export delimited "${output}Cash flow all.csv", replace
 
