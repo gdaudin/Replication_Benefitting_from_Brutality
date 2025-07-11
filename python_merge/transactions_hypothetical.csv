@@ -1,658 +1,658 @@
-linenumber,ventureid,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks,line_number,specificationcategory
-5.00000000,DR001,Return,Ship In,75.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-10.00000000,DR002,Expenditure,Ship Out,40.08430000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-11.00000000,DR002,Return,Ship In,30.06322500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-17.00000000,DR003,Expenditure,Ship Out,250.55280000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-18.00000000,DR003,Return,Ship In,187.91460000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-26.00000000,DR004,Expenditure,Insurance,58.20000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-27.00000000,DR004,Expenditure,Ship Out,99.82230000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-28.00000000,DR004,Return,Ship In,74.86672500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-31.00000000,DR005,Expenditure,Insurance,40.91000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-32.00000000,DR005,Expenditure,Ship Out,70.18280000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-33.00000000,DR005,Return,Ship In,52.63710000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-37.00000000,DR006,Expenditure,Insurance,86.66000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-38.00000000,DR006,Expenditure,Ship Out,148.66330000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-39.00000000,DR006,Return,Ship In,111.49747500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-45.00000000,DR007,Expenditure,Ship Out,317.47670000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-46.00000000,DR007,Return,Ship In,238.10752500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-53.00000000,DR008,Expenditure,Ship Out,126.95260000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-54.00000000,DR008,Return,Ship In,95.21445000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-60.00000000,DR009,Expenditure,Ship Out,285.97400000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-61.00000000,DR009,Return,Ship In,214.48050000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-67.00000000,DR010,Expenditure,Ship Out,149.39940000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-68.00000000,DR010,Return,Ship In,112.04955000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-72.00000000,DR011,Expenditure,Ship Out,186.60560000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-73.00000000,DR011,Return,Ship In,139.95420000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-79.00000000,DR012,Expenditure,Ship Out,272.05610000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-80.00000000,DR012,Return,Ship In,204.04207500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-85.00000000,DR013,Expenditure,Ship Out,106.67000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,,Ship
-93.00000000,DR014,Expenditure,Ship Out,380.41240000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-94.00000000,DR014,Return,Ship In,285.30930000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-96.00000000,DR015,Expenditure,Insurance,612.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-98.00000000,DR015,Expenditure,Ship Out,522.49500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR026,,Ship
-99.00000000,DR015,Return,Ship In,391.87000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-101.00000000,DR016,Expenditure,Insurance,100.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-103.00000000,DR016,Expenditure,Ship Out,172.21000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-104.00000000,DR016,Return,Ship In,129.15750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-107.00000000,DR017,Expenditure,Insurance,588.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-109.00000000,DR017,Expenditure,Ship Out,1009.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-110.00000000,DR017,Return,Ship In,757.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-112.00000000,DR018,Expenditure,Insurance,125.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-114.00000000,DR018,Expenditure,Ship Out,214.37000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-115.00000000,DR018,Return,Ship In,160.77750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-118.00000000,DR019,Expenditure,Insurance,1118.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-121.00000000,DR019,Return,Ship In,2100.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-124.00000000,DR020,Expenditure,Insurance,1194.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-126.00000000,DR020,Return,Ship In,2179.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-132.00000000,DR021,Expenditure,Ship Out,1509.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-133.00000000,DR021,Return,Ship In,1132.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-135.00000000,DR022,Expenditure,Insurance,675.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-137.00000000,DR022,Expenditure,Ship Out,1157.70000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,For Sarah itself,,Ship
-138.00000000,DR022,Return,Ship In,868.27500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-140.00000000,DR023,Expenditure,Insurance,1294.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-143.00000000,DR023,Return,Ship In,2138.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-145.00000000,DR024,Expenditure,Insurance,1173.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-147.00000000,DR024,Expenditure,Ship Out,2012.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-148.00000000,DR024,Return,Ship In,1509.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-150.00000000,DR025,Expenditure,Insurance,1082.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-152.00000000,DR025,Expenditure,Ship Out,1855.38000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-153.00000000,DR025,Return,Ship In,1391.53500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-155.00000000,DR026,Expenditure,Insurance,406.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-157.00000000,DR026,Expenditure,Ship Out,696.66000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-158.00000000,DR026,Return,Ship In,522.49500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-162.00000000,DR027,Expenditure,Ship Out,882.98000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,"Ship ran ashore, so no value of ship in.",,Ship
-164.00000000,DR028,Expenditure,Insurance,968.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-167.00000000,DR028,Expenditure,Ship Out,912.56000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-168.00000000,DR028,Return,Ship In,684.42000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-170.00000000,DR029,Expenditure,Insurance,543.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-172.00000000,DR029,Expenditure,Ship Out,513.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR110,,Ship
-173.00000000,DR029,Return,Ship In,385.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-175.00000000,DR030,Expenditure,Insurance,669.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-178.00000000,DR030,Expenditure,Ship Out,385.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR029,,Ship
-179.00000000,DR030,Return,Ship In,289.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV*VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-181.00000000,DR031,Expenditure,Insurance,355.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-183.00000000,DR031,Expenditure,Ship Out,608.43000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-184.00000000,DR031,Return,Ship In,456.32250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-186.00000000,DR032,Expenditure,Insurance,310.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-188.00000000,DR032,Expenditure,Ship Out,532.10000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-189.00000000,DR032,Return,Ship In,399.07500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-191.00000000,DR033,Expenditure,Insurance,348.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-193.00000000,DR033,Expenditure,Ship Out,597.72000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-194.00000000,DR033,Return,Ship In,448.29000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-196.00000000,DR034,Expenditure,Insurance,396.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-198.00000000,DR034,Expenditure,Ship Out,679.49000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-199.00000000,DR034,Return,Ship In,509.61750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-201.00000000,DR035,Expenditure,Insurance,301.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-203.00000000,DR035,Expenditure,Ship Out,516.46000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-204.00000000,DR035,Return,Ship In,387.34500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-206.00000000,DR036,Expenditure,Insurance,293.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-208.00000000,DR036,Expenditure,Ship Out,503.03000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-209.00000000,DR036,Return,Ship In,377.27250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-211.00000000,DR037,Expenditure,Insurance,346.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-213.00000000,DR037,Expenditure,Ship Out,593.47000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-214.00000000,DR037,Return,Ship In,445.10250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-216.00000000,DR038,Expenditure,Insurance,291.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-218.00000000,DR038,Expenditure,Ship Out,499.63000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-219.00000000,DR038,Return,Ship In,374.72250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-221.00000000,DR039,Expenditure,Insurance,425.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-223.00000000,DR039,Expenditure,Ship Out,729.30000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-224.00000000,DR039,Return,Ship In,546.97500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-226.00000000,DR040,Expenditure,Insurance,448.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-228.00000000,DR040,Expenditure,Ship Out,767.89000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-229.00000000,DR040,Return,Ship In,575.91750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-231.00000000,DR041,Expenditure,Insurance,781.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-233.00000000,DR041,Expenditure,Ship Out,1339.77000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-234.00000000,DR041,Return,Ship In,1004.82750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-237.00000000,DR042,Expenditure,Insurance,1087.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-240.00000000,DR042,Return,Ship In,225.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-242.00000000,DR043,Expenditure,Insurance,765.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-244.00000000,DR043,Expenditure,Ship Out,1182.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-245.00000000,DR043,Return,Ship In,887.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-247.00000000,DR044,Expenditure,Insurance,695.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-248.00000000,DR044,Expenditure,Ship Out,887.00000000,nan,0.00000000,VSDO*VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage DR043,,Ship
-250.00000000,DR044,Return,Ship In,568.00000000,nan,0.00000000,VSDO*VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-252.00000000,DR045,Expenditure,Insurance,723.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-253.00000000,DR045,Expenditure,Ship Out,320.00000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,,Ship
-257.00000000,DR046,Expenditure,Insurance,516.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-259.00000000,DR046,Expenditure,Ship Out,885.53000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-260.00000000,DR046,Return,Ship In,664.14750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-262.00000000,DR047,Expenditure,Insurance,493.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-263.00000000,DR047,Expenditure,Ship Out,846.09000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-266.00000000,DR048,Expenditure,Insurance,481.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-269.00000000,DR048,Expenditure,Ship Out,733.00000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,,Ship
-272.00000000,DR049,Expenditure,Insurance,1034.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-274.00000000,DR049,Expenditure,Ship Out,1774.29000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-275.00000000,DR049,Return,Ship In,1330.71750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-280.00000000,DR050,Return,Ship In,26.90000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-282.00000000,DR051,Expenditure,Ship Out,33.78750000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-283.00000000,DR051,Return,Ship In,25.34062500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-285.00000000,DR052,Expenditure,Insurance,65.65000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-286.00000000,DR052,Expenditure,Ship Out,54.08000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-289.00000000,DR052,Return,Ship In,40.56000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-291.00000000,DR053,Expenditure,Insurance,23.38000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-292.00000000,DR053,Expenditure,Ship Out,40.10000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-295.00000000,DR053,Return,Ship In,30.10000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-297.00000000,DR054,Expenditure,Insurance,14.01000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-298.00000000,DR054,Expenditure,Ship Out,24.03000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-300.00000000,DR054,Return,Ship In,18.02000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-302.00000000,DR055,Expenditure,Ship Out,13.24000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-304.00000000,DR055,Return,Ship In,9.93000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-305.00000000,DR055,Expenditure,Insurance,8.90000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-307.00000000,DR056,Expenditure,Ship Out,8.80000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage DR055,,Ship
-309.00000000,DR056,Return,Ship In,6.60000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-310.00000000,DR056,Expenditure,Insurance,21.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-313.00000000,DR057,Expenditure,Ship Out,19.21000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-314.00000000,DR057,Expenditure,Insurance,23.32000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-319.00000000,DR058,Expenditure,Ship Out,88.89000000,nan,0.00000000,VSDR*VSDR,nan,Outfitting,Pound sterling,,,Ship
-321.00000000,DR058,Return,Ship In,66.67000000,nan,0.00000000,VSDR,nan,Return,Pound sterling,Estimated based on Ship Out on the following voyage DR059,,Ship
-325.00000000,DR059,Expenditure,Ship Out,66.67000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,,Ship
-344.00000000,DR062,Expenditure,Insurance,94.90000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-351.00000000,DR064,Expenditure,Ship Out,105.01000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-352.00000000,DR064,Expenditure,Insurance,126.45000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-354.00000000,DR064,Return,Ship In,78.76000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-358.00000000,DR065,Expenditure,Ship Out,106.67000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,,Ship
-365.00000000,DR066,Expenditure,Ship Out,44.40000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,,Ship
-377.00000000,DR068,Expenditure,Insurance,334.45000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-378.00000000,DR068,Expenditure,Ship Out,228.77000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,,Ship
-384.00000000,DR069,Expenditure,Insurance,601.04000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-386.00000000,DR069,Return,Ship In,660.93000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-389.00000000,DR070,Expenditure,Ship Out,1600.00000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,,Ship
-390.00000000,DR070,Expenditure,Insurance,566.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-395.00000000,DR071,Expenditure,Insurance,367.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-396.00000000,DR071,Expenditure,Ship Out,629.51000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-397.00000000,DR071,Return,Ship In,472.13250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-400.00000000,DR072,Expenditure,Insurance,281.05000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-401.00000000,DR072,Expenditure,Ship Out,434.35000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-402.00000000,DR072,Return,Ship In,325.76250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-405.00000000,DR073,Expenditure,Insurance,358.16000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-406.00000000,DR073,Expenditure,Ship Out,553.52000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-407.00000000,DR073,Return,Ship In,415.14000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-410.00000000,DR074,Expenditure,Insurance,749.76000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-411.00000000,DR074,Expenditure,Ship Out,1158.72000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-412.00000000,DR074,Return,Ship In,869.04000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-415.00000000,DR075,Expenditure,Insurance,390.17000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-416.00000000,DR075,Expenditure,Ship Out,602.99000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-417.00000000,DR075,Return,Ship In,452.24250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-420.00000000,DR076,Expenditure,Insurance,633.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-421.00000000,DR076,Expenditure,Ship Out,977.84000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-422.00000000,DR076,Return,Ship In,733.38000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-425.00000000,DR077,Expenditure,Insurance,349.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-426.00000000,DR077,Expenditure,Ship Out,301.92000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-427.00000000,DR077,Return,Ship In,226.44000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-430.00000000,DR078,Expenditure,Insurance,195.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-431.00000000,DR078,Expenditure,Ship Out,265.20000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-432.00000000,DR078,Return,Ship In,198.90000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-435.00000000,DR079,Expenditure,Insurance,173.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-436.00000000,DR079,Expenditure,Ship Out,269.96000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-437.00000000,DR079,Return,Ship In,202.47000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-440.00000000,DR080,Expenditure,Insurance,172.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-441.00000000,DR080,Expenditure,Ship Out,320.28000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-442.00000000,DR080,Return,Ship In,240.21000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-445.00000000,DR081,Expenditure,Insurance,150.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-446.00000000,DR081,Expenditure,Ship Out,187.68000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-447.00000000,DR081,Return,Ship In,140.76000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-450.00000000,DR082,Expenditure,Insurance,413.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-451.00000000,DR082,Expenditure,Ship Out,992.80000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-452.00000000,DR082,Return,Ship In,744.60000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-455.00000000,DR083,Expenditure,Insurance,138.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-456.00000000,DR083,Expenditure,Ship Out,1213.12000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-457.00000000,DR083,Return,Ship In,909.84000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-460.00000000,DR084,Expenditure,Insurance,207.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-461.00000000,DR084,Expenditure,Ship Out,1028.16000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-462.00000000,DR084,Return,Ship In,771.12000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-465.00000000,DR085,Expenditure,Insurance,128.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-466.00000000,DR085,Expenditure,Ship Out,1116.56000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-467.00000000,DR085,Return,Ship In,837.42000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-470.00000000,DR086,Expenditure,Insurance,121.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-471.00000000,DR086,Expenditure,Ship Out,1043.12000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-472.00000000,DR086,Return,Ship In,782.34000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-475.00000000,DR087,Expenditure,Insurance,212.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-476.00000000,DR087,Expenditure,Ship Out,1120.64000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-477.00000000,DR087,Return,Ship In,840.48000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-480.00000000,DR088,Expenditure,Insurance,1518.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-481.00000000,DR088,Expenditure,Ship Out,614.72000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-482.00000000,DR088,Return,Ship In,461.04000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-485.00000000,DR089,Expenditure,Insurance,1074.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-486.00000000,DR089,Expenditure,Ship Out,658.24000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-487.00000000,DR089,Return,Ship In,493.68000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-490.00000000,DR090,Expenditure,Insurance,785.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-491.00000000,DR090,Expenditure,Ship Out,453.73000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-492.00000000,DR090,Return,Ship In,340.29750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-495.00000000,DR091,Expenditure,Insurance,886.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-496.00000000,DR091,Expenditure,Ship Out,441.49000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-497.00000000,DR091,Return,Ship In,331.11750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-500.00000000,DR092,Expenditure,Insurance,665.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-501.00000000,DR092,Expenditure,Ship Out,470.05000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-502.00000000,DR092,Return,Ship In,352.53750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-505.00000000,DR093,Expenditure,Insurance,915.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-506.00000000,DR093,Expenditure,Ship Out,718.59000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-507.00000000,DR093,Return,Ship In,538.94250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-510.00000000,DR094,Expenditure,Insurance,722.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-511.00000000,DR094,Expenditure,Ship Out,660.45000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-512.00000000,DR094,Return,Ship In,495.33750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-515.00000000,DR095,Expenditure,Insurance,750.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-516.00000000,DR095,Expenditure,Ship Out,1381.08000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-517.00000000,DR095,Return,Ship In,1035.81000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-520.00000000,DR096,Expenditure,Insurance,675.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-521.00000000,DR096,Expenditure,Ship Out,1281.12000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-522.00000000,DR096,Return,Ship In,960.84000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-525.00000000,DR097,Expenditure,Insurance,832.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-526.00000000,DR097,Expenditure,Ship Out,411.57000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-527.00000000,DR097,Return,Ship In,308.67750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-530.00000000,DR098,Expenditure,Insurance,725.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-531.00000000,DR098,Expenditure,Ship Out,733.89000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-532.00000000,DR098,Return,Ship In,550.41750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-535.00000000,DR099,Expenditure,Insurance,648.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-536.00000000,DR099,Expenditure,Ship Out,456.96000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-537.00000000,DR099,Return,Ship In,342.72000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-540.00000000,DR100,Expenditure,Insurance,398.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-541.00000000,DR100,Expenditure,Ship Out,1454.52000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-542.00000000,DR100,Return,Ship In,1090.89000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-586.00000000,KR022,Expenditure,Ship Out,731.83470000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-587.00000000,KR022,Return,Ship In,548.87602500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-590.00000000,KR023,Expenditure,Insurance,3615.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-591.00000000,KR023,Expenditure,Ship Out,2422.37000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-593.00000000,KR023,Return,Ship In,1816.77000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-597.00000000,KR024,Expenditure,Insurance,2714.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-598.00000000,KR024,Expenditure,Ship Out,1873.29000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-601.00000000,KR024,Return,Ship In,1404.96000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-605.00000000,KR025,Expenditure,Insurance,5795.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-609.00000000,KR026,Expenditure,Insurance,3874.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-610.00000000,KR026,Expenditure,Ship Out,2595.37000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-612.00000000,KR026,Return,Ship In,1946.53000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-614.00000000,KR027,Expenditure,Ship Out,644.48870000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-615.00000000,KR027,Return,Ship In,483.36652500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-618.00000000,KR028,Expenditure,Ship Out,819.17135000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-619.00000000,KR028,Return,Ship In,614.37851250,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-622.00000000,KR029,Expenditure,Ship Out,1147.18720000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-623.00000000,KR029,Return,Ship In,860.39040000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-626.00000000,KR030,Expenditure,Ship Out,671.83830000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-627.00000000,KR030,Return,Ship In,503.87872500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-630.00000000,KR031,Expenditure,Ship Out,584.81870000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-631.00000000,KR031,Return,Ship In,438.61402500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-634.00000000,KR032,Expenditure,Ship Out,2391.86940000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-635.00000000,KR032,Return,Ship In,1793.90205000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-638.00000000,KR033,Expenditure,Ship Out,1980.00020000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-639.00000000,KR033,Return,Ship In,1485.00015000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-641.00000000,KR034,Expenditure,Ship Out,317.16220000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-642.00000000,KR034,Return,Ship In,237.87165000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-644.00000000,KR035,Expenditure,Ship Out,762.27575000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-645.00000000,KR035,Return,Ship In,571.70681250,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-649.00000000,KR036,Expenditure,Ship Out,723.06695000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-650.00000000,KR036,Return,Ship In,542.30021250,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-653.00000000,KR037,Expenditure,Ship Out,327.56450000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-654.00000000,KR037,Return,Ship In,245.67337500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-657.00000000,KR038,Expenditure,Ship Out,5468.39000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-658.00000000,KR038,Return,Ship In,4101.29250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-660.00000000,KR039,Expenditure,Ship Out,721.50890000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-661.00000000,KR039,Return,Ship In,541.13167500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-665.00000000,KR041,Expenditure,Ship Out,714.55590000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-666.00000000,KR041,Return,Ship In,535.91692500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-668.00000000,KR042,Expenditure,Ship Out,902.59970000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-669.00000000,KR042,Return,Ship In,676.94977500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-671.00000000,KR043,Expenditure,Insurance,615.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-673.00000000,KR043,Expenditure,Ship Out,1054.85000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-674.00000000,KR043,Return,Ship In,791.13750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-676.00000000,KR044,Expenditure,Insurance,3534.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-678.00000000,KR044,Expenditure,Ship Out,2367.08000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-679.00000000,KR044,Return,Ship In,1775.31000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-681.00000000,KR045,Expenditure,Insurance,684.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-683.00000000,KR045,Expenditure,Ship Out,1173.68000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-684.00000000,KR045,Return,Ship In,880.26000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-686.00000000,KR046,Expenditure,Insurance,530.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-688.00000000,KR046,Expenditure,Ship Out,909.84000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-689.00000000,KR046,Return,Ship In,682.38000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-691.00000000,KR047,Expenditure,Insurance,2864.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-693.00000000,KR047,Expenditure,Ship Out,4914.02000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-694.00000000,KR047,Return,Ship In,3685.51500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-696.00000000,KR048,Expenditure,Insurance,1003.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-698.00000000,KR048,Expenditure,Ship Out,1721.08000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-699.00000000,KR048,Return,Ship In,1290.81000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-701.00000000,KR049,Expenditure,Insurance,551.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-703.00000000,KR049,Expenditure,Ship Out,945.03000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-704.00000000,KR049,Return,Ship In,708.77250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-706.00000000,KR050,Expenditure,Insurance,441.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-708.00000000,KR050,Expenditure,Ship Out,756.50000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-709.00000000,KR050,Return,Ship In,567.37500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-711.00000000,KR051,Expenditure,Insurance,7793.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-713.00000000,KR051,Expenditure,Ship Out,5221.21000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-714.00000000,KR051,Return,Ship In,3915.90750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-716.00000000,KR052,Expenditure,Insurance,908.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,No link to TSTD so exact date unknown. Estimated based on an assumed insurance premium of 11% of gross outlays,,Insurance
-718.00000000,KR052,Expenditure,Ship Out,1556.69000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-719.00000000,KR052,Return,Ship In,1167.51750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-721.00000000,KR053,Expenditure,Ship Out,2410.66000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-722.00000000,KR053,Expenditure,Insurance,3598.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-724.00000000,KR053,Return,Ship In,1808.00000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-767.00000000,NR007,Expenditure,Ship Out,156.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,,Ship
-775.00000000,NR008,Expenditure,Ship Out,184.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,,Ship
-825.00000000,NR015,Expenditure,Ship Out,86.36000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-826.00000000,NR015,Return,Ship In,64.77000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-856.00000000,NR021,Expenditure,Ship Out,61.30000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,,Ship
-871.00000000,NR023,Return,Ship In,66.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-876.00000000,NR024,Expenditure,Ship Out,124.44000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-935.00000000,NR036,Return,Ship In,105.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-943.00000000,NR038,Expenditure,Ship Out,105.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR036,,Ship
-945.00000000,NR038,Return,Ship In,78.75000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-950.00000000,NR040,Return,Ship In,79.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-957.00000000,NR041,Return,Ship In,255.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-961.00000000,NR042,Expenditure,Ship Out,582.76000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-962.00000000,NR042,Return,Ship In,437.07000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-963.00000000,NR042,Expenditure,Insurance,441.18000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-968.00000000,NR043,Return,Ship In,24.75000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1002.00000000,NR049,Return,Ship In,62.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1013.00000000,NR051,Expenditure,Insurance,38.20000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1019.00000000,NR052,Expenditure,Insurance,60.50000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1035.00000000,NR055,Return,Ship In,33.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1036.00000000,NR055,Expenditure,Insurance,38.20000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1070.00000000,NR061,Expenditure,Ship Out,148.75000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1071.00000000,NR061,Return,Ship In,111.56000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-1092.00000000,NR067,Expenditure,Insurance,73.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,Radburn assumed �47 based on partial insurance rates.,,Insurance
-1095.00000000,NR067,Return,Ship In,168.75000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,"Recalc from Radburn�s data, assuming 50% residual value.",,Ship
-1114.00000000,NR071,Return,Ship In,112.50000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1120.00000000,NR072,Return,Ship In,90.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1126.00000000,NR074,Expenditure,Ship Out,168.75000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR067,,Ship
-1135.00000000,NR076,Expenditure,Ship Out,90.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR072,,Ship
-1137.00000000,NR076,Return,Ship In,67.50000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-1138.00000000,NR077,Expenditure,Insurance,349.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed �190, unclear how and why.",,Insurance
-1140.00000000,NR077,Expenditure,Ship Out,112.50000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR071,,Ship
-1146.00000000,NR079,Expenditure,Insurance,129.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed �104, unclear why and how.",,Insurance
-1150.00000000,NR079,Return,Ship In,39.38000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1163.00000000,NR081,Expenditure,Insurance,389.08000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1167.00000000,NR081,Return,Ship In,110.25000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1175.00000000,NR083,Expenditure,Ship Out,39.38000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR079,,Ship
-1177.00000000,NR083,Return,Ship In,29.54000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-1184.00000000,NR084,Expenditure,Insurance,280.43000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1207.00000000,NR088,Return,Ship In,131.25000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1211.00000000,NR089,Expenditure,Ship Out,299.54000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1213.00000000,NR089,Return,Ship In,224.66000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-1216.00000000,NR090,Expenditure,Ship Out,131.25000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR088,,Ship
-1219.00000000,NR091,Expenditure,Ship Out,110.25000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR081,,Ship
-1220.00000000,NR091,Expenditure,Insurance,436.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1222.00000000,NR091,Return,Ship In,82.69000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1226.00000000,NR093,Expenditure,Insurance,509.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1228.00000000,NR093,Return,Ship In,225.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1230.00000000,NR094,Expenditure,Insurance,67.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1232.00000000,NR094,Return,Ship In,36.40000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1234.00000000,NR095,Expenditure,Insurance,411.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1236.00000000,NR095,Return,Ship In,224.05000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1238.00000000,NR096,Expenditure,Ship Out,179.25000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR095,,Ship
-1239.00000000,NR096,Expenditure,Insurance,118.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1241.00000000,NR096,Return,Ship In,134.44000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,,Ship
-1246.00000000,DR102,Expenditure,Insurance,830.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1248.00000000,DR102,Expenditure,Ship Out,1424.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1249.00000000,DR102,Return,Ship In,1068.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,Ship
-1254.00000000,DR103,Return,Ship In,488.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,,Ship
-1255.00000000,DR103,Expenditure,Insurance,723.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1262.00000000,DR104,Expenditure,Insurance,1870.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1263.00000000,DR104,Expenditure,Ship Out,1763.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1265.00000000,DR105,Expenditure,Insurance,770.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1266.00000000,DR105,Expenditure,Ship Out,726.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1268.00000000,DR106,Expenditure,Insurance,1100.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1269.00000000,DR106,Expenditure,Ship Out,1037.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1271.00000000,DR107,Expenditure,Insurance,1276.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1272.00000000,DR107,Expenditure,Ship Out,1203.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1274.00000000,DR108,Expenditure,Insurance,1188.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1275.00000000,DR108,Expenditure,Ship Out,1120.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1277.00000000,DR109,Expenditure,Insurance,1540.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1278.00000000,DR109,Expenditure,Ship Out,1452.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1280.00000000,DR110,Expenditure,Insurance,924.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1281.00000000,DR110,Expenditure,Ship Out,684.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR028,,Ship
-1283.00000000,DR111,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1284.00000000,DR111,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1286.00000000,DR112,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1287.00000000,DR112,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1289.00000000,DR113,Expenditure,Insurance,880.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1290.00000000,DR113,Expenditure,Ship Out,1510.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1292.00000000,DR114,Expenditure,Insurance,660.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1293.00000000,DR114,Expenditure,Ship Out,1132.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1295.00000000,DR115,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1296.00000000,DR115,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1298.00000000,DR116,Expenditure,Insurance,374.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1299.00000000,DR116,Expenditure,Ship Out,642.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1301.00000000,DR117,Expenditure,Insurance,1100.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1302.00000000,DR117,Expenditure,Ship Out,1887.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1304.00000000,DR118,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1305.00000000,DR118,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1307.00000000,DR119,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1308.00000000,DR119,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1310.00000000,DR120,Expenditure,Insurance,473.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1311.00000000,DR120,Expenditure,Ship Out,811.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1313.00000000,DR121,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1314.00000000,DR121,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1316.00000000,DR122,Expenditure,Insurance,605.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1317.00000000,DR122,Expenditure,Ship Out,1038.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1319.00000000,DR123,Expenditure,Insurance,440.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1320.00000000,DR123,Expenditure,Ship Out,755.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1322.00000000,DR124,Expenditure,Insurance,594.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1323.00000000,DR124,Expenditure,Ship Out,1019.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1325.00000000,DR125,Expenditure,Insurance,693.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1326.00000000,DR125,Expenditure,Ship Out,1189.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1328.00000000,DR126,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1329.00000000,DR126,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1331.00000000,DR127,Expenditure,Insurance,770.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1332.00000000,DR127,Expenditure,Ship Out,1321.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1334.00000000,DR128,Expenditure,Insurance,506.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1335.00000000,DR128,Expenditure,Ship Out,868.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1337.00000000,DR129,Expenditure,Insurance,616.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1338.00000000,DR129,Expenditure,Ship Out,1057.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1340.00000000,DR130,Expenditure,Insurance,539.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1341.00000000,DR130,Expenditure,Ship Out,925.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1343.00000000,DR131,Expenditure,Insurance,396.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1344.00000000,DR131,Expenditure,Ship Out,679.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1346.00000000,DR132,Expenditure,Insurance,308.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1347.00000000,DR132,Expenditure,Ship Out,528.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1349.00000000,DR133,Expenditure,Insurance,539.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1350.00000000,DR133,Expenditure,Ship Out,925.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1352.00000000,DR134,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1353.00000000,DR134,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1355.00000000,DR135,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1356.00000000,DR135,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1358.00000000,DR136,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1359.00000000,DR136,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1361.00000000,DR137,Expenditure,Insurance,484.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1362.00000000,DR137,Expenditure,Ship Out,830.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1364.00000000,DR138,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1365.00000000,DR138,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1367.00000000,DR139,Expenditure,Insurance,682.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1368.00000000,DR139,Expenditure,Ship Out,1170.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1370.00000000,DR140,Expenditure,Insurance,825.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1371.00000000,DR140,Expenditure,Ship Out,1415.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1373.00000000,DR141,Expenditure,Insurance,506.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1374.00000000,DR141,Expenditure,Ship Out,868.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1376.00000000,DR142,Expenditure,Insurance,374.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1377.00000000,DR142,Expenditure,Ship Out,642.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1379.00000000,DR143,Expenditure,Insurance,484.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1380.00000000,DR143,Expenditure,Ship Out,830.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1382.00000000,DR144,Expenditure,Insurance,770.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1383.00000000,DR144,Expenditure,Ship Out,1321.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1385.00000000,DR145,Expenditure,Insurance,594.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1386.00000000,DR145,Expenditure,Ship Out,1019.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1388.00000000,DR146,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1389.00000000,DR146,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1391.00000000,DR147,Expenditure,Insurance,682.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1392.00000000,DR147,Expenditure,Ship Out,1170.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1396.00000000,DR148,Expenditure,Insurance,2075.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1398.00000000,DR149,Expenditure,Insurance,133.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1399.00000000,DR149,Expenditure,Ship Out,228.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1401.00000000,DR150,Expenditure,Insurance,273.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1402.00000000,DR150,Expenditure,Ship Out,468.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1416.00000000,DR160,Expenditure,Insurance,89.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1417.00000000,DR160,Expenditure,Ship Out,153.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1427.00000000,DR164,Expenditure,Insurance,38.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1431.00000000,DR166,Expenditure,Insurance,105.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1432.00000000,DR166,Expenditure,Ship Out,180.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1437.00000000,DR167,Expenditure,Insurance,469.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1447.00000000,DR172,Expenditure,Insurance,1190.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,,Insurance
-1448.00000000,DR172,Expenditure,Ship Out,2041.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,,Ship
-1450.00000000,DR173,Expenditure,Insurance,1172.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1451.00000000,DR173,Expenditure,Ship Out,2010.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1453.00000000,DR174,Expenditure,Insurance,1174.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1454.00000000,DR174,Expenditure,Ship Out,2013.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1458.00000000,DR177,Expenditure,Insurance,578.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1459.00000000,DR177,Expenditure,Ship Out,992.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1461.00000000,DR177,Return,Ship in,744.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,,
-1463.00000000,DR178,Expenditure,Insurance,1773.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1464.00000000,DR178,Expenditure,Ship Out,3042.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1466.00000000,DR179,Expenditure,Insurance,584.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1467.00000000,DR179,Expenditure,Ship Out,1003.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1469.00000000,DR180,Expenditure,Insurance,2112.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1470.00000000,DR180,Expenditure,Ship Out,3624.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1472.00000000,DR181,Expenditure,Insurance,956.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1473.00000000,DR181,Expenditure,Ship Out,1640.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1475.00000000,DR182,Expenditure,Insurance,751.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1476.00000000,DR182,Expenditure,Ship Out,1288.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1478.00000000,DR183,Expenditure,Insurance,798.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1479.00000000,DR183,Expenditure,Ship Out,1370.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,,Ship
-1489.00000000,DR189,Expenditure,Insurance,385.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1491.00000000,DR190,Expenditure,Insurance,550.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1493.00000000,DR191,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1495.00000000,DR192,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1497.00000000,DR193,Expenditure,Insurance,990.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1500.00000000,DR195,Expenditure,Insurance,715.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1502.00000000,DR196,Expenditure,Insurance,176.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1504.00000000,DR197,Expenditure,Insurance,770.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1506.00000000,DR198,Expenditure,Insurance,440.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1508.00000000,DR199,Expenditure,Insurance,660.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1510.00000000,DR200,Expenditure,Insurance,660.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1512.00000000,DR201,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1514.00000000,DR202,Expenditure,Insurance,990.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1516.00000000,DR203,Expenditure,Insurance,495.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1520.00000000,DR206,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1524.00000000,DR208,Expenditure,Insurance,1320.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1527.00000000,DR210,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1529.00000000,DR211,Expenditure,Insurance,400.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-1531.00000000,DR212,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,,Insurance
-114.00000000,KR017,Expenditure,Ship out,8603.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,,Ship
-115.00000000,KR017,Return,Ship in,6453.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,,
-116.00000000,KR017,Expenditure,Insurance,12652.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,,Insurance
-117.00000000,KR018,Expenditure,Ship out,9103.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,,Ship
-118.00000000,KR018,Expenditure,Insurance,13386.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,,Insurance
-119.00000000,KR018,Return,Ship in,6827.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,,
-120.00000000,KR019,Expenditure,Ship out,7476.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,,Ship
-121.00000000,KR019,Expenditure,Insurance,10994.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,,Insurance
-122.00000000,KR019,Return,Ship in,5607.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,,
-123.00000000,KR020,Expenditure,Ship out,12991.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,,Ship
-124.00000000,KR020,Expenditure,Insurance,19104.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,,Insurance
-125.00000000,KR020,Return,Ship in,9743.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,,
-126.00000000,KR021,Expenditure,Ship out,12990.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,,Ship
-127.00000000,KR021,Expenditure,Insurance,19102.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,,Insurance
-128.00000000,KR021,Return,Ship in,9742.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,,
-192.00000000,KR054,Return,Value of ship upon return,4687.75000000,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-193.00000000,KR055,Return,Value of ship upon return,6828.00641026,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-194.00000000,KR056,Return,Value of ship upon return,8196.07051282,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-195.00000000,KR057,Return,Value of ship upon return,6686.44871795,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-196.00000000,KR058,Return,Value of ship upon return,5060.55128205,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-197.00000000,KR059,Return,Value of ship upon return,10033.26923077,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-198.00000000,KR060,Return,Value of ship upon return,10025.42307692,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-199.00000000,KR061,Return,Value of ship upon return,8595.67948718,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-200.00000000,KR062,Return,Value of ship upon return,10656.92948718,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-201.00000000,KR063,Return,Value of ship upon return,8514.60256410,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-202.00000000,KR064,Return,Value of ship upon return,8681.44230769,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-203.00000000,KR065,Return,Value of ship upon return,4764.25000000,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-204.00000000,KR066,Return,Value of ship upon return,4458.25000000,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-205.00000000,KR067,Return,Value of ship upon return,7311.41666667,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-206.00000000,KR068,Return,Value of ship upon return,5819.23076923,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-207.00000000,KR069,Return,Value of ship upon return,10423.94230769,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-208.00000000,KR070,Return,Value of ship upon return,6769.48717949,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,,
-209.00000000,KR054,Expenditure,Insurance,10754.25000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
-210.00000000,KR055,Expenditure,Insurance,6892.27000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-211.00000000,KR056,Expenditure,Insurance,8273.21000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-212.00000000,KR057,Expenditure,Insurance,6749.38000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-213.00000000,KR058,Expenditure,Insurance,5108.18000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-214.00000000,KR059,Expenditure,Insurance,10127.70000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-215.00000000,KR060,Expenditure,Insurance,10119.78000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-216.00000000,KR061,Expenditure,Insurance,8676.58000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-217.00000000,KR062,Expenditure,Insurance,10757.23000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-218.00000000,KR063,Expenditure,Insurance,8594.74000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-219.00000000,KR064,Expenditure,Insurance,8763.15000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-220.00000000,KR065,Expenditure,Insurance,10929.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),,Insurance
-221.00000000,KR066,Expenditure,Insurance,10227.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
-222.00000000,KR067,Expenditure,Insurance,16773.25000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
-223.00000000,KR068,Expenditure,Insurance,13350.00000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
-224.00000000,KR069,Expenditure,Insurance,23913.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
-225.00000000,KR070,Expenditure,Insurance,15530.00000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
-1.00000000,MR001,Expenditure,Trade cargo costs,1700000.00000000,cash and credit,,0.0,1600-11-04,,Portuguese real,,,Trade cargo
-2.00000000,MR001,Expenditure,Licence cost (Africa),72000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Contract stipulated that the arma��o (outfitting) carried the registry for the slaves' licences,,
-3.00000000,MR001,Expenditure,Licence cost (America),3960.00000000,nan,,1.0,nan,Outfitting,Spanish real,"Estimate based on contract stating that the arma��o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America",,
-4.00000000,MR001,Expenditure,Taxes,1008.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,,
-6.00000000,MR001,Returns,Sale of slaves in America,364000.00000000,nan,,0.0,nan,Return,Portuguese real,,,
-7.00000000,MR002,Expenditure,Outfitting costs,157500.00000000,nan,,0.0,nan,Outfitting,Portuguese real,Refers to venture MR001,,Outfitting
-8.00000000,MR002,Expenditure,Rent of ship,120000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,,
-9.00000000,MR002,Expenditure,Taxes (Canary Islands),21000.00000000,nan,1.00000000,0.0,nan,Transactions during voyage,Portuguese real,,,
-10.00000000,MR002,Expenditure,Taxes (Africa),60000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stipulating a fee of 300 reis per slave, with 200 stipulated by the outfitter to be shipped from Africa",,
-11.00000000,MR002,Expenditure,Insurance costs,200000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,,Insurance
-12.00000000,MR002,Expenditure,Licence cost (Africa),1200000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stating that the outfitter would pay 6,000 reis per slave that arrived in America, with 200 stipulated to be shipped",,
-13.00000000,MR002,Returns,Freight compensation,200000.00000000,nan,,0.0,nan,Return,Portuguese real,"Discounted over the freight cost of transporting slaves due the freighter lending a sum of 200,000 reis to the shipmaster who was entitled to carry 50 more slaves on the ship for himself",,Freight and passengers
-14.00000000,MR003,Expenditure,Trade cargo costs,100000.00000000,nan,,0.0,1617-10-24,,Portuguese real,,,Trade cargo
-15.00000000,MR003,Expenditure,Licence cost (Africa),21000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Estimate based on the contract of Guinea,,
-16.00000000,MR003,Expenditure,Licence cost (America),1320.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,Estimate based on contract stating that the outfitter would cover the asiento costs in America (440 reales/40 ducados per slave),,
-17.00000000,MR003,Expenditure,Taxes,300.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,,
-18.00000000,MR004,Expenditure,Taxes,385.00000000,nan,,0.0,nan,Outfitting,Spanish real,,,
-19.00000000,MR004,Expenditure,Licence cost (Africa),630000.00000000,nan,1.00000000,0.0,1617-12-24,,Portuguese real,,,
-20.00000000,MR004,Expenditure,Licence cost (America),29700.00000000,nan,,0.0,nan,Outfitting,Spanish real,,,
-21.00000000,MR004,Returns,Other returns,30165.00000000,cash,,0.0,nan,Return,Spanish real,"Payment of the fee lent for the slaves' licences, to be paid in silver coins brought from America in Seville",,Various
-22.00000000,MR005,Expenditure,Outfitting costs,250000.00000000,cash,,0.0,nan,Outfitting,Portuguese real,,,Outfitting
-23.00000000,MR005,Expenditure,Trade cargo costs,250000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,"Credit received in the Canary islands to employ in cargo, added to the 250,000 received in Lisbon, totalling 400,000",,Trade cargo
-24.00000000,MR005,Expenditure,Other expenses,390000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,"Destined for the purchase of 13 slaves reserved in Guinea (7 female, 6 male), specying the contract their price at 30,000 apiece ",,Various
-25.00000000,MR005,Expenditure,Licence cost (Africa),91000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,Value based on the stated number of slaves to transport,,
-26.00000000,MR006,Expenditure,Outfitting costs,280000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,Value to be paid in Angola in slaves by agents of the outfitters,,Outfitting
-27.00000000,MR006,Expenditure,Taxes,28000.00000000,nan,1.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
-28.00000000,MR007,Expenditure,Trade cargo costs,400000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,"Cargo to be used to purchase 16 slaves for 25,000 reis a piece",,Trade cargo
-29.00000000,MR007,Returns,Insurance payments,800000.00000000,nan,,0.0,nan,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",,
-30.00000000,MR008,Expenditure,Licence cost (Africa),1362000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,"Premium of 6,000 réis per slave delivered, totalling 227",,
-31.00000000,MR008,Expenditure,Licence cost (America),74250.00000000,nan,1.00000000,1.0,nan,Outfitting,Spanish real,Corresponding to the licences of 200 slaves that an associate of the outfitter had in Angola + 25 paid to the ship captain,,
-32.00000000,MR008,Expenditure,Insurance costs,45000.00000000,nan,,0.0,nan,Transactions during voyage,Portuguese real,Rate of 200 réis per slave,,Insurance
-33.00000000,MR008,Expenditure,Taxes,4500.00000000,nan,,1.0,nan,Outfitting,Spanish real,,,
-34.00000000,MR009,Expenditure,Outfitting costs,310000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,3 different investors with different shares in same ship,,Outfitting
-35.00000000,MR009,Expenditure,Outfitting costs,240000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,,Outfitting
-36.00000000,MR009,Expenditure,Outfitting costs,200000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,,Outfitting
-37.00000000,MR009,Returns,Freight compensation,626000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (310,000) + risk compensation (310,000) paid in the Americas with the proceeding of the sale of slaves bought in Guinea",,Freight and passengers
-38.00000000,MR009,Returns,Freight compensation,480000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (240,000) + risk compensation (240,000)",,Freight and passengers
-39.00000000,MR009,Returns,Freight compensation,400000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (200,000) + risk compensation (200,000)",,Freight and passengers
-40.00000000,MR010,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,0.0,1619-03-15,Outfitting,Portuguese real,,,Trade cargo
-41.00000000,MR010,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (100,000) + risk compensation (100,000)",,Freight and passengers
-42.00000000,MR011,Expenditure,Trade cargo costs,410000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,To be converted in 11 slaves in Angola,,Trade cargo
-43.00000000,MR011,Expenditure,Licence cost (Africa),77000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
-44.00000000,MR011,Returns,Sale of slaves in America,738720.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",,
-45.00000000,MR012,Expenditure,Outfitting costs,160000.00000000,cash,0.00000000,0.0,1619-04-19,,Portuguese real,,,Outfitting
-46.00000000,MR012,Expenditure,Trade cargo costs,160000.00000000,nan,0.00000000,0.0,1619-04-19,,Portuguese real,,,Trade cargo
-47.00000000,MR012,Returns,Insurance payments,576000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,,,
-48.00000000,MR013,Expenditure,Trade cargo costs,512000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-49.00000000,MR013,Returns,Freight compensation,1024000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Premium (512,000) + risk compensation (512,000)",,Freight and passengers
-50.00000000,MR014,Expenditure,Outfitting costs,110000.00000000,cash,0.00000000,0.0,1619-05-04,,Portuguese real,"Premium (110,000) + risk compensation (110,000)",,Outfitting
-51.00000000,MR014,Returns,Freight compensation,220000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,MR011-MR014 same boat with different investors,,Freight and passengers
-52.00000000,MR015,Expenditure,Outfitting costs,5000.00000000,cash,1.00000000,0.0,1619-06-19,,Spanish real,,,Outfitting
-53.00000000,MR015,Returns,Freight compensation,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Premium (5,000 reales) + risk compensation (5,000 reales)",,Freight and passengers
-54.00000000,MR016,Expenditure,Outfitting costs,1455580.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Outfitting
-55.00000000,MR016,Expenditure,Licence cost,200000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,"Relative to 11 out of 36 slaves purchased, does not specify which licence/taxes covered just the total sum",,
-56.00000000,MR016,Returns,Sale of slaves in America,2620000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,Sum declared for the sale of 36 Guinea slaves,,
-57.00000000,MR016,Returns,Freight compensation,432000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,,,Freight and passengers
-58.00000000,MR017,Expenditure,Trade cargo costs,112500.00000000,cash,1.00000000,0.0,1619-07-22,Outfitting,Portuguese real,,,Trade cargo
-59.00000000,MR017,Returns,Freight compensation,223000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (112,500) + premium (112,500)",,Freight and passengers
-60.00000000,MR018,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-61.00000000,MR018,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,,,Freight and passengers
-62.00000000,MR019,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-63.00000000,MR019,Expenditure,Licence cost (Africa),28000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,Outfitter pledges to cover the licence fees of the 4 slaves,,
-64.00000000,MR019,Expenditure,Licence cost (America),1760.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Outfitter pledges to cover the licence fees of the 4 slaves,,
-65.00000000,MR019,Expenditure,Taxes,376.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,,
-66.00000000,MR020,Expenditure,Outfitting costs,1000000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Outfitting
-67.00000000,MR020,Returns,Insurance payments,1900000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",,
-68.00000000,MR021,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-69.00000000,MR021,Returns,Freight compensation,152000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighter’s agents the principal (80,000) + premium of 90% (72,000)",,Freight and passengers
-70.00000000,MR022,Expenditure,Trade cargo costs,440000.00000000,cash,0.00000000,0.0,1620-03-04,Outfitting,Portuguese real,,,Trade cargo
-71.00000000,MR022,Returns,Insurance payments,836000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",,
-72.00000000,MR023,Expenditure,Trade cargo costs,70000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-73.00000000,MR023,Expenditure,Licence cost (Africa),14000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
-74.00000000,MR023,Expenditure,Licence cost (America),880.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Only information is to deliver 2 slaves to the investor’s agent in America,,
-75.00000000,MR024,Expenditure,Trade cargo costs,200000.00000000,cash,0.00000000,0.0,1620-03-04,,Portuguese real,,,Trade cargo
-76.00000000,MR024,Returns,Insurance payments,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",,
-77.00000000,MR025,Expenditure,Trade cargo costs,355600.00000000,cash,0.00000000,0.0,1620-04-14,,Portuguese real,,,Trade cargo
-78.00000000,MR025,Returns,Insurance payments,640000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Payment of principal (355,600) plus risk compensation at rate of 80% (284,400) with proceedings of slave sales",,
-79.00000000,MR026,Expenditure,Trade cargo costs,500000.00000000,nan,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-80.00000000,MR026,Returns,Insurance payments,25000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,,,
-81.00000000,MR027,Expenditure,Trade cargo costs,86840.00000000,cash,0.00000000,0.0,1620-06-10,,Portuguese real,,,Trade cargo
-82.00000000,MR027,Returns,Insurance payments,173680.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (86,840) + risk compensation at rate of 100% (86,840)",,
-83.00000000,MR028,Expenditure,Insurance costs,160000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,,,Insurance
-84.00000000,MR028,Expenditure,Licence cost (Africa),35000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
-85.00000000,MR028,Expenditure,Licence cost (America),2200.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,,
-86.00000000,MR028,Returns,Sale of slaves in America,320000.00000000,nan,1.00000000,0.0,nan,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",,
+line_number,ventureid,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks,specificationcategory
+5,DR001,Return,Ship In,75.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+10,DR002,Expenditure,Ship Out,40.08430000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+11,DR002,Return,Ship In,30.06322500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+17,DR003,Expenditure,Ship Out,250.55280000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+18,DR003,Return,Ship In,187.91460000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+26,DR004,Expenditure,Insurance,58.20000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+27,DR004,Expenditure,Ship Out,99.82230000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+28,DR004,Return,Ship In,74.86672500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+31,DR005,Expenditure,Insurance,40.91000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+32,DR005,Expenditure,Ship Out,70.18280000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+33,DR005,Return,Ship In,52.63710000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+37,DR006,Expenditure,Insurance,86.66000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+38,DR006,Expenditure,Ship Out,148.66330000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+39,DR006,Return,Ship In,111.49747500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+45,DR007,Expenditure,Ship Out,317.47670000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+46,DR007,Return,Ship In,238.10752500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+53,DR008,Expenditure,Ship Out,126.95260000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+54,DR008,Return,Ship In,95.21445000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+60,DR009,Expenditure,Ship Out,285.97400000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+61,DR009,Return,Ship In,214.48050000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+67,DR010,Expenditure,Ship Out,149.39940000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+68,DR010,Return,Ship In,112.04955000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+72,DR011,Expenditure,Ship Out,186.60560000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+73,DR011,Return,Ship In,139.95420000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+79,DR012,Expenditure,Ship Out,272.05610000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+80,DR012,Return,Ship In,204.04207500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+85,DR013,Expenditure,Ship Out,106.67000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,Ship
+93,DR014,Expenditure,Ship Out,380.41240000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+94,DR014,Return,Ship In,285.30930000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+96,DR015,Expenditure,Insurance,612.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+98,DR015,Expenditure,Ship Out,522.49500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR026,Ship
+99,DR015,Return,Ship In,391.87000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV,nan,Return,Pound sterling,,Ship
+101,DR016,Expenditure,Insurance,100.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+103,DR016,Expenditure,Ship Out,172.21000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+104,DR016,Return,Ship In,129.15750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+107,DR017,Expenditure,Insurance,588.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+109,DR017,Expenditure,Ship Out,1009.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+110,DR017,Return,Ship In,757.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+112,DR018,Expenditure,Insurance,125.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+114,DR018,Expenditure,Ship Out,214.37000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+115,DR018,Return,Ship In,160.77750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+118,DR019,Expenditure,Insurance,1118.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+121,DR019,Return,Ship In,2100.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+124,DR020,Expenditure,Insurance,1194.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+126,DR020,Return,Ship In,2179.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+132,DR021,Expenditure,Ship Out,1509.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+133,DR021,Return,Ship In,1132.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+135,DR022,Expenditure,Insurance,675.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+137,DR022,Expenditure,Ship Out,1157.70000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,For Sarah itself,Ship
+138,DR022,Return,Ship In,868.27500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+140,DR023,Expenditure,Insurance,1294.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+143,DR023,Return,Ship In,2138.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+145,DR024,Expenditure,Insurance,1173.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+147,DR024,Expenditure,Ship Out,2012.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+148,DR024,Return,Ship In,1509.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+150,DR025,Expenditure,Insurance,1082.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+152,DR025,Expenditure,Ship Out,1855.38000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+153,DR025,Return,Ship In,1391.53500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+155,DR026,Expenditure,Insurance,406.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+157,DR026,Expenditure,Ship Out,696.66000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+158,DR026,Return,Ship In,522.49500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+162,DR027,Expenditure,Ship Out,882.98000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,"Ship ran ashore, so no value of ship in.",Ship
+164,DR028,Expenditure,Insurance,968.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+167,DR028,Expenditure,Ship Out,912.56000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+168,DR028,Return,Ship In,684.42000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+170,DR029,Expenditure,Insurance,543.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+172,DR029,Expenditure,Ship Out,513.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR110,Ship
+173,DR029,Return,Ship In,385.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV*VSRV,nan,Return,Pound sterling,,Ship
+175,DR030,Expenditure,Insurance,669.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+178,DR030,Expenditure,Ship Out,385.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR029,Ship
+179,DR030,Return,Ship In,289.00000000,nan,0.00000000,VSDT*VSDO*VSRV*VSRV*VSRV*VSRV,nan,Return,Pound sterling,,Ship
+181,DR031,Expenditure,Insurance,355.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+183,DR031,Expenditure,Ship Out,608.43000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+184,DR031,Return,Ship In,456.32250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+186,DR032,Expenditure,Insurance,310.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+188,DR032,Expenditure,Ship Out,532.10000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+189,DR032,Return,Ship In,399.07500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+191,DR033,Expenditure,Insurance,348.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+193,DR033,Expenditure,Ship Out,597.72000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+194,DR033,Return,Ship In,448.29000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+196,DR034,Expenditure,Insurance,396.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+198,DR034,Expenditure,Ship Out,679.49000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+199,DR034,Return,Ship In,509.61750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+201,DR035,Expenditure,Insurance,301.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+203,DR035,Expenditure,Ship Out,516.46000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+204,DR035,Return,Ship In,387.34500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+206,DR036,Expenditure,Insurance,293.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+208,DR036,Expenditure,Ship Out,503.03000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+209,DR036,Return,Ship In,377.27250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+211,DR037,Expenditure,Insurance,346.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+213,DR037,Expenditure,Ship Out,593.47000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+214,DR037,Return,Ship In,445.10250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+216,DR038,Expenditure,Insurance,291.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+218,DR038,Expenditure,Ship Out,499.63000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+219,DR038,Return,Ship In,374.72250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+221,DR039,Expenditure,Insurance,425.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+223,DR039,Expenditure,Ship Out,729.30000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+224,DR039,Return,Ship In,546.97500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+226,DR040,Expenditure,Insurance,448.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+228,DR040,Expenditure,Ship Out,767.89000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+229,DR040,Return,Ship In,575.91750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+231,DR041,Expenditure,Insurance,781.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+233,DR041,Expenditure,Ship Out,1339.77000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+234,DR041,Return,Ship In,1004.82750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+237,DR042,Expenditure,Insurance,1087.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+240,DR042,Return,Ship In,225.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+242,DR043,Expenditure,Insurance,765.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+244,DR043,Expenditure,Ship Out,1182.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+245,DR043,Return,Ship In,887.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+247,DR044,Expenditure,Insurance,695.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+248,DR044,Expenditure,Ship Out,887.00000000,nan,0.00000000,VSDO*VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage DR043,Ship
+250,DR044,Return,Ship In,568.00000000,nan,0.00000000,VSDO*VSRV*VSRV,nan,Return,Pound sterling,,Ship
+252,DR045,Expenditure,Insurance,723.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+253,DR045,Expenditure,Ship Out,320.00000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,Ship
+257,DR046,Expenditure,Insurance,516.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+259,DR046,Expenditure,Ship Out,885.53000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+260,DR046,Return,Ship In,664.14750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+262,DR047,Expenditure,Insurance,493.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+263,DR047,Expenditure,Ship Out,846.09000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+266,DR048,Expenditure,Insurance,481.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+269,DR048,Expenditure,Ship Out,733.00000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,Ship
+272,DR049,Expenditure,Insurance,1034.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+274,DR049,Expenditure,Ship Out,1774.29000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+275,DR049,Return,Ship In,1330.71750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+280,DR050,Return,Ship In,26.90000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+282,DR051,Expenditure,Ship Out,33.78750000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+283,DR051,Return,Ship In,25.34062500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+285,DR052,Expenditure,Insurance,65.65000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+286,DR052,Expenditure,Ship Out,54.08000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+289,DR052,Return,Ship In,40.56000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+291,DR053,Expenditure,Insurance,23.38000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+292,DR053,Expenditure,Ship Out,40.10000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+295,DR053,Return,Ship In,30.10000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+297,DR054,Expenditure,Insurance,14.01000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+298,DR054,Expenditure,Ship Out,24.03000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+300,DR054,Return,Ship In,18.02000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+302,DR055,Expenditure,Ship Out,13.24000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+304,DR055,Return,Ship In,9.93000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+305,DR055,Expenditure,Insurance,8.90000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+307,DR056,Expenditure,Ship Out,8.80000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage DR055,Ship
+309,DR056,Return,Ship In,6.60000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,Ship
+310,DR056,Expenditure,Insurance,21.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+313,DR057,Expenditure,Ship Out,19.21000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+314,DR057,Expenditure,Insurance,23.32000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+319,DR058,Expenditure,Ship Out,88.89000000,nan,0.00000000,VSDR*VSDR,nan,Outfitting,Pound sterling,,Ship
+321,DR058,Return,Ship In,66.67000000,nan,0.00000000,VSDR,nan,Return,Pound sterling,Estimated based on Ship Out on the following voyage DR059,Ship
+325,DR059,Expenditure,Ship Out,66.67000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,Ship
+344,DR062,Expenditure,Insurance,94.90000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+351,DR064,Expenditure,Ship Out,105.01000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+352,DR064,Expenditure,Insurance,126.45000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+354,DR064,Return,Ship In,78.76000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+358,DR065,Expenditure,Ship Out,106.67000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,Ship
+365,DR066,Expenditure,Ship Out,44.40000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,Ship
+377,DR068,Expenditure,Insurance,334.45000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+378,DR068,Expenditure,Ship Out,228.77000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,,Ship
+384,DR069,Expenditure,Insurance,601.04000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+386,DR069,Return,Ship In,660.93000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+389,DR070,Expenditure,Ship Out,1600.00000000,nan,0.00000000,VSDR,nan,Outfitting,Pound sterling,Estimated based on residual value of 75% after voyage from this voyage,Ship
+390,DR070,Expenditure,Insurance,566.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+395,DR071,Expenditure,Insurance,367.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+396,DR071,Expenditure,Ship Out,629.51000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+397,DR071,Return,Ship In,472.13250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+400,DR072,Expenditure,Insurance,281.05000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+401,DR072,Expenditure,Ship Out,434.35000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+402,DR072,Return,Ship In,325.76250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+405,DR073,Expenditure,Insurance,358.16000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+406,DR073,Expenditure,Ship Out,553.52000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+407,DR073,Return,Ship In,415.14000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+410,DR074,Expenditure,Insurance,749.76000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+411,DR074,Expenditure,Ship Out,1158.72000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+412,DR074,Return,Ship In,869.04000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+415,DR075,Expenditure,Insurance,390.17000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+416,DR075,Expenditure,Ship Out,602.99000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+417,DR075,Return,Ship In,452.24250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+420,DR076,Expenditure,Insurance,633.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+421,DR076,Expenditure,Ship Out,977.84000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+422,DR076,Return,Ship In,733.38000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+425,DR077,Expenditure,Insurance,349.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+426,DR077,Expenditure,Ship Out,301.92000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+427,DR077,Return,Ship In,226.44000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+430,DR078,Expenditure,Insurance,195.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+431,DR078,Expenditure,Ship Out,265.20000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+432,DR078,Return,Ship In,198.90000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+435,DR079,Expenditure,Insurance,173.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+436,DR079,Expenditure,Ship Out,269.96000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+437,DR079,Return,Ship In,202.47000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+440,DR080,Expenditure,Insurance,172.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+441,DR080,Expenditure,Ship Out,320.28000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+442,DR080,Return,Ship In,240.21000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+445,DR081,Expenditure,Insurance,150.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+446,DR081,Expenditure,Ship Out,187.68000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+447,DR081,Return,Ship In,140.76000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+450,DR082,Expenditure,Insurance,413.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+451,DR082,Expenditure,Ship Out,992.80000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+452,DR082,Return,Ship In,744.60000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+455,DR083,Expenditure,Insurance,138.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+456,DR083,Expenditure,Ship Out,1213.12000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+457,DR083,Return,Ship In,909.84000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+460,DR084,Expenditure,Insurance,207.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+461,DR084,Expenditure,Ship Out,1028.16000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+462,DR084,Return,Ship In,771.12000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+465,DR085,Expenditure,Insurance,128.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+466,DR085,Expenditure,Ship Out,1116.56000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+467,DR085,Return,Ship In,837.42000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+470,DR086,Expenditure,Insurance,121.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+471,DR086,Expenditure,Ship Out,1043.12000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+472,DR086,Return,Ship In,782.34000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+475,DR087,Expenditure,Insurance,212.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+476,DR087,Expenditure,Ship Out,1120.64000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+477,DR087,Return,Ship In,840.48000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+480,DR088,Expenditure,Insurance,1518.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+481,DR088,Expenditure,Ship Out,614.72000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+482,DR088,Return,Ship In,461.04000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+485,DR089,Expenditure,Insurance,1074.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+486,DR089,Expenditure,Ship Out,658.24000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+487,DR089,Return,Ship In,493.68000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+490,DR090,Expenditure,Insurance,785.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+491,DR090,Expenditure,Ship Out,453.73000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+492,DR090,Return,Ship In,340.29750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+495,DR091,Expenditure,Insurance,886.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+496,DR091,Expenditure,Ship Out,441.49000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+497,DR091,Return,Ship In,331.11750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+500,DR092,Expenditure,Insurance,665.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+501,DR092,Expenditure,Ship Out,470.05000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+502,DR092,Return,Ship In,352.53750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+505,DR093,Expenditure,Insurance,915.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+506,DR093,Expenditure,Ship Out,718.59000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+507,DR093,Return,Ship In,538.94250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+510,DR094,Expenditure,Insurance,722.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+511,DR094,Expenditure,Ship Out,660.45000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+512,DR094,Return,Ship In,495.33750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+515,DR095,Expenditure,Insurance,750.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+516,DR095,Expenditure,Ship Out,1381.08000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+517,DR095,Return,Ship In,1035.81000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+520,DR096,Expenditure,Insurance,675.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+521,DR096,Expenditure,Ship Out,1281.12000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+522,DR096,Return,Ship In,960.84000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+525,DR097,Expenditure,Insurance,832.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+526,DR097,Expenditure,Ship Out,411.57000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+527,DR097,Return,Ship In,308.67750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+530,DR098,Expenditure,Insurance,725.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+531,DR098,Expenditure,Ship Out,733.89000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+532,DR098,Return,Ship In,550.41750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+535,DR099,Expenditure,Insurance,648.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+536,DR099,Expenditure,Ship Out,456.96000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+537,DR099,Return,Ship In,342.72000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+540,DR100,Expenditure,Insurance,398.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+541,DR100,Expenditure,Ship Out,1454.52000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+542,DR100,Return,Ship In,1090.89000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+586,KR022,Expenditure,Ship Out,731.83470000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+587,KR022,Return,Ship In,548.87602500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+590,KR023,Expenditure,Insurance,3615.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+591,KR023,Expenditure,Ship Out,2422.37000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+593,KR023,Return,Ship In,1816.77000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+597,KR024,Expenditure,Insurance,2714.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+598,KR024,Expenditure,Ship Out,1873.29000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+601,KR024,Return,Ship In,1404.96000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+605,KR025,Expenditure,Insurance,5795.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+609,KR026,Expenditure,Insurance,3874.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+610,KR026,Expenditure,Ship Out,2595.37000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+612,KR026,Return,Ship In,1946.53000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+614,KR027,Expenditure,Ship Out,644.48870000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+615,KR027,Return,Ship In,483.36652500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+618,KR028,Expenditure,Ship Out,819.17135000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+619,KR028,Return,Ship In,614.37851250,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+622,KR029,Expenditure,Ship Out,1147.18720000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+623,KR029,Return,Ship In,860.39040000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+626,KR030,Expenditure,Ship Out,671.83830000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+627,KR030,Return,Ship In,503.87872500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+630,KR031,Expenditure,Ship Out,584.81870000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+631,KR031,Return,Ship In,438.61402500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+634,KR032,Expenditure,Ship Out,2391.86940000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+635,KR032,Return,Ship In,1793.90205000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+638,KR033,Expenditure,Ship Out,1980.00020000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+639,KR033,Return,Ship In,1485.00015000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+641,KR034,Expenditure,Ship Out,317.16220000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+642,KR034,Return,Ship In,237.87165000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+644,KR035,Expenditure,Ship Out,762.27575000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+645,KR035,Return,Ship In,571.70681250,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+649,KR036,Expenditure,Ship Out,723.06695000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+650,KR036,Return,Ship In,542.30021250,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+653,KR037,Expenditure,Ship Out,327.56450000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+654,KR037,Return,Ship In,245.67337500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+657,KR038,Expenditure,Ship Out,5468.39000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+658,KR038,Return,Ship In,4101.29250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+660,KR039,Expenditure,Ship Out,721.50890000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+661,KR039,Return,Ship In,541.13167500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+665,KR041,Expenditure,Ship Out,714.55590000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+666,KR041,Return,Ship In,535.91692500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+668,KR042,Expenditure,Ship Out,902.59970000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+669,KR042,Return,Ship In,676.94977500,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+671,KR043,Expenditure,Insurance,615.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+673,KR043,Expenditure,Ship Out,1054.85000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+674,KR043,Return,Ship In,791.13750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+676,KR044,Expenditure,Insurance,3534.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+678,KR044,Expenditure,Ship Out,2367.08000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+679,KR044,Return,Ship In,1775.31000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+681,KR045,Expenditure,Insurance,684.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+683,KR045,Expenditure,Ship Out,1173.68000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+684,KR045,Return,Ship In,880.26000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+686,KR046,Expenditure,Insurance,530.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+688,KR046,Expenditure,Ship Out,909.84000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+689,KR046,Return,Ship In,682.38000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+691,KR047,Expenditure,Insurance,2864.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+693,KR047,Expenditure,Ship Out,4914.02000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+694,KR047,Return,Ship In,3685.51500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+696,KR048,Expenditure,Insurance,1003.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+698,KR048,Expenditure,Ship Out,1721.08000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+699,KR048,Return,Ship In,1290.81000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+701,KR049,Expenditure,Insurance,551.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+703,KR049,Expenditure,Ship Out,945.03000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+704,KR049,Return,Ship In,708.77250000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+706,KR050,Expenditure,Insurance,441.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+708,KR050,Expenditure,Ship Out,756.50000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+709,KR050,Return,Ship In,567.37500000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+711,KR051,Expenditure,Insurance,7793.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+713,KR051,Expenditure,Ship Out,5221.21000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+714,KR051,Return,Ship In,3915.90750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+716,KR052,Expenditure,Insurance,908.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,No link to TSTD so exact date unknown. Estimated based on an assumed insurance premium of 11% of gross outlays,Insurance
+718,KR052,Expenditure,Ship Out,1556.69000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+719,KR052,Return,Ship In,1167.51750000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+721,KR053,Expenditure,Ship Out,2410.66000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+722,KR053,Expenditure,Insurance,3598.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+724,KR053,Return,Ship In,1808.00000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+767,NR007,Expenditure,Ship Out,156.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,Ship
+775,NR008,Expenditure,Ship Out,184.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,Ship
+825,NR015,Expenditure,Ship Out,86.36000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+826,NR015,Return,Ship In,64.77000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+856,NR021,Expenditure,Ship Out,61.30000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,Ship
+871,NR023,Return,Ship In,66.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+876,NR024,Expenditure,Ship Out,124.44000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+935,NR036,Return,Ship In,105.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+943,NR038,Expenditure,Ship Out,105.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR036,Ship
+945,NR038,Return,Ship In,78.75000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,Ship
+950,NR040,Return,Ship In,79.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+957,NR041,Return,Ship In,255.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+961,NR042,Expenditure,Ship Out,582.76000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+962,NR042,Return,Ship In,437.07000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+963,NR042,Expenditure,Insurance,441.18000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+968,NR043,Return,Ship In,24.75000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1002,NR049,Return,Ship In,62.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1013,NR051,Expenditure,Insurance,38.20000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1019,NR052,Expenditure,Insurance,60.50000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1035,NR055,Return,Ship In,33.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1036,NR055,Expenditure,Insurance,38.20000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1070,NR061,Expenditure,Ship Out,148.75000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1071,NR061,Return,Ship In,111.56000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+1092,NR067,Expenditure,Insurance,73.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,Radburn assumed �47 based on partial insurance rates.,Insurance
+1095,NR067,Return,Ship In,168.75000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,"Recalc from Radburn�s data, assuming 50% residual value.",Ship
+1114,NR071,Return,Ship In,112.50000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1120,NR072,Return,Ship In,90.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1126,NR074,Expenditure,Ship Out,168.75000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR067,Ship
+1135,NR076,Expenditure,Ship Out,90.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR072,Ship
+1137,NR076,Return,Ship In,67.50000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,Ship
+1138,NR077,Expenditure,Insurance,349.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed �190, unclear how and why.",Insurance
+1140,NR077,Expenditure,Ship Out,112.50000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR071,Ship
+1146,NR079,Expenditure,Insurance,129.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed �104, unclear why and how.",Insurance
+1150,NR079,Return,Ship In,39.38000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1163,NR081,Expenditure,Insurance,389.08000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1167,NR081,Return,Ship In,110.25000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1175,NR083,Expenditure,Ship Out,39.38000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR079,Ship
+1177,NR083,Return,Ship In,29.54000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,Ship
+1184,NR084,Expenditure,Insurance,280.43000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1207,NR088,Return,Ship In,131.25000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1211,NR089,Expenditure,Ship Out,299.54000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1213,NR089,Return,Ship In,224.66000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
+1216,NR090,Expenditure,Ship Out,131.25000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR088,Ship
+1219,NR091,Expenditure,Ship Out,110.25000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR081,Ship
+1220,NR091,Expenditure,Insurance,436.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1222,NR091,Return,Ship In,82.69000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1226,NR093,Expenditure,Insurance,509.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1228,NR093,Return,Ship In,225.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1230,NR094,Expenditure,Insurance,67.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1232,NR094,Return,Ship In,36.40000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1234,NR095,Expenditure,Insurance,411.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1236,NR095,Return,Ship In,224.05000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1238,NR096,Expenditure,Ship Out,179.25000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR095,Ship
+1239,NR096,Expenditure,Insurance,118.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1241,NR096,Return,Ship In,134.44000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,Ship
+1246,DR102,Expenditure,Insurance,830.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1248,DR102,Expenditure,Ship Out,1424.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1249,DR102,Return,Ship In,1068.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,Ship
+1254,DR103,Return,Ship In,488.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
+1255,DR103,Expenditure,Insurance,723.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1262,DR104,Expenditure,Insurance,1870.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1263,DR104,Expenditure,Ship Out,1763.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1265,DR105,Expenditure,Insurance,770.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1266,DR105,Expenditure,Ship Out,726.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1268,DR106,Expenditure,Insurance,1100.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1269,DR106,Expenditure,Ship Out,1037.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1271,DR107,Expenditure,Insurance,1276.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1272,DR107,Expenditure,Ship Out,1203.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1274,DR108,Expenditure,Insurance,1188.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1275,DR108,Expenditure,Ship Out,1120.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1277,DR109,Expenditure,Insurance,1540.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1278,DR109,Expenditure,Ship Out,1452.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1280,DR110,Expenditure,Insurance,924.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1281,DR110,Expenditure,Ship Out,684.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Outfitting,Pound sterling,Residual value from previous voyage DR028,Ship
+1283,DR111,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1284,DR111,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1286,DR112,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1287,DR112,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1289,DR113,Expenditure,Insurance,880.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1290,DR113,Expenditure,Ship Out,1510.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1292,DR114,Expenditure,Insurance,660.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1293,DR114,Expenditure,Ship Out,1132.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1295,DR115,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1296,DR115,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1298,DR116,Expenditure,Insurance,374.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1299,DR116,Expenditure,Ship Out,642.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1301,DR117,Expenditure,Insurance,1100.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1302,DR117,Expenditure,Ship Out,1887.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1304,DR118,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1305,DR118,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1307,DR119,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1308,DR119,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1310,DR120,Expenditure,Insurance,473.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1311,DR120,Expenditure,Ship Out,811.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1313,DR121,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1314,DR121,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1316,DR122,Expenditure,Insurance,605.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1317,DR122,Expenditure,Ship Out,1038.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1319,DR123,Expenditure,Insurance,440.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1320,DR123,Expenditure,Ship Out,755.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1322,DR124,Expenditure,Insurance,594.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1323,DR124,Expenditure,Ship Out,1019.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1325,DR125,Expenditure,Insurance,693.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1326,DR125,Expenditure,Ship Out,1189.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1328,DR126,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1329,DR126,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1331,DR127,Expenditure,Insurance,770.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1332,DR127,Expenditure,Ship Out,1321.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1334,DR128,Expenditure,Insurance,506.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1335,DR128,Expenditure,Ship Out,868.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1337,DR129,Expenditure,Insurance,616.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1338,DR129,Expenditure,Ship Out,1057.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1340,DR130,Expenditure,Insurance,539.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1341,DR130,Expenditure,Ship Out,925.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1343,DR131,Expenditure,Insurance,396.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1344,DR131,Expenditure,Ship Out,679.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1346,DR132,Expenditure,Insurance,308.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1347,DR132,Expenditure,Ship Out,528.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1349,DR133,Expenditure,Insurance,539.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1350,DR133,Expenditure,Ship Out,925.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1352,DR134,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1353,DR134,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1355,DR135,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1356,DR135,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1358,DR136,Expenditure,Insurance,550.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1359,DR136,Expenditure,Ship Out,944.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1361,DR137,Expenditure,Insurance,484.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1362,DR137,Expenditure,Ship Out,830.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1364,DR138,Expenditure,Insurance,572.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1365,DR138,Expenditure,Ship Out,981.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1367,DR139,Expenditure,Insurance,682.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1368,DR139,Expenditure,Ship Out,1170.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1370,DR140,Expenditure,Insurance,825.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1371,DR140,Expenditure,Ship Out,1415.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1373,DR141,Expenditure,Insurance,506.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1374,DR141,Expenditure,Ship Out,868.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1376,DR142,Expenditure,Insurance,374.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1377,DR142,Expenditure,Ship Out,642.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1379,DR143,Expenditure,Insurance,484.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1380,DR143,Expenditure,Ship Out,830.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1382,DR144,Expenditure,Insurance,770.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1383,DR144,Expenditure,Ship Out,1321.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1385,DR145,Expenditure,Insurance,594.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1386,DR145,Expenditure,Ship Out,1019.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1388,DR146,Expenditure,Insurance,627.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1389,DR146,Expenditure,Ship Out,1076.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1391,DR147,Expenditure,Insurance,682.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1392,DR147,Expenditure,Ship Out,1170.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1396,DR148,Expenditure,Insurance,2075.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1398,DR149,Expenditure,Insurance,133.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1399,DR149,Expenditure,Ship Out,228.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1401,DR150,Expenditure,Insurance,273.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1402,DR150,Expenditure,Ship Out,468.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1416,DR160,Expenditure,Insurance,89.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1417,DR160,Expenditure,Ship Out,153.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1427,DR164,Expenditure,Insurance,38.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1431,DR166,Expenditure,Insurance,105.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1432,DR166,Expenditure,Ship Out,180.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1437,DR167,Expenditure,Insurance,469.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1447,DR172,Expenditure,Insurance,1190.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
+1448,DR172,Expenditure,Ship Out,2041.00000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
+1450,DR173,Expenditure,Insurance,1172.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1451,DR173,Expenditure,Ship Out,2010.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1453,DR174,Expenditure,Insurance,1174.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1454,DR174,Expenditure,Ship Out,2013.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1458,DR177,Expenditure,Insurance,578.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1459,DR177,Expenditure,Ship Out,992.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1461,DR177,Return,Ship in,744.00000000,nan,0.00000000,VSDT*VSDO*VSRV,nan,Return,Pound sterling,,
+1463,DR178,Expenditure,Insurance,1773.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1464,DR178,Expenditure,Ship Out,3042.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1466,DR179,Expenditure,Insurance,584.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1467,DR179,Expenditure,Ship Out,1003.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1469,DR180,Expenditure,Insurance,2112.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1470,DR180,Expenditure,Ship Out,3624.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1472,DR181,Expenditure,Insurance,956.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1473,DR181,Expenditure,Ship Out,1640.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1475,DR182,Expenditure,Insurance,751.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1476,DR182,Expenditure,Ship Out,1288.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1478,DR183,Expenditure,Insurance,798.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1479,DR183,Expenditure,Ship Out,1370.00000000,nan,0.00000000,VSDT*VSDO,nan,Outfitting,Pound sterling,,Ship
+1489,DR189,Expenditure,Insurance,385.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1491,DR190,Expenditure,Insurance,550.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1493,DR191,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1495,DR192,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1497,DR193,Expenditure,Insurance,990.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1500,DR195,Expenditure,Insurance,715.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1502,DR196,Expenditure,Insurance,176.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1504,DR197,Expenditure,Insurance,770.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1506,DR198,Expenditure,Insurance,440.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1508,DR199,Expenditure,Insurance,660.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1510,DR200,Expenditure,Insurance,660.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1512,DR201,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1514,DR202,Expenditure,Insurance,990.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1516,DR203,Expenditure,Insurance,495.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1520,DR206,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1524,DR208,Expenditure,Insurance,1320.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1527,DR210,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1529,DR211,Expenditure,Insurance,400.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+1531,DR212,Expenditure,Insurance,1100.00000000,nan,0.00000000,INT,nan,Outfitting,Pound sterling,,Insurance
+114,KR017,Expenditure,Ship out,8603.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,Ship
+115,KR017,Return,Ship in,6453.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,
+116,KR017,Expenditure,Insurance,12652.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,Insurance
+117,KR018,Expenditure,Ship out,9103.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,Ship
+118,KR018,Expenditure,Insurance,13386.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,Insurance
+119,KR018,Return,Ship in,6827.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,
+120,KR019,Expenditure,Ship out,7476.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,Ship
+121,KR019,Expenditure,Insurance,10994.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,Insurance
+122,KR019,Return,Ship in,5607.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,
+123,KR020,Expenditure,Ship out,12991.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,Ship
+124,KR020,Expenditure,Insurance,19104.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,Insurance
+125,KR020,Return,Ship in,9743.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,
+126,KR021,Expenditure,Ship out,12990.00000000,nan,0.00000000,VSDO*VSDT,nan,Outfitting,Danish rigsdaler,,Ship
+127,KR021,Expenditure,Insurance,19102.00000000,nan,0.00000000,INT,nan,Outfitting,Danish rigsdaler,,Insurance
+128,KR021,Return,Ship in,9742.00000000,nan,0.00000000,VSDO*VSRV*VSRT,nan,Return,Danish rigsdaler,,
+192,KR054,Return,Value of ship upon return,4687.75000000,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+193,KR055,Return,Value of ship upon return,6828.00641026,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+194,KR056,Return,Value of ship upon return,8196.07051282,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+195,KR057,Return,Value of ship upon return,6686.44871795,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+196,KR058,Return,Value of ship upon return,5060.55128205,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+197,KR059,Return,Value of ship upon return,10033.26923077,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+198,KR060,Return,Value of ship upon return,10025.42307692,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+199,KR061,Return,Value of ship upon return,8595.67948718,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+200,KR062,Return,Value of ship upon return,10656.92948718,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+201,KR063,Return,Value of ship upon return,8514.60256410,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+202,KR064,Return,Value of ship upon return,8681.44230769,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+203,KR065,Return,Value of ship upon return,4764.25000000,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+204,KR066,Return,Value of ship upon return,4458.25000000,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+205,KR067,Return,Value of ship upon return,7311.41666667,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+206,KR068,Return,Value of ship upon return,5819.23076923,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+207,KR069,Return,Value of ship upon return,10423.94230769,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+208,KR070,Return,Value of ship upon return,6769.48717949,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
+209,KR054,Expenditure,Insurance,10754.25000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
+210,KR055,Expenditure,Insurance,6892.27000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+211,KR056,Expenditure,Insurance,8273.21000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+212,KR057,Expenditure,Insurance,6749.38000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+213,KR058,Expenditure,Insurance,5108.18000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+214,KR059,Expenditure,Insurance,10127.70000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+215,KR060,Expenditure,Insurance,10119.78000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+216,KR061,Expenditure,Insurance,8676.58000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+217,KR062,Expenditure,Insurance,10757.23000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+218,KR063,Expenditure,Insurance,8594.74000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+219,KR064,Expenditure,Insurance,8763.15000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+220,KR065,Expenditure,Insurance,10929.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace),Insurance
+221,KR066,Expenditure,Insurance,10227.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
+222,KR067,Expenditure,Insurance,16773.25000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
+223,KR068,Expenditure,Insurance,13350.00000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
+224,KR069,Expenditure,Insurance,23913.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
+225,KR070,Expenditure,Insurance,15530.00000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
+1,MR001,Expenditure,Trade cargo costs,1700000.00000000,cash and credit,,0.0,1600-11-04,,Portuguese real,,Trade cargo
+2,MR001,Expenditure,Licence cost (Africa),72000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Contract stipulated that the arma��o (outfitting) carried the registry for the slaves' licences,
+3,MR001,Expenditure,Licence cost (America),3960.00000000,nan,,1.0,nan,Outfitting,Spanish real,"Estimate based on contract stating that the arma��o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America",
+4,MR001,Expenditure,Taxes,1008.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,
+6,MR001,Returns,Sale of slaves in America,364000.00000000,nan,,0.0,nan,Return,Portuguese real,,
+7,MR002,Expenditure,Outfitting costs,157500.00000000,nan,,0.0,nan,Outfitting,Portuguese real,Refers to venture MR001,Outfitting
+8,MR002,Expenditure,Rent of ship,120000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,
+9,MR002,Expenditure,Taxes (Canary Islands),21000.00000000,nan,1.00000000,0.0,nan,Transactions during voyage,Portuguese real,,
+10,MR002,Expenditure,Taxes (Africa),60000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stipulating a fee of 300 reis per slave, with 200 stipulated by the outfitter to be shipped from Africa",
+11,MR002,Expenditure,Insurance costs,200000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,Insurance
+12,MR002,Expenditure,Licence cost (Africa),1200000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stating that the outfitter would pay 6,000 reis per slave that arrived in America, with 200 stipulated to be shipped",
+13,MR002,Returns,Freight compensation,200000.00000000,nan,,0.0,nan,Return,Portuguese real,"Discounted over the freight cost of transporting slaves due the freighter lending a sum of 200,000 reis to the shipmaster who was entitled to carry 50 more slaves on the ship for himself",Freight and passengers
+14,MR003,Expenditure,Trade cargo costs,100000.00000000,nan,,0.0,1617-10-24,,Portuguese real,,Trade cargo
+15,MR003,Expenditure,Licence cost (Africa),21000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Estimate based on the contract of Guinea,
+16,MR003,Expenditure,Licence cost (America),1320.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,Estimate based on contract stating that the outfitter would cover the asiento costs in America (440 reales/40 ducados per slave),
+17,MR003,Expenditure,Taxes,300.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,
+18,MR004,Expenditure,Taxes,385.00000000,nan,,0.0,nan,Outfitting,Spanish real,,
+19,MR004,Expenditure,Licence cost (Africa),630000.00000000,nan,1.00000000,0.0,1617-12-24,,Portuguese real,,
+20,MR004,Expenditure,Licence cost (America),29700.00000000,nan,,0.0,nan,Outfitting,Spanish real,,
+21,MR004,Returns,Other returns,30165.00000000,cash,,0.0,nan,Return,Spanish real,"Payment of the fee lent for the slaves' licences, to be paid in silver coins brought from America in Seville",Various
+22,MR005,Expenditure,Outfitting costs,250000.00000000,cash,,0.0,nan,Outfitting,Portuguese real,,Outfitting
+23,MR005,Expenditure,Trade cargo costs,250000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,"Credit received in the Canary islands to employ in cargo, added to the 250,000 received in Lisbon, totalling 400,000",Trade cargo
+24,MR005,Expenditure,Other expenses,390000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,"Destined for the purchase of 13 slaves reserved in Guinea (7 female, 6 male), specying the contract their price at 30,000 apiece ",Various
+25,MR005,Expenditure,Licence cost (Africa),91000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,Value based on the stated number of slaves to transport,
+26,MR006,Expenditure,Outfitting costs,280000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,Value to be paid in Angola in slaves by agents of the outfitters,Outfitting
+27,MR006,Expenditure,Taxes,28000.00000000,nan,1.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
+28,MR007,Expenditure,Trade cargo costs,400000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,"Cargo to be used to purchase 16 slaves for 25,000 reis a piece",Trade cargo
+29,MR007,Returns,Insurance payments,800000.00000000,nan,,0.0,nan,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",
+30,MR008,Expenditure,Licence cost (Africa),1362000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,"Premium of 6,000 réis per slave delivered, totalling 227",
+31,MR008,Expenditure,Licence cost (America),74250.00000000,nan,1.00000000,1.0,nan,Outfitting,Spanish real,Corresponding to the licences of 200 slaves that an associate of the outfitter had in Angola + 25 paid to the ship captain,
+32,MR008,Expenditure,Insurance costs,45000.00000000,nan,,0.0,nan,Transactions during voyage,Portuguese real,Rate of 200 réis per slave,Insurance
+33,MR008,Expenditure,Taxes,4500.00000000,nan,,1.0,nan,Outfitting,Spanish real,,
+34,MR009,Expenditure,Outfitting costs,310000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,3 different investors with different shares in same ship,Outfitting
+35,MR009,Expenditure,Outfitting costs,240000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,Outfitting
+36,MR009,Expenditure,Outfitting costs,200000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,Outfitting
+37,MR009,Returns,Freight compensation,626000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (310,000) + risk compensation (310,000) paid in the Americas with the proceeding of the sale of slaves bought in Guinea",Freight and passengers
+38,MR009,Returns,Freight compensation,480000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (240,000) + risk compensation (240,000)",Freight and passengers
+39,MR009,Returns,Freight compensation,400000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (200,000) + risk compensation (200,000)",Freight and passengers
+40,MR010,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,0.0,1619-03-15,Outfitting,Portuguese real,,Trade cargo
+41,MR010,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (100,000) + risk compensation (100,000)",Freight and passengers
+42,MR011,Expenditure,Trade cargo costs,410000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,To be converted in 11 slaves in Angola,Trade cargo
+43,MR011,Expenditure,Licence cost (Africa),77000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
+44,MR011,Returns,Sale of slaves in America,738720.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",
+45,MR012,Expenditure,Outfitting costs,160000.00000000,cash,0.00000000,0.0,1619-04-19,,Portuguese real,,Outfitting
+46,MR012,Expenditure,Trade cargo costs,160000.00000000,nan,0.00000000,0.0,1619-04-19,,Portuguese real,,Trade cargo
+47,MR012,Returns,Insurance payments,576000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,,
+48,MR013,Expenditure,Trade cargo costs,512000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
+49,MR013,Returns,Freight compensation,1024000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Premium (512,000) + risk compensation (512,000)",Freight and passengers
+50,MR014,Expenditure,Outfitting costs,110000.00000000,cash,0.00000000,0.0,1619-05-04,,Portuguese real,"Premium (110,000) + risk compensation (110,000)",Outfitting
+51,MR014,Returns,Freight compensation,220000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,MR011-MR014 same boat with different investors,Freight and passengers
+52,MR015,Expenditure,Outfitting costs,5000.00000000,cash,1.00000000,0.0,1619-06-19,,Spanish real,,Outfitting
+53,MR015,Returns,Freight compensation,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Premium (5,000 reales) + risk compensation (5,000 reales)",Freight and passengers
+54,MR016,Expenditure,Outfitting costs,1455580.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Outfitting
+55,MR016,Expenditure,Licence cost,200000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,"Relative to 11 out of 36 slaves purchased, does not specify which licence/taxes covered just the total sum",
+56,MR016,Returns,Sale of slaves in America,2620000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,Sum declared for the sale of 36 Guinea slaves,
+57,MR016,Returns,Freight compensation,432000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,,Freight and passengers
+58,MR017,Expenditure,Trade cargo costs,112500.00000000,cash,1.00000000,0.0,1619-07-22,Outfitting,Portuguese real,,Trade cargo
+59,MR017,Returns,Freight compensation,223000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (112,500) + premium (112,500)",Freight and passengers
+60,MR018,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
+61,MR018,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,,Freight and passengers
+62,MR019,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
+63,MR019,Expenditure,Licence cost (Africa),28000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,Outfitter pledges to cover the licence fees of the 4 slaves,
+64,MR019,Expenditure,Licence cost (America),1760.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Outfitter pledges to cover the licence fees of the 4 slaves,
+65,MR019,Expenditure,Taxes,376.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,
+66,MR020,Expenditure,Outfitting costs,1000000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Outfitting
+67,MR020,Returns,Insurance payments,1900000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",
+68,MR021,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
+69,MR021,Returns,Freight compensation,152000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighter’s agents the principal (80,000) + premium of 90% (72,000)",Freight and passengers
+70,MR022,Expenditure,Trade cargo costs,440000.00000000,cash,0.00000000,0.0,1620-03-04,Outfitting,Portuguese real,,Trade cargo
+71,MR022,Returns,Insurance payments,836000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",
+72,MR023,Expenditure,Trade cargo costs,70000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
+73,MR023,Expenditure,Licence cost (Africa),14000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
+74,MR023,Expenditure,Licence cost (America),880.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Only information is to deliver 2 slaves to the investor’s agent in America,
+75,MR024,Expenditure,Trade cargo costs,200000.00000000,cash,0.00000000,0.0,1620-03-04,,Portuguese real,,Trade cargo
+76,MR024,Returns,Insurance payments,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",
+77,MR025,Expenditure,Trade cargo costs,355600.00000000,cash,0.00000000,0.0,1620-04-14,,Portuguese real,,Trade cargo
+78,MR025,Returns,Insurance payments,640000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Payment of principal (355,600) plus risk compensation at rate of 80% (284,400) with proceedings of slave sales",
+79,MR026,Expenditure,Trade cargo costs,500000.00000000,nan,0.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
+80,MR026,Returns,Insurance payments,25000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,,
+81,MR027,Expenditure,Trade cargo costs,86840.00000000,cash,0.00000000,0.0,1620-06-10,,Portuguese real,,Trade cargo
+82,MR027,Returns,Insurance payments,173680.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (86,840) + risk compensation at rate of 100% (86,840)",
+83,MR028,Expenditure,Insurance costs,160000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,,Insurance
+84,MR028,Expenditure,Licence cost (Africa),35000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
+85,MR028,Expenditure,Licence cost (America),2200.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,
+86,MR028,Returns,Sale of slaves in America,320000.00000000,nan,1.00000000,0.0,nan,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",
