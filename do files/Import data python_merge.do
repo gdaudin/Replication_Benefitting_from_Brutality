@@ -20,10 +20,7 @@ clear
 import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
 
 rename *_* **
-rename *_* **
-rename *_* **
-rename *_* **
-rename *_* **
+
 
 
 foreach var of varlist meansofpaymentreturn dateoftransaction {
@@ -103,6 +100,7 @@ rename dateofreturntoportofoutfit dateofreturntoportofoutfitting
 foreach var of varlist date* place* number* {
 	replace `var' = "" if `var' == "nan"
 }
+list numberofslavespurchased if regexm(numberofslavespurchased, "[^0-9.]")
 
  
 capture tostring  date* place* number* voyageidintstd internalcrossref nameofthecaptain  profitsreportedinsource, replace
@@ -114,16 +112,16 @@ rename fate FATEcol
 
 * STANDARDIZE THE SPELLING IN SOME VARIABLES
 
-replace perspectiveofsource="Investor" if perspectiveofsource=="investor"
+*replace perspectiveofsource="Investor" if perspectiveofsource=="investor"
 replace perspectiveofsource="Owner" if perspectiveofsource=="Owner?"
-replace completedataonoutlays="no" if  strpos(completedataonoutlays, "N")  |  strpos(completedataonoutlays, "n") 
-replace internalcrossref="" if internalcrossref=="."
-replace nameofoutfitter="" if nameofoutfitter=="."
-replace nameofthecaptain="" if nameofthecaptain=="."
+*replace completedataonoutlays="no" if  strpos(completedataonoutlays, "N")  |  strpos(completedataonoutlays, "n") 
+*replace internalcrossref="" if internalcrossref=="."
+*replace nameofoutfitter="" if nameofoutfitter=="."
+*replace nameofthecaptain="" if nameofthecaptain=="."
 
 
-destring numberofslavespurchased, replace
-destring numberofslavessold, replace
+*destring numberofslavespurchased, replace
+*destring numberofslavessold, replace
 
 
 // Standardize OUTFITTER names for merge with TSDT
