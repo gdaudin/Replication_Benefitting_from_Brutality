@@ -1,226 +1,226 @@
-VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
-KR001,Expenditure,Crew bonus,2054,,0,,,Return,Danish rigsdaler,
-KR001,Expenditure,Crew costs,5440,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
-KR001,Expenditure,Extraordinary expenses,897,,0,,,Outfitting,Danish rigsdaler,
-KR001,Expenditure,Outfitting costs,13565,,0,,,Outfitting,Danish rigsdaler,
-KR001,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR001,Expenditure,Value of ship before departure,5226,,0,,,Outfitting,Danish rigsdaler,
-KR001,Return,Remitted sale of slaves in America,41910,,0,,,Return,Danish rigsdaler,
-KR001,Return,Sale of American goods,2108,,0,,,Return,Danish rigsdaler,
-KR001,Return,Insurance loss reimbursement,418,,0,Other,,Return,Danish rigsdaler,Estimated based on assumptions about what might have been insured.
-KR002,Expenditure,Crew bonus,1537,,0,,,Return,Danish rigsdaler,
-KR002,Expenditure,Crew costs,4360,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
-KR002,Expenditure,Extraordinary expenses,1629,,0,,,Outfitting,Danish rigsdaler,
-KR002,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR002,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR002,Expenditure,Value of ship before departure,4800,,0,,,Outfitting,Danish rigsdaler,
-KR002,Return,Remitted sale of slaves in America,30755,,0,,,Return,Danish rigsdaler,
-KR003,Expenditure,Crew bonus,2514,,0,,,Return,Danish rigsdaler,
-KR003,Expenditure,Crew costs,4920,,0,,,Outfitting,Danish rigsdaler,
-KR003,Expenditure,Extraordinary expenses,3774,,0,,,Outfitting,Danish rigsdaler,
-KR003,Expenditure,Outfitting costs,9845,,0,,,Outfitting,Danish rigsdaler,
-KR003,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR003,Return,Remitted sale of slaves in America,42063,,0,,,Return,Danish rigsdaler,
-KR004,Expenditure,Crew bonus,1861,,0,,,Return,Danish rigsdaler,
-KR004,Expenditure,Crew costs,7302,,0,,,Outfitting,Danish rigsdaler,
-KR004,Expenditure,Extraordinary expenses,743,,0,,,Outfitting,Danish rigsdaler,
-KR004,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR004,Expenditure,Trade cargo costs,46600,,0,,,Outfitting,Danish rigsdaler,
-KR004,Return,Remitted sale of slaves in America,43119,,0,,,Return,Danish rigsdaler,
-KR005,Expenditure,Crew bonus,1944,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR005,Expenditure,Crew costs,6871,,0,,,Outfitting,Danish rigsdaler,
-KR005,Expenditure,Extraordinary expenses,5481,,0,,,Outfitting,Danish rigsdaler,
-KR005,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR005,Expenditure,Trade cargo costs,50704,,0,,,Outfitting,Danish rigsdaler,
-KR005,Return,Remitted sale of slaves in America,39116,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
-KR006,Expenditure,Crew bonus,1215,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR006,Expenditure,Crew costs,3500,,0,,,Outfitting,Danish rigsdaler,
-KR006,Expenditure,Extraordinary expenses,2181,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR006,Expenditure,Outfitting costs,7112,,0,,,Outfitting,Danish rigsdaler,
-KR006,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR006,Expenditure,Value of ship before departure,3450,,0,,,Outfitting,Danish rigsdaler,
-KR006,Return,Remitted sale of slaves in America,24486,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
-KR007,Expenditure,Crew bonus,1341,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR007,Expenditure,Crew costs,3500,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
-KR007,Expenditure,Extraordinary expenses,2181,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR007,Expenditure,Outfitting costs,4424,,0,,,Outfitting,Danish rigsdaler,
-KR007,Expenditure,Trade cargo costs,36530,,0,,,Outfitting,Danish rigsdaler,
-KR007,Return,Remitted sale of slaves in America,27104,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
-KR008,Expenditure,Crew bonus,1584,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR008,Expenditure,Crew costs,5039,,0,,,Outfitting,Danish rigsdaler,
-KR008,Expenditure,Extraordinary expenses,1836,,0,,,Outfitting,Danish rigsdaler,
-KR008,Expenditure,Outfitting costs,8069,,0,,,Outfitting,Danish rigsdaler,
-KR008,Expenditure,Trade cargo costs,34404,,0,,,Outfitting,Danish rigsdaler,
-KR008,Return,Remitted sale of slaves in America,31878,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
-KR009,Expenditure,Crew bonus,1503,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR009,Expenditure,Crew costs,3344,,0,,,Outfitting,Danish rigsdaler,
-KR009,Expenditure,Extraordinary expenses,659,,0,,,Outfitting,Danish rigsdaler,
-KR009,Expenditure,Outfitting costs,6436,,0,,,Outfitting,Danish rigsdaler,
-KR009,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR009,Expenditure,Value of ship before departure,3450,,0,,,Outfitting,Danish rigsdaler,
-KR009,Return,Remitted sale of slaves in America,36000,,0,,,Return,Danish rigsdaler,
-KR010,Expenditure,Crew bonus,1458,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR010,Expenditure,Crew costs,3405,,0,,,Outfitting,Danish rigsdaler,
-KR010,Expenditure,Extraordinary expenses,940,,0,,,Outfitting,Danish rigsdaler,
-KR010,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR010,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR010,Return,Remitted sale of slaves in America,30318,,0,,,Return,Danish rigsdaler,
-KR011,Expenditure,Crew bonus,1440,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR011,Expenditure,Crew costs,3500,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
-KR011,Expenditure,Extraordinary expenses,854,,0,,,Outfitting,Danish rigsdaler,
-KR011,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR011,Expenditure,Trade cargo costs,55960,,0,,,Outfitting,Danish rigsdaler,
-KR011,Return,Remitted sale of slaves in America,24000,,0,,,Return,Danish rigsdaler,
-KR012,Expenditure,Crew bonus,1380,,0,,,Return,Danish rigsdaler,
-KR012,Expenditure,Crew costs,4391,,0,,,Outfitting,Danish rigsdaler,
-KR012,Expenditure,Extraordinary expenses,595,,0,,,Outfitting,Danish rigsdaler,
-KR012,Expenditure,Outfitting costs,4131,,0,,,Outfitting,Danish rigsdaler,
-KR012,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR012,Return,Remitted sale of slaves in America,24727,,0,,,Return,Danish rigsdaler,
-KR013,Expenditure,Crew bonus,819,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR013,Expenditure,Crew costs,3500,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
-KR013,Expenditure,Extraordinary expenses,1704,,0,,,Outfitting,Danish rigsdaler,
-KR013,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR013,Expenditure,Trade cargo costs,20013,,0,,,Outfitting,Danish rigsdaler,
-KR013,Return,Remitted sale of slaves in America,20020,,0,,,Return,Danish rigsdaler,
-KR014,Expenditure,Crew costs,2732,,0,,,Outfitting,Danish rigsdaler,
-KR014,Expenditure,Extraordinary expenses,2852,,0,,,Outfitting,Danish rigsdaler,
-KR014,Expenditure,Outfitting costs,3213,,0,,,Outfitting,Danish rigsdaler,
-KR014,Expenditure,Trade cargo costs,5297,,0,Other,,Outfitting,Danish rigsdaler,"Estimate based on cargo costs for another venture, KR015, by the Bargum Trading society."
-KR014,Expenditure,Value of ship before departure,3450,,0,,,Outfitting,Danish rigsdaler,
-KR015,Expenditure,Crew bonus,747,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
-KR015,Expenditure,Crew costs,4082,,0,,,Outfitting,Danish rigsdaler,
-KR015,Expenditure,Extraordinary expenses,2181,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
-KR015,Expenditure,Outfitting costs,3833,,0,,,Outfitting,Danish rigsdaler,
-KR015,Expenditure,Trade cargo costs,5297,,0,,,Outfitting,Danish rigsdaler,
-KR015,Expenditure,Value of ship before departure,3000,,0,,,Outfitting,Danish rigsdaler,
-KR015,Return,Remitted sale of slaves in America,15092,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
-KR016,Return,Freight compensation,2040,,0,,,Return,Danish rigsdaler,Refers to all venture KR001-KR015 in total
-KR016,Return,Remitted sale of slaves in America,203205,,0,,,Return,Danish rigsdaler,Refers to all venture KR001-KR015 in total
-KR016,Expenditure,Insurance,50474,,0,Other,,Unknown,Danish rigsdaler,Refers to all venture KR001-KR015 in total
-KR016,Return,Sale of American goods,50441,,0,,,Return,Danish rigsdaler,Refers to all venture KR001-KR015 in total
-KR017,Expenditure,Total expenditure,50608,,0,,,Outfitting,Danish rigsdaler,
-KR017,Return,Remitted sale of slaves in America,53311,,0,,,Return,Danish rigsdaler,
-KR017,Return,Sale of American goods,10569,,0,,,Return,Danish rigsdaler,
-KR018,Expenditure,Total expenditure,53545,,0,,,Outfitting,Danish rigsdaler,
-KR018,Return,Remitted sale of slaves in America,56428,,0,,,Return,Danish rigsdaler,
-KR018,Return,Sale of American goods,4746,,0,,,Return,Danish rigsdaler,
-KR019,Expenditure,Total expenditure,43977,,0,,,Outfitting,Danish rigsdaler,
-KR019,Return,Remitted sale of slaves in America,84128,,0,,,Return,Danish rigsdaler,
-KR019,Return,Sale of American goods,6560,,0,,,Return,Danish rigsdaler,
-KR020,Expenditure,Total expenditure,76417,,0,,,Outfitting,Danish rigsdaler,
-KR020,Return,Remitted sale of slaves in America,89790,,0,,,Return,Danish rigsdaler,
-KR021,Expenditure,Total expenditure,76409,,0,,,Outfitting,Danish rigsdaler,
-KR021,Return,Remitted sale of slaves in America,92540,,0,,,Return,Danish rigsdaler,
-KR017,Expenditure,Ship out,8603,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
-KR017,Return,Ship in,6453,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
-KR017,Expenditure,Insurance,12652,,0,INT,,Outfitting,Danish rigsdaler,
-KR018,Expenditure,Ship out,9103,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
-KR018,Expenditure,Insurance,13386,,0,INT,,Outfitting,Danish rigsdaler,
-KR018,Return,Ship in,6827,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
-KR019,Expenditure,Ship out,7476,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
-KR019,Expenditure,Insurance,10994,,0,INT,,Outfitting,Danish rigsdaler,
-KR019,Return,Ship in,5607,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
-KR020,Expenditure,Ship out,12991,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
-KR020,Expenditure,Insurance,19104,,0,INT,,Outfitting,Danish rigsdaler,
-KR020,Return,Ship in,9743,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
-KR021,Expenditure,Ship out,12990,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
-KR021,Expenditure,Insurance,19102,,0,INT,,Outfitting,Danish rigsdaler,
-KR021,Return,Ship in,9742,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
-KR054,Expenditure,Direct cost,22921,,0,,,Return,Peso fuerte,
-KR055,Expenditure,Direct cost,30411,,0,,,Return,Peso fuerte,
-KR056,Expenditure,Direct cost,36216,,0,,,Return,Peso fuerte,
-KR057,Expenditure,Direct cost,26236,,0,,,Return,Peso fuerte,
-KR058,Expenditure,Direct cost,26788,,0,,,Return,Peso fuerte,
-KR059,Expenditure,Direct cost,35053,,0,,,Return,Peso fuerte,
-KR060,Expenditure,Direct cost,85509,,0,,,Return,Peso fuerte,
-KR061,Expenditure,Direct cost,55103,,0,,,Return,Peso fuerte,
-KR062,Expenditure,Direct cost,61664,,0,,,Return,Peso fuerte,
-KR063,Expenditure,Direct cost,63086,,0,,,Return,Peso fuerte,
-KR064,Expenditure,Direct cost,56428,,0,,,Return,Peso fuerte,
-KR065,Expenditure,Direct cost,27173,,0,,,Return,Peso fuerte,
-KR066,Expenditure,Direct cost,11000,,0,,,Return,Peso fuerte,
-KR067,Expenditure,Direct cost,31000,,0,,,Return,Peso fuerte,
-KR068,Expenditure,Direct cost,21000,,0,,,Return,Peso fuerte,
-KR069,Expenditure,Direct cost,26000,,0,,,Return,Peso fuerte,
-KR070,Expenditure,Direct cost,30500,,0,,,Return,Peso fuerte,
-KR054,Expenditure,Investment,43017,,0,,,Outfitting,Peso fuerte,
-KR055,Expenditure,Investment,62657,,0,,,Outfitting,Peso fuerte,
-KR056,Expenditure,Investment,75211,,0,,,Outfitting,Peso fuerte,
-KR057,Expenditure,Investment,61358,,0,,,Outfitting,Peso fuerte,
-KR058,Expenditure,Investment,46438,,0,,,Outfitting,Peso fuerte,
-KR059,Expenditure,Investment,92070,,0,,,Outfitting,Peso fuerte,
-KR060,Expenditure,Investment,91998,,0,,,Outfitting,Peso fuerte,
-KR061,Expenditure,Investment,78878,,0,,,Outfitting,Peso fuerte,
-KR062,Expenditure,Investment,97793,,0,,,Outfitting,Peso fuerte,
-KR063,Expenditure,Investment,78134,,0,,,Outfitting,Peso fuerte,
-KR064,Expenditure,Investment,79665,,0,,,Outfitting,Peso fuerte,
-KR065,Expenditure,Investment,43719,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
-KR066,Expenditure,Investment,40911,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
-KR067,Expenditure,Investment,67093,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
-KR068,Expenditure,Investment,53400,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
-KR069,Expenditure,Investment,95655,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
-KR070,Expenditure,Investment,62120,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
-KR054,Return,Returns from slaves sales,145711,,0,,,Return,Peso fuerte,
-KR055,Return,Returns from slaves sales,159596,,0,,,Return,Peso fuerte,
-KR056,Return,Returns from slaves sales,154763,,0,,,Return,Peso fuerte,
-KR057,Return,Returns from slaves sales,107214,,0,,,Return,Peso fuerte,
-KR058,Return,Returns from slaves sales,162550,,0,,,Return,Peso fuerte,
-KR059,Return,Returns from slaves sales,209488,,0,,,Return,Peso fuerte,
-KR060,Return,Returns from slaves sales,124737,,0,,,Return,Peso fuerte,
-KR061,Return,Returns from slaves sales,218007,,0,,,Return,Peso fuerte,
-KR062,Return,Returns from slaves sales,256146,,0,,,Return,Peso fuerte,
-KR063,Return,Returns from slaves sales,111683,,0,,,Return,Peso fuerte,
-KR064,Return,Returns from slaves sales,180078,,0,,,Return,Peso fuerte,
-KR065,Return,Returns from slaves sales,128484,,0,,,Return,Peso fuerte,
-KR066,Return,Returns from slaves sales,74366,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
-KR067,Return,Returns from slaves sales,151981,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
-KR068,Return,Returns from slaves sales,108300,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
-KR069,Return,Returns from slaves sales,162060,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
-KR070,Return,Returns from slaves sales,134685,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
-KR054,Return,Other returns,10000,,0,,,Return,Peso fuerte,
-KR055,Return,Other returns,11623,,0,,,Return,Peso fuerte,
-KR056,Return,Other returns,13728,,0,,,Return,Peso fuerte,
-KR057,Return,Other returns,8000,,0,,,Return,Peso fuerte,
-KR058,Return,Other returns,8019,,0,,,Return,Peso fuerte,
-KR059,Return,Other returns,20000,,0,,,Return,Peso fuerte,
-KR060,Return,Other returns,6500,,0,,,Return,Peso fuerte,
-KR061,Return,Other returns,4000,,0,,,Return,Peso fuerte,
-KR062,Return,Other returns,14102,,0,,,Return,Peso fuerte,
-KR063,Return,Other returns,12298,,0,,,Return,Peso fuerte,
-KR064,Return,Other returns,5314,,0,,,Return,Peso fuerte,
-KR065,Return,Other returns,495,,0,,,Return,Peso fuerte,
-KR054,Return,Value of ship upon return,4687.75,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR055,Return,Value of ship upon return,6828.00641025641,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR056,Return,Value of ship upon return,8196.07051282051,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR057,Return,Value of ship upon return,6686.44871794872,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR058,Return,Value of ship upon return,5060.55128205128,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR059,Return,Value of ship upon return,10033.2692307692,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR060,Return,Value of ship upon return,10025.4230769231,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR061,Return,Value of ship upon return,8595.67948717949,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR062,Return,Value of ship upon return,10656.9294871794,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR063,Return,Value of ship upon return,8514.60256410256,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR064,Return,Value of ship upon return,8681.44230769231,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR065,Return,Value of ship upon return,4764.25,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR066,Return,Value of ship upon return,4458.25,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR067,Return,Value of ship upon return,7311.41666666667,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR068,Return,Value of ship upon return,5819.23076923077,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR069,Return,Value of ship upon return,10423.9423076923,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR070,Return,Value of ship upon return,6769.48717948718,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
-KR054,Expenditure,Insurance,10754.25,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
-KR055,Expenditure,Insurance,6892.27,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR056,Expenditure,Insurance,8273.21,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR057,Expenditure,Insurance,6749.38,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR058,Expenditure,Insurance,5108.18,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR059,Expenditure,Insurance,10127.7,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR060,Expenditure,Insurance,10119.78,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR061,Expenditure,Insurance,8676.58,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR062,Expenditure,Insurance,10757.23,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR063,Expenditure,Insurance,8594.74,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR064,Expenditure,Insurance,8763.15,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR065,Expenditure,Insurance,10929.75,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
-KR066,Expenditure,Insurance,10227.75,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
-KR067,Expenditure,Insurance,16773.25,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
-KR068,Expenditure,Insurance,13350,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
-KR069,Expenditure,Insurance,23913.75,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
-KR070,Expenditure,Insurance,15530,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
+linenumber,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,hypothesis,dateoftransaction,timing,currency,remarks
+1,KR001,Expenditure,Crew bonus,2054,,0,,,Return,Danish rigsdaler,
+2,KR001,Expenditure,Crew costs,5440,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
+3,KR001,Expenditure,Extraordinary expenses,897,,0,,,Outfitting,Danish rigsdaler,
+4,KR001,Expenditure,Outfitting costs,13565,,0,,,Outfitting,Danish rigsdaler,
+5,KR001,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+6,KR001,Expenditure,Value of ship before departure,5226,,0,,,Outfitting,Danish rigsdaler,
+7,KR001,Return,Remitted sale of slaves in America,41910,,0,,,Return,Danish rigsdaler,
+8,KR001,Return,Sale of American goods,2108,,0,,,Return,Danish rigsdaler,
+9,KR001,Return,Insurance loss reimbursement,418,,0,Other,,Return,Danish rigsdaler,Estimated based on assumptions about what might have been insured.
+10,KR002,Expenditure,Crew bonus,1537,,0,,,Return,Danish rigsdaler,
+11,KR002,Expenditure,Crew costs,4360,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
+12,KR002,Expenditure,Extraordinary expenses,1629,,0,,,Outfitting,Danish rigsdaler,
+13,KR002,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+14,KR002,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+15,KR002,Expenditure,Value of ship before departure,4800,,0,,,Outfitting,Danish rigsdaler,
+16,KR002,Return,Remitted sale of slaves in America,30755,,0,,,Return,Danish rigsdaler,
+17,KR003,Expenditure,Crew bonus,2514,,0,,,Return,Danish rigsdaler,
+18,KR003,Expenditure,Crew costs,4920,,0,,,Outfitting,Danish rigsdaler,
+19,KR003,Expenditure,Extraordinary expenses,3774,,0,,,Outfitting,Danish rigsdaler,
+20,KR003,Expenditure,Outfitting costs,9845,,0,,,Outfitting,Danish rigsdaler,
+21,KR003,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+22,KR003,Return,Remitted sale of slaves in America,42063,,0,,,Return,Danish rigsdaler,
+23,KR004,Expenditure,Crew bonus,1861,,0,,,Return,Danish rigsdaler,
+24,KR004,Expenditure,Crew costs,7302,,0,,,Outfitting,Danish rigsdaler,
+25,KR004,Expenditure,Extraordinary expenses,743,,0,,,Outfitting,Danish rigsdaler,
+26,KR004,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+27,KR004,Expenditure,Trade cargo costs,46600,,0,,,Outfitting,Danish rigsdaler,
+28,KR004,Return,Remitted sale of slaves in America,43119,,0,,,Return,Danish rigsdaler,
+29,KR005,Expenditure,Crew bonus,1944,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+30,KR005,Expenditure,Crew costs,6871,,0,,,Outfitting,Danish rigsdaler,
+31,KR005,Expenditure,Extraordinary expenses,5481,,0,,,Outfitting,Danish rigsdaler,
+32,KR005,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+33,KR005,Expenditure,Trade cargo costs,50704,,0,,,Outfitting,Danish rigsdaler,
+34,KR005,Return,Remitted sale of slaves in America,39116,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
+35,KR006,Expenditure,Crew bonus,1215,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+36,KR006,Expenditure,Crew costs,3500,,0,,,Outfitting,Danish rigsdaler,
+37,KR006,Expenditure,Extraordinary expenses,2181,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+38,KR006,Expenditure,Outfitting costs,7112,,0,,,Outfitting,Danish rigsdaler,
+39,KR006,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+40,KR006,Expenditure,Value of ship before departure,3450,,0,,,Outfitting,Danish rigsdaler,
+41,KR006,Return,Remitted sale of slaves in America,24486,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
+42,KR007,Expenditure,Crew bonus,1341,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+43,KR007,Expenditure,Crew costs,3500,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
+44,KR007,Expenditure,Extraordinary expenses,2181,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+45,KR007,Expenditure,Outfitting costs,4424,,0,,,Outfitting,Danish rigsdaler,
+46,KR007,Expenditure,Trade cargo costs,36530,,0,,,Outfitting,Danish rigsdaler,
+47,KR007,Return,Remitted sale of slaves in America,27104,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
+48,KR008,Expenditure,Crew bonus,1584,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+49,KR008,Expenditure,Crew costs,5039,,0,,,Outfitting,Danish rigsdaler,
+50,KR008,Expenditure,Extraordinary expenses,1836,,0,,,Outfitting,Danish rigsdaler,
+51,KR008,Expenditure,Outfitting costs,8069,,0,,,Outfitting,Danish rigsdaler,
+52,KR008,Expenditure,Trade cargo costs,34404,,0,,,Outfitting,Danish rigsdaler,
+53,KR008,Return,Remitted sale of slaves in America,31878,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
+54,KR009,Expenditure,Crew bonus,1503,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+55,KR009,Expenditure,Crew costs,3344,,0,,,Outfitting,Danish rigsdaler,
+56,KR009,Expenditure,Extraordinary expenses,659,,0,,,Outfitting,Danish rigsdaler,
+57,KR009,Expenditure,Outfitting costs,6436,,0,,,Outfitting,Danish rigsdaler,
+58,KR009,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+59,KR009,Expenditure,Value of ship before departure,3450,,0,,,Outfitting,Danish rigsdaler,
+60,KR009,Return,Remitted sale of slaves in America,36000,,0,,,Return,Danish rigsdaler,
+61,KR010,Expenditure,Crew bonus,1458,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+62,KR010,Expenditure,Crew costs,3405,,0,,,Outfitting,Danish rigsdaler,
+63,KR010,Expenditure,Extraordinary expenses,940,,0,,,Outfitting,Danish rigsdaler,
+64,KR010,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+65,KR010,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+66,KR010,Return,Remitted sale of slaves in America,30318,,0,,,Return,Danish rigsdaler,
+67,KR011,Expenditure,Crew bonus,1440,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+68,KR011,Expenditure,Crew costs,3500,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
+69,KR011,Expenditure,Extraordinary expenses,854,,0,,,Outfitting,Danish rigsdaler,
+70,KR011,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+71,KR011,Expenditure,Trade cargo costs,55960,,0,,,Outfitting,Danish rigsdaler,
+72,KR011,Return,Remitted sale of slaves in America,24000,,0,,,Return,Danish rigsdaler,
+73,KR012,Expenditure,Crew bonus,1380,,0,,,Return,Danish rigsdaler,
+74,KR012,Expenditure,Crew costs,4391,,0,,,Outfitting,Danish rigsdaler,
+75,KR012,Expenditure,Extraordinary expenses,595,,0,,,Outfitting,Danish rigsdaler,
+76,KR012,Expenditure,Outfitting costs,4131,,0,,,Outfitting,Danish rigsdaler,
+77,KR012,Expenditure,Trade cargo costs,35658,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+78,KR012,Return,Remitted sale of slaves in America,24727,,0,,,Return,Danish rigsdaler,
+79,KR013,Expenditure,Crew bonus,819,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+80,KR013,Expenditure,Crew costs,3500,,0,Other,,Outfitting,Danish rigsdaler,"Estimates based on monthly hiring costs, mulitplied by an assumed number of months of hire (based on the length of an average venture, 20 months)."
+81,KR013,Expenditure,Extraordinary expenses,1704,,0,,,Outfitting,Danish rigsdaler,
+82,KR013,Expenditure,Outfitting costs,6736,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+83,KR013,Expenditure,Trade cargo costs,20013,,0,,,Outfitting,Danish rigsdaler,
+84,KR013,Return,Remitted sale of slaves in America,20020,,0,,,Return,Danish rigsdaler,
+85,KR014,Expenditure,Crew costs,2732,,0,,,Outfitting,Danish rigsdaler,
+86,KR014,Expenditure,Extraordinary expenses,2852,,0,,,Outfitting,Danish rigsdaler,
+87,KR014,Expenditure,Outfitting costs,3213,,0,,,Outfitting,Danish rigsdaler,
+88,KR014,Expenditure,Trade cargo costs,5297,,0,Other,,Outfitting,Danish rigsdaler,"Estimate based on cargo costs for another venture, KR015, by the Bargum Trading society."
+89,KR014,Expenditure,Value of ship before departure,3450,,0,,,Outfitting,Danish rigsdaler,
+90,KR015,Expenditure,Crew bonus,747,,0,Other,,Return,Danish rigsdaler,Estimate based on percentage of slave sales on the same ship
+91,KR015,Expenditure,Crew costs,4082,,0,,,Outfitting,Danish rigsdaler,
+92,KR015,Expenditure,Extraordinary expenses,2181,,0,Other,,Outfitting,Danish rigsdaler,Estimate based on average figure for other ventures by the Bargum Trading society.
+93,KR015,Expenditure,Outfitting costs,3833,,0,,,Outfitting,Danish rigsdaler,
+94,KR015,Expenditure,Trade cargo costs,5297,,0,,,Outfitting,Danish rigsdaler,
+95,KR015,Expenditure,Value of ship before departure,3000,,0,,,Outfitting,Danish rigsdaler,
+96,KR015,Return,Remitted sale of slaves in America,15092,,0,Other,,Return,Danish rigsdaler,Estimate based on number of slaves sold and assumption of average price of slaves sold by Bargum.
+97,KR016,Return,Freight compensation,2040,,0,,,Return,Danish rigsdaler,Refers to all venture KR001-KR015 in total
+98,KR016,Return,Remitted sale of slaves in America,203205,,0,,,Return,Danish rigsdaler,Refers to all venture KR001-KR015 in total
+99,KR016,Expenditure,Insurance,50474,,0,Other,,Unknown,Danish rigsdaler,Refers to all venture KR001-KR015 in total
+100,KR016,Return,Sale of American goods,50441,,0,,,Return,Danish rigsdaler,Refers to all venture KR001-KR015 in total
+101,KR017,Expenditure,Total expenditure,50608,,0,,,Outfitting,Danish rigsdaler,
+102,KR017,Return,Remitted sale of slaves in America,53311,,0,,,Return,Danish rigsdaler,
+103,KR017,Return,Sale of American goods,10569,,0,,,Return,Danish rigsdaler,
+104,KR018,Expenditure,Total expenditure,53545,,0,,,Outfitting,Danish rigsdaler,
+105,KR018,Return,Remitted sale of slaves in America,56428,,0,,,Return,Danish rigsdaler,
+106,KR018,Return,Sale of American goods,4746,,0,,,Return,Danish rigsdaler,
+107,KR019,Expenditure,Total expenditure,43977,,0,,,Outfitting,Danish rigsdaler,
+108,KR019,Return,Remitted sale of slaves in America,84128,,0,,,Return,Danish rigsdaler,
+109,KR019,Return,Sale of American goods,6560,,0,,,Return,Danish rigsdaler,
+110,KR020,Expenditure,Total expenditure,76417,,0,,,Outfitting,Danish rigsdaler,
+111,KR020,Return,Remitted sale of slaves in America,89790,,0,,,Return,Danish rigsdaler,
+112,KR021,Expenditure,Total expenditure,76409,,0,,,Outfitting,Danish rigsdaler,
+113,KR021,Return,Remitted sale of slaves in America,92540,,0,,,Return,Danish rigsdaler,
+114,KR017,Expenditure,Ship out,8603,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
+115,KR017,Return,Ship in,6453,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
+116,KR017,Expenditure,Insurance,12652,,0,INT,,Outfitting,Danish rigsdaler,
+117,KR018,Expenditure,Ship out,9103,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
+118,KR018,Expenditure,Insurance,13386,,0,INT,,Outfitting,Danish rigsdaler,
+119,KR018,Return,Ship in,6827,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
+120,KR019,Expenditure,Ship out,7476,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
+121,KR019,Expenditure,Insurance,10994,,0,INT,,Outfitting,Danish rigsdaler,
+122,KR019,Return,Ship in,5607,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
+123,KR020,Expenditure,Ship out,12991,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
+124,KR020,Expenditure,Insurance,19104,,0,INT,,Outfitting,Danish rigsdaler,
+125,KR020,Return,Ship in,9743,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
+126,KR021,Expenditure,Ship out,12990,,0,VSDO*VSDT,,Outfitting,Danish rigsdaler,
+127,KR021,Expenditure,Insurance,19102,,0,INT,,Outfitting,Danish rigsdaler,
+128,KR021,Return,Ship in,9742,,0,VSDO*VSRV*VSRT,,Return,Danish rigsdaler,
+129,KR054,Expenditure,Direct cost,22921,,0,,,Return,Peso fuerte,
+130,KR055,Expenditure,Direct cost,30411,,0,,,Return,Peso fuerte,
+131,KR056,Expenditure,Direct cost,36216,,0,,,Return,Peso fuerte,
+132,KR057,Expenditure,Direct cost,26236,,0,,,Return,Peso fuerte,
+133,KR058,Expenditure,Direct cost,26788,,0,,,Return,Peso fuerte,
+134,KR059,Expenditure,Direct cost,35053,,0,,,Return,Peso fuerte,
+135,KR060,Expenditure,Direct cost,85509,,0,,,Return,Peso fuerte,
+136,KR061,Expenditure,Direct cost,55103,,0,,,Return,Peso fuerte,
+137,KR062,Expenditure,Direct cost,61664,,0,,,Return,Peso fuerte,
+138,KR063,Expenditure,Direct cost,63086,,0,,,Return,Peso fuerte,
+139,KR064,Expenditure,Direct cost,56428,,0,,,Return,Peso fuerte,
+140,KR065,Expenditure,Direct cost,27173,,0,,,Return,Peso fuerte,
+141,KR066,Expenditure,Direct cost,11000,,0,,,Return,Peso fuerte,
+142,KR067,Expenditure,Direct cost,31000,,0,,,Return,Peso fuerte,
+143,KR068,Expenditure,Direct cost,21000,,0,,,Return,Peso fuerte,
+144,KR069,Expenditure,Direct cost,26000,,0,,,Return,Peso fuerte,
+145,KR070,Expenditure,Direct cost,30500,,0,,,Return,Peso fuerte,
+146,KR054,Expenditure,Investment,43017,,0,,,Outfitting,Peso fuerte,
+147,KR055,Expenditure,Investment,62657,,0,,,Outfitting,Peso fuerte,
+148,KR056,Expenditure,Investment,75211,,0,,,Outfitting,Peso fuerte,
+149,KR057,Expenditure,Investment,61358,,0,,,Outfitting,Peso fuerte,
+150,KR058,Expenditure,Investment,46438,,0,,,Outfitting,Peso fuerte,
+151,KR059,Expenditure,Investment,92070,,0,,,Outfitting,Peso fuerte,
+152,KR060,Expenditure,Investment,91998,,0,,,Outfitting,Peso fuerte,
+153,KR061,Expenditure,Investment,78878,,0,,,Outfitting,Peso fuerte,
+154,KR062,Expenditure,Investment,97793,,0,,,Outfitting,Peso fuerte,
+155,KR063,Expenditure,Investment,78134,,0,,,Outfitting,Peso fuerte,
+156,KR064,Expenditure,Investment,79665,,0,,,Outfitting,Peso fuerte,
+157,KR065,Expenditure,Investment,43719,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
+158,KR066,Expenditure,Investment,40911,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
+159,KR067,Expenditure,Investment,67093,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
+160,KR068,Expenditure,Investment,53400,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
+161,KR069,Expenditure,Investment,95655,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
+162,KR070,Expenditure,Investment,62120,,0,Other,,Outfitting,Peso fuerte,"Imputed by original authors, unknown exactly how"
+163,KR054,Return,Returns from slaves sales,145711,,0,,,Return,Peso fuerte,
+164,KR055,Return,Returns from slaves sales,159596,,0,,,Return,Peso fuerte,
+165,KR056,Return,Returns from slaves sales,154763,,0,,,Return,Peso fuerte,
+166,KR057,Return,Returns from slaves sales,107214,,0,,,Return,Peso fuerte,
+167,KR058,Return,Returns from slaves sales,162550,,0,,,Return,Peso fuerte,
+168,KR059,Return,Returns from slaves sales,209488,,0,,,Return,Peso fuerte,
+169,KR060,Return,Returns from slaves sales,124737,,0,,,Return,Peso fuerte,
+170,KR061,Return,Returns from slaves sales,218007,,0,,,Return,Peso fuerte,
+171,KR062,Return,Returns from slaves sales,256146,,0,,,Return,Peso fuerte,
+172,KR063,Return,Returns from slaves sales,111683,,0,,,Return,Peso fuerte,
+173,KR064,Return,Returns from slaves sales,180078,,0,,,Return,Peso fuerte,
+174,KR065,Return,Returns from slaves sales,128484,,0,,,Return,Peso fuerte,
+175,KR066,Return,Returns from slaves sales,74366,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
+176,KR067,Return,Returns from slaves sales,151981,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
+177,KR068,Return,Returns from slaves sales,108300,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
+178,KR069,Return,Returns from slaves sales,162060,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
+179,KR070,Return,Returns from slaves sales,134685,,0,Other,,Return,Peso fuerte,"Estimated based on known number of slaves sold, and average price of slaves prevalent the year in question."
+180,KR054,Return,Other returns,10000,,0,,,Return,Peso fuerte,
+181,KR055,Return,Other returns,11623,,0,,,Return,Peso fuerte,
+182,KR056,Return,Other returns,13728,,0,,,Return,Peso fuerte,
+183,KR057,Return,Other returns,8000,,0,,,Return,Peso fuerte,
+184,KR058,Return,Other returns,8019,,0,,,Return,Peso fuerte,
+185,KR059,Return,Other returns,20000,,0,,,Return,Peso fuerte,
+186,KR060,Return,Other returns,6500,,0,,,Return,Peso fuerte,
+187,KR061,Return,Other returns,4000,,0,,,Return,Peso fuerte,
+188,KR062,Return,Other returns,14102,,0,,,Return,Peso fuerte,
+189,KR063,Return,Other returns,12298,,0,,,Return,Peso fuerte,
+190,KR064,Return,Other returns,5314,,0,,,Return,Peso fuerte,
+191,KR065,Return,Other returns,495,,0,,,Return,Peso fuerte,
+192,KR054,Return,Value of ship upon return,4687.75,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+193,KR055,Return,Value of ship upon return,6828.00641025641,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+194,KR056,Return,Value of ship upon return,8196.07051282051,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+195,KR057,Return,Value of ship upon return,6686.44871794872,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+196,KR058,Return,Value of ship upon return,5060.55128205128,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+197,KR059,Return,Value of ship upon return,10033.2692307692,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+198,KR060,Return,Value of ship upon return,10025.4230769231,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+199,KR061,Return,Value of ship upon return,8595.67948717949,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+200,KR062,Return,Value of ship upon return,10656.9294871794,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+201,KR063,Return,Value of ship upon return,8514.60256410256,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+202,KR064,Return,Value of ship upon return,8681.44230769231,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+203,KR065,Return,Value of ship upon return,4764.25,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+204,KR066,Return,Value of ship upon return,4458.25,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+205,KR067,Return,Value of ship upon return,7311.41666666667,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+206,KR068,Return,Value of ship upon return,5819.23076923077,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+207,KR069,Return,Value of ship upon return,10423.9423076923,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+208,KR070,Return,Value of ship upon return,6769.48717948718,,,VSDO*VSRV*VSRT,,Return,Peso fuerte,
+209,KR054,Expenditure,Insurance,10754.25,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
+210,KR055,Expenditure,Insurance,6892.27,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+211,KR056,Expenditure,Insurance,8273.21,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+212,KR057,Expenditure,Insurance,6749.38,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+213,KR058,Expenditure,Insurance,5108.18,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+214,KR059,Expenditure,Insurance,10127.7,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+215,KR060,Expenditure,Insurance,10119.78,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+216,KR061,Expenditure,Insurance,8676.58,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+217,KR062,Expenditure,Insurance,10757.23,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+218,KR063,Expenditure,Insurance,8594.74,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+219,KR064,Expenditure,Insurance,8763.15,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+220,KR065,Expenditure,Insurance,10929.75,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 11% (year of peace)
+221,KR066,Expenditure,Insurance,10227.75,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
+222,KR067,Expenditure,Insurance,16773.25,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
+223,KR068,Expenditure,Insurance,13350,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
+224,KR069,Expenditure,Insurance,23913.75,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
+225,KR070,Expenditure,Insurance,15530,,,INV*INT,,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war)
