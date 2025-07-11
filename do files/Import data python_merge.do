@@ -107,6 +107,8 @@ rename dateofreturntoportofoutfit dateofreturntoportofoutfitting
 drop if regexm(ventureid, "MR")
 drop if ventureid == ""
 
+label var nationality "Nationality"
+
 foreach var of varlist date* place* number* {
 	replace `var' = "" if `var' == "nan"
 }
