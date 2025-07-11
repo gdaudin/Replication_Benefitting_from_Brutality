@@ -572,37 +572,37 @@ KR068,Expenditure,Insurance,13350.00000000,nan,,INV*INT,nan,Outfitting,Peso fuer
 KR069,Expenditure,Insurance,23913.75000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
 KR070,Expenditure,Insurance,15530.00000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),,Insurance
 MR001,Expenditure,Trade cargo costs,1700000.00000000,cash and credit,,0.0,1600-11-04,,Portuguese real,,,Trade cargo
-MR001,Expenditure,Licence cost (Africa),72000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Contract stipulated that the arma��o (outfitting) carried the registry for the slaves' licences,,Various
-MR001,Expenditure,Licence cost (America),3960.00000000,nan,,1.0,nan,Outfitting,Spanish real,"Estimate based on contract stating that the arma��o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America",,Various
-MR001,Expenditure,Taxes,1008.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,,Various
-MR001,Returns,Sale of slaves in America,364000.00000000,nan,,0.0,nan,Return,Portuguese real,,,Slave sale
+MR001,Expenditure,Licence cost (Africa),72000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Contract stipulated that the arma��o (outfitting) carried the registry for the slaves' licences,,
+MR001,Expenditure,Licence cost (America),3960.00000000,nan,,1.0,nan,Outfitting,Spanish real,"Estimate based on contract stating that the arma��o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America",,
+MR001,Expenditure,Taxes,1008.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,,
+MR001,Returns,Sale of slaves in America,364000.00000000,nan,,0.0,nan,Return,Portuguese real,,,
 MR002,Expenditure,Outfitting costs,157500.00000000,nan,,0.0,nan,Outfitting,Portuguese real,Refers to venture MR001,,Outfitting
-MR002,Expenditure,Rent of ship,120000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,,Freight and passengers
-MR002,Expenditure,Taxes (Canary Islands),21000.00000000,nan,1.00000000,0.0,nan,Transactions during voyage,Portuguese real,,,Various
-MR002,Expenditure,Taxes (Africa),60000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stipulating a fee of 300 reis per slave, with 200 stipulated by the outfitter to be shipped from Africa",,Various
+MR002,Expenditure,Rent of ship,120000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,,
+MR002,Expenditure,Taxes (Canary Islands),21000.00000000,nan,1.00000000,0.0,nan,Transactions during voyage,Portuguese real,,,
+MR002,Expenditure,Taxes (Africa),60000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stipulating a fee of 300 reis per slave, with 200 stipulated by the outfitter to be shipped from Africa",,
 MR002,Expenditure,Insurance costs,200000.00000000,nan,,0.0,nan,Outfitting,Portuguese real,,,Insurance
-MR002,Expenditure,Licence cost (Africa),1200000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stating that the outfitter would pay 6,000 reis per slave that arrived in America, with 200 stipulated to be shipped",,Various
+MR002,Expenditure,Licence cost (Africa),1200000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,"Estimate based on contract stating that the outfitter would pay 6,000 reis per slave that arrived in America, with 200 stipulated to be shipped",,
 MR002,Returns,Freight compensation,200000.00000000,nan,,0.0,nan,Return,Portuguese real,"Discounted over the freight cost of transporting slaves due the freighter lending a sum of 200,000 reis to the shipmaster who was entitled to carry 50 more slaves on the ship for himself",,Freight and passengers
 MR003,Expenditure,Trade cargo costs,100000.00000000,nan,,0.0,1617-10-24,,Portuguese real,,,Trade cargo
-MR003,Expenditure,Licence cost (Africa),21000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Estimate based on the contract of Guinea,,Various
-MR003,Expenditure,Licence cost (America),1320.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,Estimate based on contract stating that the outfitter would cover the asiento costs in America (440 reales/40 ducados per slave),,Various
-MR003,Expenditure,Taxes,300.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,,Various
-MR004,Expenditure,Taxes,385.00000000,nan,,0.0,nan,Outfitting,Spanish real,,,Various
-MR004,Expenditure,Licence cost (Africa),630000.00000000,nan,1.00000000,0.0,1617-12-24,,Portuguese real,,,Various
-MR004,Expenditure,Licence cost (America),29700.00000000,nan,,0.0,nan,Outfitting,Spanish real,,,Various
+MR003,Expenditure,Licence cost (Africa),21000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Estimate based on the contract of Guinea,,
+MR003,Expenditure,Licence cost (America),1320.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,Estimate based on contract stating that the outfitter would cover the asiento costs in America (440 reales/40 ducados per slave),,
+MR003,Expenditure,Taxes,300.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,,
+MR004,Expenditure,Taxes,385.00000000,nan,,0.0,nan,Outfitting,Spanish real,,,
+MR004,Expenditure,Licence cost (Africa),630000.00000000,nan,1.00000000,0.0,1617-12-24,,Portuguese real,,,
+MR004,Expenditure,Licence cost (America),29700.00000000,nan,,0.0,nan,Outfitting,Spanish real,,,
 MR004,Returns,Other returns,30165.00000000,cash,,0.0,nan,Return,Spanish real,"Payment of the fee lent for the slaves' licences, to be paid in silver coins brought from America in Seville",,Various
 MR005,Expenditure,Outfitting costs,250000.00000000,cash,,0.0,nan,Outfitting,Portuguese real,,,Outfitting
 MR005,Expenditure,Trade cargo costs,250000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,"Credit received in the Canary islands to employ in cargo, added to the 250,000 received in Lisbon, totalling 400,000",,Trade cargo
 MR005,Expenditure,Other expenses,390000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,"Destined for the purchase of 13 slaves reserved in Guinea (7 female, 6 male), specying the contract their price at 30,000 apiece ",,Various
-MR005,Expenditure,Licence cost (Africa),91000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,Value based on the stated number of slaves to transport,,Various
+MR005,Expenditure,Licence cost (Africa),91000.00000000,nan,,1.0,nan,Transactions during voyage,Portuguese real,Value based on the stated number of slaves to transport,,
 MR006,Expenditure,Outfitting costs,280000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,Value to be paid in Angola in slaves by agents of the outfitters,,Outfitting
-MR006,Expenditure,Taxes,28000.00000000,nan,1.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,Various
+MR006,Expenditure,Taxes,28000.00000000,nan,1.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
 MR007,Expenditure,Trade cargo costs,400000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,"Cargo to be used to purchase 16 slaves for 25,000 reis a piece",,Trade cargo
-MR007,Returns,Insurance payments,800000.00000000,nan,,0.0,nan,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",,Insurance
-MR008,Expenditure,Licence cost (Africa),1362000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,"Premium of 6,000 réis per slave delivered, totalling 227",,Various
-MR008,Expenditure,Licence cost (America),74250.00000000,nan,1.00000000,1.0,nan,Outfitting,Spanish real,Corresponding to the licences of 200 slaves that an associate of the outfitter had in Angola + 25 paid to the ship captain,,Various
+MR007,Returns,Insurance payments,800000.00000000,nan,,0.0,nan,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",,
+MR008,Expenditure,Licence cost (Africa),1362000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,"Premium of 6,000 réis per slave delivered, totalling 227",,
+MR008,Expenditure,Licence cost (America),74250.00000000,nan,1.00000000,1.0,nan,Outfitting,Spanish real,Corresponding to the licences of 200 slaves that an associate of the outfitter had in Angola + 25 paid to the ship captain,,
 MR008,Expenditure,Insurance costs,45000.00000000,nan,,0.0,nan,Transactions during voyage,Portuguese real,Rate of 200 réis per slave,,Insurance
-MR008,Expenditure,Taxes,4500.00000000,nan,,1.0,nan,Outfitting,Spanish real,,,Various
+MR008,Expenditure,Taxes,4500.00000000,nan,,1.0,nan,Outfitting,Spanish real,,,
 MR009,Expenditure,Outfitting costs,310000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,3 different investors with different shares in same ship,,Outfitting
 MR009,Expenditure,Outfitting costs,240000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,,Outfitting
 MR009,Expenditure,Outfitting costs,200000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,,Outfitting
@@ -612,11 +612,11 @@ MR009,Returns,Freight compensation,400000.00000000,nan,0.00000000,0.0,nan,Return
 MR010,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,0.0,1619-03-15,Outfitting,Portuguese real,,,Trade cargo
 MR010,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (100,000) + risk compensation (100,000)",,Freight and passengers
 MR011,Expenditure,Trade cargo costs,410000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,To be converted in 11 slaves in Angola,,Trade cargo
-MR011,Expenditure,Licence cost (Africa),77000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,Various
-MR011,Returns,Sale of slaves in America,738720.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",,Slave sale
+MR011,Expenditure,Licence cost (Africa),77000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
+MR011,Returns,Sale of slaves in America,738720.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",,
 MR012,Expenditure,Outfitting costs,160000.00000000,cash,0.00000000,0.0,1619-04-19,,Portuguese real,,,Outfitting
 MR012,Expenditure,Trade cargo costs,160000.00000000,nan,0.00000000,0.0,1619-04-19,,Portuguese real,,,Trade cargo
-MR012,Returns,Insurance payments,576000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,,,Insurance
+MR012,Returns,Insurance payments,576000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,,,
 MR013,Expenditure,Trade cargo costs,512000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
 MR013,Returns,Freight compensation,1024000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Premium (512,000) + risk compensation (512,000)",,Freight and passengers
 MR014,Expenditure,Outfitting costs,110000.00000000,cash,0.00000000,0.0,1619-05-04,,Portuguese real,"Premium (110,000) + risk compensation (110,000)",,Outfitting
@@ -624,35 +624,35 @@ MR014,Returns,Freight compensation,220000.00000000,cash,0.00000000,0.0,nan,Retur
 MR015,Expenditure,Outfitting costs,5000.00000000,cash,1.00000000,0.0,1619-06-19,,Spanish real,,,Outfitting
 MR015,Returns,Freight compensation,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Premium (5,000 reales) + risk compensation (5,000 reales)",,Freight and passengers
 MR016,Expenditure,Outfitting costs,1455580.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Outfitting
-MR016,Expenditure,Licence cost,200000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,"Relative to 11 out of 36 slaves purchased, does not specify which licence/taxes covered just the total sum",,Various
-MR016,Returns,Sale of slaves in America,2620000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,Sum declared for the sale of 36 Guinea slaves,,Slave sale
+MR016,Expenditure,Licence cost,200000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,"Relative to 11 out of 36 slaves purchased, does not specify which licence/taxes covered just the total sum",,
+MR016,Returns,Sale of slaves in America,2620000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,Sum declared for the sale of 36 Guinea slaves,,
 MR016,Returns,Freight compensation,432000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,,,Freight and passengers
 MR017,Expenditure,Trade cargo costs,112500.00000000,cash,1.00000000,0.0,1619-07-22,Outfitting,Portuguese real,,,Trade cargo
 MR017,Returns,Freight compensation,223000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (112,500) + premium (112,500)",,Freight and passengers
 MR018,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
 MR018,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,,,Freight and passengers
 MR019,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-MR019,Expenditure,Licence cost (Africa),28000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,Outfitter pledges to cover the licence fees of the 4 slaves,,Various
-MR019,Expenditure,Licence cost (America),1760.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Outfitter pledges to cover the licence fees of the 4 slaves,,Various
-MR019,Expenditure,Taxes,376.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,,Various
+MR019,Expenditure,Licence cost (Africa),28000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,Outfitter pledges to cover the licence fees of the 4 slaves,,
+MR019,Expenditure,Licence cost (America),1760.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Outfitter pledges to cover the licence fees of the 4 slaves,,
+MR019,Expenditure,Taxes,376.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,,
 MR020,Expenditure,Outfitting costs,1000000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Outfitting
-MR020,Returns,Insurance payments,1900000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",,Insurance
+MR020,Returns,Insurance payments,1900000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",,
 MR021,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
 MR021,Returns,Freight compensation,152000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighter’s agents the principal (80,000) + premium of 90% (72,000)",,Freight and passengers
 MR022,Expenditure,Trade cargo costs,440000.00000000,cash,0.00000000,0.0,1620-03-04,Outfitting,Portuguese real,,,Trade cargo
-MR022,Returns,Insurance payments,836000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",,Insurance
+MR022,Returns,Insurance payments,836000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",,
 MR023,Expenditure,Trade cargo costs,70000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-MR023,Expenditure,Licence cost (Africa),14000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,Various
-MR023,Expenditure,Licence cost (America),880.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Only information is to deliver 2 slaves to the investor’s agent in America,,Various
+MR023,Expenditure,Licence cost (Africa),14000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
+MR023,Expenditure,Licence cost (America),880.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Only information is to deliver 2 slaves to the investor’s agent in America,,
 MR024,Expenditure,Trade cargo costs,200000.00000000,cash,0.00000000,0.0,1620-03-04,,Portuguese real,,,Trade cargo
-MR024,Returns,Insurance payments,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",,Insurance
+MR024,Returns,Insurance payments,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",,
 MR025,Expenditure,Trade cargo costs,355600.00000000,cash,0.00000000,0.0,1620-04-14,,Portuguese real,,,Trade cargo
-MR025,Returns,Insurance payments,640000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Payment of principal (355,600) plus risk compensation at rate of 80% (284,400) with proceedings of slave sales",,Insurance
+MR025,Returns,Insurance payments,640000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Payment of principal (355,600) plus risk compensation at rate of 80% (284,400) with proceedings of slave sales",,
 MR026,Expenditure,Trade cargo costs,500000.00000000,nan,0.00000000,0.0,nan,Outfitting,Portuguese real,,,Trade cargo
-MR026,Returns,Insurance payments,25000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,,,Insurance
+MR026,Returns,Insurance payments,25000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,,,
 MR027,Expenditure,Trade cargo costs,86840.00000000,cash,0.00000000,0.0,1620-06-10,,Portuguese real,,,Trade cargo
-MR027,Returns,Insurance payments,173680.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (86,840) + risk compensation at rate of 100% (86,840)",,Insurance
+MR027,Returns,Insurance payments,173680.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (86,840) + risk compensation at rate of 100% (86,840)",,
 MR028,Expenditure,Insurance costs,160000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,,,Insurance
-MR028,Expenditure,Licence cost (Africa),35000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,Various
-MR028,Expenditure,Licence cost (America),2200.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,,Various
-MR028,Returns,Sale of slaves in America,320000.00000000,nan,1.00000000,0.0,nan,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",,Slave sale
+MR028,Expenditure,Licence cost (Africa),35000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,,
+MR028,Expenditure,Licence cost (America),2200.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,,
+MR028,Returns,Sale of slaves in America,320000.00000000,nan,1.00000000,0.0,nan,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",,
