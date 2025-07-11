@@ -25,7 +25,7 @@ append using blouf.dat
 erase blouf.dat
 
 rename *_* **
-drop if regexm(ventureid, "MR")
+*drop if regexm(ventureid, "MR")
 rename linenumber line_number
 
 

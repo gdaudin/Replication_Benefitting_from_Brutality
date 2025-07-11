@@ -64,7 +64,7 @@ Cash received	Cash	11	-11
 Total investments		11	-11
 sale of slave	Slave sale	11	-11
 Discounts on trade goods	Credit	10	-10
-Licence cost (Africa)	Various	10	-10
+Licence cost (Africa)		10	-10
 Navire	Ship	10	-10
 Outstanding debt in colony	Debt	10	-10
 Sale of sugar	Cargo	10	-10
@@ -72,7 +72,7 @@ To be collected	Credit	10	-10
 Insurance costs	Insurance	9	-9
 Frais de désarmement	Various	8	-8
 Freight charges	Freight and passengers	8	-8
-Insurance payments	Insurance	8	-8
+Insurance payments		8	-8
 Other return	Various	8	-8
 Receipts in cash or letters	Various	8	-8
 Total returns	Unknown	8	-8
@@ -81,7 +81,7 @@ gages de l’équipage	Wages	8	-8
 Assurances	Insurance	7	-7
 Cargaison	Cargo	7	-7
 Cost of the mise hors	Unknown	7	-7
-Licence cost (America)	Various	7	-7
+Licence cost (America)		7	-7
 Mise hors estimée	Unknown	7	-7
 Ship in		7	-7
 Ship out	Ship	7	-7
@@ -94,7 +94,7 @@ Proceeds of slave sales	Slave sale	6	-6
 Radoub	Outfitting	6	-6
 Sale of ship	Ship	6	-6
 Ship and outfit	Unknown	6	-6
-Taxes	Various	6	-6
+Taxes		6	-6
 Total expenditure	Unknown	6	-6
 VIVRE DES NOIRS (?)	Victuals	6	-6
 Wages for the Crew (Gages de lééquipage)	Wages	6	-6
@@ -117,7 +117,7 @@ Goods imported		4	-4
 Inset charges		4	-4
 Outfitting & advance wages	Unknown	4	-4
 Payé à l’équipage		4	-4
-Sale of slaves in America	Slave sale	4	-4
+Sale of slaves in America		4	-4
 Sundry goods sold	Cargo	4	-4
 Various (Deniers oubliés)	Various	4	-4
 Victuals (Vivres équipage)	Victuals	4	-4
@@ -189,7 +189,7 @@ Commission 5é%	Commission	1	-1
 Commission de l’armateur	Commission	1	-1
 Commission de vente aux armateurs à 2 %	Commission	1	-1
 Commission d’un officier sur la vente à 1%		1	-1
-Commission fees	Commission	1	-1
+Commission fees		1	-1
 Commission pour le correspondant au Cap	Commission	1	-1
 Commission sur frais en Angleterre	Commission	1	-1
 Commission sur la vente du Cultivateur	Commission	1	-1
@@ -243,7 +243,7 @@ Inset, Returned Goods and Insurance Loss reimbursement	Unknown	1	-1
 Interest ?	Various	1	-1
 Inward costs	Various	1	-1
 Ivory sales		1	-1
-Licence cost	Various	1	-1
+Licence cost		1	-1
 Loss on dollars shipped	Various	1	-1
 Marchandises de retour	Cargo	1	-1
 Mise hors et cargaison	Unknown	1	-1
@@ -280,7 +280,7 @@ Remboursements (connus) des nègres invalides	Various	1	-1
 Remboursements de l’assureur suite à une prise	Insurance	1	-1
 Remise en France		1	-1
 Remittances		1	-1
-Rent of ship	Freight and passengers	1	-1
+Rent of ship		1	-1
 Repairs and disbursements		1	-1
 Reste à recouvrer au Cap		1	-1
 Retour par la Betsy (second voyage)	Cargo	1	-1
@@ -301,8 +301,8 @@ Ship, cargo and outfit	Various	1	-1
 Short interest on specie	Various	1	-1
 Sold equipment	Various	1	-1
 Sugar imported		1	-1
-Taxes (Africa)	Various	1	-1
-Taxes (Canary Islands)	Various	1	-1
+Taxes (Africa)		1	-1
+Taxes (Canary Islands)		1	-1
 Total outlays	Unknown	1	-1
 Unpaid wages for dead (Déduction pour les morts)	Various	1	-1
 Various (Divers)	Wages	1	-1
