@@ -58,6 +58,7 @@ testparm i.YEARAF
 reg profit i.YEARAF ib3.nationality_num if N>=2
 testparm i.YEARAF
 outreg2 using "$output/reg_synchro.doc", label word auto(2) replace addstat(F-test for joint significance of years, r(F), p-stat, r(p)) 
+outreg2 using "$output/reg_synchro.txt", label text auto(2) replace addstat(F-test for joint significance of years, r(F), p-stat, r(p)) 
 
 reg profit i.YEARAF if N>=2
 testparm i.YEARAF
