@@ -19,6 +19,16 @@ clear
 * IMPORT CASH FLOW-DATABASES (now "transactions.csv" from python)
 import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
 
+rename *_* **
+rename *_* **
+rename *_* **
+rename *_* **
+rename *_* **
+
+
+foreach var of varlist meansofpaymentreturn dateoftransaction {
+	replace `var' = "" if "`var'" == "nan"
+}
 
 recast str2045 specification 
 assert ventureid !=""
@@ -87,8 +97,21 @@ rename *_* **
 rename *_* **
 rename *_* **
 rename *_* **
+rename dateofdeparturefromportofo dateofdeparturefromportofoutfitt
+rename dateofreturntoportofoutfit dateofreturntoportofoutfitting
+
+foreach var of varlist date* place* number* {
+	replace `var' = "" if `var' == "nan"
+}
 
  
+capture tostring  date* place* number* voyageidintstd internalcrossref nameofthecaptain  profitsreportedinsource, replace
+capture replace shareoftheship=subinstr(shareoftheship, ",", ".",.)
+capture destring shareoftheship, force replace
+capture destring numberofvoyages, force replace
+rename fate FATEcol 
+
+
 * STANDARDIZE THE SPELLING IN SOME VARIABLES
 
 replace perspectiveofsource="Investor" if perspectiveofsource=="investor"
