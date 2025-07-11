@@ -21,6 +21,7 @@ import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
 
 rename *_* **
 drop if regexm(ventureid, "MR")
+rename linenumber line_number
 
 
 

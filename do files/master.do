@@ -28,9 +28,9 @@
 
 	*Creating datasets
 	do "${dir}/do files/Port shares computation.do"
-	do "${dir}/do files/Import external data.do"
+	do "${dir}/do files/Import external data.do" /*606 ventures 685 voyages*/
 	*do "${dir}/do files/Import data.do" /*606 ventures 685 voyages*/ /*This works from the pre-merged csv files*/
-	do "${dir}/do files/Import data post-merge.do" /*This works from the post-merged csv files*/
+	do "${dir}/do files/Import data python_merge.do" /*This works from the post-merged csv files*/
 	do "${dir}/do files/Unique voyages db.do" /*This creates a db of voyages in the data*/
 	do "${dir}/do files/For careers.do" /*Work on tsdt, enriched when possible with our data*/
 	
