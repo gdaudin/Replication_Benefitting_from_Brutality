@@ -512,13 +512,13 @@ Line_number,VentureID,typeofcashflow,specification,value,meansofpaymentreturn,in
 38,GD017,Return,Not specified,720,,,,1775-04-23,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers
 39,GD017,Return,Not specified,979.225,,,,1775-06-13,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers
 40,GD017,Return,Not specified,378,,,,1775-06-13,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers
-1,GD018,Expenditure,Not specified,13156.3375,0,,,1768,Outfitting,Livres tournois,
-2,GD018,Expenditure,Not specified,624.8375,368,,,1768,After outfitting,Livres tournois,
+1,GD018,Expenditure,Not specified,13156.3375,,,,1768,Outfitting,Livres tournois,
+2,GD018,Expenditure,Not specified,624.8375,,,,1768,After outfitting,Livres tournois,
 3,GD018,Expenditure,Not specified,16907.225,,,,1770,Outfitting,Livres tournois,
 4,GD018,Expenditure,Not specified,232.675,,,,1770,After outfitting,Livres tournois,
 5,GD018,Expenditure,Not specified,9407.30416666667,,,,1772,Outfitting,Livres tournois,
 6,GD018,Expenditure,Not specified,865.104166666667,,,,1772,After outfitting,Livres tournois,
-7,GD018,Expenditure,Not specified,10715.925,59731.1291666667,,,1774,Outfitting,Livres tournois,
+7,GD018,Expenditure,Not specified,10715.925,,,,1774,Outfitting,Livres tournois,
 8,GD018,Expenditure,Not specified,1048.0125,,,,1774,After outfitting,Livres tournois,
 9,GD018,Expenditure,Not specified,2262.10416666667,,,,1777,Outfitting,Livres tournois,
 10,GD018,Expenditure,Not specified,685.5,,,,1777,After outfitting,Livres tournois,
