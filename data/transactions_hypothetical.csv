@@ -517,8 +517,8 @@ KR069--H002,KR069,Expenditure,Insurance,23913.75000000,nan,,INV*INT,nan,Outfitti
 KR070--H001,KR070,Return,Value of ship upon return,6769.48717949,nan,,VSDO*VSRV*VSRT,nan,Return,Peso fuerte,,
 KR070--H002,KR070,Expenditure,Insurance,15530.00000000,nan,,INV*INT,nan,Outfitting,Peso fuerte,Insurance rate assumed to be 25% (year of war),Insurance
 MR001--H001,MR001,Expenditure,Trade cargo costs,1700000.00000000,cash and credit,,0.0,1600-11-04,,Portuguese real,,Trade cargo
-MR001--H002,MR001,Expenditure,Licence cost (Africa),72000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Contract stipulated that the armaï¿½ï¿½o (outfitting) carried the registry for the slaves' licences,
-MR001--H003,MR001,Expenditure,Licence cost (America),3960.00000000,nan,,1.0,nan,Outfitting,Spanish real,"Estimate based on contract stating that the armaï¿½ï¿½o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America",
+MR001--H002,MR001,Expenditure,Licence cost (Africa),72000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,Contract stipulated that the arma��o (outfitting) carried the registry for the slaves' licences,
+MR001--H003,MR001,Expenditure,Licence cost (America),3960.00000000,nan,,1.0,nan,Outfitting,Spanish real,"Estimate based on contract stating that the arma��o (outfitting) carried the registry for the slaves' licences, making its price 330 (Lisbon/Seville), instead of 440 if paid upon arrival in America",
 MR001--H004,MR001,Expenditure,Taxes,1008.00000000,nan,,1.0,nan,Transactions during voyage,Spanish real,,
 MR001--H005,MR001,Returns,Sale of slaves in America,364000.00000000,nan,,0.0,nan,Return,Portuguese real,,
 MR002--H001,MR002,Expenditure,Outfitting costs,157500.00000000,nan,,0.0,nan,Outfitting,Portuguese real,Refers to venture MR001,Outfitting
@@ -543,10 +543,10 @@ MR005--H004,MR005,Expenditure,Licence cost (Africa),91000.00000000,nan,,1.0,nan,
 MR006--H001,MR006,Expenditure,Outfitting costs,280000.00000000,credit,1.00000000,0.0,nan,Outfitting,Portuguese real,Value to be paid in Angola in slaves by agents of the outfitters,Outfitting
 MR006--H002,MR006,Expenditure,Taxes,28000.00000000,nan,1.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
 MR007--H001,MR007,Expenditure,Trade cargo costs,400000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,"Cargo to be used to purchase 16 slaves for 25,000 reis a piece",Trade cargo
-MR007--H002,MR007,Returns,Insurance payments,800000.00000000,nan,,0.0,nan,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 rï¿½is) instead",
-MR008--H001,MR008,Expenditure,Licence cost (Africa),1362000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,"Premium of 6,000 rÃ©is per slave delivered, totalling 227",
+MR007--H002,MR007,Returns,Insurance payments,800000.00000000,nan,,0.0,nan,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",
+MR008--H001,MR008,Expenditure,Licence cost (Africa),1362000.00000000,nan,,1.0,nan,Outfitting,Portuguese real,"Premium of 6,000 réis per slave delivered, totalling 227",
 MR008--H002,MR008,Expenditure,Licence cost (America),74250.00000000,nan,1.00000000,1.0,nan,Outfitting,Spanish real,Corresponding to the licences of 200 slaves that an associate of the outfitter had in Angola + 25 paid to the ship captain,
-MR008--H003,MR008,Expenditure,Insurance costs,45000.00000000,nan,,0.0,nan,Transactions during voyage,Portuguese real,Rate of 200 rÃ©is per slave,Insurance
+MR008--H003,MR008,Expenditure,Insurance costs,45000.00000000,nan,,0.0,nan,Transactions during voyage,Portuguese real,Rate of 200 réis per slave,Insurance
 MR008--H004,MR008,Expenditure,Taxes,4500.00000000,nan,,1.0,nan,Outfitting,Spanish real,,
 MR009--H001,MR009,Expenditure,Outfitting costs,310000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,3 different investors with different shares in same ship,Outfitting
 MR009--H002,MR009,Expenditure,Outfitting costs,240000.00000000,cash,0.00000000,0.0,1619-03-14,Outfitting,Portuguese real,,Outfitting
@@ -558,7 +558,7 @@ MR010--H001,MR010,Expenditure,Trade cargo costs,100000.00000000,cash,0.00000000,
 MR010--H002,MR010,Returns,Freight compensation,200000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Premium (100,000) + risk compensation (100,000)",Freight and passengers
 MR011--H001,MR011,Expenditure,Trade cargo costs,410000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,To be converted in 11 slaves in Angola,Trade cargo
 MR011--H002,MR011,Expenditure,Licence cost (Africa),77000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
-MR011--H003,MR011,Returns,Sale of slaves in America,738720.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 rÃ©is in silver coins instead",
+MR011--H003,MR011,Returns,Sale of slaves in America,738720.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",
 MR012--H001,MR012,Expenditure,Outfitting costs,160000.00000000,cash,0.00000000,0.0,1619-04-19,,Portuguese real,,Outfitting
 MR012--H002,MR012,Expenditure,Trade cargo costs,160000.00000000,nan,0.00000000,0.0,1619-04-19,,Portuguese real,,Trade cargo
 MR012--H003,MR012,Returns,Insurance payments,576000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,,
@@ -583,12 +583,12 @@ MR019--H004,MR019,Expenditure,Taxes,376.00000000,nan,0.00000000,1.0,nan,Transact
 MR020--H001,MR020,Expenditure,Outfitting costs,1000000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Outfitting
 MR020--H002,MR020,Returns,Insurance payments,1900000.00000000,nan,0.00000000,0.0,nan,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",
 MR021--H001,MR021,Expenditure,Trade cargo costs,80000.00000000,cash,0.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
-MR021--H002,MR021,Returns,Freight compensation,152000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighterâs agents the principal (80,000) + premium of 90% (72,000)",Freight and passengers
+MR021--H002,MR021,Returns,Freight compensation,152000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighter’s agents the principal (80,000) + premium of 90% (72,000)",Freight and passengers
 MR022--H001,MR022,Expenditure,Trade cargo costs,440000.00000000,cash,0.00000000,0.0,1620-03-04,Outfitting,Portuguese real,,Trade cargo
-MR022--H002,MR022,Returns,Insurance payments,836000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighterâs associate",
+MR022--H002,MR022,Returns,Insurance payments,836000.00000000,cash,0.00000000,0.0,nan,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",
 MR023--H001,MR023,Expenditure,Trade cargo costs,70000.00000000,cash,1.00000000,0.0,nan,Outfitting,Portuguese real,,Trade cargo
 MR023--H002,MR023,Expenditure,Licence cost (Africa),14000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
-MR023--H003,MR023,Expenditure,Licence cost (America),880.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Only information is to deliver 2 slaves to the investorâs agent in America,
+MR023--H003,MR023,Expenditure,Licence cost (America),880.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,Only information is to deliver 2 slaves to the investor’s agent in America,
 MR024--H001,MR024,Expenditure,Trade cargo costs,200000.00000000,cash,0.00000000,0.0,1620-03-04,,Portuguese real,,Trade cargo
 MR024--H002,MR024,Returns,Insurance payments,10000.00000000,cash,0.00000000,0.0,nan,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",
 MR025--H001,MR025,Expenditure,Trade cargo costs,355600.00000000,cash,0.00000000,0.0,1620-04-14,,Portuguese real,,Trade cargo
@@ -600,7 +600,7 @@ MR027--H002,MR027,Returns,Insurance payments,173680.00000000,nan,0.00000000,0.0,
 MR028--H001,MR028,Expenditure,Insurance costs,160000.00000000,nan,1.00000000,0.0,nan,Outfitting,Portuguese real,,Insurance
 MR028--H002,MR028,Expenditure,Licence cost (Africa),35000.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Portuguese real,,
 MR028--H003,MR028,Expenditure,Licence cost (America),2200.00000000,nan,0.00000000,1.0,nan,Transactions during voyage,Spanish real,,
-MR028--H004,MR028,Returns,Sale of slaves in America,320000.00000000,nan,1.00000000,0.0,nan,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 âof the bestâ slaves brought in ship, evaluated at 320,00 rÃ©is (64,000 a piece)",
+MR028--H004,MR028,Returns,Sale of slaves in America,320000.00000000,nan,1.00000000,0.0,nan,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",
 NR007--H001,NR007,Expenditure,Ship Out,156.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,Ship
 NR008--H001,NR008,Expenditure,Ship Out,184.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,,Ship
 NR015--H001,NR015,Expenditure,Ship Out,86.36000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
@@ -624,16 +624,16 @@ NR055--H001,NR055,Return,Ship In,33.00000000,nan,0.00000000,VSRV,nan,Return,Poun
 NR055--H002,NR055,Expenditure,Insurance,38.20000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
 NR061--H001,NR061,Expenditure,Ship Out,148.75000000,nan,0.00000000,VSDO,nan,Outfitting,Pound sterling,,Ship
 NR061--H002,NR061,Return,Ship In,111.56000000,nan,0.00000000,VSDO*VSRV,nan,Return,Pound sterling,,Ship
-NR067--H001,NR067,Expenditure,Insurance,73.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,Radburn assumed ï¿½47 based on partial insurance rates.,Insurance
-NR067--H002,NR067,Return,Ship In,168.75000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,"Recalc from Radburnï¿½s data, assuming 50% residual value.",Ship
+NR067--H001,NR067,Expenditure,Insurance,73.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,Radburn assumed �47 based on partial insurance rates.,Insurance
+NR067--H002,NR067,Return,Ship In,168.75000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,"Recalc from Radburn�s data, assuming 50% residual value.",Ship
 NR071--H001,NR071,Return,Ship In,112.50000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
 NR072--H001,NR072,Return,Ship In,90.00000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
 NR074--H001,NR074,Expenditure,Ship Out,168.75000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR067,Ship
 NR076--H001,NR076,Expenditure,Ship Out,90.00000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR072,Ship
 NR076--H002,NR076,Return,Ship In,67.50000000,nan,0.00000000,VSRV*VSRV,nan,Return,Pound sterling,,Ship
-NR077--H001,NR077,Expenditure,Insurance,349.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed ï¿½190, unclear how and why.",Insurance
+NR077--H001,NR077,Expenditure,Insurance,349.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed �190, unclear how and why.",Insurance
 NR077--H002,NR077,Expenditure,Ship Out,112.50000000,nan,0.00000000,VSRV,nan,Outfitting,Pound sterling,Estimated based on residual value from previous voyage NR071,Ship
-NR079--H001,NR079,Expenditure,Insurance,129.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed ï¿½104, unclear why and how.",Insurance
+NR079--H001,NR079,Expenditure,Insurance,129.00000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,"Radburn assumed �104, unclear why and how.",Insurance
 NR079--H002,NR079,Return,Ship In,39.38000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
 NR081--H001,NR081,Expenditure,Insurance,389.08000000,nan,0.00000000,INV,nan,Outfitting,Pound sterling,,Insurance
 NR081--H002,NR081,Return,Ship In,110.25000000,nan,0.00000000,VSRV,nan,Return,Pound sterling,,Ship
