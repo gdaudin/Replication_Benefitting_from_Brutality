@@ -5,7 +5,7 @@
 
 import delimited "/Users/guillaumedaudin/Répertoires Git/slaveprofits data and programs/python_merge/transactions.csv", stringcols(1 6 8) encoding(utf8) clear
 sort ventureid line_number
-bysort ventureid  : gen new_transaction_id = ventureid + "--T" + string(_n,"%03.0f")
+bysort ventureid  : gen new_transaction_id = ventureid + "_T" + string(_n,"%03.0f")
 drop transaction_id
 rename new_transaction_id transaction_id 
 drop line_number
@@ -15,7 +15,7 @@ export delimited "/Users/guillaumedaudin/Répertoires Git/slaveprofits data and
 
 import delimited "/Users/guillaumedaudin/Répertoires Git/slaveprofits data and programs/python_merge/transactions_hypothetical.csv", encoding(utf8) stringcols(1 6 8) clear
 sort ventureid line_number
-bysort ventureid  : gen new_transaction_id = ventureid + "--H" + string(_n,"%03.0f")
+bysort ventureid  : gen new_transaction_id = ventureid + "_H" + string(_n,"%03.0f")
 drop transaction_id
 rename new_transaction_id transaction_id 
 drop line_number
