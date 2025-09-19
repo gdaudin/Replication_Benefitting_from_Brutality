@@ -25,7 +25,7 @@ args OR VSDO VSDR VSDT VSRV VSRT INV INT
 use "${output}Database for IRR computation_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", clear
 
 
-sort ventureid line_number
+sort transactionid
 /*
 For the English ones, here is Klas’s opinion : 
 I found the time to check now. There are no ships for which

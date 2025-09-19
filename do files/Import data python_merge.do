@@ -17,18 +17,18 @@ clear
 ///////////////////////////////////////////////////////////////////////////-
 
 * IMPORT CASH FLOW-DATABASES (now "transactions.csv" from python)
-import delimited "$dir/python_merge/transactions.csv" , encoding(utf8) clear
+import delimited "$dir/data/transactions.csv" , encoding(utf8) clear
 save blouf.dat, replace
 
-import delimited "$dir/python_merge/transactions_hypothetical.csv" , encoding(utf8) clear
+import delimited "$dir/data/transactions_hypothetical.csv" , encoding(utf8) clear
 append using blouf.dat
 erase blouf.dat
 
 rename *_* **
 *drop if regexm(ventureid, "MR")
-rename linenumber line_number
+*rename linenumber line_number
 
-
+replace hypothesis="OR" if specificationcategory=="Doubtful credit"
 
 foreach var of varlist meansofpaymentreturn dateoftransaction {
 	replace `var' = "" if "`var'" == "nan"
@@ -37,9 +37,11 @@ foreach var of varlist meansofpaymentreturn dateoftransaction {
 recast str2045 specification 
 assert ventureid !=""
 
+
 save "${output}Cash flow all.dta", replace
 
 
+/****We do not deal with specification categories anymore : they are now in the data file
 //To complete specification categories
 import delimited "$dir/data/specification_categories.csv" , encoding(utf8) clear
 recast str2045 specification 
@@ -64,9 +66,10 @@ merge 1:m specification using "${output}Cash flow all.dta"
 
 assert _merge==3 | _merge==1 
 drop if _merge==1
-
-
 drop _merge
+*/
+
+use "${output}Cash flow all.dta", clear
 
 replace intermediarytradingoperation = 0 if intermediarytradingoperation==.
 **Treating the date
@@ -83,7 +86,7 @@ drop date date2 date3
 
 generate transaction_year = yofd(dateoftransaction)
 
-sort ventureid line_number
+sort transactionid
 save "${output}Cash flow all.dta", replace
 export delimited "${output}Cash flow all.csv", replace
 
