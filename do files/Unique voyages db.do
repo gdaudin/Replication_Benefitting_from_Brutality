@@ -76,11 +76,11 @@ replace VOYAGEID="" if strmatch(VOYAGEID,"?")==1
 /*Testing if there are left potentially duplicate voyages difficult to identify*/
 /*This is the only case where it might happen*/
 drop if ventureid=="KR016" & voyagenumber==14
-assert (VOYAGEID!="" | ventureid=="KR014") if internalcrossref!=""
+assert (VOYAGEID!="" | ventureid=="KR014"|ventureid=="GD021") if internalcrossref!=""
 /*Following this, all duplicate voyages have a VoyageID (even if some non-duplicates ones do not)*/
 
 replace VOYAGEID = "RDKRR"+ventureid if VOYAGEID==""
-assert (internalcrossref=="" | ventureid=="KR014") if strmatch(VOYAGEID,"RDKRR*")==1
+assert (internalcrossref=="" | ventureid=="KR014" | ventureid=="GD021") if strmatch(VOYAGEID,"RDKRR*")==1
 
 **We will only keep one observation VOYAGEID. But we need to make sure we have the best data on it
 *from the other cross-references.

@@ -43,6 +43,9 @@ replace NATINIMP=8 if nationality =="Dutch" & NATINIMP==.
 replace NATINIMP=10 if nationality =="French" & NATINIMP==.
 replace NATINIMP=15 if nationality =="Danish" & NATINIMP==.
 
+assert NATINIMP==10 if nationality=="French"
+
+
 gen NATINIMP_tab3 = NATINIMP
 replace NATINIMP_tab3=30 if NATINIMP ==2 | NATINIMP ==3 | (NATINIMP >=12  & NATINIMP !=. & NATINIMP==12)
 replace NATINIMP_tab3=6 if NATINIMP==4 | NATINIMP==5

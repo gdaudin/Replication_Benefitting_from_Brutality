@@ -97,7 +97,7 @@ export delimited "${output}Cash flow all.csv", replace
 
 clear
 
-import delimited "$dir/python_merge/venture all.csv" , encoding(utf8) clear
+import delimited "$dir/data/ventures.csv" , encoding(utf8) clear
 **In the do file, spaces were initially removed. With the merged data, they werereplaced by 
 rename *_* **
 rename *_* **
@@ -115,7 +115,7 @@ label var nationality "Nationality"
 foreach var of varlist date* place* number* {
 	replace `var' = "" if `var' == "nan"
 }
-list numberofslavespurchased if regexm(numberofslavespurchased, "[^0-9.]")
+list numberofenslavedpurchased if regexm(numberofenslavedpurchased, "[^0-9.]")
 
  
 capture tostring  date* place* number* voyageidintstd internalcrossref nameofthecaptain  profitsreportedinsource, replace
@@ -135,7 +135,7 @@ replace perspectiveofsource="Owner" if perspectiveofsource=="Owner?"
 *replace nameofthecaptain="" if nameofthecaptain=="."
 
 
-*destring numberofslavespurchased, replace
+*destring numberofenslavedpurchased, replace
 *destring numberofslavessold, replace
 
 
@@ -201,7 +201,7 @@ rename datedepartureportofoutfitt_str dateofdeparturefromportofoutfitt
 * ROUTINE IS THEN REPEATED FOR ALL DIFFERENT DATES IN THE DATASETS
 
 
-local varlist dateofdeparturefromportofoutfitt dateofprimarysource datetradebeganinafrica dateofdeparturefromafrica datevesselarrivedwithslaves dateofreturntoportofoutfitting
+local varlist dateofdeparturefromportofoutfitt dateofprimarysource datetradebeganinafrica dateofdeparturefromafrica datevesselarrivedwithenslave dateofreturntoportofoutfitting
 
 foreach var of local varlist {
 	gen year1=substr( `var' ,1,4)
@@ -210,7 +210,7 @@ foreach var of local varlist {
 	destring year1, replace
 	destring month1, replace
 	destring day1, replace
-	if "`var'" == "datevesselarrivedwithslaves" |   "`var'" == "datetradebeganinafrica" {
+	if "`var'" == "datevesselarrivedwithenslave" |   "`var'" == "datetradebeganinafrica" {
 		local x = substr("`var'",  5,100)
 	}
 	else {
@@ -242,7 +242,7 @@ gen yearofdeparturefromportofoutfit=year(dateofdeparturefromportofoutfitt)
 gen yearofprimarysource=year(dateofprimarysource)
 gen yeartradebeganinafrica=year(datetradebeganinafrica)
 gen yearofdeparturefromafrica=year(dateofdeparturefromafrica)
-gen yearvesselarrivedwithslaves=year(datevesselarrivedwithslaves)
+gen yearvesselarrivedwithslaves=year(datevesselarrivedwithenslave)
 gen yearofreturntoportofoutfitting=year(dateofreturntoportofoutfitting)
 
 * GENERAL YEAR-VARIABLE, THE LOWEST COMMON DENOMINATOR, IN ORDER TO BE ABLE TO ORDER THE VENTURES ROUGHLY CHRONOLOGICALLY
