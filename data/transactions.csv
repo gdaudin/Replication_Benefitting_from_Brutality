@@ -2019,27 +2019,27 @@ GD124_T001,GD124,Expenditure,Navire,16200,,,,Outfitting,Livres tournois,,Ship
 GD124_T002,GD124,Expenditure,Radoub,59717.56666667,,,,Outfitting,Livres tournois,,Outfitting
 GD124_T003,GD124,Expenditure,victuals (Vivres),28547.73333333,,,,Outfitting,Livres tournois,,Victuals
 GD124_T004,GD124,Expenditure,Cargaison,221615.21,,,,Outfitting,Livres tournois,Confirmé p. 328,Cargo
-GD124_T005,GD124,Return,Vente des esclaves,11815,,1,1775-04,Return,Livres coloniales,,Slave sale
-GD124_T006,GD124,Return,Vente des esclaves,3550,,1,1775-05,Return,Livres coloniales,,Slave sale
-GD124_T007,GD124,Return,Vente des esclaves,15729,,1,1775-06,Return,Livres coloniales,,Slave sale
-GD124_T008,GD124,Return,Vente des esclaves,22593,,1,1775-07,Return,Livres coloniales,,Slave sale
-GD124_T009,GD124,Return,Vente des esclaves,42603,,1,1775-08,Return,Livres coloniales,,Slave sale
-GD124_T010,GD124,Return,Vente des esclaves,10900,,1,1775-09,Return,Livres coloniales,,Slave sale
-GD124_T011,GD124,Return,Vente des esclaves,7500,,1,1775-10,Return,Livres coloniales,,Slave sale
-GD124_T012,GD124,Return,Vente des esclaves,12503,,1,1775-11,Return,Livres coloniales,,Slave sale
-GD124_T013,GD124,Return,Vente des esclaves,15052,,1,1775-12,Return,Livres coloniales,,Slave sale
-GD124_T014,GD124,Return,Vente des esclaves,8316,,1,1776-01,Return,Livres coloniales,,Slave sale
-GD124_T015,GD124,Return,Vente des esclaves,49887,,1,1776-02,Return,Livres coloniales,,Slave sale
-GD124_T016,GD124,Return,Vente des esclaves,95365,,1,1776-03,Return,Livres coloniales,,Slave sale
-GD124_T017,GD124,Return,Vente des esclaves,8132,,1,1773-04,Return,Livres coloniales,,Slave sale
-GD124_T018,GD124,Return,Vente des esclaves,3800,,1,1774-07,Return,Livres coloniales,,Slave sale
-GD124_T019,GD124,Return,Vente des esclaves,20670,,1,1774-08,Return,Livres coloniales,,Slave sale
-GD124_T020,GD124,Expenditure,avantages des officiers majors et autres suivant sa note,12386.8,,1,,Return,Livres coloniales,,Wages
-GD124_T021,GD124,Expenditure,commission du capitaine sur le montant de sa vente à 5é%,30199,,1,,Return,Livres coloniales,,
-GD124_T022,GD124,Expenditure,Commission d’un officier sur la vente à 1%,6039.8,,1,,Return,Livres coloniales,,
-GD124_T023,GD124,Expenditure,Deux comptes de frais généraux pour le navire,23021.01666667,,1,,Return,Livres coloniales,,Various
-GD124_T024,GD124,Expenditure,Deux mandats du capitaine pour objets achetés é la céte,154.5,,1,,Return,Livres coloniales,,Cargo
-GD124_T025,GD124,Return,Emploi et remises en France,532487.10833333,,1,,Return,Livres coloniales,,Unknown
+GD124_T005,GD124,Return,Vente des esclaves,11815,,1,1775-04,Return,Livres des colonies,,Slave sale
+GD124_T006,GD124,Return,Vente des esclaves,3550,,1,1775-05,Return,Livres des colonies,,Slave sale
+GD124_T007,GD124,Return,Vente des esclaves,15729,,1,1775-06,Return,Livres des colonies,,Slave sale
+GD124_T008,GD124,Return,Vente des esclaves,22593,,1,1775-07,Return,Livres des colonies,,Slave sale
+GD124_T009,GD124,Return,Vente des esclaves,42603,,1,1775-08,Return,Livres des colonies,,Slave sale
+GD124_T010,GD124,Return,Vente des esclaves,10900,,1,1775-09,Return,Livres des colonies,,Slave sale
+GD124_T011,GD124,Return,Vente des esclaves,7500,,1,1775-10,Return,Livres des colonies,,Slave sale
+GD124_T012,GD124,Return,Vente des esclaves,12503,,1,1775-11,Return,Livres des colonies,,Slave sale
+GD124_T013,GD124,Return,Vente des esclaves,15052,,1,1775-12,Return,Livres des colonies,,Slave sale
+GD124_T014,GD124,Return,Vente des esclaves,8316,,1,1776-01,Return,Livres des colonies,,Slave sale
+GD124_T015,GD124,Return,Vente des esclaves,49887,,1,1776-02,Return,Livres des colonies,,Slave sale
+GD124_T016,GD124,Return,Vente des esclaves,95365,,1,1776-03,Return,Livres des colonies,,Slave sale
+GD124_T017,GD124,Return,Vente des esclaves,8132,,1,1773-04,Return,Livres des colonies,,Slave sale
+GD124_T018,GD124,Return,Vente des esclaves,3800,,1,1774-07,Return,Livres des colonies,,Slave sale
+GD124_T019,GD124,Return,Vente des esclaves,20670,,1,1774-08,Return,Livres des colonies,,Slave sale
+GD124_T020,GD124,Expenditure,avantages des officiers majors et autres suivant sa note,12386.8,,1,,Return,Livres des colonies,,Wages
+GD124_T021,GD124,Expenditure,commission du capitaine sur le montant de sa vente à 5é%,30199,,1,,Return,Livres des colonies,,
+GD124_T022,GD124,Expenditure,Commission d’un officier sur la vente à 1%,6039.8,,1,,Return,Livres des colonies,,
+GD124_T023,GD124,Expenditure,Deux comptes de frais généraux pour le navire,23021.01666667,,1,,Return,Livres des colonies,,Various
+GD124_T024,GD124,Expenditure,Deux mandats du capitaine pour objets achetés é la céte,154.5,,1,,Return,Livres des colonies,,Cargo
+GD124_T025,GD124,Return,Emploi et remises en France,532487.10833333,,1,,Return,Livres des colonies,,Unknown
 GD124_T026,GD124,Return,Fret du chargement entier,14319.3125,,,,Return,Livres tournois,,Freight and passengers
 GD124_T027,GD124,Return,Remise en France,84518.7,,,,Return,Livres tournois,,
 GD124_T028,GD124,Return,Vente en France,134551.8975,,,,Return,Livres tournois,,
@@ -2131,50 +2131,50 @@ GD142_T040,GD142,Expenditure,Commission de vente aux armateurs à 2 %,16623.86,,
 GD142_T041,GD142,Expenditure,Ducroire des armateurs à 1%,8303.26,,,1817,Return,Francs,,Commission
 GD142_T042,GD142,Return,Vente du Cultivateur et armes,28338,,,1817,Return,Francs,,Ship
 GD142_T043,GD142,Expenditure,Commission sur la vente du Cultivateur,567,,,1817,Return,Francs,,Commission
-GD143_T001,GD143,Expenditure,Frais d’armement,149159,,,1741,Outfitting,Livres,,Outfitting
-GD143_T002,GD143,Return,Vente des Noirs,193898,,1,1742,Transactions during voyage,Livres,,Slave sale
-GD143_T003,GD143,Return,Vente d’ustensiles divers,15538,,1,1742,Transactions during voyage,Livres,,Various
-GD144_T001,GD144,Expenditure,Coût du navire,6000,,,1783,Outfitting,Livres,,Ship
-GD144_T002,GD144,Expenditure,Frais de remise en état,30214,,,1783,Outfitting,Livres,,Various
-GD144_T003,GD144,Expenditure,Avances à l’équipage,2624,,,1783,Outfitting,Livres,,Wages
-GD144_T004,GD144,Expenditure,Vivres,10975,,,1783,Outfitting,Livres,,Victuals
-GD144_T005,GD144,Expenditure,Cargaison,92242,,,1783,Outfitting,Livres,,Cargo
-GD144_T006,GD144,Return,Vente des Noirs,363760,,1,1784,Transactions during voyage,Livres,,Slave sale
-GD144_T007,GD144,Return,Vente d’ustensiles divers,3083,,1,1784,Transactions during voyage,Livres,,Various
-GD144_T008,GD144,Expenditure,Frais à l’arrivée pour gages de l’équipage et traite du capitaine,14224,,1,1784,Transactions during voyage,Livres,I assume in the West Indies (like the rest). But could be in France ?,Various
-GD145_T001,GD145,Expenditure,Mise-hors 1er voyage,472944,,,1782,Outfitting,Livres,,Unknown
-GD145_T002,GD145,Return,Vente des noirs du 2e voyage,589002,,1,1784,Transactions during voyage,Livres,1783 ? 1784 ?,Slave sale
-GD146_T001,GD146,Expenditure,Armement,160000,,,1774,Outfitting,Livres,,Outfitting
-GD146_T002,GD146,Return,"Retours par la Pyrra, la Confiance, le Guerrie",32574,,,1776-08-17,Return,Livres,,Cargo
-GD146_T003,GD146,Return,Retour par le Montyon,19739,,,1776-08-17,Return,Livres,,Cargo
-GD146_T004,GD146,Return,Retour par la Betsy (second voyage),42806,,,1777-03-20,Return,Livres,,Cargo
-GD146_T005,GD146,Return,??,9255,,,1778-01-25,Return,Livres,,Unknown
-GD146_T006,GD146,Return,par la Julie,6120,,,1778-06-18,Return,Livres,,Cargo
-GD146_T007,GD146,Return,Profits et pertes,3636,,,1778-08-27,Return,Livres,,Various
-GD146_T008,GD146,Return,"Divers, dont une lettre de change",1342,,,1779-11-18,Return,Livres,,Various
-GD146_T009,GD146,Return,Divers acquis de Guinée,2009,,,1780-11-09,Return,Livres,,Various
-GD147_T001,GD147,Expenditure,Mise hors et cargaison,163440,,,1776,Outfitting,Livres,,Unknown
-GD147_T002,GD147,Return,Queue de retour de la vente de 296 noirs,174924,,,,Return,Livres,,Slave sale
-GD147_T003,GD147,Return,Remboursements de l’assureur suite à une prise,177760,,,,Return,Livres,,Insurance
-GD148_T001,GD148,Expenditure,Mise hors estimée,197120,,,1735,Outfitting,Livres,,Unknown
-GD148_T002,GD148,Return,Vente de 402 noirs,254299,,1,1736,Transactions during voyage,Livres,,Slave sale
-GD149_T001,GD149,Expenditure,Mise hors estimée,73800,,,1739,Outfitting,Livres,,Unknown
-GD149_T002,GD149,Return,Vente de 161 noirs,184000,,1,1740,Transactions during voyage,Livres,,Slave sale
-GD149_T003,GD149,Return,11 noirs de pacotille,13200,,1,1740,Transactions during voyage,Livres,,Various
-GD150_T001,GD150,Expenditure,Mise hors estimée,110700,,,1739,Outfitting,Livres,,Unknown
-GD150_T002,GD150,Return,vente de 208 noirs,237050,,1,1740,Transactions during voyage,Livres,,Sale of slave
-GD150_T003,GD150,Return,10 noirs de pacotille,35516,,1,1740,Transactions during voyage,Livres,,Various
-GD151_T001,GD151,Expenditure,Mise hors estimée,246000,,,1741,Outfitting,Livres,,Unknown
-GD151_T002,GD151,Return,vente de 367 nois,432300,,1,1742,Transactions during voyage,Livres,,Sale of slave
-GD152_T001,GD152,Expenditure,Mise hors estimée,369000,,,1748,Outfitting,Livres,,Unknown
-GD152_T002,GD152,Return,Vente de 350 noirs,338957,,1,1749,Transactions during voyage,Livres,,Slave sale
-GD153_T001,GD153,Expenditure,Mise hors estimée,246000,,,1773,Outfitting,Livres,,Unknown
-GD153_T002,GD153,Return,vente de 346 noirs,603980,,1,1774,Transactions during voyage,Livres,,Sale of slave
-GD154_T001,GD154,Expenditure,Mise hors estimée,282900,,,1774,Outfitting,Livres,,Unknown
-GD154_T002,GD154,Return,vente de 383 noirs,622700,,1,1775,Transactions during voyage,Livres coloniales,,Sale of slave
-GD154_T003,GD154,Expenditure,Frais au Cap sans commission,63995,,1,1775,Transactions during voyage,Livres coloniales,,Various
-GD154_T004,GD154,Expenditure,Commission pour le correspondant au Cap,8207,,1,1775,Transactions during voyage,Livres coloniales,,Commission
-GD154_T005,GD154,Expenditure,Achats en Afrique,19842,,1,1775,Transactions during voyage,Livres coloniales,,Cargo
+GD143_T001,GD143,Expenditure,Frais d’armement,149159,,,1741,Outfitting,Livres tournois,,Outfitting
+GD143_T002,GD143,Return,Vente des Noirs,193898,,1,1742,Transactions during voyage,Livres tournois,,Slave sale
+GD143_T003,GD143,Return,Vente d’ustensiles divers,15538,,1,1742,Transactions during voyage,Livres tournois,,Various
+GD144_T001,GD144,Expenditure,Coût du navire,6000,,,1783,Outfitting,Livres tournois,,Ship
+GD144_T002,GD144,Expenditure,Frais de remise en état,30214,,,1783,Outfitting,Livres tournois,,Various
+GD144_T003,GD144,Expenditure,Avances à l’équipage,2624,,,1783,Outfitting,Livres tournois,,Wages
+GD144_T004,GD144,Expenditure,Vivres,10975,,,1783,Outfitting,Livres tournois,,Victuals
+GD144_T005,GD144,Expenditure,Cargaison,92242,,,1783,Outfitting,Livres tournois,,Cargo
+GD144_T006,GD144,Return,Vente des Noirs,363760,,1,1784,Transactions during voyage,Livres tournois,,Slave sale
+GD144_T007,GD144,Return,Vente d’ustensiles divers,3083,,1,1784,Transactions during voyage,Livres tournois,,Various
+GD144_T008,GD144,Expenditure,Frais à l’arrivée pour gages de l’équipage et traite du capitaine,14224,,1,1784,Transactions during voyage,Livres tournois,I assume in the West Indies (like the rest). But could be in France ?,Various
+GD145_T001,GD145,Expenditure,Mise-hors 1er voyage,472944,,,1782,Outfitting,Livres tournois,,Unknown
+GD145_T002,GD145,Return,Vente des noirs du 2e voyage,589002,,1,1784,Transactions during voyage,Livres tournois,1783 ? 1784 ?,Slave sale
+GD146_T001,GD146,Expenditure,Armement,160000,,,1774,Outfitting,Livres tournois,,Outfitting
+GD146_T002,GD146,Return,"Retours par la Pyrra, la Confiance, le Guerrie",32574,,,1776-08-17,Return,Livres tournois,,Cargo
+GD146_T003,GD146,Return,Retour par le Montyon,19739,,,1776-08-17,Return,Livres tournois,,Cargo
+GD146_T004,GD146,Return,Retour par la Betsy (second voyage),42806,,,1777-03-20,Return,Livres tournois,,Cargo
+GD146_T005,GD146,Return,??,9255,,,1778-01-25,Return,Livres tournois,,Unknown
+GD146_T006,GD146,Return,par la Julie,6120,,,1778-06-18,Return,Livres tournois,,Cargo
+GD146_T007,GD146,Return,Profits et pertes,3636,,,1778-08-27,Return,Livres tournois,,Various
+GD146_T008,GD146,Return,"Divers, dont une lettre de change",1342,,,1779-11-18,Return,Livres tournois,,Various
+GD146_T009,GD146,Return,Divers acquis de Guinée,2009,,,1780-11-09,Return,Livres tournois,,Various
+GD147_T001,GD147,Expenditure,Mise hors et cargaison,163440,,,1776,Outfitting,Livres tournois,,Unknown
+GD147_T002,GD147,Return,Queue de retour de la vente de 296 noirs,174924,,,,Return,Livres tournois,,Slave sale
+GD147_T003,GD147,Return,Remboursements de l’assureur suite à une prise,177760,,,,Return,Livres tournois,,Insurance
+GD148_T001,GD148,Expenditure,Mise hors estimée,197120,,,1735,Outfitting,Livres tournois,,Unknown
+GD148_T002,GD148,Return,Vente de 402 noirs,254299,,1,1736,Transactions during voyage,Livres tournois,,Slave sale
+GD149_T001,GD149,Expenditure,Mise hors estimée,73800,,,1739,Outfitting,Livres tournois,,Unknown
+GD149_T002,GD149,Return,Vente de 161 noirs,184000,,1,1740,Transactions during voyage,Livres tournois,,Slave sale
+GD149_T003,GD149,Return,11 noirs de pacotille,13200,,1,1740,Transactions during voyage,Livres tournois,,Various
+GD150_T001,GD150,Expenditure,Mise hors estimée,110700,,,1739,Outfitting,Livres tournois,,Unknown
+GD150_T002,GD150,Return,vente de 208 noirs,237050,,1,1740,Transactions during voyage,Livres tournois,,Sale of slave
+GD150_T003,GD150,Return,10 noirs de pacotille,35516,,1,1740,Transactions during voyage,Livres tournois,,Various
+GD151_T001,GD151,Expenditure,Mise hors estimée,246000,,,1741,Outfitting,Livres tournois,,Unknown
+GD151_T002,GD151,Return,vente de 367 nois,432300,,1,1742,Transactions during voyage,Livres tournois,,Sale of slave
+GD152_T001,GD152,Expenditure,Mise hors estimée,369000,,,1748,Outfitting,Livres tournois,,Unknown
+GD152_T002,GD152,Return,Vente de 350 noirs,338957,,1,1749,Transactions during voyage,Livres tournois,,Slave sale
+GD153_T001,GD153,Expenditure,Mise hors estimée,246000,,,1773,Outfitting,Livres tournois,,Unknown
+GD153_T002,GD153,Return,vente de 346 noirs,603980,,1,1774,Transactions during voyage,Livres tournois,,Sale of slave
+GD154_T001,GD154,Expenditure,Mise hors estimée,282900,,,1774,Outfitting,Livres tournois,,Unknown
+GD154_T002,GD154,Return,vente de 383 noirs,622700,,1,1775,Transactions during voyage,Livres des colonies,,Sale of slave
+GD154_T003,GD154,Expenditure,Frais au Cap sans commission,63995,,1,1775,Transactions during voyage,Livres des colonies,,Various
+GD154_T004,GD154,Expenditure,Commission pour le correspondant au Cap,8207,,1,1775,Transactions during voyage,Livres des colonies,,Commission
+GD154_T005,GD154,Expenditure,Achats en Afrique,19842,,1,1775,Transactions during voyage,Livres des colonies,,Cargo
 GD154_T006,GD154,Expenditure,Frais de désarmement,20867,,,1775,Return,Livres tournois,,Various
 GD154_T007,GD154,Expenditure,Reliquats de gages pour l’équipage,20873,,,1775,Return,Livres tournois,,Wages
 GD154_T008,GD154,Expenditure,Commission de l’armateur,1684,,,1775,Return,Livres tournois,,Commission
