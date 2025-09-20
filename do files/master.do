@@ -18,7 +18,7 @@
 
 
 	*Preliminary 
-	*IMPORT STDT DATASET
+	*IMPORT TSTD DATASET
 	* Currently not used section - if we want to import again, delete the old version of the TSTD.dta
 	*unzipfile "${dir}/external data/tastdb-exp-2020.sav.zip", replace
 	*import spss using "${dir}/external data/tastdb-exp-2020.sav", clear

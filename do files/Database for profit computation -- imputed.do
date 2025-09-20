@@ -36,7 +36,7 @@ gen totalnetreturn_silver_perslave= totalnetreturn_silver/SLAMIMP/shareoftheship
 
 
 
-**Compute the gross return of selling slaves according to STDT (in silver)
+**Compute the gross return of selling slaves according to TSTD (in silver)
 rename currency currency_of_venture
 gen currency ="Pound sterling"
 gen transaction_year= YEARAF

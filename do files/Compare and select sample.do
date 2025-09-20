@@ -80,7 +80,7 @@ replace three_nat=1 if (NATINIMP==7 | NATINIMP==8 | NATINIMP == 10)
 
 twoway (histogram YEARAF  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac start(1730) width(5) color(red%30)) ///
 	 (histogram YEARAF  if  three_nat==1 &  YEARAF>=1730 & YEARAF<=1815,  frac start(1730) width(5) color(green%30)), ///
-	 legend(order(1 "Sample" 2 "STDT (expanded)" )) 
+	 legend(order(1 "Sample" 2 "TSTD (expanded)" )) 
 
 ***This convinces me that the right common support to look at is 1750-1795
 replace sample=0 if YEARAF >1795 | YEARAF < 1750 | nationality =="Danish" | nationality =="Spanish"
@@ -102,10 +102,10 @@ label values period period_l
 
 collect clear
 collect: table (NATINIMP_tab3) (period) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
-collect rename Table STDT
+collect rename Table TSTD
 collect : table (NATINIMP_tab3) (period) if sample==1,  statistic (freq) statistic(proportion)   nformat(%3.2f)
 collect rename Table Sample
-collect combine tab = STDT Sample 
+collect combine tab = TSTD Sample 
 collect style header NATINIMP_tab3 collection period result, title(hide)
 collect style header  result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
@@ -136,7 +136,7 @@ by VOYAGEID: drop if _N != _n
 bysort VOYAGEID: assert _N==1
 drop _merge
 
-save  "${output}STDT_enriched.dta", replace
+save  "${output}TSTD_enriched.dta", replace
 
 replace FATE4=4 if FATE4==.
 table (FATE4) if sample==1
@@ -145,10 +145,10 @@ codebook FATE4 if sample==1
 
 collect clear
 collect: table (FATE4) if support==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
-collect rename Table STDT
+collect rename Table TSTD
 collect: table (FATE4) if sample==1,  statistic (freq) statistic(proportion)  nformat(%3.2f)
 collect rename Table Sample
-collect combine tab = STDT Sample 
+collect combine tab = TSTD Sample 
 collect style header FATE4 collection, title(hide)
 collect style header result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
@@ -171,14 +171,14 @@ label var crowd "Number of embarked enslaved persons per ton"
 gen DisSlavePerTon=SLAMIMP/TONMOD
 label var  DisSlavePerTon "Number of disembarked enslaved persons per ton"
 
-save  "${output}STDT_enriched.dta", replace
+save  "${output}TSTD_enriched.dta", replace
 
 
 /*
 **Look at the tonnage repartition
 twoway (histogram TONMOD  if (data >=1 & !missing(data)) &  three_nat==1 & YEARAF>=1730 & YEARAF<=1815, frac color(red%30)) ///
  	(histogram TONMOD  if  three_nat==1 &  YEARAF>=1730 & YEARAF<=1815,  frac color(green%30)), ///
- 	legend(order(1 "Sample" 2 "STDT (expanded)" )) 
+ 	legend(order(1 "Sample" 2 "TSTD (expanded)" )) 
 
 /*
 gen weight = 2
@@ -189,7 +189,7 @@ ksmirnov YEARAF,by(dupindicator)
 
 twoway (histogram YEARAF [fweight=weight] if dupindicator==1 &  YEARAF>=1745 & YEARAF<=1795 & three_nat==1, frac start(1745) width(5) color(red%30)) ///
 	 (histogram YEARAF [fweight=weight] if dupindicator==0  &  YEARAF>=1745 & YEARAF<=1795 & three_nat==1,  frac start(1745) width(5) color(green%30)), ///
-	 legend(order(1 "Sample" 2 "STDT (expanded)" )) 
+	 legend(order(1 "Sample" 2 "TSTD (expanded)" )) 
 
 */
 /*
@@ -286,10 +286,10 @@ label var OUTFITTER_regional_experience_d "Not the first voyage of the outfitter
 gen OUTFITTER_total_career_d=0 if !missing(OUTFITTER_total_career)
 replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFITTER_total_career)
 
-save  "${output}STDT_enriched.dta", replace
+save  "${output}TSTD_enriched.dta", replace
 
 */
-************Compare Full STDT, Support STDT, sample for some variables
+************Compare Full TSTD, Support TSTD, sample for some variables
 expand 2 if support==1, gen(dupindicator_support)
 expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)
 
@@ -298,7 +298,7 @@ replace group = 0 if dupindicator_support==0
 replace group = 1 if dupindicator_support==1 & dupindicator_sample==0
 replace group = 2 if dupindicator_sample==1
 
-label define group 0 "STDT" 1 "STDT-suport" 2 "sample"
+label define group 0 "TSTD" 1 "TSTD-suport" 2 "sample"
 label value group group
 
 
@@ -349,8 +349,8 @@ collect layout (var[war neutral big_port] # result[mean median sd count] ///
 
 collect layout (var[crowd MORTALITY DisSlavePerTon] # result[mean median sd count]) (group [1 2])
 
-collect export "${output}Compare STDT__support__sample.docx", as(docx) replace
-collect export "${output}Compare STDT__support__sample.txt", as(txt) replace
+collect export "${output}Compare TSTD__support__sample.docx", as(docx) replace
+collect export "${output}Compare TSTD__support__sample.txt", as(txt) replace
 
 /*
 ****K_Smirnov tests
@@ -373,7 +373,7 @@ foreach var of varlist $varlist_o {
 collect label levels cmdset `labels', modify
 collect style cell result, nformat(%4.2fc)
 collect layout (cmdset) (result)
-collect title "KS test between STDT (same support) and sample"
+collect title "KS test between TSTD (same support) and sample"
 collect preview
 
 collect clear
@@ -393,34 +393,34 @@ foreach var of varlist $varlist_o /*$varlist_d*/ {
 }
  macro list
 
-collect remap result[N_1 mu_1 sd_1] = STDT_same_support
+collect remap result[N_1 mu_1 sd_1] = TSTD_same_support
 collect remap result[N_2 mu_2 sd_2] = Sample
 collect remap result[p] = Difference
-collect style header STDT_same_support Sample Difference, title(name)
+collect style header TSTD_same_support Sample Difference, title(name)
 collect style column, dups(center) width(asis)
-collect label levels STDT_same_support N_1 N mu_1 Mean sd_1 "St. dev"
+collect label levels TSTD_same_support N_1 N mu_1 Mean sd_1 "St. dev"
 collect label levels Sample N_2 N mu_2 Mean sd_2 "St. dev"
 collect label levels Difference p p-value
-collect style cell STDT_same_support[mu_1 sd_1] Sample[mu_2 sd_2] Difference[p], nformat(%4.2fc)
-collect style cell STDT_same_support[N_1], nformat(%5.0fc)
+collect style cell TSTD_same_support[mu_1 sd_1] Sample[mu_2 sd_2] Difference[p], nformat(%4.2fc)
+collect style cell TSTD_same_support[N_1], nformat(%5.0fc)
 collect style header cmdset, title(hide)
-collect title "Ttest test between STDT (same support) and sample"
+collect title "Ttest test between TSTD (same support) and sample"
 collect label levels cmdset `labels', modify
-collect layout (cmdset) (STDT_same_support Sample Difference )
+collect layout (cmdset) (TSTD_same_support Sample Difference )
 
 
-collect export "${output}Compare STDT__support__sample_withTTest.docx", as(docx) replace
-collect export "${output}Compare STDT__support__sample_withTTest.txt", as(txt) replace
+collect export "${output}Compare TSTD__support__sample_withTTest.docx", as(docx) replace
+collect export "${output}Compare TSTD__support__sample_withTTest.txt", as(txt) replace
 
 
 
 /*
 
-gen sampleSTDT=0
-replace sampleSTDT=1 if YEARAF >= 1750 & YEARAF <=1790 & (NATINIMP==7 | NATINIMP==8 | NATINIMP == 10)
+gen sampleTSTD=0
+replace sampleTSTD=1 if YEARAF >= 1750 & YEARAF <=1790 & (NATINIMP==7 | NATINIMP==8 | NATINIMP == 10)
 
 preserve
-keep if sampleSTDT==1
+keep if sampleTSTD==1
 
 expand 2 if  sample==1,gen(dupindicator)
 
@@ -443,7 +443,7 @@ And GREC for continuous auxiliary variable. (Does not exist...	)
 
 **** Post-stratification
 **Issue : we have no French observation before 1763
-use "${output}STDT_enriched.dta", clear
+use "${output}TSTD_enriched.dta", clear
 
 
 keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10
@@ -466,7 +466,7 @@ gen strata = FATE_3c*100+NATINIMP
 collapse (count) pop_size=NATINIMP, by(strata)
 save "${output}pop_totals.dta", replace
 
-use "${output}STDT_enriched.dta", clear
+use "${output}TSTD_enriched.dta", clear
 
 gen FATE_3c = FATE4
 replace FATE_3c= 2 if FATE4 ==3
@@ -487,7 +487,7 @@ keep VOYAGEID post_wt
 save "${output}voy_weight.dta", replace
 
 *****ipfraking
-use "${output}STDT_enriched.dta", clear
+use "${output}TSTD_enriched.dta", clear
 merge 1:1 VOYAGEID using  "${output}voy_weight.dta"
 drop _merge
 keep if NATINIMP==7 | NATINIMP==8 | NATINIMP == 10

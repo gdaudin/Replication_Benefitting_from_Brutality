@@ -39,7 +39,7 @@ else {
 keep ventureid profit
 merge 1:m ventureid using "${output}voyages.dta"
 keep VOYAGEID profit
-merge 1:1 VOYAGEID using "${output}STDT_enriched.dta"
+merge 1:1 VOYAGEID using "${output}TSTD_enriched.dta"
 
 svyset ventureid
 

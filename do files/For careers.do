@@ -24,7 +24,7 @@ clear
 ///////////////////////////////////////////////////////////////////////////////
 ////Captains and OUTFITTERs’ career.
 /////1. Start with tstd.
-//// 2. correct names in STDT
+//// 2. correct names in TSTD
 //// 3. Merge with our the information in our extra voyage
 /////4. PREPARE OUTFITTERS’ AND CAPTAINS’ TRACK RECORD
 
