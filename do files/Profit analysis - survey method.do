@@ -36,6 +36,7 @@ else {
 	use "${output}Ventures&profit_`HYP'.dta", clear
 }
 
+
 keep ventureid profit
 merge 1:m ventureid using "${output}voyages.dta"
 keep VOYAGEID profit
@@ -43,11 +44,13 @@ merge 1:1 VOYAGEID using "${output}TSTD_enriched.dta"
 
 svyset ventureid
 
-if "`HYP'"== "French" keep if NATINIMP==10 
-if "`HYP'"== "French" keep if YEARAF>=1763
-if "`HYP'"== "French" drop if YEARAF>=1778 & YEARAF <=1783 
+
+
+if "`HYP'"== "French" keep if NATINIMP==10
 if "`HYP'"== "British" keep if NATINIMP==7
 if "`HYP'"== "Dutch" keep if NATINIMP==8 
+
+
 
 collect get, tags(raking[whole] hyp[`HYP']) : svy:mean profit
 
@@ -64,6 +67,10 @@ collect get, tags(raking[support] hyp[`HYP']) : svy : mean profit
 *********
 *****Just nationality and period
 **********
+**There are not enough French observations to rake by all three periods, so we just do two periods for them
+if "`HYP'"== "French" keep if YEARAF>=1763
+if "`HYP'"== "French" drop if YEARAF>=1778 & YEARAF <=1783 
+
 
 ***Extracting matrixes to use with rake
 tabulate period, matcell(period_mat)

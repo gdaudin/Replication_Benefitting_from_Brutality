@@ -66,7 +66,7 @@ collect style header sample, title(hide)
 collect style cell result[percent], nformat (%3.0fc)
 collect layout (NATINIMP_tab3[7 8 10 3 15 6 9 30 .m]) (sample[1 0]#result) 
 **For table 3 "Representativity of our sample (flag)"":
-tabi 239 11796 \  101 1606 \ 84 4141 \ 17 1911 \5 408 \ 0 11363 \ 0 2275 \ 0 16, chi2  
+tabi 238 11796 \  101 1606 \ 85 4141 \ 17 1911 \5 408 \ 0 11363 \ 0 2275 \ 0 16, chi2  
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
 
@@ -136,7 +136,25 @@ by VOYAGEID: drop if _N != _n
 bysort VOYAGEID: assert _N==1
 drop _merge
 
-save  "${output}TSTD_enriched.dta", replace
+**** Nationality
+
+codebook NATINIMP
+label list labels18
+
+/*NATINIMP coding in stdt
+7     Great Britain
+8     Netherlands
+10    France
+*/
+
+
+replace NATINIMP=1 if nationality =="Spanish" & NATINIMP==.
+replace NATINIMP=7 if nationality =="English" & NATINIMP==.
+replace NATINIMP=8 if nationality =="Dutch" & NATINIMP==.
+replace NATINIMP=10 if nationality =="French" & NATINIMP==.
+replace NATINIMP=15 if nationality =="Danish" & NATINIMP==.
+
+***Treatment of fate
 
 replace FATE4=4 if FATE4==.
 table (FATE4) if sample==1
@@ -289,6 +307,7 @@ replace OUTFITTER_total_career_d=1 if OUTFITTER_total_career>1 & !missing(OUTFIT
 save  "${output}TSTD_enriched.dta", replace
 
 */
+use "${output}TSTD_enriched.dta", clear
 ************Compare Full TSTD, Support TSTD, sample for some variables
 expand 2 if support==1, gen(dupindicator_support)
 expand 2 if sample==1 & dupindicator==1,gen(dupindicator_sample)

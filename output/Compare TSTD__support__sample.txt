@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------
+                                                     |          group       
+                                                     |  TSTD-suport   sample
+-----------------------------------------------------+----------------------
+Number of embarked enslaved persons per ton          |                      
+  Mean                                               |         1.52     1.36
+  Median                                             |         1.43     1.28
+  Standard deviation                                 |         0.77     0.58
+  Number of nonmissing values                        |        6,406      328
+Enslaved person mortality rate during Middle Passage |                      
+  Mean                                               |         0.13     0.12
+  Median                                             |         0.12     0.11
+  Standard deviation                                 |         0.09     0.09
+  Number of nonmissing values                        |        7,874      367
+Number of disembarked enslaved persons per ton       |                      
+  Mean                                               |         1.32     1.18
+  Median                                             |         1.25     1.08
+  Standard deviation                                 |         0.66     0.50
+  Number of nonmissing values                        |        6,307      327
+----------------------------------------------------------------------------
