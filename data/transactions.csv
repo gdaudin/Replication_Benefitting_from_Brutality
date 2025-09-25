@@ -1,4 +1,4 @@
-transaction_id,ventureid,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,dateoftransaction,timing,currency,remarks,specificationcategory
+ventureid,ventureid,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,dateoftransaction,timing,currency,remarks,specificationcategory
 DR001_T001,DR001,Expenditure,Insurance,30.15,,0,1750-09-26,Outfitting,Pound sterling,,Insurance
 DR001_T002,DR001,Expenditure,Other expenditures,513.11,,0,1750-09-26,Outfitting,Pound sterling,Calculated as the remainder. after deducting expenditures specified in the source. from total expenditures specified in the source.,Various
 DR001_T003,DR001,Expenditure,Ship out,100,,0,1750-09-26,Outfitting,Pound sterling,,Ship
@@ -3946,7 +3946,6 @@ KR067_T001,KR067,Expenditure,Direct cost,31000,,0,,Return,Peso fuerte,,
 KR068_T001,KR068,Expenditure,Direct cost,21000,,0,,Return,Peso fuerte,,
 KR069_T001,KR069,Expenditure,Direct cost,26000,,0,,Return,Peso fuerte,,
 KR070_T001,KR070,Expenditure,Direct cost,30500,,0,,Return,Peso fuerte,,
-MR001_T001,MR001,Expenditure,Commission fees,,,,,,Portuguese real,Contract states that the supercargos are owed a fee equalling 12% from the proceeding of the total of the slaves' sale in Cartagena,
 NR001_T001,NR001,Expenditure,Insurance,188,,0,,Outfitting,Pound sterling,,Insurance
 NR001_T002,NR001,Expenditure,Other,6,,0,,Outfitting,Pound sterling,,Various
 NR001_T003,NR001,Expenditure,Outfitting,575,,0,,Outfitting,Pound sterling,,Outfitting
@@ -4407,3 +4406,11 @@ NR095_T001,NR095,Expenditure,Outfitting including ship purchase,1645,,0,,Outfitt
 NR095_T002,NR095,Return,Inset,2980,,0,,Return,Pound sterling,,Unknown
 NR096_T001,NR096,Expenditure,Outfitting,845,,0,,Outfitting,Pound sterling,,Outfitting
 NR096_T002,NR096,Return,Inset,1719,,0,,Return,Pound sterling,,Unknown
+MR029_T001,MR029,Expenditure,Outfitting,800000,,0,,Outfitting,Portuguese real,,Outfitting
+MR030_T001,MR030,Expenditure,Sea loan,300000,,0,,Outfitting,Portuguese real,,Insurance
+MR030_T002,MR030,Expenditure,Sea loan,270000,,0,,Return,Portuguese real,,Insurance
+MR031_T001,MR031,Expenditure,Bills of exchange,230000,,0,,Outfitting,Portuguese real,Bill of exchange for outfitting slave-ship,Outfitting
+MR032_T001,MR032,Expenditure,Duties,1800650,,0,,Outfitting,Portuguese real,,Duties
+MR033_T001,MR033,Expenditure,Duties,8400,,0,,Return,Spanish real,,Duties
+MR034_T001,MR034,Return,Sale of enslaved people,248000,,0,,Return,Portuguese real,,Sales of enslaved people 
+MR035_T001,MR035,Expenditure,Bills of exchange,156000,,0,,Return,Portuguese real,"To pay for an earlier credit. Unclear who owes the bill of exchange, five people are involved in venture",Credit
