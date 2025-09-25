@@ -32,3 +32,5 @@
 *.csv#
 ~To generate transaction_id.do.stswp
 TSTD_enriched.dta
+/data/~$data_quality_flags.xlsx
+/output/~$ofits_bynatio_baseline.docx
