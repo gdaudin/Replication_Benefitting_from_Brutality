@@ -2611,9 +2611,9 @@ GK022_T013,GK022,Return,Returned trade cargo,369,,,,Return,Dutch Guilder,,Trade 
 GK022_T014,GK022,Expenditure,Wages crew (including bonuses),10099,,,,Return,Dutch Guilder,,Wages
 GK022_T015,GK022,Expenditure,Other expenses,2441,,,,Return,Dutch Guilder,,Various
 GK023_T001,GK023,Expenditure,Value of ship before departure,10000,,,,Outfitting,Dutch Guilder,,Ship
-GK023_T002,GK023,Expenditure,Outfitting costs,10754,,,,Outfitting,Dutch Guilder,,Outfitting
+GK023_T002,GK023,Expenditure,Outfitting costs,9929,,,,Outfitting,Dutch Guilder,,Outfitting
 GK023_T003,GK023,Expenditure,Advance crew payment,635,,,,Outfitting,Dutch Guilder,,Wages
-GK023_T004,GK023,Expenditure,Insurance hull,0,,,,Outfitting,Dutch Guilder,,Insurance
+GK023_T004,GK023,Expenditure,Insurance hull,825,,,,Outfitting,Dutch Guilder,,Insurance
 GK023_T005,GK023,Expenditure,Insurance cargo,1470,,,,Outfitting,Dutch Guilder,,Insurance
 GK023_T006,GK023,Expenditure,Trade cargo costs,27465,,,,Outfitting,Dutch Guilder,,Trade cargo
 GK023_T007,GK023,Expenditure,Other expenses,4514,,,,Outfitting,Dutch Guilder,,Various
