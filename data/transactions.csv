@@ -1,4 +1,4 @@
-ventureid,ventureid,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,dateoftransaction,timing,currency,remarks,specificationcategory
+transaction_id,ventureid,typeofcashflow,specification,value,meansofpaymentreturn,intermediarytradingoperation,dateoftransaction,timing,currency,remarks,specificationcategory
 DR001_T001,DR001,Expenditure,Insurance,30.15,,0,1750-09-26,Outfitting,Pound sterling,,Insurance
 DR001_T002,DR001,Expenditure,Other expenditures,513.11,,0,1750-09-26,Outfitting,Pound sterling,Calculated as the remainder. after deducting expenditures specified in the source. from total expenditures specified in the source.,Various
 DR001_T003,DR001,Expenditure,Ship out,100,,0,1750-09-26,Outfitting,Pound sterling,,Ship
