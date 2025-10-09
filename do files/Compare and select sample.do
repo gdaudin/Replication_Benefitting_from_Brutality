@@ -66,7 +66,7 @@ collect style header sample, title(hide)
 collect style cell result[percent], nformat (%3.0fc)
 collect layout (NATINIMP_tab3[7 8 10 3 15 6 9 30 .m]) (sample[1 0]#result) 
 **For table 3 "Representativity of our sample (flag)"":
-tabi 238 11796 \  101 1606 \ 85 4141 \ 17 1911 \5 408 \ 0 11363 \ 0 2275 \ 0 16, chi2  
+tabi 238 11797 \  101 1606 \ 85 4141 \ 17 1911 \5 408 \ 0 11363 \ 0 2275 \ 0 16, chi2  
 collect export "${output}Compare_Sample_Nationality.txt", as(txt) replace
 collect export "${output}Compare_Sample_Nationality.docx", as(docx) replace
 
@@ -87,6 +87,7 @@ replace sample=0 if YEARAF >1795 | YEARAF < 1750 | nationality =="Danish" | nati
 
 gen support=0
 replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
+blif
 
 **Using war and peace for periods
 gen period=1 if YEARAF<=1755
@@ -171,7 +172,7 @@ collect style header FATE4 collection, title(hide)
 collect style header result, level(hide)
 collect style cell result[frequency], nformat (%5.0fc)
 collect layout (FATE4)(collection#result)
-tabi 337 6836 \  22 735 \ 12 549 \ 3 187, chi2  
+tabi 337 6836 \  21 735 \ 12 549 \ 3 187, chi2  
 collect export "${output}Compare_Sample_Fate.docx", as(docx) replace
 collect export "${output}Compare_Sample_Fate.txt", as(txt) replace
 
