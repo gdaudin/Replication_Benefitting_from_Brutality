@@ -97,13 +97,33 @@ graph export "$graphs/hist_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT
 
 label var YEARAF "Year departed Africa"
 
-twoway (scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th)), ///
-		legend(label(1 "French") label(2 "English") label(3 "Dutch") ///
-		label(4 "Danish") label(5 "Spanish")) scheme(s1color) note("Marker size proportional to number of voyages")
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh) mcolor(green)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh) mcolor(orange)) ///		
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X) mcolor(purple)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus) mcolor(blue)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th) mcolor(sand)), ///
+		legend(label(1 "Danish") label(2 "Dutch") label(3 "English")  ///
+		label(4 "French") label(5 "Spanish") rows(1)) scheme(s1color) ///
+		xscale(range(1725 1835)) xlabel(1725 (25)1825) ytitle("") name(scatter_year_profit_all, replace)
+
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X) mcolor(purple)), ///
+		title("English ventures") xscale(range(1725 1835)) xlabel(1725 (25)1825) xtitle("") yscale(range(-1 3)) ylabel(-1 (1) 3) ytitle("") ///
+		scheme(s1color) name(scatter_year_profit_EN, replace)
+
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh) mcolor(orange)), ///
+		title("Dutch ventures") xscale(range(1725 1835)) xlabel(1725 (25)1825) xtitle("") yscale(range(-1 3)) ylabel(-1 (1) 3)  ///
+		scheme(s1color)  name(scatter_year_profit_ND, replace)
+
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh) mcolor (green)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus) mcolor(blue)) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th) mcolor(sand)), ///
+		 xscale(range(1725 1835)) xlabel(1725 (25)1825) yscale(range(-1 3)) ylabel(-1 (1) 3)  ///
+		legend(label(1 "Danish") label(2 "French") label(3 "Spanish") rows(1)) ///
+		scheme(s1color) name(scatter_year_profit_3c, replace)
+
+graph combine  scatter_year_profit_ND scatter_year_profit_EN  scatter_year_profit_3c scatter_year_profit_all, ///
+		note("Marker size proportional to number of voyages") ycommon xcommon
+
 graph export "$graphs/scatter_year_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
 
 end
