@@ -48,6 +48,15 @@ graph export  "$graphs/Syncro_hist.png", replace
 
 restore
 
+collapse (sd) sd_profit=profit (mean) mean_profit=profit (count) nbr_profit=profit, by(YEARAF)
+
+graph twoway (bar  nbr_profit YEARAF if nbr_profit>=2, yaxis(1)) (scatter mean_profit  YEARAF if nbr_profit>=2, msymbol(square) yaxis(2)) ///
+	(scatter  sd_profit YEARAF if nbr_profit>=2, yaxis(2)) , ///
+	scheme(s1color) ///
+	legend(label(1 "Number of profit observations (left axis)") label(2 "Mean profit (right axis)") label (3 "Standard deviation of profit (right axis)")) ///
+	xtitle("") ytitle("") xscale(range(1725 1830)) xlabel(1750(25)1825)
+
+graph export "$graphs/profit_dispersio_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
 
 reg profit i.YEARAF 
 testparm i.YEARAF
