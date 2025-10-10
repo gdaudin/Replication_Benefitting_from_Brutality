@@ -87,7 +87,8 @@ replace sample=0 if YEARAF >1795 | YEARAF < 1750 | nationality =="Danish" | nati
 
 gen support=0
 replace support=1 if three_nat==1 & YEARAF >= 1750 & YEARAF <=1795
-blif
+codebook ventureid if sample==1
+codebook VOYAGEID if sample==1
 
 **Using war and peace for periods
 gen period=1 if YEARAF<=1755
