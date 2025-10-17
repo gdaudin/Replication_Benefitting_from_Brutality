@@ -86,8 +86,8 @@ if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
 macro list
 
 local support_size=_N
-display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15)"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))
 
 collect get, tags(raking[nat_period] hyp[`HYP']) : svy : mean profit
 
@@ -124,8 +124,8 @@ matrix for_rake = for_rake, FATE_forraking'
 local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 
-display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))
 display "bn.period bn.NATINIMP bn.FATE_forraking"
 if "`HYP'" !="OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0" svy : mean profit
 
@@ -154,8 +154,8 @@ global totalMORTALITY_support=sumMORTALITY[1]
 matrix for_rake = for_rake, $totalMORTALITY_support
 local regressor_list= "`regressor_list' MORTALITY"
 
-display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))
 display "bn.period bn.NATINIMP MORTALITY"
 svy : mean profit
 restore
@@ -187,8 +187,8 @@ matrix for_rake = for_rake, FATE_forraking'
 local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 
-display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))
 display "bn.period bn.NATINIMP bn.FATE_forraking MORTALITY"
 if "`HYP'" !="OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0" svy : mean profit
 restore
@@ -219,9 +219,9 @@ local regressor_list= "`regressor_list' crowd"
 matrix for_rake = for_rake, $totalcrowd_support 
 
 
-display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
+display "`method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))"
 matrix list for_rake
-svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))
 display "bn.period bn.NATINIMP  crowd"
 if "`HYP'"!="French" svy : mean profit
 restore
@@ -250,8 +250,8 @@ matrix for_rake = for_rake, FATE_forraking'
 local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 
-display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy) ll(0) ul(15))
 display "bn.period bn.NATINIMP bn.FATE_forraking MORTALITY crowd"
 if "`HYP'"!="French" collect get, tags(raking[all] hyp[`HYP']) :  svy : mean profit
 restore
