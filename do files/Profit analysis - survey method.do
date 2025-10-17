@@ -25,8 +25,8 @@ if lower(c(username)) == "guillaumedaudin" {
 
 capture program drop profit_analysis_survey
 program define profit_analysis_survey
-args HYP
-*eg profit_analysis OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 for the baseline
+args HYP method
+*eg profit_analysis OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 rake for the baseline
 
 
 if "`HYP'"=="French" | "`HYP'"== "British" | "`HYP'"== "Dutch" {
@@ -86,8 +86,8 @@ if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
 macro list
 
 local support_size=_N
-display "rake(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
 
 collect get, tags(raking[nat_period] hyp[`HYP']) : svy : mean profit
 
@@ -124,8 +124,8 @@ matrix for_rake = for_rake, FATE_forraking'
 local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 
-display "rake(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
 display "bn.period bn.NATINIMP bn.FATE_forraking"
 if "`HYP'" !="OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0" svy : mean profit
 
@@ -154,8 +154,8 @@ global totalMORTALITY_support=sumMORTALITY[1]
 matrix for_rake = for_rake, $totalMORTALITY_support
 local regressor_list= "`regressor_list' MORTALITY"
 
-display "rake(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
 display "bn.period bn.NATINIMP MORTALITY"
 svy : mean profit
 restore
@@ -187,8 +187,8 @@ matrix for_rake = for_rake, FATE_forraking'
 local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 
-display "rake(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
 display "bn.period bn.NATINIMP bn.FATE_forraking MORTALITY"
 if "`HYP'" !="OR._VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0" svy : mean profit
 restore
@@ -219,9 +219,9 @@ local regressor_list= "`regressor_list' crowd"
 matrix for_rake = for_rake, $totalcrowd_support 
 
 
-display "rake(`regressor_list', totals(for_rake `support_size', copy))"
+display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
 matrix list for_rake
-svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
 display "bn.period bn.NATINIMP  crowd"
 if "`HYP'"!="French" svy : mean profit
 restore
@@ -250,8 +250,8 @@ matrix for_rake = for_rake, FATE_forraking'
 local regressor_list= "`regressor_list' bn.FATE_forraking"
 
 
-display "rake(`regressor_list', totals(for_rake `support_size', copy))"
-svyset ventureid, rake(`regressor_list', totals(for_rake `support_size', copy))
+display "`method'(`regressor_list', totals(for_rake `support_size', copy))"
+svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy))
 display "bn.period bn.NATINIMP bn.FATE_forraking MORTALITY crowd"
 if "`HYP'"!="French" collect get, tags(raking[all] hyp[`HYP']) :  svy : mean profit
 restore
@@ -303,11 +303,14 @@ tokenize `"$hyp_list_name"'
 macro list
 display "`1'"
 
+***To test rake / regress (ie different measure methods for calibration, change line 313
+
+
 collect clear
 local label_list
 local i 1
 foreach hyp of global hyp_list {
-	profit_analysis_survey `hyp'
+	profit_analysis_survey `hyp' regress
 	local label_list `label_list' `hyp' "``i''"
 	local i = `i'+1
 }
