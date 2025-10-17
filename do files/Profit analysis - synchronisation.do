@@ -43,7 +43,7 @@ bysort YEARAF : gen N=_N
 bysort YEARAF nationality_num: gen N_nat=_N
 
 
-
+/*
 preserve
 bysort YEARAF : keep if _n==1
 label var N "Number of single-voyage ventures (all nationalities)"
@@ -65,27 +65,41 @@ graph twoway (bar  nbr_profit YEARAF if nbr_profit>=2, yaxis(1)) (scatter mean_p
 graph export "$graphs/profit_dispersio_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
 
 restore
-
-
-reg profit i.YEARAF 
-*testparm i.YEARAF
-
-reg profit i.YEARAF ib3.nationality_num
-*testparm i.YEARAF
+******Method with dummies
 
 foreach ynbr in 2 3 4 5 6 7 8 9 {
 
-reg profit i.YEARAF ib3.nationality_num if N>=`ynbr'
-testparm i.YEARAF
 collect get, tags(ynbr[`ynbr'] reg[add]): reg profit i.YEARAF ib3.nationality_num if N>=`ynbr'
 collect get, tags(ynbr[`ynbr'] reg[add]): testparm i.YEARAF
 
-reg profit i.YEARAF#nationality_num if N_nat>=`ynbr'
-testparm i.YEARAF#nationality_num
+
 collect get, tags(ynbr[`ynbr'] reg[mul]): reg profit i.YEARAF#nationality_num if N_nat>=`ynbr'
 collect get, tags(ynbr[`ynbr'] reg[mul]): testparm i.YEARAF#nationality_num
 }
 
+collect label levels reg add "Nationality shifter" mul "Nation-specific market return", replace
+collect label levels ynbr 2 "At least 2 observations per year" 3 "At least 3 observations per year" 4 "At least 4 observations per year" 5 "At least 5 observations per year" 6 "At least 6 observations per year" 7 "At least 7 observations per year" 8 "At least 8 observations per year" 9 "At least 9 observations per year", replace
+collect label levels result p "F-test for joint significance of years (p-stat)" N "Number of observations", replace
+collect style cell result[r2 p], nformat(%3.2fc)
+collect layout (ynbr#result[N r2 p]) (reg)
+
+collect export "${output}Profit analysis survey synchronisation.docx", as(docx) replace
+collect export "${output}Profit analysis survey synchronisation.txt", as(txt) replace
+
+*/
+
+*****Other method, through the mean
+collect clear
+egen y_profit=mean(profit), by(YEARAF)
+egen yN_profit=mean(profit), by(YEARAF nationality_num)
+
+foreach ynbr in 2 3 4 5 6 7 8 9 {
+
+collect get, tags(ynbr[`ynbr'] reg[y_mean]): reg profit y_profit ib3.nationality_num if N>=`ynbr'
+collect get, tags(ynbr[`ynbr'] reg[yN_mean]): reg profit yN_profit if N_nat>=`ynbr'
+}
+
+blif
 collect label levels reg add "Nationality shifter" mul "Nation-specific market return", replace
 collect label levels ynbr 2 "At least 2 observations per year" 3 "At least 3 observations per year" 4 "At least 4 observations per year" 5 "At least 5 observations per year" 6 "At least 6 observations per year" 7 "At least 7 observations per year" 8 "At least 8 observations per year" 9 "At least 9 observations per year", replace
 collect label levels result p "F-test for joint significance of years (p-stat)" N "Number of observations", replace
