@@ -65,6 +65,29 @@ label list labels19
 collect get, tags(raking[support] hyp[`HYP']) : svy : mean profit
 
 *********
+*****Just nationality 
+**********
+
+if "`HYP'"!="French" & "`HYP'"!= "British" & "`HYP'"!= "Dutch" {
+	
+	***Extracting matrixes to use with rake
+	tabulate NATINIMP_tab3, matcell(NATINIMP_mat)
+	matrix for_rake = NATINIMP_mat'
+	local regressor_list= "bn.NATINIMP_tab3"
+
+	macro list
+
+	local support_size=_N
+	display "`method'(`regressor_list', totals(for_rake `support_size', copy)  /*ll(0) ul(15)*/"
+	svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy)  /*ll(0) ul(15)*/)
+
+	collect get, tags(raking[nat] hyp[`HYP']) : svy : mean profit
+ }
+
+
+
+
+*********
 *****Just nationality and period
 **********
 **There are not enough French observations to rake by all three periods, so we just do two periods for them
@@ -90,6 +113,7 @@ display "`method'(`regressor_list', totals(for_rake `support_size', copy)  /*ll(
 svyset ventureid, `method'(`regressor_list', totals(for_rake `support_size', copy)  /*ll(0) ul(15)*/)
 
 collect get, tags(raking[nat_period] hyp[`HYP']) : svy : mean profit
+
 
 
 ***********
@@ -321,7 +345,7 @@ foreach hyp of global hyp_list {
 macro list
 
 collect label levels hyp `label_list', replace
-collect label levels raking whole "Whole sample" support "1750-1795, 3 flags" nat_period "Raking: nationality and period" all "Raking: all variables", replace
+collect label levels raking whole "Whole sample" support "1750-1795, 3 flags" nat "Raking: nationality" nat_period "Raking: nationality and period" all "Raking: all variables", replace
 collect label levels result _r_b mean _r_ci "95% ci" N "Nbr. of observations", replace
 collect style cell result[_r_ci], sformat([%s]) cidelimiter(, )
 collect style cell result[_r_b _r_ci], nformat(%4.3fc)
