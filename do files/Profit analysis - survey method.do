@@ -260,7 +260,7 @@ end
 
 
 ////////// 
-*****For appendix
+*****For tables
 ////////////////
 
 
@@ -283,8 +283,10 @@ global hyp_list 	OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
 */
 
 
-
-
+capture program drop profit_analysis_survey_table
+program define profit_analysis_survey_table
+args method
+ 
 global hyp_list_name `""Baseline" "Only British" "Only Dutch" "Only French" "Without Observations with outstanding claims"'
 global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to not have been paid at all"'
 global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to have been paid in full"'
@@ -311,7 +313,7 @@ collect clear
 local label_list
 local i 1
 foreach hyp of global hyp_list {
-	profit_analysis_survey `hyp' rake
+	profit_analysis_survey `hyp' `method'
 	local label_list `label_list' `hyp' "``i''"
 	local i = `i'+1
 }
@@ -327,8 +329,11 @@ collect style cell hyp[whole support nat_period all]#result[_r_b _r_ci N], halig
 *collect style header result, halign(left)
 collect layout (hyp#result[_r_b _r_ci N]) (raking)
 
-collect export "${output}Profit analysis survey robustess.docx", as(docx) replace
-collect export "${output}Profit analysis survey robustess.txt", as(txt) replace
+collect export "${output}Profit analysis survey robustess `method'.docx", as(docx) replace
+collect export "${output}Profit analysis survey robustess `method'.txt", as(txt) replace
 
+end
 
-break
+profit_analysis_survey_table rake
+profit_analysis_survey_table regress
+

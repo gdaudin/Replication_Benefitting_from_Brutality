@@ -123,6 +123,7 @@ capture replace shareoftheship=subinstr(shareoftheship, ",", ".",.)
 capture destring shareoftheship, force replace
 capture destring numberofvoyages, force replace
 rename fate FATEcol 
+destring FATEcol, force replace
 
 
 * STANDARDIZE THE SPELLING IN SOME VARIABLES
