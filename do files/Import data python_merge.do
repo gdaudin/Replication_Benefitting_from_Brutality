@@ -97,7 +97,7 @@ export delimited "${output}Cash flow all.csv", replace
 
 clear
 
-import delimited "$dir/data/ventures.csv" , encoding(utf8) clear
+import delimited "$dir/data/ventures.csv" , encoding(utf8) clear  stringcols(_all)
 **In the do file, spaces were initially removed. With the merged data, they werereplaced by 
 rename *_* **
 rename *_* **
@@ -154,6 +154,7 @@ replace nameofoutfitter = "Arnou"  if strmatch(nameofoutfitter,"*N. Arnou*")==1
 replace nameofoutfitter = "Portier de Lantimo" if strmatch(nameofoutfitter,"*Portier de Lantimo*")==1
 replace nameofoutfitter = "Rossel" if strmatch(nameofoutfitter,"*Rossel*")==1
 replace nameofoutfitter = "Goad, John" if strmatch(nameofoutfitter,"*Goad, Joan*")==1
+
 
 
 save "${output}Venture all.dta", replace
