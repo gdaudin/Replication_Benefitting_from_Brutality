@@ -107,8 +107,7 @@ rename *_* **
 rename *_* **
 rename dateofdeparturefromportofo dateofdeparturefromportofoutfitt
 rename dateofreturntoportofoutfit dateofreturntoportofoutfitting
-drop if regexm(ventureid, "MR")
-drop if ventureid == ""
+
 
 label var nationality "Nationality"
 
@@ -124,6 +123,21 @@ capture destring shareoftheship, force replace
 capture destring numberofvoyages, force replace
 rename fate FATEcol 
 destring FATEcol, force replace
+
+
+*****To get the number of voyages and ventures before dropping Miguel’s observations
+quietly summarize numberofvoyages
+display r(sum)
+codebook ventureid
+
+
+*******Dropping Miguel’s observations
+drop if regexm(ventureid, "MR")
+drop if ventureid == ""
+quietly summarize numberofvoyages
+display r(sum)
+codebook ventureid
+
 
 
 * STANDARDIZE THE SPELLING IN SOME VARIABLES
