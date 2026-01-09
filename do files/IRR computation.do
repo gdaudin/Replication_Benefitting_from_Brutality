@@ -10,7 +10,9 @@ else if lower(c(username)) == "xronkl" {
 	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
 	cd "$dir"
 	global output "$dir\output\"
+	*"
 	global graphs "$dir\graphs\"
+	*"
 }
 clear
 **Notice that the sources of GD126, GD127 and GD128 compute the irr (but does not give the data to do it ourselves)
@@ -270,10 +272,19 @@ bysort sample: summarize irr profit
 display "mean:" _b[_cons]+_b[profit]*0.144+_b[sq_profit]*(0.144)^2
 display "median:" _b[_cons]+_b[profit]*0.116+_b[sq_profit]*(0.116)^2
 
-display "representative mean:" _b[_cons]+_b[profit]*0.144+_b[sq_profit]*(0.144)^2
-display "representative English mean:" _b[_cons]+_b[profit]*0.112+_b[sq_profit]*(0.112)^2
+display "representative mean:" _b[_cons]+_b[profit]*0.133+_b[sq_profit]*(0.133)^2
+display "representative English mean:" _b[_cons]+_b[profit]*0.11+_b[sq_profit]*(0.11)^2
 display "representative Dutch mean:" _b[_cons]+_b[profit]*0.089+_b[sq_profit]*(0.089)^2
-display "representative French mean:" _b[_cons]+_b[profit]*0.254+_b[sq_profit]*(0.254)^2
+display "representative French mean:" _b[_cons]+_b[profit]*0.253+_b[sq_profit]*(0.253)^2
+
+2026 01 09 
+mean:.04480152
+median:.03489695
+representative mean:.04095419
+representative English mean:.03272681
+representative Dutch mean:.02499865
+representative French mean:.07986442
+
 
 
 end
