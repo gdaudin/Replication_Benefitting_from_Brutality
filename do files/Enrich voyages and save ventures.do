@@ -178,6 +178,7 @@ collapse (first)  MAJMAJBYIMP data (mean) YEARDEP YEARAF SLAXIMP SLAMIMP length_
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
 
+label var MAJMAJBYIMP "African region of trade"
 label var neutral "Neutrality of own nation"
 label var war "War involving own nation"
 label var TONMOD "Tonnage standardized on British measured tons, 1773-1835"

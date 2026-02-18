@@ -108,7 +108,6 @@ if "`hyp'"=="Baseline"  | "`hyp'"=="Imputed"{
 	collect export "${output}DS_proxy_var_`hyp'.pdf", as(pdf) replace
 }
 
-blif
 collect clear
 
 table (period) (nationality_num)
