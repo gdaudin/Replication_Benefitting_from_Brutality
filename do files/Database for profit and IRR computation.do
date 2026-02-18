@@ -11,7 +11,7 @@ else if lower(c(username)) == "xronkl" {
 	global output "$dir\output\"
 }
 clear
-
+*"
 
 capture program drop profit_computation_db
 program define profit_computation_db
@@ -61,6 +61,8 @@ replace intermediarytradingoperation=0 if missing(intermediarytradingoperation)
 
 * MERGE CASH FLOW AND VENTURE-DATABASES INTO ONE
 merge m:1 ventureid using "${output}Enriched ventures.dta", nogen
+
+
 drop if value==.
 
 drop if nationality==""
@@ -70,21 +72,26 @@ drop if intermediarytradingoperation==1
 save "${output}Database for IRR computation_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", replace
 
 *Assign a transaction year when absent and assignement is possible
-replace transaction_year=yearofdeparturefromportofoutfit if transaction_year==. & (timing=="Outfitting" | timing=="After outfitting")
-replace transaction_year=YEARDEP if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
-replace transaction_year=YEARAF if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
-
+assert mod(transaction_year,1)==0 | transaction_year==.
+replace transaction_year=int(yearofdeparturefromportofoutfit) if transaction_year==. & (timing=="Outfitting" | timing=="After outfitting")
+assert mod(transaction_year,1)==0 | transaction_year==.
+replace transaction_year=int(YEARDEP) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
+replace transaction_year=int(YEARAF) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
+assert mod(transaction_year,1)==0 | transaction_year==.
 egen yearmax=max(transaction_year), by(ventureid timing)
-replace transaction_year=yearmax  if transaction_year==. &  (timing=="Return" | timing=="Transcations during voyage")
+assert mod(transaction_year,1)==0 | transaction_year==.
+replace transaction_year=yearmax  if transaction_year==. &  (timing=="Return" | timing=="Transactions during voyage")
 drop yearmax
-replace transaction_year=yearofreturntoportofoutfitting  if transaction_year==. & (timing=="Return" | timing=="Transcations during voyage")
+replace transaction_year=int(yearofreturntoportofoutfitting) if transaction_year==. & (timing=="Return" | timing=="Transactions during voyage")
+assert mod(transaction_year,1)==0 | transaction_year==.
 *replace transaction_year=year(DATEEND/100000000) if transaction_year==. &  timing=="Return"
-replace transaction_year=YEARAF+1 if transaction_year==. &  (timing=="Return" | timing=="Transcations during voyage")
-
+replace transaction_year=int(YEARAF)+1 if transaction_year==. &  (timing=="Return" | timing=="Transactions during voyage")
+assert mod(transaction_year,1)==0 | transaction_year==.
 
 * Change all cash flows in grams of silver for the whole ship
 replace value = value *2/3 if currency =="Livres coloniales" | currency == "Livres des colonies"
 replace currency = "Livres tournois" if currency =="Livres" | currency =="Livres coloniales" | currency == "Livres des colonies"
+
 merge m:1 transaction_year currency using  "${output}Exchange rates in silver.dta" 
 replace conv_in_silver = 4.5 if currency=="Francs"
 drop if _merge==2 
@@ -114,10 +121,10 @@ gen costonreturn=value if typeofcashflow=="Expenditure" & (timing=="Return" | ti
 replace costonreturn=0 if missing(costonreturn)
 
 **Silver
-gen expenditure_silver=value_silver if typeofcashflow=="Expenditure" & & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
+gen expenditure_silver=value_silver if typeofcashflow=="Expenditure" & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
 replace expenditure_silver=0 if missing(expenditure_silver)
 
-gen discount_silver=value_silver if typeofcashflow=="Return" & & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
+gen discount_silver=value_silver if typeofcashflow=="Return" & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
 replace discount_silver=0 if missing(discount_silver)
 
 gen return_silver=value_silver if typeofcashflow=="Return" & (timing=="Return" | timing=="Transactions during voyage") & intermediarytradingoperation==0
@@ -167,6 +174,8 @@ gen totalnetreturn=totalgrossreturn-totalcostonreturn
 
 gen totalnetexp_silver=totalgrossexp_silver-totaldisc_silver
 gen totalnetreturn_silver=totalgrossreturn_silver-totalcostonreturn_silver
+
+
 
 
 *Move from a database by cashflow to database by venture

@@ -11,7 +11,7 @@ else if lower(c(username)) == "xronkl" {
 	global output "$dir\output\"
 }
 clear
-
+*"
 
 ********************************
 *Work on the ventures where we can compute the profit
@@ -42,15 +42,16 @@ label var profit "(Net returns over net outlays) -1"
 **Compute the silver value of the total investment
 
 
-gen totalnetexp_silver_ship = totalnetexp_silver / shareoftheship / numberofvoyages
-label var totalnetexp_silver_ship "Total net expenditure in grams of silver for the whole ship"
+gen totalnetexp_silver_ship = totalnetexp_silver / shareoftheship / numberofvoyages / 1000
+label var totalnetexp_silver_ship "Total net expenditure in kg of silver for the whole ship"
+blif
 gen ln_totalnetexp_silver_ship = ln(totalnetexp_silver_ship)
 label var ln_totalnetexp_silver_ship "Net expenditure on venture (ln(silver grams))"
 
 gen totalnetexpperton=totalnetexp_silver_ship/TONMOD
 
 **Generate a couple of further variables for the analysis
-gen investment_per_slave = totalnetexp_silver_ship/SLAXIMP
+gen investment_per_slave = totalnetexp_silver_ship/SLAXIMP*1000
 label var investment_per_slave "Total net expenditure in g. of silver per enslaved person"
 gen investment_per_slavekg = investment_per_slave/1000
 label var investment_per_slavekg "Total net expenditure in kg of silver per enslaved person"
