@@ -36,7 +36,8 @@ gen ln_SLAXIMP = ln(SLAXIMP)
 label var ln_SLAXIMP "Enslaved persons emparked (ln)"
 
 gen MORTALITY=(SLAXIMP-SLAMIMP)/SLAXIMP
-replace MORTALITY=VYMRTRAT if missing(MORTALITY)
+replace MORTALITY=VYMRTRAT if missing(MORTALITY) | MORTALITY<=0
+replace MORTALITY=0 if MORTALITY<0
 label var MORTALITY "Enslaved person mortality rate"
 
 

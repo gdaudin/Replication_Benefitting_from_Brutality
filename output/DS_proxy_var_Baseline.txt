@@ -2,7 +2,7 @@
                                                           |                       Nationality                     
                                                           |  Danish    Dutch   English   French   Spanish    Total
 ----------------------------------------------------------+-------------------------------------------------------
-(mean) SLAXIMP                                            |                                                       
+Imputed number of enslaved people embarked                |                                                       
   Mean                                                    |     420      272       267      365       496      293
   Median                                                  |     429      261       256      361       505      273
   Standard deviation                                      |      69       73       117      135       136      123
@@ -13,7 +13,7 @@ Enslaved person mortality rate                            |
   Mean                                                    |    0.16     0.08      0.14     0.15      0.13     0.12
   Median                                                  |    0.14     0.05      0.14     0.14      0.12     0.11
   Standard deviation                                      |    0.13     0.09      0.06     0.10      0.03     0.08
-  Minimum value                                           |    0.00     0.00     -0.12     0.00      0.06    -0.12
+  Minimum value                                           |    0.00     0.00      0.00     0.00      0.06     0.00
   Maximum value                                           |    0.34     0.57      0.44     0.50      0.18     0.57
   Number of nonmissing values                             |       5      101       198       41        17      362
 Total net expenditure in g. of silver per enslaved person |                                                       
@@ -23,7 +23,7 @@ Total net expenditure in g. of silver per enslaved person |
   Minimum value                                           |   1,179    1,381       456      878     1,644      456
   Maximum value                                           |   2,253   13,725     9,132   12,368     6,070   13,725
   Number of nonmissing values                             |       5      101       198       42        17      363
-(mean) pricemarkup                                        |                                                       
+Enslaved people price markup between America and Africa   |                                                       
   Mean                                                    |    4.31     3.86      3.57     3.14         .     3.61
   Median                                                  |    3.96     3.59      3.43     3.08               3.30
   Standard deviation                                      |    2.52     1.27      0.99     0.50         .     1.08
