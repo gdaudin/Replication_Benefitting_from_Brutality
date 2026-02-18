@@ -1843,7 +1843,7 @@ GD029_T011,GD029,Return,Not specified,3083.4917,,0,,Return,Livres tournois,Répa
 GD029_T012,GD029,Return,Not specified,2188.7251,,0,,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers,Unspecified in source,-62275,1789
 GD029_T013,GD029,Return,Not specified,906.27917,,0,,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers,Unspecified in source,-62091,1789
 GD029_T014,GD029,Return,Reste à recouvrer,42875,,0,OR,Return,Livres tournois,Sommes restant à recouvrer,Doubtful credit,-60650,1793
-GD030_T001,GD030,Return,valeur du chargement du retour,1563698,,0,,Transactions during voyage,Livres tournois,,Sales of other goods,,
+GD030_T001,GD030,Return,Total des ventes antillaises,1563698,,0,,Transactions during voyage,Livres tournois,,Sales of other goods,,
 GD030_T002,GD030,Expenditure,Coût total du désarmement,873007,,0,,Return,Livres tournois,,Other expenses,-63403,1786
 GD033_T001,GD033,Expenditure,Not specified,34341.633,,0,,Outfitting,Livres tournois,,Unspecified in source,-64282,1784
 GD033_T002,GD033,Expenditure,Not specified,4856.1084,,0,,After outfitting,Livres tournois,,Unspecified in source,-64282,1784
