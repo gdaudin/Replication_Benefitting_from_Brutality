@@ -1449,7 +1449,7 @@ GD029_T011,GD029,Return,Not specified,3083.49166667,,,1788-12-30,Return,Livres t
 GD029_T012,GD029,Return,Not specified,2188.725,,,1789-06-30,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers,Unspecified in source
 GD029_T013,GD029,Return,Not specified,906.27916667,,,1789-12-31,Return,Livres tournois,Répartitions portées sur le Grand Livre seulement et qui ne se trouvent point dans les dossiers,Unspecified in source
 GD029_T014,GD029,Return,Reste à recouvrer,42875,,,1793-12-11,Return,Livres tournois,Sommes restant à recouvrer,Doubtful credit
-GD030_T001,GD030,Return,valeur du chargement du retour,1563698,,,,Transactions during voyage,Livres tournois,,Sales of other goods
+GD030_T001,GD030,Return,Total des ventes antillaises,1563698,,,,Transactions during voyage,Livres tournois,,Sales of other goods
 GD030_T002,GD030,Expenditure,Coût total du désarmement,873007,,,1786-05-29,Return,Livres tournois,,Other expenses
 GD033_T001,GD033,Expenditure,Not specified,34341.63333333,,,1784,Outfitting,Livres tournois,,Unspecified in source
 GD033_T002,GD033,Expenditure,Not specified,4856.10833333,,,1784,After outfitting,Livres tournois,,Unspecified in source
@@ -4406,67 +4406,67 @@ NR095_T001,NR095,Expenditure,Outfitting including ship purchase,1645,,0,,Outfitt
 NR095_T002,NR095,Return,Inset,2980,,0,,Return,Pound sterling,,Unknown
 NR096_T001,NR096,Expenditure,Outfitting,845,,0,,Outfitting,Pound sterling,,Outfitting
 NR096_T002,NR096,Return,Inset,1719,,0,,Return,Pound sterling,,Unknown
-MR001_T001,MR001,Expenditure,Commission fees,43680.0,,0.0,,Return,Portuguese real,Contract states that the supercargos are owed a fee equalling 12% from the proceeding of the total of the slaves' sale in Cartagena. Based on imputed return on slave sales.,
-MR001_T002,MR001,Expenditure,Trade cargo costs,1700000.0,cash and credit,,1600-11-04,,Portuguese real,,Trade cargo
-MR002_T001,MR002,Expenditure,Insurance costs,200000.0,,,,Outfitting,Portuguese real,,Insurance
-MR002_T002,MR002,Expenditure,Rent of ship,120000.0,,,,Outfitting,Portuguese real,,
-MR002_T003,MR002,Return,Freight compensation,200000.0,,,,Return,Portuguese real,"Discounted over the freight cost of transporting slaves due the freighter lending a sum of 200,000 reis to the shipmaster who was entitled to carry 50 more slaves on the ship for himself",Freight and passengers
-MR003_T001,MR003,Expenditure,Trade cargo costs,100000.0,,,1617-10-24,,Portuguese real,,Trade cargo
-MR004_T001,MR004,Return,Other returns,30165.0,cash,,,Return,Spanish real,"Payment of the fee lent for the slaves' licences, to be paid in silver coins brought from America in Seville",Various
-MR005_T001,MR005,Expenditure,Other expenses,390000.0,,1.0,,Outfitting,Portuguese real,"Destined for the purchase of 13 slaves reserved in Guinea (7 female, 6 male), specying the contract their price at 30,000 apiece",Various
-MR005_T002,MR005,Expenditure,Outfitting costs,250000.0,cash,,,Outfitting,Portuguese real,,Outfitting
-MR005_T003,MR005,Expenditure,Trade cargo costs,250000.0,credit,1.0,,Outfitting,Portuguese real,"Credit received in the Canary islands to employ in cargo, added to the 250,000 received in Lisbon, totalling 400,000",Trade cargo
-MR007_T001,MR007,Expenditure,Trade cargo costs,400000.0,cash,1.0,,Outfitting,Portuguese real,"Cargo to be used to purchase 16 slaves for 25,000 reis a piece",Trade cargo
-MR007_T002,MR007,Return,Insurance payments,800000.0,,,,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",
-MR009_T001,MR009,Expenditure,Outfitting costs,200000.0,cash,0.0,1619-03-14,Outfitting,Portuguese real,,Outfitting
-MR009_T002,MR009,Expenditure,Outfitting costs,240000.0,cash,0.0,1619-03-14,Outfitting,Portuguese real,,Outfitting
-MR009_T003,MR009,Expenditure,Outfitting costs,310000.0,cash,0.0,1619-03-14,Outfitting,Portuguese real,3 different investors with different shares in same ship,Outfitting
-MR009_T004,MR009,Return,Freight compensation,400000.0,,0.0,,Return,Portuguese real,"Premium (200,000) + risk compensation (200,000)",Freight and passengers
-MR009_T005,MR009,Return,Freight compensation,480000.0,,0.0,,Return,Portuguese real,"Premium (240,000) + risk compensation (240,000)",Freight and passengers
-MR009_T006,MR009,Return,Freight compensation,626000.0,,0.0,,Return,Portuguese real,"Premium (310,000) + risk compensation (310,000) paid in the Americas with the proceeding of the sale of slaves bought in Guinea",Freight and passengers
-MR010_T001,MR010,Expenditure,Trade cargo costs,100000.0,cash,0.0,1619-03-15,Outfitting,Portuguese real,,Trade cargo
-MR010_T002,MR010,Return,Freight compensation,200000.0,,0.0,,Return,Portuguese real,"Premium (100,000) + risk compensation (100,000)",Freight and passengers
-MR011_T001,MR011,Expenditure,Trade cargo costs,410000.0,cash,0.0,,Outfitting,Portuguese real,To be converted in 11 slaves in Angola,Trade cargo
-MR011_T002,MR011,Return,Sale of slaves in America,738720.0,,0.0,,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",
-MR012_T001,MR012,Return,Insurance payments,576000.0,cash,0.0,,Return,Portuguese real,,
-MR012_T002,MR012,Expenditure,Outfitting costs,160000.0,cash,0.0,1619-04-19,,Portuguese real,,Outfitting
-MR012_T003,MR012,Expenditure,Trade cargo costs,160000.0,,0.0,1619-04-19,,Portuguese real,,Trade cargo
-MR013_T001,MR013,Expenditure,Trade cargo costs,512000.0,cash,0.0,,Outfitting,Portuguese real,,Trade cargo
-MR013_T002,MR013,Return,Freight compensation,1024000.0,cash,0.0,,Return,Portuguese real,"Premium (512,000) + risk compensation (512,000)",Freight and passengers
-MR014_T001,MR014,Return,Freight compensation,220000.0,cash,0.0,,Return,Portuguese real,MR011-MR014 same boat with different investors,Freight and passengers
-MR014_T002,MR014,Expenditure,Outfitting costs,110000.0,cash,0.0,1619-05-04,,Portuguese real,"Premium (110,000) + risk compensation (110,000)",Outfitting
-MR015_T001,MR015,Return,Freight compensation,10000.0,cash,0.0,,Return,Spanish real,"Premium (5,000 reales) + risk compensation (5,000 reales)",Freight and passengers
-MR015_T002,MR015,Expenditure,Outfitting costs,5000.0,cash,1.0,1619-06-19,,Spanish real,,Outfitting
-MR016_T001,MR016,Expenditure,Outfitting costs,1455580.0,cash,0.0,,Outfitting,Portuguese real,,Outfitting
-MR016_T002,MR016,Return,Freight compensation,432000.0,,0.0,,Return,Portuguese real,,Freight and passengers
-MR016_T003,MR016,Return,Sale of slaves in America,2620000.0,cash,0.0,,Return,Portuguese real,Sum declared for the sale of 36 Guinea slaves,
-MR017_T001,MR017,Expenditure,Trade cargo costs,112500.0,cash,1.0,1619-07-22,Outfitting,Portuguese real,,Trade cargo
-MR017_T002,MR017,Return,Freight compensation,223000.0,,0.0,,Return,Portuguese real,"Principal (112,500) + premium (112,500)",Freight and passengers
-MR018_T001,MR018,Expenditure,Trade cargo costs,100000.0,cash,0.0,,Outfitting,Portuguese real,,Trade cargo
-MR018_T002,MR018,Return,Freight compensation,200000.0,,0.0,,Return,Portuguese real,,Freight and passengers
-MR019_T001,MR019,Expenditure,Trade cargo costs,80000.0,cash,0.0,,Outfitting,Portuguese real,,Trade cargo
-MR020_T001,MR020,Expenditure,Outfitting costs,1000000.0,cash,0.0,,Outfitting,Portuguese real,,Outfitting
-MR020_T002,MR020,Return,Insurance payments,1900000.0,,0.0,,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",
-MR021_T001,MR021,Expenditure,Trade cargo costs,80000.0,cash,0.0,,Outfitting,Portuguese real,,Trade cargo
-MR021_T002,MR021,Return,Freight compensation,152000.0,cash,0.0,,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighter’s agents the principal (80,000) + premium of 90% (72,000)",Freight and passengers
-MR022_T001,MR022,Expenditure,Trade cargo costs,440000.0,cash,0.0,1620-03-04,Outfitting,Portuguese real,,Trade cargo
-MR022_T002,MR022,Return,Insurance payments,836000.0,cash,0.0,,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",
-MR023_T001,MR023,Expenditure,Trade cargo costs,70000.0,cash,1.0,,Outfitting,Portuguese real,,Trade cargo
-MR024_T001,MR024,Return,Insurance payments,10000.0,cash,0.0,,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",
-MR024_T002,MR024,Expenditure,Trade cargo costs,200000.0,cash,0.0,1620-03-04,,Portuguese real,,Trade cargo
-MR025_T001,MR025,Return,Insurance payments,640000.0,cash,0.0,,Return,Portuguese real,"Payment of principal (355,600) plus risk compensation at rate of 80% (284,400) with proceedings of slave sales",
-MR025_T002,MR025,Expenditure,Trade cargo costs,355600.0,cash,0.0,1620-04-14,,Portuguese real,,Trade cargo
-MR026_T001,MR026,Expenditure,Trade cargo costs,500000.0,,0.0,,Outfitting,Portuguese real,,Trade cargo
-MR026_T002,MR026,Return,Insurance payments,25000.0,cash,0.0,,Return,Spanish real,,
-MR027_T001,MR027,Return,Insurance payments,173680.0,,0.0,,Return,Portuguese real,"Principal (86,840) + risk compensation at rate of 100% (86,840)",
-MR027_T002,MR027,Expenditure,Trade cargo costs,86840.0,cash,0.0,1620-06-10,,Portuguese real,,Trade cargo
-MR028_T001,MR028,Expenditure,Insurance costs,160000.0,,1.0,,Outfitting,Portuguese real,,Insurance
-MR028_T002,MR028,Return,Sale of slaves in America,320000.0,,1.0,,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",
-MR029_T001,MR029,Expenditure,Outfitting,800000.0,,0.0,,Outfitting,Portuguese real,,Outfitting
-MR030_T001,MR030,Expenditure,Sea loan,300000.0,,0.0,,Outfitting,Portuguese real,,Insurance
-MR030_T002,MR030,Expenditure,Sea loan,270000.0,,0.0,,Return,Portuguese real,,Insurance
-MR031_T001,MR031,Expenditure,Bills of exchange,230000.0,,0.0,,Outfitting,Portuguese real,Bill of exchange for outfitting slave-ship,Outfitting
-MR032_T001,MR032,Expenditure,Duties,1800650.0,,0.0,,Outfitting,Portuguese real,,Duties
-MR033_T001,MR033,Expenditure,Duties,8400.0,,0.0,,Return,Spanish real,,Duties
-MR034_T001,MR034,Return,Sale of enslaved people,248000.0,,0.0,,Return,Portuguese real,,Sales of enslaved people 
-MR035_T001,MR035,Expenditure,Bills of exchange,156000.0,,0.0,,Return,Portuguese real,"To pay for an earlier credit. Unclear who owes the bill of exchange, five people are involved in venture",Credit
+MR001_T001,MR001,Expenditure,Commission fees,43680,,0,,Return,Portuguese real,Contract states that the supercargos are owed a fee equalling 12% from the proceeding of the total of the slaves' sale in Cartagena. Based on imputed return on slave sales.,
+MR001_T002,MR001,Expenditure,Trade cargo costs,1700000,cash and credit,,1600-11-04,,Portuguese real,,Trade cargo
+MR002_T001,MR002,Expenditure,Insurance costs,200000,,,,Outfitting,Portuguese real,,Insurance
+MR002_T002,MR002,Expenditure,Rent of ship,120000,,,,Outfitting,Portuguese real,,
+MR002_T003,MR002,Return,Freight compensation,200000,,,,Return,Portuguese real,"Discounted over the freight cost of transporting slaves due the freighter lending a sum of 200,000 reis to the shipmaster who was entitled to carry 50 more slaves on the ship for himself",Freight and passengers
+MR003_T001,MR003,Expenditure,Trade cargo costs,100000,,,1617-10-24,,Portuguese real,,Trade cargo
+MR004_T001,MR004,Return,Other returns,30165,cash,,,Return,Spanish real,"Payment of the fee lent for the slaves' licences, to be paid in silver coins brought from America in Seville",Various
+MR005_T001,MR005,Expenditure,Other expenses,390000,,1,,Outfitting,Portuguese real,"Destined for the purchase of 13 slaves reserved in Guinea (7 female, 6 male), specying the contract their price at 30,000 apiece",Various
+MR005_T002,MR005,Expenditure,Outfitting costs,250000,cash,,,Outfitting,Portuguese real,,Outfitting
+MR005_T003,MR005,Expenditure,Trade cargo costs,250000,credit,1,,Outfitting,Portuguese real,"Credit received in the Canary islands to employ in cargo, added to the 250,000 received in Lisbon, totalling 400,000",Trade cargo
+MR007_T001,MR007,Expenditure,Trade cargo costs,400000,cash,1,,Outfitting,Portuguese real,"Cargo to be used to purchase 16 slaves for 25,000 reis a piece",Trade cargo
+MR007_T002,MR007,Return,Insurance payments,800000,,,,Return,Portuguese real,"The contract states that the freighter undergoes the risk of the journey, and the shipmaster is bound to deliver the 16 slaves to his agent in America, or pay a fee of 20,000 spanish reales (800,000 r�is) instead",
+MR009_T001,MR009,Expenditure,Outfitting costs,200000,cash,0,1619-03-14,Outfitting,Portuguese real,,Outfitting
+MR009_T002,MR009,Expenditure,Outfitting costs,240000,cash,0,1619-03-14,Outfitting,Portuguese real,,Outfitting
+MR009_T003,MR009,Expenditure,Outfitting costs,310000,cash,0,1619-03-14,Outfitting,Portuguese real,3 different investors with different shares in same ship,Outfitting
+MR009_T004,MR009,Return,Freight compensation,400000,,0,,Return,Portuguese real,"Premium (200,000) + risk compensation (200,000)",Freight and passengers
+MR009_T005,MR009,Return,Freight compensation,480000,,0,,Return,Portuguese real,"Premium (240,000) + risk compensation (240,000)",Freight and passengers
+MR009_T006,MR009,Return,Freight compensation,626000,,0,,Return,Portuguese real,"Premium (310,000) + risk compensation (310,000) paid in the Americas with the proceeding of the sale of slaves bought in Guinea",Freight and passengers
+MR010_T001,MR010,Expenditure,Trade cargo costs,100000,cash,0,1619-03-15,Outfitting,Portuguese real,,Trade cargo
+MR010_T002,MR010,Return,Freight compensation,200000,,0,,Return,Portuguese real,"Premium (100,000) + risk compensation (100,000)",Freight and passengers
+MR011_T001,MR011,Expenditure,Trade cargo costs,410000,cash,0,,Outfitting,Portuguese real,To be converted in 11 slaves in Angola,Trade cargo
+MR011_T002,MR011,Return,Sale of slaves in America,738720,,0,,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster bound to deliver the 11 slaves to his agents in America, or pay 738,720 réis in silver coins instead",
+MR012_T001,MR012,Return,Insurance payments,576000,cash,0,,Return,Portuguese real,,
+MR012_T002,MR012,Expenditure,Outfitting costs,160000,cash,0,1619-04-19,,Portuguese real,,Outfitting
+MR012_T003,MR012,Expenditure,Trade cargo costs,160000,,0,1619-04-19,,Portuguese real,,Trade cargo
+MR013_T001,MR013,Expenditure,Trade cargo costs,512000,cash,0,,Outfitting,Portuguese real,,Trade cargo
+MR013_T002,MR013,Return,Freight compensation,1024000,cash,0,,Return,Portuguese real,"Premium (512,000) + risk compensation (512,000)",Freight and passengers
+MR014_T001,MR014,Return,Freight compensation,220000,cash,0,,Return,Portuguese real,MR011-MR014 same boat with different investors,Freight and passengers
+MR014_T002,MR014,Expenditure,Outfitting costs,110000,cash,0,1619-05-04,,Portuguese real,"Premium (110,000) + risk compensation (110,000)",Outfitting
+MR015_T001,MR015,Return,Freight compensation,10000,cash,0,,Return,Spanish real,"Premium (5,000 reales) + risk compensation (5,000 reales)",Freight and passengers
+MR015_T002,MR015,Expenditure,Outfitting costs,5000,cash,1,1619-06-19,,Spanish real,,Outfitting
+MR016_T001,MR016,Expenditure,Outfitting costs,1455580,cash,0,,Outfitting,Portuguese real,,Outfitting
+MR016_T002,MR016,Return,Freight compensation,432000,,0,,Return,Portuguese real,,Freight and passengers
+MR016_T003,MR016,Return,Sale of slaves in America,2620000,cash,0,,Return,Portuguese real,Sum declared for the sale of 36 Guinea slaves,
+MR017_T001,MR017,Expenditure,Trade cargo costs,112500,cash,1,1619-07-22,Outfitting,Portuguese real,,Trade cargo
+MR017_T002,MR017,Return,Freight compensation,223000,,0,,Return,Portuguese real,"Principal (112,500) + premium (112,500)",Freight and passengers
+MR018_T001,MR018,Expenditure,Trade cargo costs,100000,cash,0,,Outfitting,Portuguese real,,Trade cargo
+MR018_T002,MR018,Return,Freight compensation,200000,,0,,Return,Portuguese real,,Freight and passengers
+MR019_T001,MR019,Expenditure,Trade cargo costs,80000,cash,0,,Outfitting,Portuguese real,,Trade cargo
+MR020_T001,MR020,Expenditure,Outfitting costs,1000000,cash,0,,Outfitting,Portuguese real,,Outfitting
+MR020_T002,MR020,Return,Insurance payments,1900000,,0,,Return,Portuguese real,"Principal (1,000,000) + premium (900,000)",
+MR021_T001,MR021,Expenditure,Trade cargo costs,80000,cash,0,,Outfitting,Portuguese real,,Trade cargo
+MR021_T002,MR021,Return,Freight compensation,152000,cash,0,,Return,Portuguese real,"Freighter undergoes the risk of the journey, shipmaster is bound to deliver the slaves to his agents in America. In case the shipmaster sells the slaves, he is bound to pay the freighter’s agents the principal (80,000) + premium of 90% (72,000)",Freight and passengers
+MR022_T001,MR022,Expenditure,Trade cargo costs,440000,cash,0,1620-03-04,Outfitting,Portuguese real,,Trade cargo
+MR022_T002,MR022,Return,Insurance payments,836000,cash,0,,Return,Portuguese real,"Captain fulfils payment of principal (440,000) + premium (396,000) at a rate of 90% with the sale of slaves in the name of the freighter’s associate",
+MR023_T001,MR023,Expenditure,Trade cargo costs,70000,cash,1,,Outfitting,Portuguese real,,Trade cargo
+MR024_T001,MR024,Return,Insurance payments,10000,cash,0,,Return,Spanish real,"Principal (5,000 reales) + risk compensation (5,000 reales)",
+MR024_T002,MR024,Expenditure,Trade cargo costs,200000,cash,0,1620-03-04,,Portuguese real,,Trade cargo
+MR025_T001,MR025,Return,Insurance payments,640000,cash,0,,Return,Portuguese real,"Payment of principal (355,600) plus risk compensation at rate of 80% (284,400) with proceedings of slave sales",
+MR025_T002,MR025,Expenditure,Trade cargo costs,355600,cash,0,1620-04-14,,Portuguese real,,Trade cargo
+MR026_T001,MR026,Expenditure,Trade cargo costs,500000,,0,,Outfitting,Portuguese real,,Trade cargo
+MR026_T002,MR026,Return,Insurance payments,25000,cash,0,,Return,Spanish real,,
+MR027_T001,MR027,Return,Insurance payments,173680,,0,,Return,Portuguese real,"Principal (86,840) + risk compensation at rate of 100% (86,840)",
+MR027_T002,MR027,Expenditure,Trade cargo costs,86840,cash,0,1620-06-10,,Portuguese real,,Trade cargo
+MR028_T001,MR028,Expenditure,Insurance costs,160000,,1,,Outfitting,Portuguese real,,Insurance
+MR028_T002,MR028,Return,Sale of slaves in America,320000,,1,,Return,Portuguese real,"The freighter agree to settle the debt with the captain over the handling of 5 “of the best” slaves brought in ship, evaluated at 320,00 réis (64,000 a piece)",
+MR029_T001,MR029,Expenditure,Outfitting,800000,,0,,Outfitting,Portuguese real,,Outfitting
+MR030_T001,MR030,Expenditure,Sea loan,300000,,0,,Outfitting,Portuguese real,,Insurance
+MR030_T002,MR030,Expenditure,Sea loan,270000,,0,,Return,Portuguese real,,Insurance
+MR031_T001,MR031,Expenditure,Bills of exchange,230000,,0,,Outfitting,Portuguese real,Bill of exchange for outfitting slave-ship,Outfitting
+MR032_T001,MR032,Expenditure,Duties,1800650,,0,,Outfitting,Portuguese real,,Duties
+MR033_T001,MR033,Expenditure,Duties,8400,,0,,Return,Spanish real,,Duties
+MR034_T001,MR034,Return,Sale of enslaved people,248000,,0,,Return,Portuguese real,,Sales of enslaved people 
+MR035_T001,MR035,Expenditure,Bills of exchange,156000,,0,,Return,Portuguese real,"To pay for an earlier credit. Unclear who owes the bill of exchange, five people are involved in venture",Credit
