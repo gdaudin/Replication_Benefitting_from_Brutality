@@ -58,6 +58,8 @@ gen ln_length_in_days=ln(length_in_days)
 
 *save "${output}Problemid.dta", replace
 *erase "${output}Database for profit computation.dta"
+sort ventureid
+
 
 save "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", replace
 

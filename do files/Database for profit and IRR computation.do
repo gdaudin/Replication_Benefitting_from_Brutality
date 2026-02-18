@@ -186,13 +186,11 @@ gen totalnetreturn_silver=totalgrossreturn_silver-totalcostonreturn_silver
 
 
 
-
+drop transactionid typeofcashflow-nbr_INT conv_in_silver-costonreturn_silver
 *Move from a database by cashflow to database by venture
 by ventureid: keep if _n==1
-drop nbr_*
 
 
-drop specification-specificationcategory typeofcashflow-timing remarks-transaction_year conv_in_silver
 save "${output}Database for profit computation_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", replace
 
 end
