@@ -14,8 +14,8 @@ Period                                              |
   West                                              |              53        39        1         1      94
   Total                                             |       5      97       190       33         4     329
 FATEcol                                             |                                                     
-  Voyage completed as intended                      |              94       168       34         6     302
-  Original goal thwarted before disembarking slaves |                         4        3                 7
+  Voyage completed as intended                      |              94       168       35         6     303
+  Original goal thwarted before disembarking slaves |                         4        2                 6
   Original goal thwarted after disembarking slaves  |               5        13        3                21
   Unspecified/unknown                               |       5                 4        6        10      25
   Total                                             |       5      99       189       46        16     355

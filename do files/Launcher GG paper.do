@@ -46,19 +46,13 @@
 	do "${dir}/do files/Database for profit and IRR computation.do"
 	do "${dir}/do files/Profit computation.do" /*387 ventures and 446 voyages*/
 
-	blif
+	
 	
 	/*Pour BB
 	do "${dir}/do files/Profit analysis - survey method.do" /// Appendix table
 	do "${dir}/do files/Profit analysis - synchronisation.do" 
 		********
 	do "${dir}/do files/Descriptive statistics of profit.do" /*Small table 2 BB Profit by flag for all sample.*/
-		*/ Average profitability of the transatlantic slave trade, by nationality of trader, 1730-1830 */
-		*/ comes from here. 
-		///The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
-		///to find an easy better way.
-		///table 2 Average profitability BB///
-
 	do "${dir}/do files/Profit graphs.do" /*Figures 2 and 3 and 4 in BB*/
 	
 	*/

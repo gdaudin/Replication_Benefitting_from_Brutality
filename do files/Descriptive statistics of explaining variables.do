@@ -3,28 +3,6 @@ clear
 *ssc install estout, replace
 *ssc install outreg2, replace
 
-if lower(c(username)) == "kraemer" {
-	!subst X: /d
-	!subst X:   "C:\Users\Kraemer\Documents"
-	capture cd "X:\slaveprofits\"
-	if _rc != 0 cd  "C:\Users\Kraemer\Documents\slaveprofits"
-	global output "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith\output"
-	global tastdb "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith"
-	global slaves "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith\slaves"
-
-}
-
- if lower(c(username)) == "claire" {
-	!subst X: /d
-	!subst X:   "/Users/guillaume-claire-judith/"
-	capture cd "X:/slaveprofits/"
-	if _rc != 0 cd  "/Users/h-claire-judith/slaveprofits/"
-	global output "/Users/guillaume-claire-judith/Desktop/temp"
-	global tastdb "/Users/guillaume-claire-judith/slaveprofits/script guillaume-claire-judith/"
-	global slaves "/Users/guillaume-claire-judith/slaveprofits/script guillaume-claire-judith/slaves/"
-
-}
-
 if lower(c(username)) == "guillaumedaudin" {
 	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
@@ -42,7 +20,7 @@ if lower(c(username)) == "guillaumedaudin" {
 	global slaves "$dir\do files\script guillaume-claire-judith\slaves\"
 	global graphs "$dir\graphs"
 }
-
+*"
 
 capture program drop descriptive_stat
 program define descriptive_stat
@@ -130,6 +108,7 @@ if "`hyp'"=="Baseline"  | "`hyp'"=="Imputed"{
 	collect export "${output}DS_proxy_var_`hyp'.pdf", as(pdf) replace
 }
 
+blif
 collect clear
 
 table (period) (nationality_num)

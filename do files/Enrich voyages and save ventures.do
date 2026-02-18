@@ -14,7 +14,7 @@ clear
 	global tastdb "$dir\external data\"
 }
 
-
+*"
 
 
 use "${output}voyages.dta", clear
@@ -177,6 +177,13 @@ collapse (first)  MAJMAJBYIMP data (mean) YEARDEP YEARAF SLAXIMP SLAMIMP length_
 			*/, by(ventureid)
 
 generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
+
+label var neutral "Neutrality of own nation"
+label var war "War involving own nation"
+label var TONMOD "Tonnage standardized on British measured tons, 1773-1835"
+label var crowd "Number of embarked enslaved persons per ton"
+
+
 
 *make dummies out of means
 
