@@ -58,6 +58,7 @@
 	*/
 
 	do "${dir}/do files/Descriptive statistics of explaining variables.do"
+	blif
 	
 
 	/*

@@ -92,7 +92,7 @@ gen FATEdum2=1 if FATEcol==2
 gen FATEdum3=1 if FATEcol==3
 gen FATEdum4=1 if FATEcol==4
 
-label define fate 1 "Voyage completed as intended" 2 "Original goal thwarted before disembarking slaves" 3 "Original goal thwarted after disembarking slaves" 4 "Unspecified/unknown", replace
+label define fate 1 "Voyage completed as intended" 2 "Original goal thwarted before disembarking enslaved people" 3 "Original goal thwarted after disembarking enslaved people" 4 "Unspecified/unknown", replace
 label values FATEcol fate
 
 **Compute the length of each voyage (if possible)
@@ -206,6 +206,7 @@ replace FATEcol=4 if FATEdum4==1
 drop FATEdum*
 
 label values FATEcol fate //label fate is defined earlier
+label var FATEcol "Fate of venture"
 
 
 
