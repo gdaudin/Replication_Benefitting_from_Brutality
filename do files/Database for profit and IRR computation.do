@@ -72,20 +72,27 @@ drop if intermediarytradingoperation==1
 save "${output}Database for IRR computation_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'.dta", replace
 
 *Assign a transaction year when absent and assignement is possible
+**Beginning of the voyage
 assert mod(transaction_year,1)==0 | transaction_year==.
 replace transaction_year=int(yearofdeparturefromportofoutfit) if transaction_year==. & (timing=="Outfitting" | timing=="After outfitting")
-assert mod(transaction_year,1)==0 | transaction_year==.
 replace transaction_year=int(YEARDEP) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
 replace transaction_year=int(YEARAF) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
+replace transaction_year=int(YEARAF_own) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
+replace transaction_year=int(yearofdeparturefromafrica) if transaction_year==. & (timing=="Outfitting" | timing=="After outfitting")
+replace transaction_year=int(yearvesselarrivedwithslaves) if transaction_year==. & (timing=="Outfitting" | timing=="After outfitting")
+replace transaction_year=int(YEARDEP) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting")
+replace transaction_year=int(YEARAF) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting")
+replace transaction_year=int(YEARAF_own) if transaction_year==. &  (timing=="Outfitting" | timing=="After outfitting") & numberofvoyages==1
 assert mod(transaction_year,1)==0 | transaction_year==.
+*****End of the voyage
 egen yearmax=max(transaction_year), by(ventureid timing)
 assert mod(transaction_year,1)==0 | transaction_year==.
 replace transaction_year=yearmax  if transaction_year==. &  (timing=="Return" | timing=="Transactions during voyage")
 drop yearmax
 replace transaction_year=int(yearofreturntoportofoutfitting) if transaction_year==. & (timing=="Return" | timing=="Transactions during voyage")
 assert mod(transaction_year,1)==0 | transaction_year==.
-*replace transaction_year=year(DATEEND/100000000) if transaction_year==. &  timing=="Return"
 replace transaction_year=int(YEARAF)+1 if transaction_year==. &  (timing=="Return" | timing=="Transactions during voyage")
+replace transaction_year=int(YEARAF_own)+1 if transaction_year==. &  (timing=="Return" | timing=="Transactions during voyage")
 assert mod(transaction_year,1)==0 | transaction_year==.
 
 * Change all cash flows in grams of silver for the whole ship
@@ -93,7 +100,9 @@ replace value = value *2/3 if currency =="Livres coloniales" | currency == "Livr
 replace currency = "Livres tournois" if currency =="Livres" | currency =="Livres coloniales" | currency == "Livres des colonies"
 
 merge m:1 transaction_year currency using  "${output}Exchange rates in silver.dta" 
+
 replace conv_in_silver = 4.5 if currency=="Francs"
+ 
 drop if _merge==2 
 
 
