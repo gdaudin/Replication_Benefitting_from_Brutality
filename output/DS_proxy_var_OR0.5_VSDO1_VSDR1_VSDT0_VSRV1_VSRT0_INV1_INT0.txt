@@ -17,10 +17,10 @@ Enslaved person mortality rate                            |
   Maximum value                                           |    0.34     0.57      0.44     0.50      0.18     0.57
   Number of nonmissing values                             |       5      101       198       41        17      362
 Total net expenditure in g. of silver per enslaved person |                                                       
-  Mean                                                    |   1,836    3,011     2,286    3,152     3,602    2,643
-  Median                                                  |   2,035    2,707     2,154    2,678     3,610    2,459
-  Standard deviation                                      |     439    1,507     1,344    1,829     1,037    1,493
-  Minimum value                                           |   1,179    1,381         0      878     1,644        0
+  Mean                                                    |   1,836    3,011     2,484    3,152     3,602    2,751
+  Median                                                  |   2,035    2,707     2,236    2,678     3,610    2,467
+  Standard deviation                                      |     439    1,507     1,168    1,829     1,037    1,386
+  Minimum value                                           |   1,179    1,381       456      878     1,644      456
   Maximum value                                           |   2,253   13,725     9,132   12,368     6,070   13,725
   Number of nonmissing values                             |       5      101       198       42        17      363
 (mean) pricemarkup                                        |                                                       

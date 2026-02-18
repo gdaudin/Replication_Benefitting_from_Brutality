@@ -44,7 +44,6 @@ label var profit "(Net returns over net outlays) -1"
 
 gen totalnetexp_silver_ship = totalnetexp_silver / shareoftheship / numberofvoyages / 1000
 label var totalnetexp_silver_ship "Total net expenditure in kg of silver for the whole ship"
-blif
 gen ln_totalnetexp_silver_ship = ln(totalnetexp_silver_ship)
 label var ln_totalnetexp_silver_ship "Net expenditure on venture (ln(silver grams))"
 

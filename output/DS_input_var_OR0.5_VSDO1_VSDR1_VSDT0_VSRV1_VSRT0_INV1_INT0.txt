@@ -18,10 +18,10 @@ Big African slave-trading port                           |
   Standard deviation                                     |    0.00    0.46      0.49     0.47      0.44    0.50
   Number of nonmissing values                            |       5     101       214       50        17     387
 Total net expenditure in kg of silver for the whole ship |                                                     
-  Mean                                                   |     761     752       603    1,040     1,716     749
-  Median                                                 |     677     681       522      991     1,701     631
-  Standard deviation                                     |     192     224       490      525       481     504
-  Minimum value                                          |     556     455         0       61     1,038       0
+  Mean                                                   |     761     752       649    1,040     1,716     775
+  Median                                                 |     677     681       546      991     1,701     639
+  Standard deviation                                     |     192     224       457      525       481     480
+  Minimum value                                          |     556     455       111       61     1,038      61
   Maximum value                                          |     967   1,383     3,492    2,306     2,446   3,492
   Number of nonmissing values                            |       5     101       214       50        17     387
 Tonnage standardized on British measured tons, 1773-1835 |                                                     
