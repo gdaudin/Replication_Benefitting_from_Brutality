@@ -31,7 +31,7 @@ Tonnage standardized on British measured tons, 1773-1835 |
   Minimum value                                          |       .     192        44       60         .      44
   Maximum value                                          |       .     497       501      365         .     501
   Number of nonmissing values                            |       0      95       201       29         0     325
-Number of embarked enslaved persons per ton              |                                                     
+Number of embarked enslaved people per ton               |                                                     
   Mean                                                   |       .    0.88      1.55     1.59         .    1.35
   Median                                                 |            0.82      1.49     1.53              1.26
   Standard deviation                                     |       .    0.31      0.55     0.52         .    0.58

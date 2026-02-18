@@ -181,7 +181,7 @@ generate VYMRTRAT=(SLAXIMP-SLAMIMP)/SLAXIMP
 label var neutral "Neutrality of own nation"
 label var war "War involving own nation"
 label var TONMOD "Tonnage standardized on British measured tons, 1773-1835"
-label var crowd "Number of embarked enslaved persons per ton"
+label var crowd "Number of embarked enslaved people per ton"
 label var pricemarkup "Enslaved people price markup between America and Africa"
 label var SLAXIMP "Imputed number of enslaved people embarked"
 
