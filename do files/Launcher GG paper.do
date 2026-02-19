@@ -58,11 +58,12 @@
 	*/
 
 	do "${dir}/do files/Descriptive statistics of explaining variables.do"
-	blif
+	
 	
 
-	/*
+	
 	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
+	blif
 	do "${dir}/do files/Profit two parts regressions.do"
 	do "${dir}/do files/Profit two parts regressions--various hypothesis.do"
 

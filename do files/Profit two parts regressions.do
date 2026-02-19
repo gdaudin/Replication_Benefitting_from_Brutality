@@ -7,7 +7,7 @@ clear
 if lower(c(username)) == "guillaumedaudin" {
 	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
+	global output "~/Répertoires GIT/slaveprofits data and programs/output"
 	global tastdb "$dir/script guillaume-claire-judith/"
 	global slaves "$dir/script guillaume-claire-judith/slaves/"
 	global graphs "$dir/graphs"
@@ -17,8 +17,11 @@ if lower(c(username)) == "guillaumedaudin" {
 	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
 	cd "$dir"
 	global output "$dir\output\"
+	*"
 	global tastdb "$dir\external data\"
+	*"
 	global slaves "$dir\do files\script guillaume-claire-judith\slaves\"
+	*"
 	global graphs "$dir\graphs"
 }
 
@@ -31,7 +34,7 @@ args OR VSDO VSDR VSDT VSRV VSRT INV INT IMP
 
 
 
-use "${output}Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", clear
+use "${output}/Ventures&profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.dta", clear
 
 *keep if completedataonoutlays=="yes" & completedataonreturns=="yes"
 drop if completedataonoutlays=="no" & completedataonreturns=="no"
@@ -41,43 +44,46 @@ collect clear
 
 global explaining "nationality_num period war neutral big_port ln_totalnetexp_silver_ship pricemarkup MAJMAJBYIMP_num TONMOD crowd OUTFITTER_experience_d captain_experience_d OUTFITTER_total_career captain_total_career OUTFITTER_regional_experience_d captain_regional_experience_d"
 global proxy "investment_per_slave ln_SLAXIMP  MORTALITY ln_length_in_days FATEcol"
-estpost summarize profit $explaining $proxy
-esttab using "$output/tablesv2_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
+*estpost summarize profit $explaining $proxy
+*esttab using "$output/tablesv2_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv", cells("count mean median sd min max") replace csv
 *These descriptive statistic tables are superceded by the one computed by nationality in do "Descriptive statistics of explaining variables.do"
 
 global explaining "nationality_num war neutral period"
 global explaining =subinstr("$explaining","nationality_num","ib3.nationality_num",.)
 global explaining =subinstr("$explaining","period","ib2.period",.)
 reg profit $explaining, vce(robust)
-outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
+*outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
+outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2) replace 
 
 
-reg profit $explaining [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
-reg profit $explaining if frak_post_wt !=., vce(robust)
-outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
+*reg profit $explaining [weight=frak_post_wt], vce(robust)
+*outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
+*reg profit $explaining if frak_post_wt !=., vce(robust)
+*outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
 
 
 
 global explaining "$explaining MAJMAJBYIMP_num big_port"
 global explaining =subinstr("$explaining","MAJMAJBYIMP_num","i.MAJMAJBYIMP_num",.)
 reg profit $explaining, vce(robust)
-outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+*outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2)  
 
-reg profit $explaining [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining if frak_post_wt !=., vce(robust)
-outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining [weight=frak_post_wt], vce(robust)
+// outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining if frak_post_wt !=., vce(robust)
+// outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
 
 
 global explaining "$explaining ln_totalnetexp_silver_ship crowd OUTFITTER_experience_d captain_experience_d"
 reg profit $explaining, vce(robust)
-outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+*outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2)  
 
-reg profit $explaining [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining if frak_post_wt !=. , vce(robust)
-outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining [weight=frak_post_wt], vce(robust)
+// outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining if frak_post_wt !=. , vce(robust)
+// outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
 
 
 global explaining "nationality_num war neutral period"
@@ -87,32 +93,40 @@ global explaining "$explaining MAJMAJBYIMP_num big_port"
 global explaining =subinstr("$explaining","MAJMAJBYIMP_num","i.MAJMAJBYIMP_num",.)
 global explaining "$explaining TONMOD crowd OUTFITTER_experience_d captain_experience_d"
 reg profit $explaining, vce(robust)
-outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining if frak_post_wt !=., vce(robust)
-outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+*outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2)  
+
+
+// reg profit $explaining [weight=frak_post_wt], vce(robust)
+// outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining if frak_post_wt !=., vce(robust)
+// outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
 
 
 
 global explaining "$explaining ln_totalnetexp_silver_ship"
 reg profit $explaining, vce(robust)
-outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining if frak_post_wt !=., vce(robust)
-outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+*outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2)  
+
+// reg profit $explaining [weight=frak_post_wt], vce(robust)
+// outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining if frak_post_wt !=., vce(robust)
+// outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
 
 
 
 
 global explaining "$explaining OUTFITTER_total_career captain_total_career OUTFITTER_regional_experience_d captain_regional_experience_d "
 reg profit $explaining, vce(robust)
-outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
-reg profit $explaining if frak_post_wt !=., vce(robust)
-outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+*outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+outreg2 using "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2)  
+copy "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt" "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv"
+erase "$output/regv2exp_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt"
+// reg profit $explaining [weight=frak_post_wt], vce(robust)
+// outreg2 using "$output/regv2exp_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
+// reg profit $explaining if frak_post_wt !=., vce(robust)
+// outreg2 using "$output/regv2exp_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2)
 
 
 
@@ -122,14 +136,21 @@ test captain_experience_d  captain_regional_experience_d captain_total_career
 test war neutral
 *test YEARAF yearsq
 
+////////Proxy regressions
+
 global proxy "ln_SLAXIMP MORTALITY investment_per_slave pricemarkup ln_length_in_days FATEcol"
 global proxy =subinstr("$proxy","FATEcol","i.FATEcol",.)
 reg profit $proxy, vce(robust) 
 outreg2 using "$output/regv2prox_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace 
-reg profit $proxy [weight=frak_post_wt], vce(robust)
-outreg2 using "$output/regv2prox_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace
-reg profit $proxy if frak_post_wt !=., vce(robust)
-outreg2 using "$output/regv2prox_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace
+outreg2 using "$output/regv2prox_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt", label text auto(2) replace 
+
+copy "$output/regv2prox_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt" "$output/regv2prox_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.csv"
+erase "$output/regv2prox_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.txt"
+
+// reg profit $proxy [weight=frak_post_wt], vce(robust)
+// outreg2 using "$output/regv2prox_wt_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace
+// reg profit $proxy if frak_post_wt !=., vce(robust)
+// outreg2 using "$output/regv2prox_sample_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.xls", label excel auto(2) replace
 
 
 
