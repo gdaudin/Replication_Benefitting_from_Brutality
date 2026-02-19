@@ -1,0 +1,52 @@
+	(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1	(Net returns over net outlays) -1
+						
+Nationality = 2, Dutch	-0.055	-0.093*	0.12*	-0.024	-0.066	-0.077
+	(0.043)	(0.056)	(0.069)	(0.074)	(0.075)	(0.18)
+Nationality = 4, French	0.017	-0.0065	0.20*	0.084	0.14	0.14
+	(0.086)	(0.10)	(0.11)	(0.11)	(0.097)	(0.097)
+War involving own nation	-0.0037	0.00063	0.010	-0.019	0.022	0.021
+	(0.061)	(0.061)	(0.063)	(0.060)	(0.062)	(0.061)
+Neutrality of own nation	0.018	-0.014	-0.055	-0.043	-0.032	-0.037
+	(0.067)	(0.065)	(0.066)	(0.068)	(0.063)	(0.068)
+Period = 1, pre-1750	-0.053	-0.041	-0.14	-0.072	-0.15*	-0.14
+	(0.071)	(0.081)	(0.090)	(0.082)	(0.082)	(0.087)
+Period = 3, 1776-1800	0.090	0.10	0.25**	0.14	0.21**	0.21**
+	(0.076)	(0.077)	(0.11)	(0.098)	(0.095)	(0.099)
+Period = 4, post-1800	0.090	0.083	0.47***	0.14	0.45***	0.45***
+	(0.13)	(0.13)	(0.15)	(0.14)	(0.15)	(0.15)
+African region of trade = 2, South		0.096	0.069	0.071	0.045	0.050
+		(0.088)	(0.083)	(0.097)	(0.075)	(0.077)
+African region of trade = 3, West		0.0082	-0.071	0.0044	-0.065	-0.063
+		(0.042)	(0.049)	(0.044)	(0.047)	(0.050)
+Big African slave-trading port		-0.059	-0.077	-0.086	-0.072*	-0.071
+		(0.050)	(0.047)	(0.053)	(0.044)	(0.045)
+Tonnage standardized on British measured tons, 1773-1835				-0.000060	0.0021***	0.0021***
+				(0.00038)	(0.00064)	(0.00061)
+Number of embarked enslaved people per ton			0.13***	0.11**	0.25***	0.24***
+			(0.044)	(0.044)	(0.061)	(0.056)
+Not the first voyage of the outfitter			0.092	0.11*	0.11*	0.086
+			(0.063)	(0.063)	(0.064)	(0.10)
+Not the first voyage of the captain			0.074	0.048	0.051	0.015
+			(0.045)	(0.044)	(0.041)	(0.073)
+Net expenditure on venture (ln(silver grams))			-0.29***		-0.50***	-0.50***
+			(0.11)		(0.15)	(0.14)
+(mean) OUTFITTER_total_career						0.00025
+						(0.0018)
+(mean) captain_total_career						0.00056
+						(0.0062)
+Not the first voyage of the outfitter in the region						0.024
+						(0.092)
+Not the first voyage of the captain in the region						0.043
+						(0.077)
+Nationality = 1, Danish	0.19	0.18				
+	(0.17)	(0.18)				
+Nationality = 5, Spanish	0.67***	0.63***				
+	(0.20)	(0.15)				
+Constant	0.077***	0.11**	1.59**	-0.15	2.37***	2.37***
+	(0.028)	(0.044)	(0.63)	(0.12)	(0.75)	(0.74)
+						
+Observations	387	329	301	301	301	301
+R-squared	0.154	0.083	0.164	0.072	0.229	0.231
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						

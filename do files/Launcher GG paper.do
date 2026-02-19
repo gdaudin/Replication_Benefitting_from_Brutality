@@ -15,7 +15,7 @@
 		global graphs "$dir\graphs"
 	}
 
-
+*"
 
 	*Preliminary 
 	*IMPORT TSTD DATASET
@@ -62,9 +62,10 @@
 	
 
 	
-	do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG**///
-	blif
+	*do "${dir}/do files/Profit analysis.do" ///***Explaining profits : GG but outdated**///
+
 	do "${dir}/do files/Profit two parts regressions.do"
+	blif
 	do "${dir}/do files/Profit two parts regressions--various hypothesis.do"
 
 	
