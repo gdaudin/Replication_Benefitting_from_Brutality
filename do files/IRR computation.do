@@ -1,19 +1,4 @@
 
-if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits data and programs"
-	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
-	global graphs "$dir/graphs"
-}
-
-else if lower(c(username)) == "xronkl" {
-	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
-	cd "$dir"
-	global output "$dir\output\"
-	*"
-	global graphs "$dir\graphs\"
-	*"
-}
 clear
 **Notice that the sources of GD126, GD127 and GD128 compute the irr (but does not give the data to do it ourselves)
 **See end of the program for its integration

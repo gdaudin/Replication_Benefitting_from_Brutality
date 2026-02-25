@@ -3,46 +3,6 @@ clear
 *ssc install estout, replace
 *ssc install outreg2, replace
 
-if lower(c(username)) == "kraemer" {
-	!subst X: /d
-	!subst X:   "C:\Users\Kraemer\Documents"
-	capture cd "X:\slaveprofits\"
-	if _rc != 0 cd  "C:\Users\Kraemer\Documents\slaveprofits"
-	global output "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith\output"
-	global tastdb "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith"
-	global slaves "C:\Users\Kraemer\Documents\slaveprofits\script guillaume-claire-judith\slaves"
-
-}
-
- if lower(c(username)) == "claire" {
-	!subst X: /d
-	!subst X:   "/Users/guillaume-claire-judith/"
-	capture cd "X:/slaveprofits/"
-	if _rc != 0 cd  "/Users/h-claire-judith/slaveprofits/"
-	global output "/Users/guillaume-claire-judith/Desktop/temp"
-	global tastdb "/Users/guillaume-claire-judith/slaveprofits/script guillaume-claire-judith/"
-	global slaves "/Users/guillaume-claire-judith/slaveprofits/script guillaume-claire-judith/slaves/"
-
-}
-
-if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits data and programs"
-	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
-	global tastdb "$dir/script guillaume-claire-judith/"
-	global slaves "$dir/script guillaume-claire-judith/slaves/"
-	global graphs "$dir/graphs"
-}
-
- if lower(c(username)) == "xronkl" {
-	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
-	cd "$dir"
-	global output "$dir\output\"
-	global tastdb "$dir\external data\"
-	global slaves "$dir\do files\script guillaume-claire-judith\slaves\"
-	global graphs "$dir\graphs"
-}
-
 
 collect clear
 **First work on the baseline

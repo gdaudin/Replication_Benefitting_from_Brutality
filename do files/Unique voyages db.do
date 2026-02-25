@@ -3,19 +3,6 @@ clear
 
 *Requires xfill to be installed
 *See net from http://www.sealedenvelope.com/
- if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits data and programs"
-	cd "$dir"
-	global output "$dir/output/"
-	global tastdb "$dir/external data/"
-}
-
- if lower(c(username)) == "xronkl" {
-	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits data and programs"
-	cd "$dir"
-	global output "$dir\output\"
-	global tastdb "$dir\external data\"
-}
 
 
 *This is to create a db of unique voyages in our venture data. There are (at least) three challenges :
