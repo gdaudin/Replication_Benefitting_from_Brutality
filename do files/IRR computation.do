@@ -277,6 +277,7 @@ display "representative English mean:" _b[_cons]+_b[profit]*0.11+_b[sq_profit]*(
 display "representative Dutch mean:" _b[_cons]+_b[profit]*0.089+_b[sq_profit]*(0.089)^2
 display "representative French mean:" _b[_cons]+_b[profit]*0.253+_b[sq_profit]*(0.253)^2
 
+/*
 2026 01 09 
 mean:.04480152
 median:.03489695
@@ -284,7 +285,7 @@ representative mean:.04095419
 representative English mean:.03272681
 representative Dutch mean:.02499865
 representative French mean:.07986442
-
+*/
 
 
 end
