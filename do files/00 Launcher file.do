@@ -3,9 +3,20 @@
 	cd "$dir"
 	global output "$dir/output/"
 	global graphs "$dir/graphs"
-	global tastdb "$dir/external data/"
+	global tstddb "$dir/external data/"
 
 	if lower(c(username)) == "xronkl"	global dir xxx
+
+		*Preliminary 
+	*IMPORT TSTD DATASET
+	* Currently not used section - if we want to import again, delete the old version of the TSTD.dta
+	*unzipfile "${tstddb}/external data/tstddb-exp-2020.sav.zip", replace
+	*import spss using "${tstddb}/external data/tstddb-exp-2020.sav", clear
+	*erase "${tstddb}/external data/tstddb-exp-2020.sav"
+	*tostring(VOYAGEID), replace
+	*save "tstddb-exp-2020.dta", replace
+
+
 
 	*Creating datasets
 	do "${dir}/do files/Port shares computation.do"

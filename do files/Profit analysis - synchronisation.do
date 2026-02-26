@@ -8,7 +8,7 @@ if lower(c(username)) == "guillaumedaudin" {
 	global dir "~/Répertoires GIT/slaveprofits data and programs"
 	cd "$dir"
 	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
-	global tastdb "$dir/script guillaume-claire-judith/"
+	global tstddb "$dir/script guillaume-claire-judith/"
 	global slaves "$dir/script guillaume-claire-judith/slaves/"
 	global graphs "$dir/graphs"
 }
@@ -17,7 +17,7 @@ if lower(c(username)) == "guillaumedaudin" {
 	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
 	cd "$dir"
 	global output "$dir\output\"
-	global tastdb "$dir\external data\"
+	global tstddb "$dir\external data\"
 	global slaves "$dir\do files\script guillaume-claire-judith\slaves\"
 	global graphs "$dir\graphs"
 }

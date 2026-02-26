@@ -14,7 +14,7 @@ and SLAXIMP (imputed total slaves embarked)
 */
 
 
-use "${tastdb}tastdb-exp-2020.dta", clear
+use "${tstddb}tstddb-exp-2020.dta", clear
 
 keep YEARAF  MJBYPTIMP SLAXIMP
 collapse (sum) SLAXIMP, by(MJBYPTIMP YEARAF)

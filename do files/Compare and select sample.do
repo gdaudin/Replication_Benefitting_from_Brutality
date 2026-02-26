@@ -6,7 +6,7 @@ table nationality if sample==1
 
 use "${output}voyages", clear
 
-merge 1:1 VOYAGEID using "${tastdb}tastdb-exp-2020_corr.dta"
+merge 1:1 VOYAGEID using "${tstddb}tstddb-exp-2020_corr.dta"
 drop _merge
 replace FATE4=4 if FATE4==.
 

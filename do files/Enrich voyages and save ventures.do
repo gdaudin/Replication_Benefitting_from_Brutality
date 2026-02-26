@@ -4,7 +4,7 @@ clear
 
 use "${output}voyages.dta", clear
 
-merge m:1 VOYAGEID using "${tastdb}tastdb-exp-2020_corr.dta"
+merge m:1 VOYAGEID using "${tstddb}tstddb-exp-2020_corr.dta"
 drop _merge
 
 ****We work only on the voyages in the profit database
