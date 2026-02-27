@@ -82,28 +82,15 @@ replace transaction_year=int(YEARAF)+1 if transaction_year==. &  (timing=="Retur
 replace transaction_year=int(YEARAF_own)+1 if transaction_year==. &  (timing=="Return" | timing=="Transactions during voyage")
 assert mod(transaction_year,1)==0 | transaction_year==.
 
-* Change all cash flows in grams of silver for the whole ship
+* Take into account currencx
 replace value = value *2/3 if currency =="Livres coloniales" | currency == "Livres des colonies"
 replace currency = "Livres tournois" if currency =="Livres" | currency =="Livres coloniales" | currency == "Livres des colonies"
 
-merge m:1 transaction_year currency using  "${output}Exchange rates in silver.dta" 
 
-replace conv_in_silver = 4.5 if currency=="Francs"
- 
-drop if _merge==2 
-
-
-gen value_silver = value * conv_in_silver
-tab ventureid if value_silver ==. & value !=.
-
-drop _merge
-
-gen value_silver_ship = value_silver / shareoftheship
 
 
 
 * GENERATE FOUR VARIABLES - EXPENDITURE, DISCOUNT, RETURN AND COSTONRETURN - BASED ON THE TYPE AND TIMING OF TRANSACTIONothi
-* both in currency and silver
 
 gen expenditure=value if typeofcashflow=="Expenditure" & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
 replace expenditure=0 if missing(expenditure)
@@ -116,19 +103,6 @@ gen return=value if typeofcashflow=="Return" & (timing=="Return" | timing=="Tran
 gen costonreturn=value if typeofcashflow=="Expenditure" & (timing=="Return" | timing=="Transactions during voyage") & intermediarytradingoperation==0
 replace costonreturn=0 if missing(costonreturn)
 
-**Silver
-gen expenditure_silver=value_silver if typeofcashflow=="Expenditure" & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
-replace expenditure_silver=0 if missing(expenditure_silver)
-
-gen discount_silver=value_silver if typeofcashflow=="Return" & (timing=="Outfitting" | timing=="After outfitting") & intermediarytradingoperation==0
-replace discount_silver=0 if missing(discount_silver)
-
-gen return_silver=value_silver if typeofcashflow=="Return" & (timing=="Return" | timing=="Transactions during voyage") & intermediarytradingoperation==0
-
-gen costonreturn_silver=value_silver if typeofcashflow=="Expenditure" & (timing=="Return" | timing=="Transactions during voyage") & intermediarytradingoperation==0
-replace costonreturn_silver=0 if missing(costonreturn_silver)
-
-***End of the creation of the four variables
 
 * SUM UP ALL THESE FOUR VARIABLES BY VENTURE
 
@@ -136,17 +110,6 @@ bysort ventureid: egen totalgrossexp=total(expenditure)
 bysort ventureid: egen totaldisc=total(discount)
 bysort ventureid: egen totalgrossreturn=total(return)
 bysort ventureid: egen totalcostonreturn=total(costonreturn)
-
-bysort ventureid: egen totalgrossexp_silver=total(expenditure_silver)
-bysort ventureid: egen totaldisc_silver=total(discount_silver)
-bysort ventureid: egen totalgrossreturn_silver=total(return_silver)
-bysort ventureid: egen totalcostonreturn_silver=total(costonreturn_silver)
-
-* DEAL WITH DANISH BARGUM TRADING SOCIETY WHERE SOME RETURNS ARE REPORTED COLLECTIVELY FOR SEVERAL VENTURES
-*bysort nameofoutfitter: egen totalgrossexp2=total(expenditure)
-*bysort nameofoutfitter: egen totaldisc2=total(discount)
-*bysort nameofoutfitter: egen totalgrossreturn2=total(return)
-*bysort nameofoutfitter: egen totalcostonreturn2=total(costonreturn)
 
 **Back to DANISH BARGUM TRADING SOCIETY WHERE SOME RETURNS ARE REPORTED COLLECTIVELY FOR SEVERAL VENTURES
 *replace totalgrossexp2=. if ventureid!="KR016"
@@ -168,12 +131,8 @@ bysort ventureid: egen totalcostonreturn_silver=total(costonreturn_silver)
 gen totalnetexp=totalgrossexp-totaldisc
 gen totalnetreturn=totalgrossreturn-totalcostonreturn
 
-gen totalnetexp_silver=totalgrossexp_silver-totaldisc_silver
-gen totalnetreturn_silver=totalgrossreturn_silver-totalcostonreturn_silver
 
-
-
-drop transactionid typeofcashflow-nbr_INT conv_in_silver-costonreturn_silver
+drop transactionid typeofcashflow-nbr_INT
 *Move from a database by cashflow to database by venture
 by ventureid: keep if _n==1
 

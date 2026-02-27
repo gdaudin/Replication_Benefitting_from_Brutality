@@ -94,7 +94,7 @@ global hyp_list_name `""Baseline" "Observations with outstanding claims excluded
 global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to not have been paid at all"'
 global hyp_list_name `"$hyp_list_name" "Claims outstanding assumed to have been paid in full"'
 global hyp_list_name `"$hyp_list_name" "Higher cost of hull relative to other outlays (25% instead of 17% in baseline)"'
-global hyp_list_name `"$hyp_list_name" "Lower rate of depreciation (10% instead of baseline 25%"'
+global hyp_list_name `"$hyp_list_name" "Lower rate of depreciation (10% instead of baseline 25%)"'
 global hyp_list_name `"$hyp_list_name" "Cost of insurance not added to any voyages"'
 global hyp_list_name `"$hyp_list_name" "Cost of insurance added to outlays, even in cases where accounts seem to suggest total outlays"'
 global hyp_list_name `"$hyp_list_name" "Value of hull (outgoing/incoming) added to outlays/returns, even in cases where accounts seem to suggest total outlays/returns"'

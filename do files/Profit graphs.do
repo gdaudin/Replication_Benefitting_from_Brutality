@@ -90,6 +90,3 @@ graph export "$graphs/scatter_year_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT
 end
 
 profit_graphs 0.5 1 1 0 1 0 1 0
-/*
-profit_graphs 0.5 1 1 0 1 0 1 0 IMP
-profit_graphs 0.5 1 1 0 1 0 1 0 onlyIMP	

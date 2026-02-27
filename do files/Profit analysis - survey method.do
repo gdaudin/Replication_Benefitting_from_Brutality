@@ -284,9 +284,7 @@ global hyp_list 	OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0 ///
 					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT1 ///
 					OR0.5_VSDO1_VSDR1_VSDT1_VSRV1_VSRT1_INV1_INT0 ///
 					OR0.5_VSDO1_VSDR1_VSDT1_VSRV1_VSRT1_INV1_INT1
-*					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0IMP /// 
-*					OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0onlyIMP
-*/
+
 
 
 capture program drop profit_analysis_survey_table
@@ -302,8 +300,7 @@ global hyp_list_name `"$hyp_list_name" "Cost of insurance not added to any voyag
 global hyp_list_name `"$hyp_list_name" "Cost of insurance added to outlays, even in cases where accounts seem to suggest total outlays"'
 global hyp_list_name `"$hyp_list_name" "Value of hull (outgoing/incoming) added to outlays/returns, even in cases where accounts seem to suggest total outlays/returns"'
 global hyp_list_name `"$hyp_list_name" "Both value of hull and cost of insurance added, in cases where accounts seem to suggest total outlays/returns"'
-*global hyp_list_name `"$hyp_list_name" "Baseline including imputed profits"'
-*global hyp_list_name `"$hyp_list_name" "Baseline including only imputed profits""'
+
 
 
 
