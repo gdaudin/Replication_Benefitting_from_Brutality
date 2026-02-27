@@ -12,7 +12,7 @@
 	* Only do it once, then we will work with the dta file created here (tstddb-exp-2020.dta)
 	import spss using "${tstddb}/tstddb-exp-2020.sav", clear
 	tostring(VOYAGEID), replace
-	save "tstddb-exp-2020.dta", replace
+	save "${tstddb}/tstddb-exp-2020.dta", replace
 
 
 
