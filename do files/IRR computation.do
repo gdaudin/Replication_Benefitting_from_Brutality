@@ -232,8 +232,9 @@ gen sample=substr(ventureid,1,2)
 twoway (scatter irr profit if nationality=="French", msymbol(plus)) ///
 		(scatter irr profit  if nationality=="English", msymbol(X)) ///
 		(qfitci irr profit, color(%25) ), ///
-		legend(label(1 "French") label(2 "English") label(3 "Quadratic fit")) scheme(s1color) ytitle("irr")
+		legend(label(1 "French") label(2 "English") label(3 "Quadratic fit")) scheme(s1mono) ytitle("irr")
 graph export "$graphs/scatter_irr_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
+graph export "$graphs/scatter_irr_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.tif",as(tif) replace
 		
 
 gen sq_profit = profit^2

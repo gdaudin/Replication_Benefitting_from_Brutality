@@ -44,9 +44,9 @@
 	
 	*****
 	
-	do "${dir}/do files/Profit analysis - survey method.do" /// Appendix table
+	do "${dir}/do files/Profit analysis - survey method.do" /*Appendix table*/
+
 	do "${dir}/do files/Profit analysis - synchronisation.do" 
-	
 	
 
 

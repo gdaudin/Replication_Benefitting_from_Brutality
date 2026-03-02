@@ -4,24 +4,6 @@ collect clear
 *ssc install estout, replace
 *ssc install outreg2, replace
 
-if lower(c(username)) == "guillaumedaudin" {
-	global dir "~/Répertoires GIT/slaveprofits data and programs"
-	cd "$dir"
-	global output "~/Répertoires GIT/slaveprofits data and programs/output/"
-	global tstddb "$dir/script guillaume-claire-judith/"
-	global slaves "$dir/script guillaume-claire-judith/slaves/"
-	global graphs "$dir/graphs"
-}
-
- if lower(c(username)) == "xronkl" {
-	global dir "S:\Personal Folders\Forskning - under arbete\Slave trade profits meta-study\GIT\slaveprofits"
-	cd "$dir"
-	global output "$dir\output\"
-	global tstddb "$dir\external data\"
-	global slaves "$dir\do files\script guillaume-claire-judith\slaves\"
-	global graphs "$dir\graphs"
-}
-
 
 capture program drop profit_analysis_synchro
 program define profit_analysis_synchro
@@ -56,13 +38,14 @@ restore
 preserve
 collapse (sd) sd_profit=profit (mean) mean_profit=profit (count) nbr_profit=profit, by(YEARAF)
 
-graph twoway (bar  nbr_profit YEARAF if nbr_profit>=2, yaxis(1)) (scatter mean_profit  YEARAF if nbr_profit>=2, msymbol(square) yaxis(2)) ///
-	(scatter  sd_profit YEARAF if nbr_profit>=2, yaxis(2)) , ///
-	scheme(s1color) ///
+graph twoway (bar  nbr_profit YEARAF if nbr_profit>=2, yaxis(1)) (scatter mean_profit  YEARAF if nbr_profit>=2, msymbol(triangle) yaxis(2)) ///
+	(scatter  sd_profit YEARAF if nbr_profit>=2, msymbol(circle) yaxis(2)) , ///
+	scheme(s1mono) ///
 	legend(label(1 "Number of profit observations (left axis)") label(2 "Mean profit (right axis)") label (3 "Standard deviation of profit (right axis)")) ///
 	xtitle("") ytitle("") xscale(range(1725 1830)) xlabel(1750(25)1825)
 
 graph export "$graphs/profit_dispersio_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
+graph export "$graphs/profit_dispersio_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.tif",as(tif) replace
 
 restore
 ******Method with dummies
@@ -99,16 +82,6 @@ collect get, tags(ynbr[`ynbr'] reg[y_mean]): reg profit y_profit ib3.nationality
 collect get, tags(ynbr[`ynbr'] reg[yN_mean]): reg profit yN_profit if N_nat>=`ynbr'
 }
 
-/*
-collect label levels reg add "Nationality shifter" mul "Nation-specific market return", replace
-collect label levels ynbr 2 "At least 2 observations per year" 3 "At least 3 observations per year" 4 "At least 4 observations per year" 5 "At least 5 observations per year" 6 "At least 6 observations per year" 7 "At least 7 observations per year" 8 "At least 8 observations per year" 9 "At least 9 observations per year", replace
-collect label levels result p "F-test for joint significance of years (p-stat)" N "Number of observations", replace
-collect style cell result[r2 p], nformat(%3.2fc)
-collect layout (ynbr#result[N r2 p]) (reg)
-
-collect export "${output}Profit analysis survey synchronisation.docx", as(docx) replace
-collect export "${output}Profit analysis survey synchronisation.txt", as(txt) replace
-*/
 
 end
 

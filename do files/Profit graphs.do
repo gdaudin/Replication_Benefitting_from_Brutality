@@ -22,18 +22,19 @@ drop if profit ==.
 label var profit "(Net returns over net outlays) -1"
 
 
-graph bar (count) profit [fweight=numberofvoyages], over(nationality) scheme(s1color)
+graph bar (count) profit [fweight=numberofvoyages], over(nationality) scheme(s1mono)
 graph export "$graphs/nbr_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png", as(png) replace
 
-hist YEARAF [fweight=numberofvoyages], freq scheme(s1color) start(1720) width(5) xtitle(Year departed Africa (mean if multiple voyages)) ytitle(Frequency)
+hist YEARAF [fweight=numberofvoyages], freq scheme(s1mono) start(1720) width(5) xtitle(Year departed Africa (mean if multiple voyages)) ytitle(Frequency)
 graph export "$graphs/hist_venture_by_year_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
+graph export "$graphs/hist_venture_by_year_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.tif",as(tif) replace
 
 
 quietly summarize profit
 local m=r(mean)
 hist profit, freq norm ///
 	note(`"mean = `=string(`m',"%6.2f")'%"') ///
-	scheme(s1color) name(All_nationalities, replace) title("All sample")
+	scheme(s1mono) name(All_nationalities, replace) title("All sample")
 
 graph export "$graphs/hist_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
  
@@ -51,41 +52,43 @@ foreach nat in `natlist' {
 	hist profit [fweight=numberofvoyages] if nationality =="`nat'", width(0.15) freq norm ///
 	note(`"mean = `=string(`m',"%6.2f")'%"') ///
 	xscale(range(-1 `max')) xlabel(-1 (0.5) `max') ///
-	scheme(s1color) title ("`nat'") name(`nat', replace)
+	scheme(s1mono) title ("`nat'") name(`nat', replace)
 }
-graph combine `natlist' All_nationalities, scheme(s1color)
+graph combine `natlist' All_nationalities, scheme(s1mono)
 graph export "$graphs/hist_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
+graph export "$graphs/hist_by_nationality_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.tif",as(tif) replace
 
 label var YEARAF "Year departed Africa"
 
-twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh) mcolor(green)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh) mcolor(orange)) ///		
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X) mcolor(purple)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus) mcolor(blue)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th) mcolor(sand)), ///
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh) /*mcolor(green)*/) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh) /*mcolor(orange)*/) ///		
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X) /*mcolor(purple)*/) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus) /*mcolor(blue)*/) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th) /*mcolor(sand)*/), ///
 		legend(label(1 "Danish") label(2 "Dutch") label(3 "English")  ///
-		label(4 "French") label(5 "Spanish") rows(1)) scheme(s1color) ///
+		label(4 "French") label(5 "Spanish") rows(1) size(vsmall)) scheme(s1mono) ///
 		xscale(range(1725 1835)) xlabel(1725 (25)1825) ytitle("") name(scatter_year_profit_all, replace)
 
-twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X) mcolor(purple)), ///
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="English", msymbol(X) /*mcolor(purple)*/), ///
 		title("English ventures") xscale(range(1725 1835)) xlabel(1725 (25)1825) xtitle("") yscale(range(-1 3)) ylabel(-1 (1) 3) ytitle("") ///
-		scheme(s1color) name(scatter_year_profit_EN, replace)
+		scheme(s1mono) name(scatter_year_profit_EN, replace)
 
-twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh) mcolor(orange)), ///
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Dutch", msymbol(Oh) /*mcolor(orange)*/), ///
 		title("Dutch ventures") xscale(range(1725 1835)) xlabel(1725 (25)1825) xtitle("") yscale(range(-1 3)) ylabel(-1 (1) 3)  ///
-		scheme(s1color)  name(scatter_year_profit_ND, replace)
+		scheme(s1mono)  name(scatter_year_profit_ND, replace)
 
-twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh) mcolor (green)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus) mcolor(blue)) ///
-		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th) mcolor(sand)), ///
+twoway 	(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Danish", msymbol(dh) /*mcolor (green)*/) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="French", msymbol(plus) /*mcolor(blue)*/) ///
+		(scatter profit YEARAF [fweight=numberofvoyages] if nationality=="Spanish", msymbol(th) /*mcolor(sand)*/), ///
 		 xscale(range(1725 1835)) xlabel(1725 (25)1825) yscale(range(-1 3)) ylabel(-1 (1) 3)  ///
 		legend(label(1 "Danish") label(2 "French") label(3 "Spanish") rows(1)) ///
-		scheme(s1color) name(scatter_year_profit_3c, replace)
+		scheme(s1mono) name(scatter_year_profit_3c, replace)
 
 graph combine  scatter_year_profit_ND scatter_year_profit_EN  scatter_year_profit_3c scatter_year_profit_all, ///
-		note("Marker size proportional to number of voyages") ycommon xcommon
+		note("Marker size proportional to number of voyages") ycommon xcommon scheme(s1mono)
 
 graph export "$graphs/scatter_year_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.png",as(png) replace
+graph export "$graphs/scatter_year_profit_OR`OR'_VSDO`VSDO'_VSDR`VSDR'_VSDT`VSDT'_VSRV`VSRV'_VSRT`VSRT'_INV`INV'_INT`INT'`IMP'.tif",as(tif) replace
 
 end
 

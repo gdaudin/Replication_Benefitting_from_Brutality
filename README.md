@@ -123,11 +123,11 @@ The provided code reproduces all numbers provided in text in the paper
 | Figure/Table #    | Program                  | Line Number | Output file                      | Notes |
 |-------------------|--------------------------|-------------|----------------------------------|-----------|
 | Figure 1          | ????    |             | summarystats.csv                 |
-| Figure 2          | `Profit graph.do`    |  88           | scatter_year_profit_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
-| Figure 3          | `Profit graph.do`    |  57           | hist_by_nationality_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
-| Figure 4          | `Profit graph.do`    |  29           | hist_venture_by_year_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
-| Figure 5          | `IRR computation.do`    |  236           | scatter_irr_profit_OR0_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
-| Figure 6          | `Profit analysis - synchronisation.do`    |  65           | profit_dispersio_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
+| Figure 2          | `Profit graph.do`    |  91           | scatter_year_profit_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.tif                 |
+| Figure 3          | `Profit graph.do`    |  59           | hist_by_nationality_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.tif                 |
+| Figure 4          | `Profit graph.do`    |  30           | hist_venture_by_year_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.tif                 |
+| Figure 5          | `IRR computation.do`    |  237           | scatter_irr_profit_OR0_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
+| Figure 6          | `Profit analysis - synchronisation.do`    |  48           | profit_dispersio_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.png                 |
 | Table 2           | `Descriptive statistics of profit.do`| 64          | Profits_bynatio_baseline.txt                       | (The stars in the column "Total" should be disregarded. They are just a consequence of the way I have programmed, but I do not seem to be able
 to find an easy better way) |
 | Table 3           | `Compare and select sample.do` | 55         | Compare_Sample_Nationality.txt                       |
