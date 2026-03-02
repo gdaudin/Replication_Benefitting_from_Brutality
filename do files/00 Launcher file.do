@@ -5,12 +5,16 @@
 	global graphs "$dir/graphs"
 	global tstddb "$dir/external data/"
 
-	if lower(c(username)) == "xronkl"	global dir xxx
+	if lower(c(username)) == "xronkl"	global dir "C:\Users\xronkl\OneDrive - University of Gothenburg\Forskning - under arbete\Slave trade profits\GIT\slaveprofits-data-and-programs"
+	global output "$dir/output/"
+	global graphs "$dir/graphs"
+	global tstddb "$dir/external data/"
+
 
 		*Preliminary 
 	*IMPORT TSTD DATASET
 	* Only do it once, then we will work with the dta file created here (tstddb-exp-2020.dta)
-	import spss using "${tstddb}/tstddb-exp-2020.sav", clear
+	import spss using "${tstddb}tstddb-exp-2020.sav", clear
 	tostring(VOYAGEID), replace
 	save "${tstddb}/tstddb-exp-2020.dta", replace
 
