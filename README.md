@@ -122,7 +122,7 @@ The provided code reproduces all numbers provided in text in the paper
 
 | Figure/Table #    | Program                  | Line Number | Output file                      | Notes |
 |-------------------|--------------------------|-------------|----------------------------------|-----------|
-| Figure 1          | ????    |             | summarystats.csv                 |
+| Figure 1          | Figure 1 datafile.xlsx    |             |                 | Just an excel file. Data from https://www.slavevoyages.org/assessment/estimates [accessed 2023-01-13].
 | Figure 2          | `Profit graph.do`    |  91           | scatter_year_profit_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.tif                 |
 | Figure 3          | `Profit graph.do`    |  59           | hist_by_nationality_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.tif                 |
 | Figure 4          | `Profit graph.do`    |  30           | hist_venture_by_year_OR0.5_VSDO1_VSDR1_VSDT0_VSRV1_VSRT0_INV1_INT0.tif                 |
