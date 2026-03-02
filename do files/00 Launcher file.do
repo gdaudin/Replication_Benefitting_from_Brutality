@@ -1,11 +1,9 @@
 	
 	if lower(c(username)) == "guillaumedaudin" global dir "~/Répertoires GIT/Replication_Benefitting_from_Brutality"
-	cd "$dir"
-	global output "$dir/output/"
-	global graphs "$dir/graphs"
-	global tstddb "$dir/external data/"
-
 	if lower(c(username)) == "xronkl"	global dir "C:\Users\xronkl\OneDrive - University of Gothenburg\Forskning - under arbete\Slave trade profits\GIT\slaveprofits-data-and-programs"
+	
+	
+	cd "$dir"
 	global output "$dir/output/"
 	global graphs "$dir/graphs"
 	global tstddb "$dir/external data/"
