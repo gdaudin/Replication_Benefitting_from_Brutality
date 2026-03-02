@@ -57,7 +57,7 @@ IrrGD.do is a derivation of irr.do by Maximo Sangiacomo, version 2.0, Feb 2013. 
 
 #### Summary
 
-Approximate time needed to reproduce the analyses on a standard (CURRENT YEAR) desktop machine: less than 10 minutes
+Approximate time needed to reproduce the analyses on a standard 2026 desktop machine: less than 10 minutes
 
 #### Details
 
