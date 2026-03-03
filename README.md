@@ -2,7 +2,7 @@
 contributors:
   - Guillaume Daudin
   - Gerhard de Kok
-  - Klas Rönnebäck
+  - Klas Rönnbäck
 ---
 
 # README
@@ -10,7 +10,7 @@ contributors:
 
 ## Overview
 
-This is a replication package for « Benefiting from Brutality? Profits of North Western Europe’s Slave Trade at the Eve of the Industrial Revolution ». The provide code constructs the analysis file from the two provided data sources (our own work and TSTD) using Stata. A main file runs all of the code to generate the data for the 15 figures and 3 tables in the paper. The replicator should expect the code to run in less than 10 minutes.
+This is a replication package for « Benefiting from Brutality? Profits of North Western Europe’s Slave Trade at the Eve of the Industrial Revolution ». The provided code constructs the analysis file from the two provided data sources (our own work and TSTD) using Stata. A main file runs all of the code to generate the data for the 15 figures and 3 tables in the paper. The replicator should expect the code to run in less than 10 minutes.
 
 ## Data Availability and Provenance Statements
 
@@ -69,7 +69,7 @@ The code was last run on a **Apple M4-Pro laptop with MacOS version 26.3**.
 * `Import own data.do` Imports our venture and transaction data
 *	`Enrich voyages and save ventures.do` Enriches the voyages and save an venture datafile
 * `Enrich ventures db.do` Enrich the venture datafile
-* `Compare and select sample.do` Looks at the available data, compare it with TSDT, reduces the sample. Produces tables 3-5
+* `Compare and select sample.do` Looks at the available data, compare it with TSTD, reduces the sample. Produces tables 3-5
 * `Database for profit and IRR computation.do` Merges the transaction and venture datasets. 
 
 ### Compute profit, describe and graph it
@@ -77,7 +77,7 @@ The code was last run on a **Apple M4-Pro laptop with MacOS version 26.3**.
 * `Descriptive statistics of profit.do` Produces descriptive statistics for profit. Produces table 2 
 * `Profit graphs.do` Produces figures 2-4
 
-### Analyze of profit
+### Analysis of profit
 
 * `Profit analysis - survey method.do` Applies sample methods to analyse profits. Produces table 6 and Appendix table 1
 * `Profit analysis - synchronisation.do` Checks for the synchronisation of profits. Produces Figure 6 and Appendix table 2
@@ -104,7 +104,7 @@ Only British/Dutch/French: British/Dutch/French (does not always work)
 -----------
 
 - The file `do files/00_launcher` will run all the data import, reformat and analysis included in the paper.
-- The program `config_stata.do` will install with the necessary dependencies.
+- The program `config_stata.do` will install the necessary dependencies.
 
 ### License for Code
 
