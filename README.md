@@ -61,7 +61,7 @@ Approximate time needed to reproduce the analyses on a standard 2026 desktop mac
 
 #### Details
 
-The code was last run on a **Apple M4-Pro laptop with MacOS version 26.3**. 
+The code was last run on a **Apple M4-Pro laptop with MacOS version 26.3** and on a **HP Elite x360 Notebook PC with Microsoft Windows 11 OS version 10.0.22631**. 
 
 ## Description of programs
 
